@@ -1,0 +1,573 @@
+/*  App.css - Estilos globales de la aplicación */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+
+/* VARIABLES GLOBALES - Colores y estilos base */
+:root {
+  --bg: #f7f1ee;
+  --surface: #ede5f8;
+  --surface2: #c9b8e8;
+  --border: #e8dff0;
+  --accent: #8a6bb8;
+  --accent2: #00d4a0;
+  --danger: #ff4f6a;
+  --warn: #f59e0b;
+  --text: #2a2230;
+  --muted: #8a7e9a;
+  --radius: 14px;
+
+   /* Para el responsible del celular */
+  --lilac-light: #ede5f8;
+  --lilac-mid: #8a6bb8;
+  --lilac: #c9b8e8;
+  --text-soft: #6b5a7a;
+  --text-muted: #8a7e9a;
+  --card: #fffaf6;
+  --peach: #e8c8a0;
+  --peach-light: #faf0e8;
+  --sage: #c8dcc8;
+  --rose: #e8c8d4;
+  --rose-light: #f7eef2;
+  --correct: #6db87a;
+  --correct-bg: #eaf6ec;
+  --wrong: #d47a7a;
+  --wrong-bg: #faeaea;
+  --shadow: 0 4px 24px rgba(180, 160, 210, 0.13);
+
+}
+
+/* RESET GLOBAL Elimina márgenes y paddings por defecto */
+* { box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* BODY Fondo y fuente base de toda la aplicación */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* TÍTULOS Fuente Space Grotesk para encabezados */
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+/* NAVBAR Barra de navegación superior (sticky) */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Contenedor del logo + botón hamburguesa.
+   En escritorio ocupa solo el ancho del logo; en celular se estira
+   para que el botón hamburguesa quede pegado a la derecha. */
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+}
+
+.navbar-brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-brand span { color: var(--text); }
+
+/* Botón hamburguesa: oculto en escritorio, solo aparece en celular */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Animación simple: las 3 líneas se convierten en una X al abrir */
+.navbar-toggle.abierto span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar-toggle.abierto span:nth-child(2) { opacity: 0; }
+.navbar-toggle.abierto span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.navbar-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active { 
+  color: var(--text); 
+  background: var(--surface2); 
+}
+
+/* El link "Registrarse" usa .btn-primary (fondo morado, texto blanco),
+   pero .navbar-links a tiene más especificidad y le ganaba el color
+   gris por defecto, dejando el texto casi invisible sobre el morado. */
+.navbar-links a.btn-primary {
+  color: #fff;
+}
+
+.navbar-links a.btn-primary:hover {
+  color: #fff;
+  background: #7a5aa8;
+}
+
+/* NAVBAR RESPONSIVE Ajustes para móviles */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-top {
+    width: 100%;
+  }
+
+  /* Muestra el botón hamburguesa solo en este breakpoint */
+  .navbar-toggle {
+    display: flex;
+  }
+
+  /* Los links quedan ocultos y se despliegan en columna, uno debajo
+     del otro, solo cuando el menú está abierto. Así se evita que se
+     partan en 2-3 filas apretadas como pasaba antes. */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.2rem;
+    padding-top: 0.6rem;
+  }
+
+  .navbar-links.abierto {
+    display: flex;
+  }
+
+  .navbar-links a,
+  .navbar-links button {
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.7rem;
+  }
+}
+
+/* PAGE Contenedor principal de cada página */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 1rem; }
+}
+
+/* BOTONES Estilos de botones (primarios, éxito, peligro, ghost) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary { 
+  background: var(--accent); 
+  color: #fff; 
+}
+
+.btn-primary:hover { 
+  background: #7a5aa8; 
+  transform: translateY(-1px); 
+}
+
+.btn-success { 
+  background: var(--accent2); 
+  color: #0f0f13; 
+}
+
+
+.btn-success:hover { 
+  opacity: 0.85; 
+}
+
+.btn-danger { 
+  background: transparent; 
+  color: var(--danger); 
+  border: 1px solid var(--danger); 
+}
+
+.btn-danger:hover { 
+  background: var(--danger); 
+  color: #fff; 
+}
+
+.btn-ghost { 
+  background: var(--surface2); 
+  color: var(--text); 
+}
+
+.btn-ghost:hover { 
+  background: var(--border); 
+}
+
+.btn-sm { 
+  padding: 0.35rem 0.8rem; 
+  font-size: 0.8rem; 
+}
+
+/* CARD Tarjeta genérica para contenido */
+.card {
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* BADGES Etiquetas de dificultad (fácil, media, difícil, profe) */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.badge-easy { 
+  background: #edf4ed; 
+  border: 1px solid #c8dcc8; 
+  color: #3a7a4a; 
+}
+
+.badge-medium { 
+  background: #faf0e8; 
+  border: 1px solid #f2d9c8; 
+  color: #8a5a30; 
+}
+
+.badge-hard { 
+  background: #f7eef2; 
+  border: 1px solid #e8c8d4; 
+  color: #8a3a5a; 
+}
+
+.badge-profe { 
+  background: #f3c9ec; 
+  border: 1px solid #e8a0d0; 
+  color: #8a3070; 
+}
+
+/* INPUTS Campos de formulario */
+.input {
+  width: 100%;
+  background: #fff8f0;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus { border-color: var(--accent); }
+
+.input-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.input-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.form-group { 
+  margin-bottom: 1rem; 
+}
+
+.form-row { 
+  display: flex; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+}
+
+/* LOADING Pantalla de carga*/
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--muted);
+}
+
+/* ADMIN HEADER Encabezado del panel de administración */
+.admin-header {
+  background: linear-gradient(135deg, #e8dff8 0%, #f5e8f0 50%, #fdf0e8 100%);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-header h1 { 
+  color: var(--text); 
+}
+
+.admin-sub { 
+  color: #5a4e6a; 
+  font-size: 0.9rem; 
+  margin-top: 0.3rem; 
+}
+
+/* ADMIN TABS Pestañas del panel de administración */
+.admin-tabs { 
+  display: flex; 
+  gap: 0.5rem; 
+  margin-bottom: 1.5rem; 
+  flex-wrap: wrap; 
+}
+
+.tab {
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: #fff8f0;
+  color: var(--muted);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.2s;
+}
+
+.tab:hover { 
+  border-color: var(--accent); 
+  color: var(--text); 
+}
+
+.tab-active { 
+  border-color: var(--accent) !important; 
+  background: var(--surface) !important; 
+  color: var(--text) !important; 
+}
+
+.tab-count { 
+  background: var(--surface2); 
+  color: var(--text); 
+  border-radius: 99px; 
+  padding: 0.1rem 0.5rem; 
+  font-size: 0.75rem; 
+  margin-left: 0.4rem; 
+}
+
+/* ADMIN FLASH Mensaje de confirmación
+   Fijo en pantalla (no dentro del flujo normal) para que se vea
+   siempre, sin importar en qué parte del formulario esté el admin. */
+.admin-flash {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  max-width: 90vw;
+  text-align: center;
+}
+
+/* Éxito: verde (igual que antes) */
+.admin-flash.success {
+  background: #edf4ed;
+  border: 1px solid #c8dcc8;
+  color: #3a7a4a;
+}
+
+/* Error / advertencia: rojo, igual que en Colaborador/Moderador */
+.admin-flash.error {
+  background: #fee2e2;
+  border: 1px solid #f5b5b5;
+  color: #991b1b;
+}
+
+/*LISTADO DE PREGUNTAS Panel de administración */
+.admin-list-header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 1rem; 
+  flex-wrap: wrap; 
+  gap: 0.5rem; 
+}
+
+/* Controles de filtro/orden del listado: más chicos y discretos que un
+   .input normal, para que no compitan visualmente con el título de la
+   sección ni se vean "invasivos" cuando hay varios uno al lado del otro. */
+.admin-list-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.select-compact-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.select-compact-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.select-compact {
+  width: auto;
+  background: #fff8f0;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 0.35rem 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  outline: none;
+  transition: border-color 0.2s;
+  max-width: 180px;
+}
+
+.select-compact:focus { border-color: var(--accent); }
+
+.preguntas-lista { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.8rem; 
+}
+
+.preg-item {
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+}
+
+.preg-info { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  margin-bottom: 0.4rem; 
+  flex-wrap: wrap; 
+}
+
+.preg-asig { 
+  font-size: 0.8rem; 
+  color: var(--muted); 
+}
+
+.preg-texto { 
+  font-size: 0.9rem; 
+  color: var(--text); 
+  margin-bottom: 0.6rem; 
+}
+
+.preg-actions { 
+  display: flex; 
+  gap: 0.5rem; 
+  flex-wrap: wrap; 
+}
+
+/* LISTADO DE ASIGNATURAS Panel de administración */
+.asig-lista { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.8rem; 
+}
+
+.asig-item { 
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+}
+
+.asig-icon { 
+  font-size: 1.5rem; 
+}
+
+.asig-nombre { 
+  font-weight: 600; 
+  color: var(--text); 
+}
+
+.asig-desc { 
+  font-size: 0.85rem; 
+  color: var(--muted); 
+}
+
+/* TEXTAREA Campos de texto multilínea */
+textarea.input { resize: vertical; }

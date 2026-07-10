@@ -1,0 +1,387 @@
+/* ============================================================
+   CUESTIONARIO.CSS - Estilos para el sistema de cuestionarios
+   ============================================================ */
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #e8dff8 0%, #f5e8f0 50%, #fdf0e8 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 2rem 1.5rem;
+  text-align: center;
+}
+
+.header-badge {
+  display: inline-block;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.7rem;
+}
+
+header h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+}
+
+header p {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* MAIN */
+.cuestionario-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.start-title {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.start-sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+/* SUBJECT GRID */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.subject-card {
+  background: #fffaf6;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.subject-card:hover:not(.locked) {
+  border-color: var(--accent);
+  background: var(--surface);
+  transform: translateY(-2px);
+}
+
+.subject-card.selected {
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px rgba(138, 107, 184, 0.25);
+}
+
+.subject-card.locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.subject-name {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.subject-meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.coming-badge {
+  display: inline-block;
+  margin-top: 0.4rem;
+  background: #faf0e8;
+  border: 1px solid #e8c8a0;
+  color: #8a6040;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* CONFIG PANEL */
+.config-panel {
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 24px rgba(180, 160, 210, 0.13);
+}
+
+.config-panel h3 {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.config-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.config-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  min-width: 160px;
+}
+
+.count-btns {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.count-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.count-btn:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+.count-btn.selected {
+  border-color: var(--accent);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.info-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.info-pill {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.info-pill strong {
+  color: var(--text);
+}
+
+/* BOTONES */
+.cuestionario-page .btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 30px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.cuestionario-page .btn-primary {
+  background: linear-gradient(135deg, var(--accent), #c4a0d4);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(138, 107, 184, 0.3);
+}
+
+.cuestionario-page .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(138, 107, 184, 0.4);
+}
+
+.cuestionario-page .btn-secondary {
+  background: var(--bg);
+  color: var(--muted);
+  border: 1.5px solid var(--border);
+}
+
+.cuestionario-page .btn-secondary:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+/* BOTON FAVORITOS */
+.fav-btn {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: #fff8f0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+  transition: all 0.2s;
+}
+
+.fav-btn.fav-activa {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── ORDEN (select chico, mismo lenguaje visual que el resto de la app) ── */
+.orden-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.orden-select {
+  width: auto;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.6rem;
+}
+
+/* ── HEADER ESCRITORIO (con las mismas propiedades que antes iban inline;
+   deben vivir aquí para que la media query de abajo pueda ocultarlo en
+   móvil — un estilo inline nunca puede ser sobreescrito por una clase) ── */
+.header-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ── HEADER MÓVIL (oculto por defecto; visible solo en pantalla angosta) ── */
+.header-mobile {
+  display: none;
+}
+
+/* RESPONSIVE (mismo breakpoint que ya usaba el resto de la página) */
+@media (max-width: 600px) {
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .header-mobile-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .header-mobile-images img {
+    width: 70px;
+    object-fit: contain;
+  }
+
+  .header-mobile h1 {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .orden-row {
+    justify-content: center;
+  }
+
+  .subject-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .subject-card {
+    padding: 0.8rem 0.6rem;
+  }
+
+  .subject-meta {
+  font-size: 0.65rem;
+  overflow: hidden;
+  line-height: 1.3;
+  max-height: 2.6em;
+}
+
+  .subject-card img {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain;
+  }
+
+  .subject-name {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .coming-badge {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.4rem;
+  }
+
+  .fav-btn {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    margin-top: 0.3rem;
+  }
+}
+/* ── ASIGNATURA DESACTIVADA (activar/desactivar cuestionarios) ── */
+.subject-disabled {
+  position: relative;
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(60%);
+}
+
+.subject-disabled::after {
+  content: 'Desactivado';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--danger, #ff4f6a);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}

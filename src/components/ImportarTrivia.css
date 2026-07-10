@@ -1,0 +1,128 @@
+/* ImportarTrivia.css — estilos del importador de preguntas vía API externa */
+
+.importar-intro p.importar-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+.importar-acciones {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.importar-hint {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0.2rem 0;
+  font-weight: 500;
+}
+
+.importar-hint-error {
+  color: var(--danger);
+}
+
+.importar-loading {
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.importar-spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  animation: importar-girar 0.8s linear infinite;
+}
+
+@keyframes importar-girar {
+  to { transform: rotate(360deg); }
+}
+
+/* Mensajes de estado inline (no flotantes como .admin-flash) */
+.admin-flash-inline {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.admin-flash-inline.success {
+  background: #edf4ed;
+  border: 1px solid #c8dcc8;
+  color: #3a7a4a;
+}
+
+.admin-flash-inline.error {
+  background: #fee2e2;
+  border: 1px solid #f5b5b5;
+  color: #991b1b;
+}
+
+.admin-flash-inline.warn {
+  background: #fef3c7;
+  border: 1px solid #f2d9a0;
+  color: #92400e;
+}
+
+.importar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.importar-item:not(.importar-item-sel) {
+  opacity: 0.55;
+}
+
+.importar-checkbox {
+  margin-top: 0.35rem;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Respaldo de las clases .colab-opt* (definidas originalmente en
+   Colaborador.css) para que este componente se vea bien sin depender
+   de que esa hoja de estilos ya haya sido cargada por otra página. */
+.colab-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.colab-opt {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: #f9fafb;
+}
+
+.colab-opt-correcta {
+  background: #d1fae5;
+  border: 1px solid #10b981;
+}
+
+.colab-letra {
+  font-weight: 600;
+  color: #6b7280;
+  min-width: 20px;
+}
+
+.check-mark {
+  color: #10b981;
+  font-weight: bold;
+  margin-left: auto;
+}

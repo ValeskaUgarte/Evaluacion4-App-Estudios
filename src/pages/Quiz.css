@@ -1,0 +1,287 @@
+/* QUIZ.CSS Estilos para la página de cuestionario */
+
+/* HEADER Encabezado del cuestionario */
+.quiz-header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 1rem; 
+}
+
+.quiz-asignatura { 
+  font-family: 'Space Grotesk', sans-serif; 
+  font-weight: 600; 
+  font-size: 0.95rem; 
+  color: var(--muted); 
+}
+
+.quiz-contador { 
+  font-family: 'Space Grotesk', sans-serif; 
+  font-size: 0.9rem; 
+  color: var(--muted); 
+}
+
+/* PROGRESS BAR Barra de progreso del cuestionario */
+.quiz-progress { 
+  height: 4px; 
+  background: var(--border); 
+  border-radius: 99px; 
+  margin-bottom: 1.5rem; 
+  overflow: hidden; 
+}
+
+.quiz-progress-bar { 
+  height: 100%; 
+  background: var(--accent); 
+  border-radius: 99px; 
+  transition: width 0.4s ease; 
+}
+
+/* QUIZ CARD Tarjeta principal de la pregunta */
+.quiz-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Metadatos de la pregunta (orden: 1) */
+.quiz-meta { 
+  display: flex; 
+  align-items: center; gap: 0.8rem; 
+  margin-bottom: 1.2rem; 
+  order: 1;
+}
+
+/* Texto de la pregunta (orden: 2) */
+.quiz-pregunta { 
+  font-size: clamp(1rem, 2.5vw, 1.25rem); 
+  line-height: 1.5; margin-bottom: 1.5rem; 
+  font-weight: 600;
+  order: 2;
+}
+
+/* Grid de opciones (orden: 3) */
+.opciones-grid { display: flex; 
+  flex-direction: column; 
+  gap: 0.6rem; 
+  margin-bottom: 1.5rem; 
+  order: 3;
+}
+
+/* Botones de acción (orden: 4) */
+.quiz-actions { 
+  display: flex; 
+  justify-content: flex-end; 
+  order: 4;
+}
+
+/* Explicación de la respuesta (orden: 5) */
+.explicacion { 
+  border-radius: 10px; 
+  padding: 1rem 1.2rem; 
+  margin-bottom: 1.5rem; 
+  font-size: 0.9rem; 
+  line-height: 1.6; 
+  order: 5;
+}
+
+/* Unidad de la pregunta */
+.quiz-unidad { 
+  font-size: 0.78rem; color: 
+  var(--muted); 
+}
+
+/* OPCIONES Estilos de las opciones de respuesta*/
+.opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fffaf6;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  transition: all 0.15s;
+  width: 100%;
+}
+
+.opcion:hover { 
+  border-color: var(--accent); 
+  background: #ede5f8; 
+}
+
+.opcion.selected { 
+  border-color: var(--accent); 
+  background: #ede5f8; 
+}
+
+.opcion.correcta { 
+  border-color: #6db87a; 
+  background: #eaf6ec; color: #2d6b3a; 
+}
+
+.opcion.incorrecta { 
+  border-color: #d47a7a; 
+  background: #faeaea; color: #6b2d2d; 
+}
+
+/* Letra de la opción (A, B, C, D) */
+.opcion-letra {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  min-width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--border);
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Texto de la opción */
+.opcion-texto { font-size: 0.92rem; line-height: 1.5; }
+
+/* EXPLICACIÓN Feedback de la respuesta */
+.exp-ok { 
+  background: #eaf6ec; 
+  border: 1px solid #b8ddbf; 
+  color: #2d6b3a; 
+
+}
+.exp-error { 
+  background: #faeaea; 
+  border: 1px solid #ddb8b8; 
+  color: #6b2d2d; 
+}
+.exp-titulo { 
+  font-family: 'Space Grotesk', sans-serif; 
+  font-weight: 700; 
+  margin-bottom: 0.4rem; 
+}
+
+/* DOTS Indicadores de preguntas (navegación visual) */
+.dots-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: flex-start;
+  margin-bottom: 1.2rem;
+  padding: 0.8rem 1rem;
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--muted);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot.current {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.dot.answered-c {
+  background: #6db87a;
+  color: #fff;
+}
+
+.dot.answered-w {
+  background: #d47a7a;
+  color: #fff;
+}
+
+.dot:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+/* CASO CLÍNICO Contexto de la pregunta */
+.quiz-case {
+  background: #ede5f8;
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.87rem;
+  color: var(--text);
+  line-height: 1.55;
+  font-style: italic;
+  order: 1;
+}
+
+.quiz-extra {
+  margin: 1rem 0;
+  order: 3;
+}
+
+/* TERMINAL Estilos para ejercicios de terminal */
+.quiz-extra .terminal-box {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+.quiz-extra .terminal-box input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #6c7086;
+  color: #a6e3a1;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  width: 220px;
+  outline: none;
+  margin-left: 0.3rem;
+}
+
+/* SUBNET TABLE Estilos para ejercicios de subnetting */
+.quiz-extra .subnet-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.quiz-extra .subnet-table th,
+.quiz-extra .subnet-table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.4rem;
+  text-align: center;
+}
+
+.quiz-extra .subnet-table th {
+  background: #ede5f8;
+  font-weight: 600;
+}
+
+.quiz-extra .subnet-table input {
+  width: 110px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  text-align: center;
+}

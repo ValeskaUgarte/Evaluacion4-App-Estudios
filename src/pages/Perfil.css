@@ -1,0 +1,192 @@
+/* PERFIL.CSS Estilos para la página de perfil del usuario */
+
+/* HERO Encabezado del perfil con avatar y datos del usuario */
+.perfil-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #e8dff8 0%, #f5e8f0 100%);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.perfil-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  flex-shrink: 0;
+}
+
+.perfil-nombre {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.perfil-rol {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.perfil-email {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* STATS Estadísticas del usuario (grid de 4 columnas)*/
+.perfil-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.perfil-stat {
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.stat-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-lbl {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+/* SECCIONES Contenedores de información del perfil */
+.perfil-section {
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.perfil-section h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.perfil-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* FAVORITAS Lista de asignaturas guardadas*/
+.perfil-favoritas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.favorita-badge {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  text-transform: capitalize;
+}
+
+.favorita-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+/* HISTORIAL Lista de resultados de cuestionarios*/
+.historial-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.historial-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--border);
+  background: var(--bg);
+}
+
+.historial-item.item-ok { 
+  border-left-color: #6db87a; 
+}   /* Correcto/aprobado */
+
+.historial-item.item-mal { 
+  border-left-color: #d47a7a; 
+}  /* Incorrecto/reprobado */
+
+.historial-asig {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.historial-fecha {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.historial-resultado {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.historial-nota {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.historial-detalle {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ACCIONES Botones del perfil */
+.perfil-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE - Ajustes para móviles */
+@media (max-width: 600px) {
+  .perfil-stats { grid-template-columns: repeat(2, 1fr); }  /* Stats a 2 columnas */
+  .perfil-hero { flex-direction: column; text-align: center; }  /* Hero apilado */
+}

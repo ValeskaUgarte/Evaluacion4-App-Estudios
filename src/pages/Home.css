@@ -1,0 +1,324 @@
+/* HOME.CSS Estilos para la página de inicio */
+
+/* HERO Sección principal */
+.home-hero { margin-bottom: 2.5rem; }
+
+.home-eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.home-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 0.8rem;
+}
+
+.home-sub {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* LAYOUT DEL HERO Imagen + contenido centrado */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-content {
+  text-align: center;
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-img {
+  width: 160px;
+  object-fit: contain;
+}
+
+.img-centrada {
+  display: block;
+  margin: 2rem auto;
+  width: 600px;
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* ESTADÍSTICAS Grid de 3 columnas*/
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.home-stat {
+  background: #fffaf6;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+}
+
+.stat-numero {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-texto {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
+/* GRID DE ASIGNATURAS Tarjetas de materias */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.subject-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.subject-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--card-accent, var(--accent));
+}
+
+.subject-card:hover {
+  border-color: var(--card-accent, var(--accent));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.subject-icon { font-size: 2rem; display: block; margin-bottom: 0.8rem; }
+.subject-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3; }
+.subject-desc { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.5; }
+.subject-cta { font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--card-accent, var(--accent)); }
+
+/*ODS  Objetivos de Desarrollo Sostenible */
+.ods-section { border-top: 1px solid var(--border); padding-top: 2rem; }
+
+.ods-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.ods-badges { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.ods-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.ods-badge span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; min-width: 28px; text-align: center; }
+
+/* Colores específicos por ODS */
+.ods-4  { background: rgba(198,103,12,0.12); border: 1px solid rgba(198,103,12,0.3); }
+.ods-4  span { color: #e8a25a; }
+.ods-10 { background: rgba(220,38,127,0.12); border: 1px solid rgba(220,38,127,0.3); }
+.ods-10 span { color: #f472b6; }
+.ods-17 { background: rgba(14,116,144,0.15); border: 1px solid rgba(14,116,144,0.3); }
+.ods-17 span { color: #22d3ee; }
+
+/* SECCIÓN DE API Enlaces a endpoints */
+.api-section {
+  background: #fffaf6;
+  border: 1px solid var(--border, #e8dff0);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.api-titulo {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text, #2a2230);
+  margin-bottom: 1rem;
+}
+
+.api-links {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.api-link {
+  background: linear-gradient(135deg, #e8dff8, #f5e8f0);
+  border: 1px solid var(--border, #e8dff0);
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent, #8a6bb8);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.api-link:hover {
+  background: linear-gradient(135deg, #c9b8e8, #e8c8d4);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* FOOTER Barra inferior con información y créditos */
+.home-footer {
+  background: linear-gradient(135deg, #e8dff8 0%, #f5e8f0 100%);
+  border-top: 1px solid var(--border, #d3c1e4);
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto 0.8rem;
+}
+
+.footer-col h4 {
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-texto,
+.footer-links li,
+.footer-links a {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.footer-bottom {
+  font-size: 0.72rem;
+  padding-top: 0.8rem;
+}
+
+/* CARRUSEL */
+.carrusel-wrap { margin: 2rem 0; text-align: center; }
+.carrusel-titulo { font-family: 'Lora', serif; font-size: 1.2rem; color: var(--text); margin-bottom: 1rem; }
+.carrusel-contenedor { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.carrusel-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; font-size: 1.3rem; cursor: pointer; color: var(--accent); flex-shrink: 0; transition: all 0.2s; }
+.carrusel-btn:hover { background: var(--accent); color: #fff; }
+.carrusel-track { display: flex; gap: 1rem; overflow: hidden; }
+.carrusel-item { background: #fffaf6; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; width: 160px; flex-shrink: 0; text-align: center; }
+.carrusel-img { width: 100%; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 0.6rem; }
+.carrusel-nombre { font-family: 'Space Grotesk', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; line-height: 1.3; }
+.carrusel-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.4; }
+.carrusel-dots { display: flex; justify-content: center; gap: 0.4rem; margin-top: 1rem; }
+.carrusel-dot { width: 8px; height: 8px; border-radius: 50%; border: none; background: var(--border); cursor: pointer; transition: all 0.2s; }
+.carrusel-dot.activo { background: var(--accent); transform: scale(1.3); }
+
+/* RESPONSIVE Ajustes para móviles (celular) */
+@media (max-width: 600px) {
+  /* Hero en celular: ANTES quedaba igual que en escritorio (imagen-texto-imagen
+     en fila). Ahora usamos flex-wrap para que las DOS imágenes ("los monitos")
+     queden juntas, una al lado de la otra, en la primera fila, y el título
+     (hero-content) pase a una segunda fila debajo, ocupando todo el ancho. */
+  .hero-layout {
+    flex-direction: row;
+    flex-wrap: wrap;           /* permite que el contenido "salte" a la fila de abajo */
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  /* order: 1 en las dos imágenes para que se muestren primero, juntas */
+  .hero-img-left,
+  .hero-img-right {
+    order: 1;
+  }
+
+  .hero-content {
+    order: 2;               /* el título queda después de las imágenes */
+    flex-basis: 100%;       /* fuerza el salto de línea: ocupa toda la fila */
+    width: 100%;
+    text-align: center;
+    margin-top: 0.4rem;
+  }
+
+  .hero-img {
+    width: 130px;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  .home-sub {
+    font-size: 0.85rem;
+  }
+
+  /* Footer: 2 columnas en vez de 4, texto más chico */
+  .home-footer {
+    padding: 0.8rem 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-col h4 {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-texto,
+  .footer-links li,
+  .footer-links a {
+    font-size: 0.65rem;
+    line-height: 1.4;
+  }
+
+  .footer-bottom {
+    font-size: 0.65rem;
+    padding-top: 0.5rem;
+  }
+
+  /* Carrusel: tarjetas más angostas */
+  .carrusel-track { gap: 0.5rem; }
+  .carrusel-item { width: 120px; }
+}

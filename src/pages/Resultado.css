@@ -1,0 +1,122 @@
+/* RESULTADO.CSS Estilos para la página de resultados del cuestionario */
+
+/* HERO Encabezado de resultados */
+.resultado-hero {
+  text-align: center;
+  padding: 2rem 0 3rem;
+}
+
+.resultado-eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+.resultado-nota {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(4rem, 12vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.aprobado { color: var(--accent2); }
+.reprobado { color: var(--danger); }
+
+.resultado-detalle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resultado-estado {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.estado-ok { color: var(--accent2); }
+.estado-mal { color: var(--danger); }
+
+/* REVISIÓN Lista de preguntas revisadas */
+.resultado-review {
+  margin-bottom: 2rem;
+}
+
+.resultado-review h3 {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* REVIEW ITEM Cada pregunta revisada */
+.review-item {
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--border);
+}
+
+.item-ok { border-left: 3px solid var(--accent2); }
+.item-mal { border-left: 3px solid var(--danger); }
+
+.review-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.review-pregunta {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.review-tu,
+.review-correcta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.review-correcta strong { color: var(--accent2); }
+
+.review-exp {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  line-height: 1.5;
+}
+
+/* ACCIONES Botones al final de la página */
+.resultado-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+/* RESPONSIVE Ajustes para móviles */
+@media (max-width: 600px) {
+  .resultado-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .review-item {
+    padding: 0.8rem 1rem;
+  }
+}

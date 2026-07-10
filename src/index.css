@@ -1,0 +1,22 @@
+/* index.css - Estilos base de la aplicación */
+
+/* RESET UNIVERSAL Elimina márgenes, paddings y define box-sizing */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*BODY Estilos base del cuerpo de la página */
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ROOT Contenedor principal de React */
+
+#root {
+  min-height: 100vh;
+}

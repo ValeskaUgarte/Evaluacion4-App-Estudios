@@ -1,0 +1,120 @@
+{
+  "asignaturas": [
+    {
+      "id": 1,
+      "key": "seguridad_informacion",
+      "nombre": "Seguridad de la Información",
+      "totalPreguntas": 140
+    },
+    {
+      "id": 2,
+      "key": "sistemas_operativos",
+      "nombre": "Sistemas Operativos",
+      "totalPreguntas": 131
+    },
+    {
+      "id": 3,
+      "key": "seguridad-examen",
+      "nombre": "Fundamentos de Seguridad de la Información",
+      "totalPreguntas": 55
+    },
+    {
+      "id": 4,
+      "key": "linux",
+      "nombre": "Linux",
+      "totalPreguntas": 70
+    },
+    {
+      "id": 5,
+      "key": "algebra",
+      "nombre": "Resolución de Problemas de Álgebra",
+      "totalPreguntas": 0
+    },
+    {
+      "id": 6,
+      "key": "metodologia_agil",
+      "nombre": "Metodología de Desarrollo Ágil",
+      "totalPreguntas": 91
+    },
+    {
+      "id": 7,
+      "key": "frontend",
+      "nombre": "Programación Front End",
+      "totalPreguntas": 121
+    },
+    {
+      "id": 8,
+      "key": "backend",
+      "nombre": "Programación Back End",
+      "totalPreguntas": 0
+    },
+    {
+      "id": 9,
+      "key": "bd_estructurados",
+      "nombre": "Base de Datos Estructuradas",
+      "totalPreguntas": 15
+    },
+    {
+      "id": 10,
+      "key": "bd_no_estructurados",
+      "nombre": "Base de Datos No Estructurados",
+      "totalPreguntas": 0
+    },
+
+    {
+      "id": 11,
+      "key": "introduccion_programacion_robotica",
+      "nombre": "Introducción a la Programación y Robótica Aplicada",
+      "totalPreguntas": 120
+    },
+    {
+      "id": 12,
+      "key": "hardware_software",
+      "nombre": "Fundamentos de Hardware y Software",
+      "totalPreguntas": 164
+    },
+    {
+      "id": 13,
+      "key": "prog_html",
+      "nombre": "Programación HTML",
+      "totalPreguntas": 143
+    },
+    {
+      "id": 14,
+      "key": "ingles_basico",
+      "nombre": "Inglés Inicial",
+      "totalPreguntas": 0
+    },
+    {
+      "id": 15,
+      "key": "ingles_intermedio",
+      "nombre": "Inglés Intermedio",
+      "totalPreguntas": 0
+    },
+    {
+      "id": 16,
+      "key": "ingles_avanzado",
+      "nombre": "Inglés Avanzado",
+      "totalPreguntas": 0
+    },
+    {
+      "id": 17,
+      "key": "japones",
+      "nombre": "Japonés",
+      "totalPreguntas": 300
+    },
+    {
+      "id": 18,
+      "key": "chino",
+      "nombre": "Chino",
+      "totalPreguntas": 0
+    },
+    {
+      "id": 19,
+      "key": "coreano",
+      "nombre": "Coreano",
+      "totalPreguntas": 210
+    }
+  ],
+  "reportes": []
+}
