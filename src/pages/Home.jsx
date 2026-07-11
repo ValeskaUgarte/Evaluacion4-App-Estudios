@@ -1,13 +1,13 @@
 // HOME.JSX - Página principal de la aplicación
 
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { getAsignaturas, getReportes, API_URL } from '../services/api';
 import './Home.css';
 
 
-function OdsBadge({ num, titulo, detalle }) {
+function OdsBadge({ num, titulo, detalle, url }) {
   const [abierto, setAbierto] = useState(false);
   return (
     <div>
@@ -28,7 +28,18 @@ function OdsBadge({ num, titulo, detalle }) {
           lineHeight: '1.6',
           maxWidth: '320px'
         }}>
-          {detalle}
+          <p style={{ margin: 0 }}>{detalle}</p>
+          {url && (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-block', marginTop: '0.6rem', fontWeight: 600, color: 'var(--accent)' }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              Ver ODS {num} en la ONU →
+            </a>
+          )}
         </div>
       )}
     </div>
@@ -64,7 +75,10 @@ function Carrusel({ nuevas = [] }) {
   const items = [...itemsFijos, ...itemsNuevas];
 
   function irASeccion(item) {
-    if (item.esOds) { window.open('', '_blank', 'noopener'); return; }
+    if (item.esOds) {
+      document.querySelector('.ods-section')?.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
     navigate(item.key ? `/quiz/${item.key}` : '/cuestionarios');
   }
 
@@ -202,8 +216,8 @@ export default function Home() {
           <p className="ods-label">Objetivos de Desarrollo Sostenible</p>
           <div className="ods-badges">
             {[
-              { num: 4, titulo: 'Educación de Calidad', detalle: 'Esta app garantiza una educación inclusiva y equitativa, promoviendo oportunidades de aprendizaje para todos los estudiantes mediante cuestionarios interactivos y material de estudio accesible.' },
-              { num: 17, titulo: 'Alianzas para los Objetivos', detalle: 'La plataforma fomenta la colaboración entre estudiantes, colaboradores y docentes para crear y compartir material educativo de calidad, fortaleciendo las alianzas en favor del aprendizaje.' },
+              { num: 4, titulo: 'Educación de Calidad', detalle: 'Esta app garantiza una educación inclusiva y equitativa, promoviendo oportunidades de aprendizaje para todos los estudiantes mediante cuestionarios interactivos y material de estudio accesible.', url: 'https://www.un.org/sustainabledevelopment/es/education/' },
+              { num: 17, titulo: 'Alianzas para los Objetivos', detalle: 'La plataforma fomenta la colaboración entre estudiantes, colaboradores y docentes para crear y compartir material educativo de calidad, fortaleciendo las alianzas en favor del aprendizaje.', url: 'https://www.un.org/sustainabledevelopment/es/globalpartnerships/' },
             ].map(ods => (
               <OdsBadge key={ods.num} {...ods} />
             ))}
@@ -233,35 +247,38 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Columna 2: links de navegación */}
+          {/* Columna 2: links de navegación (Link de react-router: navegación
+              interna sin recargar la página, evita el "Not Found" en producción) */}
           <div className="footer-col">
             <h4 className="footer-titulo">Navegación</h4>
             <ul className="footer-links">
-              <li><a href="/">Inicio</a></li>
-              <li><a href="/cuestionarios">Cuestionarios</a></li>
-              <li><a href="/login">Iniciar sesión</a></li>
-              <li><a href="/registro">Registrarse</a></li>
+              <li><Link to="/">Inicio</Link></li>
+              <li><Link to="/cuestionarios">Cuestionarios</Link></li>
+              <li><Link to="/login">Iniciar sesión</Link></li>
+              <li><Link to="/registro">Registrarse</Link></li>
             </ul>
           </div>
 
-          {/* Columna 3: links de la API */}
+          {/* Columna 3: links de la API (enlaces externos reales, sí deben
+              ser <a> normales porque salen de la app) */}
           <div className="footer-col">
             <h4 className="footer-titulo">API</h4>
             <ul className="footer-links">
-              <li><a href={API_URL} target="_blank">API Principal</a></li>
-              <li><a href={`${API_URL}/asignaturas`} target="_blank">GET /asignaturas</a></li>
-              <li><a href={`${API_URL}/reportes`} target="_blank">GET /reportes</a></li>
+              <li><a href={API_URL} target="_blank" rel="noopener noreferrer">API Principal</a></li>
+              <li><a href={`${API_URL}/asignaturas`} target="_blank" rel="noopener noreferrer">GET /asignaturas</a></li>
+              <li><a href={`${API_URL}/reportes`} target="_blank" rel="noopener noreferrer">GET /reportes</a></li>
             </ul>
           </div>
 
-          {/* Columna 4: ODS */}
+          {/* Columna 4: ODS — antes tenía <link rel="stylesheet"> (una
+              etiqueta inválida para esto, no generaba ningún enlace
+              visible/clickeable). Ahora son <a> reales hacia la página
+              oficial de cada ODS en la ONU. */}
           <div className="footer-col">
             <h4 className="footer-titulo">ODS</h4>
             <ul className="footer-links">
-              <li>ODS 4 · Educación de Calidad</li>
-              <link rel="stylesheet" href="https://www.un.org/sustainabledevelopment/es/education/" />
-              <li>ODS 17 · Alianzas para los Objetivos</li>
-              <link rel="stylesheet" href="https://www.un.org/sustainabledevelopment/es/partnerships/" />
+              <li><a href="https://www.un.org/sustainabledevelopment/es/education/" target="_blank" rel="noopener noreferrer">ODS 4 · Educación de Calidad</a></li>
+              <li><a href="https://www.un.org/sustainabledevelopment/es/globalpartnerships/" target="_blank" rel="noopener noreferrer">ODS 17 · Alianzas para los Objetivos</a></li>
             </ul>
           </div>
 
