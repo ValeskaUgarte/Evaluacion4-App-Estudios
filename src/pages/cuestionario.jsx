@@ -64,8 +64,13 @@ export default function Cuestionario() {
     <>
       <Navbar /> 
       <header>
-        {/* Versión escritorio/tablet: imágenes a los costados del texto */}
-        <div className="header-desktop" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem' }}>
+        {/* Versión escritorio/tablet: imágenes a los costados del texto.
+            IMPORTANTE: sin style inline aquí — un estilo inline siempre
+            gana sobre la regla @media de cuestionario.css que oculta
+            este bloque en celular (display:none), así que si volviera
+            a agregarse un style inline con display:flex, este bloque
+            se mostraría duplicado junto al header-mobile de abajo. */}
+        <div className="header-desktop">
           <img src="/img/app002.jpg" style={{ width: '130px', objectFit: 'contain' }} alt="estudiante" />
           <div>
             <h1>Cuestionarios</h1>

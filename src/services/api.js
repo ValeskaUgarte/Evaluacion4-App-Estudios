@@ -377,7 +377,32 @@ export function getAsignaturas() {
       p => p.asignaturaId === a.key || p.asignatura === a.key
     ).length,
   }));
-  return Promise.resolve([...delArchivo, ...delAdminConTotal]);
+
+  const combinadasLocal = [...delArchivo, ...delAdminConTotal];
+
+  // EVALUACIÓN 4 · Requisito "Integración con CRUD existente": las
+  // asignaturas creadas u obtenidas directamente desde la API externa
+  // (server.cjs / db.json, colección "asignaturas") también deben
+  // aparecer aquí, no solo las locales. Se agregan SOLO las que no
+  // existan ya con esa key (para no duplicar ni pisar las locales),
+  // y si la API no responde (apagada, URL mal configurada, sin
+  // conexión) se ignora en silencio y la app sigue funcionando con
+  // el banco local + estático de siempre.
+  const keysExistentes = new Set(combinadasLocal.map(a => a.key));
+  return fetch(`${API_URL}/asignaturas`)
+    .then(r => (r.ok ? r.json() : []))
+    .catch(() => [])
+    .then(desdeApi => {
+      const nuevasDeApi = (Array.isArray(desdeApi) ? desdeApi : [])
+        .filter(a => a?.key && !keysExistentes.has(a.key))
+        .map(a => ({
+          key: a.key,
+          nombre: a.nombre || a.key,
+          totalPreguntas: a.totalPreguntas || 0,
+          origenAPI: true, // trazabilidad: para distinguirlas en la UI si hace falta
+        }));
+      return [...combinadasLocal, ...nuevasDeApi];
+    });
 }
 
 // getPreguntasPorAsignatura
