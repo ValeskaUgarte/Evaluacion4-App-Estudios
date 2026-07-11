@@ -301,15 +301,17 @@ header p {
     align-items: center;
     gap: 0.3rem;
   }
-  
+
   /*Tamaño imagen header móvil*/
-  .header-mobile-images img {
-  width: 150px;   
-  object-fit: contain;
-}
+  .header-mobile-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
 
   .header-mobile-images img {
-    width: 70px;
+    width: 130px;
     object-fit: contain;
   }
 
