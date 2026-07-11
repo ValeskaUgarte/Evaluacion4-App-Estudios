@@ -173,7 +173,8 @@ function normalizar(p) {
     respuestaCorrecta: p.ans ?? p.respuestaCorrecta,
     explicacion: p.exp ?? p.explicacion,
     dificultad: p.diff ?? p.dificultad ?? 'medium',
-    unidad: p.unit ?? p.unidad ?? '',
+    unidad: p.unit ?? false,
+    temario: p.temario ?? false,
     profe: p.profe ?? false,
     case: p.case ?? '',
     extra: p.extra ?? '',
@@ -420,6 +421,7 @@ export function getPreguntasPorAsignatura(key) {
       explicacion: p.explicacion ?? '',
       dificultad: p.dificultad ?? 'medium',
       unidad: p.unidad ?? '',
+      temario: p.temario ?? false,     // ← agregado, faltaba
       profe: p.esDelProfesor === true,
       case: p.caso ?? '',
       extra: p.extra ?? '',
@@ -429,7 +431,6 @@ export function getPreguntasPorAsignatura(key) {
     }));
   return Promise.resolve([...delArchivo, ...delAdmin]);
 }
-
 export const getPreguntasByKey = (key) => getPreguntasPorAsignatura(key);
 
 

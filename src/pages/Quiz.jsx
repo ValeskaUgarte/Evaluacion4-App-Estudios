@@ -285,7 +285,8 @@ if (esIdioma && !nivelElegido) {
         <div className="quiz-card">
           <div className="quiz-meta">
             <span className={`badge badge-${pregunta.dificultad}`}>{DIFICULTAD_LABEL[pregunta.dificultad] || pregunta.dificultad}</span>
-            {pregunta.profe && <span className="badge badge-profe">📋 Profe</span>}
+            {pregunta.profe && <span className="badge badge-profe">Profe</span>}
+            {pregunta.temario && <span className="badge badge-temario">Temario examen</span>}
             <span className="quiz-unidad">{pregunta.unidad}</span>
           </div>
 
