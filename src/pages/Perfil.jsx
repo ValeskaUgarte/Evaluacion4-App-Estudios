@@ -36,6 +36,29 @@ export default function Perfil() {
   // Solo se muestra si el usuario es administrador, a modo de demo.
   const actividadAdmin = usuario.rol === 'admin' ? getActividad() : [];
 
+  // FILTROS de la actividad reciente: por tipo (pregunta/asignatura/
+  // reporte/moderador/todas) y por fecha exacta.
+  const [filtroTipo, setFiltroTipo] = useState('todas');
+  const [filtroFecha, setFiltroFecha] = useState('');
+
+  const actividadFiltrada = actividadAdmin.filter(a => {
+    const tipo = a.tipo || 'general';
+    if (filtroTipo !== 'todas' && tipo !== filtroTipo) return false;
+    if (filtroFecha) {
+      const fechaActividad = new Date(a.fecha).toISOString().slice(0, 10);
+      if (fechaActividad !== filtroFecha) return false;
+    }
+    return true;
+  });
+
+  const ETIQUETAS_TIPO = {
+    pregunta: 'Pregunta',
+    asignatura: 'Asignatura',
+    reporte: 'Reporte',
+    moderador: 'Moderador',
+    general: 'General',
+  };
+
   // RENDER
   return (
     <>
@@ -106,12 +129,26 @@ export default function Perfil() {
         </div>
       )}
 
-        {/*HISTORIAL Lista de resultados de quizzes*/}
+        {/*HISTORIAL Lista de resultados de quizzes. Para el admin se
+            muestra en grid compacto para no ocupar tanto espacio y no
+            interrumpir visualmente la sección de Actividad reciente
+            de más abajo.*/}
 
         <div className="perfil-section">
           <h3>Historial de quizzes</h3>
           {historial.length === 0 ? (
             <p className="perfil-empty">Aún no has realizado ningún quiz.</p>
+          ) : usuario.rol === 'admin' ? (
+            <div className="historial-grid">
+              {[...historial].reverse().map((h, i) => (
+                <div key={i} className={`historial-grid-item ${h.nota >= 4.0 ? 'item-ok' : 'item-mal'}`}>
+                  <p className="historial-asig">{h.asignatura?.nombre ?? h.asignatura}</p>
+                  <span className="historial-nota">{(h.nota ?? 0).toFixed(1)}</span>
+                  <p className="historial-detalle">{h.correctas}/{h.total}</p>
+                  <p className="historial-fecha">{new Date(h.fecha).toLocaleDateString('es-CL')}</p>
+                </div>
+              ))}
+            </div>
           ) : (
             <div className="historial-lista">
               {[...historial].reverse().map((h, i) => (
@@ -132,20 +169,51 @@ export default function Perfil() {
 
         {/* ACTIVIDAD DEL ADMINISTRADOR, solo visible para el rol admin,
             muestra sus últimas acciones en el panel como demostración
-            de la funcionalidad para la evaluación. */}
+            de la funcionalidad para la evaluación. Incluye filtros por
+            tipo de acción y por fecha para un mejor control. */}
         {usuario.rol === 'admin' && (
           <div className="perfil-section">
             <h3>Actividad reciente en el panel</h3>
+
+            {actividadAdmin.length > 0 && (
+              <div className="actividad-filtros">
+                <select value={filtroTipo} onChange={e => setFiltroTipo(e.target.value)}>
+                  <option value="todas">Todas las acciones</option>
+                  <option value="pregunta">Preguntas</option>
+                  <option value="asignatura">Asignaturas</option>
+                  <option value="reporte">Reportes</option>
+                  <option value="moderador">Moderadores</option>
+                </select>
+                <input
+                  type="date"
+                  value={filtroFecha}
+                  onChange={e => setFiltroFecha(e.target.value)}
+                />
+                {(filtroTipo !== 'todas' || filtroFecha) && (
+                  <button
+                    type="button"
+                    className="btn btn-ghost btn-sm"
+                    onClick={() => { setFiltroTipo('todas'); setFiltroFecha(''); }}
+                  >
+                    Limpiar filtros
+                  </button>
+                )}
+              </div>
+            )}
+
             {actividadAdmin.length === 0 ? (
               <p className="perfil-empty">Aún no has hecho cambios en el panel de administración.</p>
+            ) : actividadFiltrada.length === 0 ? (
+              <p className="perfil-empty">No hay actividad que coincida con los filtros seleccionados.</p>
             ) : (
               <div className="historial-lista">
-                {actividadAdmin.map((a, i) => (
+                {actividadFiltrada.map((a, i) => (
                   <div key={i} className="historial-item">
                     <div className="historial-info">
                       <p className="historial-asig">{a.texto}</p>
                       <p className="historial-fecha">{new Date(a.fecha).toLocaleString('es-CL')}</p>
                     </div>
+                    <span className="actividad-tipo-badge">{ETIQUETAS_TIPO[a.tipo || 'general']}</span>
                   </div>
                 ))}
               </div>

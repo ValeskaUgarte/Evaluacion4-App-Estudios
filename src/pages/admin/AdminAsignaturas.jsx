@@ -1,5 +1,5 @@
 // src/pages/admin/AdminAsignaturas.jsx
-// TAB ASIGNATURAS - lista de asignaturas, detalle (preguntas de una
+// TAB ASIGNATURAS, lista de asignaturas, detalle (preguntas de una
 // asignatura en particular) y formulario para crear una asignatura.
 // (Mismo comportamiento y clases CSS que estaban en Admin.jsx; solo
 // se movió el JSX a un componente propio.)
@@ -17,7 +17,7 @@ export default function AdminAsignaturas({
   formA, setFormA,
   guardarAsignatura, borrarA,
 }) {
-  // ── DETALLE: preguntas de UNA asignatura, con editar/eliminar ──
+  //DETALLE: preguntas de UNA asignatura, con editar/eliminar
   if (asigDetalle) {
     return (
       <div>
@@ -46,7 +46,7 @@ export default function AdminAsignaturas({
                   <span className={`badge badge-${p.dificultad}`}>{DIFICULTAD_LABEL[p.dificultad] || p.dificultad}</span>
                   {typeof p.esDelProfesor === 'boolean' && (
                     <span className="badge" style={{ background: p.esDelProfesor ? '#e8f0fe' : '#f4f0fa', color: p.esDelProfesor ? '#3a5aa0' : '#7a6a9a' }}>
-                      {p.esDelProfesor ? '📄 Del profesor' : '✏️ Inventada'}
+                      {p.esDelProfesor ? 'Del profesor' : 'Inventada'}
                     </span>
                   )}
                 </div>
@@ -64,7 +64,7 @@ export default function AdminAsignaturas({
     );
   }
 
-  // ── LISTA: todas las asignaturas (clic entra al detalle) ──
+  //LISTA: todas las asignaturas (clic entra al detalle)
   return (
     <div>
       <div className="admin-form card">
@@ -80,7 +80,7 @@ export default function AdminAsignaturas({
           </div>
           <div className="form-group" style={{ flex: 1 }}>
             <label className="input-label" htmlFor="asig-icono">Ícono (emoji, opcional)</label>
-            <input id="asig-icono" name="icono" className="input" value={formA.icono} onChange={e => setFormA(f => ({ ...f, icono: e.target.value.slice(0, 4) }))} placeholder="📚" />
+            <input id="asig-icono" name="icono" className="input" value={formA.icono} onChange={e => setFormA(f => ({ ...f, icono: e.target.value.slice(0, 4) }))} placeholder="" />
           </div>
         </div>
         <div className="form-group">

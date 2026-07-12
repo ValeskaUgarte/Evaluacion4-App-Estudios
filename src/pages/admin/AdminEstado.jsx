@@ -1,5 +1,5 @@
 // src/pages/admin/AdminEstado.jsx
-// TAB ESTADO - Activar/desactivar cuestionarios (solo admin).
+// TAB ESTADO - Activar o desactivar cuestionarios (solo admin).
 export default function AdminEstado({ asignaturas = [], desactivadas = [], manejarToggleAsignatura }) {
   return (
     <div>
@@ -14,8 +14,8 @@ export default function AdminEstado({ asignaturas = [], desactivadas = [], manej
             <div key={a.key} className="asig-item card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <div style={{ flex: 1 }}>
                 <p className="asig-nombre">{a.icono ? `${a.icono} ` : ''}{a.nombre}</p>
-                <p className="asig-desc" style={{ color: activa ? 'var(--accent2, #00d4a0)' : 'var(--danger, #ff4f6a)' }}>
-                  {activa ? '🟢 Activo (visible para estudiantes)' : '🔴 Desactivado (oculto)'}
+                <p className="asig-desc" style={{ color: activa ? 'var(--accent2, #00d4a0)' : 'var(--danger, #f87e91)' }}>
+                  {activa ? 'Activo (visible para estudiantes)' : 'Desactivado (oculto)'}
                 </p>
               </div>
               <button

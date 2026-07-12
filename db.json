@@ -117,22 +117,6 @@
   ],
   "reportes": [
     {
-      "pregunta": "Complete: 'The cat ___ on the bed all day.'",
-      "asignatura": "ingles_basico",
-      "motivo": "Respuesta incorrecta",
-      "fecha": "2026-07-11T02:06:43.946Z",
-      "usuario": "anonimo",
-      "id": 1
-    },
-    {
-      "pregunta": "Complete: 'The dog ___ (bark) loudly.'",
-      "asignatura": "ingles_basico",
-      "motivo": "Error en la pregunta",
-      "fecha": "2026-07-11T02:06:48.818Z",
-      "usuario": "anonimo",
-      "id": 2
-    },
-    {
       "pregunta": "¿Qué símbolo identifica a un usuario con privilegios de administrador (root) en Linux?",
       "asignatura": "linux",
       "motivo": "Contenido inapropiado",
@@ -171,6 +155,14 @@
       "fecha": "2026-07-11T02:07:50.098Z",
       "usuario": "anonimo",
       "id": 7
+    },
+    {
+      "pregunta": "¿Cómo se denomina, según la RAE, la conexión física y funcional entre dos aparatos, dispositivos o sistemas que permite la comunicación entre ellos?",
+      "asignatura": "introduccion_programacion_robotica",
+      "motivo": "Respuesta incorrecta",
+      "fecha": "2026-07-11T23:26:08.848Z",
+      "usuario": "anonimo",
+      "id": 8
     }
   ]
 }

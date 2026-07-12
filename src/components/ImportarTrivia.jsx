@@ -1,5 +1,5 @@
 // src/components/ImportarTrivia.jsx
-// ══════════════════════════════════════════════════════════
+
 // EVALUACIÓN 4 · Componente que consume la API externa Open Trivia DB
 // (src/services/opentdb.js) y permite importar las preguntas obtenidas
 // hacia el banco de preguntas propio de la app (LocalStorage, vía
@@ -14,14 +14,14 @@
 //
 // Maneja explícitamente los 5 estados pedidos por la pauta:
 //   cargando · éxito · error · sin resultados · actualización de datos
-// ══════════════════════════════════════════════════════════
+
 
 import { useState, useEffect } from 'react';
 import { fetchCategoriasTrivia, fetchPreguntasTrivia } from '../services/opentdb';
 import { crearPregunta, estadoSegunRol, registrarActividad } from '../services/api';
 import './ImportarTrivia.css';
 
-const DIFICULTAD_LABEL = { easy: '🟢 Fácil', medium: '🟡 Media', hard: '🔴 Difícil' };
+const DIFICULTAD_LABEL = { easy: 'Fácil', medium: 'Media', hard: 'Difícil' };
 
 export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
   // ── Categorías de la API (se cargan una vez, al montar) ──
@@ -151,8 +151,8 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
 
       setMsgImport({
         texto: fallidas === 0
-          ? `✅ Se importaron ${exitosas} pregunta(s)${estadoNuevo === 'pendiente' ? ' — quedaron pendientes de aprobación en el tab Revisión.' : ' correctamente.'}`
-          : `⚠️ Se importaron ${exitosas}, pero ${fallidas} fallaron. Puedes reintentar con las que quedaron en la lista.`,
+          ? `✓ Se importaron ${exitosas} pregunta(s)${estadoNuevo === 'pendiente' ? ' — quedaron pendientes de aprobación en el tab Revisión.' : ' correctamente.'}`
+          : `X Se importaron ${exitosas}, pero ${fallidas} fallaron. Puedes reintentar con las que quedaron en la lista.`,
         tipo: fallidas === 0 ? 'success' : 'error',
       });
 
@@ -169,12 +169,12 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
   return (
     <div className="importar-trivia">
       <div className="card importar-intro">
-        <h3>🌐 Importar preguntas desde una API externa</h3>
+        <h3>Importar preguntas desde una API externa</h3>
         <p className="importar-desc">
           Trae preguntas listas desde <strong>Open Trivia DB</strong> (API pública de trivia) y
           agrégalas al banco de preguntas de una asignatura. Como esa API solo entrega contenido en
-          inglés, cada pregunta y sus opciones se <strong>traducen automáticamente al español</strong> antes
-          de mostrarse. {usuario?.rol === 'admin'
+          inglés, cada pregunta y sus opciones se <strong>traducen automáticamente al español</strong> mediante strong <strong>MyMemory</strong>, 
+          antes de mostrarse. {usuario?.rol === 'admin'
             ? 'Como administrador, quedarán aprobadas de inmediato.'
             : 'Quedarán en estado "pendiente" hasta que un administrador o moderador las apruebe.'}
         </p>
@@ -184,7 +184,7 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
       <div className="card">
         <div className="form-row">
           <div className="form-group" style={{ flex: 2 }}>
-            <label className="input-label" htmlFor="trivia-asignatura">📚 Asignatura de destino *</label>
+            <label className="input-label" htmlFor="trivia-asignatura">Asignatura de destino *</label>
             <select
               id="trivia-asignatura"
               className="input"
@@ -199,7 +199,7 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
           </div>
 
           <div className="form-group" style={{ flex: 2 }}>
-            <label className="input-label" htmlFor="trivia-categoria">🏷️ Categoría (Open Trivia DB)</label>
+            <label className="input-label" htmlFor="trivia-categoria">Categoría (Open Trivia DB)</label>
             {estadoCategorias === 'cargando' && <p className="importar-hint">Cargando categorías…</p>}
             {estadoCategorias === 'error' && (
               <p className="importar-hint importar-hint-error">No se pudieron cargar las categorías. Puedes buscar sin filtrar por categoría.</p>
@@ -219,17 +219,17 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
           </div>
 
           <div className="form-group" style={{ flex: 1 }}>
-            <label className="input-label" htmlFor="trivia-dificultad">📊 Dificultad</label>
+            <label className="input-label" htmlFor="trivia-dificultad">Dificultad</label>
             <select id="trivia-dificultad" className="input" value={dificultad} onChange={e => setDificultad(e.target.value)}>
               <option value="">Cualquiera</option>
-              <option value="easy">🟢 Fácil</option>
-              <option value="medium">🟡 Media</option>
-              <option value="hard">🔴 Difícil</option>
+              <option value="easy">Fácil</option>
+              <option value="medium">Media</option>
+              <option value="hard">Difícil</option>
             </select>
           </div>
 
           <div className="form-group" style={{ flex: 1 }}>
-            <label className="input-label" htmlFor="trivia-cantidad">🔢 Cantidad</label>
+            <label className="input-label" htmlFor="trivia-cantidad">Cantidad</label>
             <input
               id="trivia-cantidad"
               type="number"
@@ -247,33 +247,33 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
             {estado === 'cargando' ? 'Buscando…' : '🔍 Buscar preguntas'}
           </button>
           {estado !== 'idle' && estado !== 'cargando' && (
-            <button className="btn btn-sm" onClick={actualizar}>🔄 Actualizar resultados</button>
+            <button className="btn btn-sm" onClick={actualizar}>Actualizar resultados</button>
           )}
         </div>
       </div>
 
-      {/* ── ESTADO: CARGANDO ── */}
+      {/*ESTADO: CARGANDO */}
       {estado === 'cargando' && (
         <div className="loading importar-loading">
           <span className="importar-spinner" aria-hidden="true" /> Consultando Open Trivia DB y traduciendo al español…
         </div>
       )}
 
-      {/* ── ESTADO: ERROR ── */}
+      {/* ESTADO: ERROR */}
       {estado === 'error' && (
         <div className="admin-flash-inline error">
           {errorMsg}
         </div>
       )}
 
-      {/* ── ESTADO: SIN RESULTADOS ── */}
+      {/* ESTADO: SIN RESULTADOS*/}
       {estado === 'vacio' && (
         <div className="admin-flash-inline warn">
           No se encontraron preguntas para esos filtros. Prueba cambiando la categoría, dificultad o cantidad.
         </div>
       )}
 
-      {/* ── ESTADO: ÉXITO — listado de preguntas obtenidas ── */}
+      {/* ESTADO: ÉXITO, listado de preguntas obtenidas */}
       {estado === 'exito' && resultados.length > 0 && (
         <div className="card">
           <div className="admin-list-header">
@@ -323,7 +323,7 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
             disabled={importando || seleccionadasCount === 0 || !asignaturaId}
             style={{ marginTop: '1rem' }}
           >
-            {importando ? 'Importando…' : `⬇️ Importar ${seleccionadasCount} seleccionada(s)`}
+            {importando ? 'Importando…' : `Importar ${seleccionadasCount} seleccionada(s)`}
           </button>
           {!asignaturaId && <p className="importar-hint importar-hint-error">Elige una asignatura de destino para poder importar.</p>}
         </div>

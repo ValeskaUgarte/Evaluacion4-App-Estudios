@@ -58,10 +58,10 @@ export default function Quiz() {
       let pregsFiltradas = preg;
       if (esIdioma && nivelElegido && nivelElegido !== 'todos') {
         pregsFiltradas = preg.filter(p => {
-          if (nivelElegido === 'basico')     return p.profe === true;
+          if (nivelElegido === 'basico') return p.profe === true;
           if (nivelElegido === 'intermedio') return p.intermedio === true;
-          if (nivelElegido === 'avanzado')   return p.avanzado === true;
-          if (nivelElegido === 'experto')    return p.experto === true;
+          if (nivelElegido === 'avanzado') return p.avanzado === true;
+          if (nivelElegido === 'experto') return p.experto === true;
           return true;
         });
       }
@@ -122,10 +122,10 @@ if (esIdioma && !nivelElegido) {
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', maxWidth: '320px', margin: '0 auto' }}>
             {[
-              { key: 'basico',      label: '⭐ Básico',       desc: 'Hiragana, vocabulario y saludos' },
-              { key: 'intermedio',  label: '⭐⭐ Intermedio',  desc: 'Gramática y conjugaciones' },
-              { key: 'avanzado',    label: '⭐⭐⭐ Avanzado',  desc: 'Keigo y estructuras complejas' },
-              { key: 'experto',     label: '⭐⭐⭐⭐ Experto', desc: 'Japonés clásico y dialectos' },
+              { key: 'basico',label: 'Básico', desc: 'Hiragana, vocabulario y saludos' },
+              { key: 'intermedio', label: 'Intermedio', desc: 'Gramática y conjugaciones' },
+              { key: 'avanzado', label: 'Avanzado', desc: 'Keigo y estructuras complejas' },
+              { key: 'experto', label: 'Experto', desc: 'Japonés clásico y dialectos' },
             ].map(n => (
               <button
                 key={n.key}
@@ -143,7 +143,7 @@ if (esIdioma && !nivelElegido) {
               onClick={() => setNivelElegido('todos')}
             >
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontWeight: '600' }}>📚 Todos los niveles</div>
+                <div style={{ fontWeight: '600' }}>Todos los niveles</div>
                 <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>Mezcla preguntas de todos los niveles</div>
               </div>
             </button>
@@ -250,7 +250,7 @@ if (esIdioma && !nivelElegido) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
             
             {/* Barra de vida */}
-            <span style={{ fontSize: '0.7rem', color: 'var(--muted)' }}>❤️</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--muted)' }}></span>
             <div style={{ flex: 1, height: '6px', background: '#faeaea', borderRadius: '99px', overflow: 'hidden' }}>
               <div style={{
                 height: '100%',
@@ -294,7 +294,7 @@ if (esIdioma && !nivelElegido) {
               "caso" en las preguntas creadas desde Admin/Colaborador */}
           {(pregunta.case || pregunta.caso) && (
             <div className="quiz-case">
-              📖 <strong>Caso práctico:</strong> {pregunta.case || pregunta.caso}
+              <strong>Caso práctico:</strong> {pregunta.case || pregunta.caso}
             </div>
           )}
 
@@ -334,7 +334,7 @@ if (esIdioma && !nivelElegido) {
           {confirmada && (
             <div className={`explicacion ${seleccionada === pregunta.respuestaCorrecta ? 'exp-ok' : 'exp-error'}`}>
               <p className="exp-titulo">
-                {seleccionada === pregunta.respuestaCorrecta ? '✅ ¡Correcto!' : '❌ Incorrecto'}
+                {seleccionada === pregunta.respuestaCorrecta ? '¡Correcto!' : 'Incorrecto'}
               </p>
               <p>{pregunta.explicacion}</p>
             </div>

@@ -1,6 +1,4 @@
-/* ============================================================
-   CUESTIONARIO.CSS - Estilos para el sistema de cuestionarios
-   ============================================================ */
+/* CUESTIONARIO.CSS - Estilos para el sistema de cuestionarios */
 
 /* HEADER */
 header {
@@ -259,7 +257,7 @@ header p {
   font-weight: 600;
 }
 
-/* ── ORDEN (select chico, mismo lenguaje visual que el resto de la app) ── */
+/* ORDEN (select chico, mismo lenguaje visual que el resto de la app) */
 .orden-row {
   display: flex;
   align-items: center;
@@ -274,9 +272,9 @@ header p {
   padding: 0.35rem 0.6rem;
 }
 
-/* ── HEADER ESCRITORIO (con las mismas propiedades que antes iban inline;
+/*HEADER ESCRITORIO (con las mismas propiedades que antes iban inline;
    deben vivir aquí para que la media query de abajo pueda ocultarlo en
-   móvil — un estilo inline nunca puede ser sobreescrito por una clase) ── */
+   móvil, un estilo inline nunca puede ser sobreescrito por una clase) */
 .header-desktop {
   display: flex;
   align-items: center;
@@ -284,7 +282,7 @@ header p {
   gap: 2rem;
 }
 
-/* ── HEADER MÓVIL (oculto por defecto; visible solo en pantalla angosta) ── */
+/*HEADER MÓVIL (oculto por defecto; visible solo en pantalla angosta) */
 .header-mobile {
   display: none;
 }
@@ -365,7 +363,7 @@ header p {
     margin-top: 0.3rem;
   }
 }
-/* ── ASIGNATURA DESACTIVADA (activar/desactivar cuestionarios) ── */
+/*ASIGNATURA DESACTIVADA (activar, desactivar cuestionarios)*/
 .subject-disabled {
   position: relative;
   opacity: 0.5;

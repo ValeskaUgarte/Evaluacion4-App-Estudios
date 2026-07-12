@@ -59,11 +59,11 @@ export default function Admin() {
   const [ordenAsignaturas, setOrdenAsignaturas] = useState('fecha'); // 'fecha' o 'nombre'
   const [asigDetalle, setAsigDetalle] = useState(null); // Asignatura cuyo detalle (preguntas) se está viendo, o null
 
-  // ── MODERACIÓN: preguntas y asignaturas pendientes de aprobación ──
+  //MODERACIÓN: preguntas y asignaturas pendientes de aprobación
   const [preguntasPend, setPreguntasPend] = useState([]);
   const [asignaturasPend, setAsignaturasPend] = useState([]);
 
-  // ── MODERADORES: lista de usuarios registrados (solo admin la usa) ──
+  //MODERADORES: lista de usuarios registrados (solo admin la usa)
   const [usuarios, setUsuarios] = useState([]);
 
   // FUNCIONES AUXILIARES
@@ -97,7 +97,7 @@ export default function Admin() {
   function manejarToggleAsignatura(key) {
     toggleAsignaturaActiva(key);
     setDesactivadas(getAsignaturasDesactivadas());
-    registrarActividad(`Cambió el estado (activo/inactivo) de la asignatura "${key}"`);
+    registrarActividad(`Cambió el estado (activo/inactivo) de la asignatura "${key}"`, 'asignatura');
   }
 
 
@@ -151,11 +151,11 @@ export default function Admin() {
       if (editId) {
         await editarPregunta(editId, payload);
         flash('Pregunta actualizada ✓');
-        registrarActividad(`Editó la pregunta "${preguntaLimpia.slice(0, 60)}"`);
+        registrarActividad(`Editó la pregunta "${preguntaLimpia.slice(0, 60)}"`, 'pregunta');
       } else {
         await crearPregunta(payload);
         flash('Pregunta creada ✓');
-        registrarActividad(`Creó la pregunta "${preguntaLimpia.slice(0, 60)}"`);
+        registrarActividad(`Creó la pregunta "${preguntaLimpia.slice(0, 60)}"`, 'pregunta');
       }
       setForm(EMPTY_P);
       setEditId(null);
@@ -207,7 +207,7 @@ export default function Admin() {
     if (!confirm('¿Eliminar esta pregunta?')) return;
     await eliminarPregunta(id);
     flash('Eliminada ✓');
-    registrarActividad('Eliminó una pregunta del banco');
+    registrarActividad('Eliminó una pregunta del banco', 'pregunta');
     cargar();
   }
 
@@ -224,7 +224,7 @@ export default function Admin() {
     const payload = { ...formA, nombre: nombreLimpio, key: nombreLimpio.toLowerCase().replace(/\s+/g, '_'), estado: 'aprobado' };
     await crearAsignatura(payload);
     flash('Asignatura creada ✓');
-    registrarActividad(`Creó la asignatura "${nombreLimpio}"`);
+    registrarActividad(`Creó la asignatura "${nombreLimpio}"`, 'asignatura');
     setFormA(EMPTY_A);
     cargar();
   }
@@ -234,19 +234,19 @@ export default function Admin() {
     if (!confirm('¿Eliminar esta asignatura?')) return;
     await eliminarAsignatura(id);
     flash('Eliminada ✓');
-    registrarActividad('Eliminó una asignatura');
+    registrarActividad('Eliminó una asignatura', 'asignatura');
     cargar();
   }
 
-  // ══════════════════════════════════════════════════════════
+
   // ACCIONES DEL TAB "REVISIÓN" - aprobar/rechazar lo que enviaron
   // colaboradores y moderadores. Disponibles tanto para admin como
   // para moderador (por eso NO se filtran por esAdmin).
-  // ══════════════════════════════════════════════════════════
+ 
   async function aprobarPreg(id) {
     await aprobarPregunta(id);
     flash('Pregunta aprobada ✓');
-    registrarActividad('Aprobó una pregunta pendiente');
+    registrarActividad('Aprobó una pregunta pendiente', 'pregunta');
     cargar();
   }
 
@@ -254,14 +254,14 @@ export default function Admin() {
     if (!confirm('¿Rechazar (eliminar) esta pregunta pendiente?')) return;
     await rechazarPregunta(id);
     flash('Pregunta rechazada');
-    registrarActividad('Rechazó una pregunta pendiente');
+    registrarActividad('Rechazó una pregunta pendiente', 'pregunta');
     cargar();
   }
 
   async function aprobarAsig(id) {
     await aprobarAsignatura(id);
     flash('Asignatura aprobada ✓');
-    registrarActividad('Aprobó una asignatura pendiente');
+    registrarActividad('Aprobó una asignatura pendiente', 'asignatura');
     cargar();
   }
 
@@ -269,18 +269,18 @@ export default function Admin() {
     if (!confirm('¿Rechazar (eliminar) esta asignatura pendiente?')) return;
     await rechazarAsignatura(id);
     flash('Asignatura rechazada');
-    registrarActividad('Rechazó una asignatura pendiente');
+    registrarActividad('Rechazó una asignatura pendiente', 'asignatura');
     cargar();
   }
 
-  // ══════════════════════════════════════════════════════════
+ 
   // ACCIONES DEL TAB "MODERADORES" (solo admin)
-  // ══════════════════════════════════════════════════════════
+  
   function handleNombrarModerador(id) {
     nombrarModerador(id);
     setUsuarios(listarUsuarios());
     flash('Usuario nombrado moderador ✓');
-    registrarActividad('Nombró a un usuario como moderador');
+    registrarActividad('Nombró a un usuario como moderador', 'moderador');
   }
 
   function handleRevocarModerador(id) {
@@ -288,12 +288,12 @@ export default function Admin() {
     revocarModerador(id);
     setUsuarios(listarUsuarios());
     flash('Rol de moderador revocado');
-    registrarActividad('Revocó el rol de moderador a un usuario');
+    registrarActividad('Revocó el rol de moderador a un usuario', 'moderador');
   }
 
-  // ══════════════════════════════════════════════════════════
+
   // ACCIONES DEL TAB "REPORTES"
-  // ══════════════════════════════════════════════════════════
+
   function manejarIrAPregunta(r) {
     const preg = preguntas.find(p => p.pregunta === r.pregunta);
     if (preg) { editarP(preg); setTab('preguntas'); }
@@ -307,11 +307,13 @@ export default function Admin() {
       flash('Pregunta eliminada ✓');
     }
     await eliminarReporte(r.id);
+    registrarActividad(`Resolvió un reporte eliminando la pregunta "${(r.pregunta || '').slice(0, 60)}"`, 'reporte');
     cargar();
   }
 
   async function manejarDescartarReporte(r) {
     await eliminarReporte(r.id);
+    registrarActividad(`Descartó un reporte sobre la pregunta "${(r.pregunta || '').slice(0, 60)}"`, 'reporte');
     cargar();
   }
 
@@ -363,7 +365,7 @@ export default function Admin() {
               son SOLO para 'admin': así el moderador ayuda a revisar
               pero no tiene los mismos privilegios que el administrador. */}
           <button className={`tab ${tab === 'revision' ? 'tab-active' : ''}`} onClick={() => setTab('revision')}>
-            🕓 Revisión <span className="tab-count">{preguntasPend.length + asignaturasPend.length}</span>
+            Revisión <span className="tab-count">{preguntasPend.length + asignaturasPend.length}</span>
           </button>
           {esAdmin && (
             <button className={`tab ${tab === 'preguntas' ? 'tab-active' : ''}`} onClick={() => setTab('preguntas')}>
@@ -377,7 +379,7 @@ export default function Admin() {
           )}
           {esAdmin && (
             <button className={`tab ${tab === 'importar' ? 'tab-active' : ''}`} onClick={() => setTab('importar')}>
-              🌐 Importar API
+              Importar API
             </button>
           )}
           <button className={`tab ${tab === 'reportes' ? 'tab-active' : ''}`} onClick={() => setTab('reportes')}>
@@ -390,7 +392,7 @@ export default function Admin() {
           )}
           {esAdmin && (
             <button className={`tab ${tab === 'moderadores' ? 'tab-active' : ''}`} onClick={() => setTab('moderadores')}>
-              👤 Moderadores
+              Moderadores
             </button>
           )}
         </div>

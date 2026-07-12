@@ -15,7 +15,7 @@ export default function AdminRevision({
 }) {
   return (
     <div>
-      <h3 style={{ marginBottom: '0.6rem' }}>📚 Asignaturas pendientes ({asignaturasPend.length})</h3>
+      <h3 style={{ marginBottom: '0.6rem' }}>Asignaturas pendientes ({asignaturasPend.length})</h3>
       {asignaturasPend.length === 0 ? (
         <p style={{ color: 'var(--muted)', padding: '1rem 0' }}>No hay asignaturas pendientes.</p>
       ) : (
@@ -30,8 +30,8 @@ export default function AdminRevision({
                 </p>
               </div>
               <div className="preg-actions">
-                <button className="btn btn-primary btn-sm" onClick={() => aprobarAsig(a._id)}>✅ Aprobar</button>
-                <button className="btn btn-danger btn-sm" onClick={() => rechazarAsig(a._id)}>❌ Rechazar</button>
+                <button className="btn btn-primary btn-sm" onClick={() => aprobarAsig(a._id)}>✓ Aprobar</button>
+                <button className="btn btn-danger btn-sm" onClick={() => rechazarAsig(a._id)}>X Rechazar</button>
               </div>
             </div>
           ))}
@@ -65,8 +65,8 @@ export default function AdminRevision({
               </div>
               {p.explicacion && <p className="colab-exp">💡 {p.explicacion}</p>}
               <div className="preg-actions">
-                <button className="btn btn-primary btn-sm" onClick={() => aprobarPreg(p._id)}>✅ Aprobar</button>
-                <button className="btn btn-danger btn-sm" onClick={() => rechazarPreg(p._id)}>❌ Rechazar</button>
+                <button className="btn btn-primary btn-sm" onClick={() => aprobarPreg(p._id)}>✓ Aprobar</button>
+                <button className="btn btn-danger btn-sm" onClick={() => rechazarPreg(p._id)}>X Rechazar</button>
               </div>
             </div>
           ))}

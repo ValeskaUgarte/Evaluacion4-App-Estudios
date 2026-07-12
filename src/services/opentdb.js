@@ -16,10 +16,10 @@
 // una sola forma de consumir APIs en todo el proyecto. Como fetch NO
 // trae timeout de fábrica ni rechaza la promesa ante errores HTTP
 // (4xx/5xx), aquí se arma manualmente con:
-//   - AbortController + setTimeout → cancela la petición si tarda
-//     más de TIMEOUT_MS y se detecta como "tiempo de espera agotado".
-//   - Revisión explícita de response.ok → si es false, se lanza un
-//     error con el status HTTP para poder mostrarlo al usuario.
+//   AbortController + setTimeout - cancela la petición si tarda
+//   más de TIMEOUT_MS y se detecta como "tiempo de espera agotado".
+//   Revisión explícita de response.ok - si es false, se lanza un
+//   error con el status HTTP para poder mostrarlo al usuario.
 
 
 const BASE_URL = 'https://opentdb.com';
@@ -104,7 +104,7 @@ function traducirError(error) {
   }
 }
 
-// TRADUCCIÓN AUTOMÁTICA (EN - ES)
+// TRADUCCIÓN AUTOMÁTICA (EN ES)
 // Open Trivia DB solo entrega contenido en inglés, como la app y el
 // resto de las asignaturas están en español, cada texto (pregunta,
 // opciones, categoría) se traduce con la API pública y gratuita de
@@ -172,7 +172,7 @@ const RESPONSE_CODE_MSG = {
 export async function fetchCategoriasTrivia() {
   try {
     const data = await fetchConTimeout(`${BASE_URL}/api_category.php`);
-    // ── Validación de existencia y tipo de los datos recibidos ──
+    // Validación de existencia y tipo de los datos recibidos
     if (!data || !Array.isArray(data.trivia_categories)) {
       return { ok: false, error: 'La API de categorías devolvió un formato inesperado.' };
     }
@@ -235,10 +235,10 @@ export async function fetchPreguntasTrivia({ categoria = '', dificultad = '', ca
         };
       });
 
-    // Traducción EN - ES de cada pregunta (en paralelo)
+    // Traducción EN, ES de cada pregunta (en paralelo)
     // Si por algún motivo la API de traducción no responde, cada
     // pregunta individual conserva su texto en inglés en vez de que
-    // fallen todas: es más importante no perder la pregunta que
+    // fallen todas, es más importante no perder la pregunta que
     // bloquear la importación completa por un servicio externo caído.
     const preguntasTraducidas = await Promise.all(preguntas.map(traducirPregunta));
 

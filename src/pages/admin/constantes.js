@@ -1,14 +1,14 @@
 // src/pages/admin/constantes.js
-// ══════════════════════════════════════════════════════════
+
 // Constantes compartidas por Admin.jsx y por las pestañas del panel
-// (src/pages/admin/*). Se extrajeron tal cual estaban en Admin.jsx,
+// (src/pages/admin/*), se extrajeron tal cual estaban en Admin.jsx,
 // sin cambiar ningún valor, para que el comportamiento no cambie.
-// ══════════════════════════════════════════════════════════
+
 
 // CONFIGURACIÓN INICIAL Valores por defecto para formularios
 export const DIFFS = ['easy', 'medium', 'hard'];
 // Traducción de la dificultad al español para mostrarla en pantalla.
-// El valor interno ('easy'/'medium'/'hard') se mantiene igual porque
+// El valor interno ('easy' 'medium' 'hard') se mantiene igual porque
 // es el que se guarda en la API y el que usan las clases CSS de los badges.
 export const DIFICULTAD_LABEL = { easy: 'Fácil', medium: 'Media', hard: 'Difícil' };
 

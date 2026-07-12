@@ -1,5 +1,5 @@
 // src/pages/admin/AdminReportes.jsx
-// TAB REPORTES - reportes de errores enviados sobre preguntas.
+// TAB REPORTES, reportes de errores enviados sobre preguntas.
 // (Mismo comportamiento que estaba en Admin.jsx; las acciones
 // -ir a la pregunta, eliminar pregunta reportada, descartar reporte-
 // siguen resolviéndose en Admin.jsx y llegan aquí como funciones.)
@@ -29,7 +29,7 @@ export default function AdminReportes({
           {/* ACCIONES DEL REPORTE: ir a pregunta, eliminar pregunta, descartar reporte */}
           <div className="preg-actions">
             <button className="btn btn-ghost btn-sm" onClick={() => onIrAPregunta(r)}>
-              ✏️ Ir a la pregunta
+              Ir a la pregunta
             </button>
             <button className="btn btn-danger btn-sm" onClick={() => onEliminarPreguntaReportada(r)}>
               🗑️ Eliminar pregunta

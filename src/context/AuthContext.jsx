@@ -84,14 +84,27 @@ export function AuthProvider({ children }) {
     setUsuario(null);
   }
 
-  // ACTUALIZAR USUARIO - Modifica los datos del usuario logueado
+  // ACTUALIZAR USUARIO - Modifica los datos del usuario logueado.
+  // OJO: el admin fijo (admin@appestudios.cl) NO vive en la lista
+  // 'usuarios' de localStorage (es un usuario hardcodeado en login(),
+  // no pasa por registro()). Antes, esta función buscaba siempre al
+  // usuario en esa lista y, si no lo encontraba (como pasa con el
+  // admin fijo), cortaba la ejecución sin guardar nada — por eso los
+  // quizzes hechos como admin nunca quedaban en su historial. Ahora
+  // primero actualizamos siempre la sesión actual, y solo si el
+  // usuario existe en la lista 'usuarios' (estudiante/colaborador/
+  // moderador/admin registrado) también se actualiza ahí, para que
+  // sus datos persistan entre sesiones futuras.
   function actualizarUsuario(datos) {
+    const actualizado = { ...usuario, ...datos };
+
     const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
     const idx = usuarios.findIndex(u => u.id === usuario.id);
-    if (idx === -1) return;
-    const actualizado = { ...usuarios[idx], ...datos };
-    usuarios[idx] = actualizado;
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    if (idx !== -1) {
+      usuarios[idx] = actualizado;
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    }
+
     localStorage.setItem('usuario_actual', JSON.stringify(actualizado));
     setUsuario(actualizado);
   }

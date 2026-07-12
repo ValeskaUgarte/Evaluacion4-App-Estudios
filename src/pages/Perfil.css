@@ -57,21 +57,21 @@
   background: #fffaf6;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.2rem;
+  padding: 0.7rem 0.5rem;
   text-align: center;
 }
 
 .stat-val {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--accent);
 }
 
 .stat-lbl {
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   color: var(--muted);
-  margin-top: 0.3rem;
+  margin-top: 0.15rem;
 }
 
 /* SECCIONES Contenedores de información del perfil */
@@ -176,6 +176,73 @@
 .historial-detalle {
   font-size: 0.75rem;
   color: var(--muted);
+}
+
+/* HISTORIAL EN GRID Versión compacta del historial de quizzes,
+   usada solo para el admin, para que no ocupe tanto espacio vertical
+   y no "empuje" la sección de Actividad reciente hacia abajo. */
+.historial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.6rem;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 0.3rem; /* deja espacio para que la scrollbar no tape las tarjetas */
+}
+
+.historial-grid-item {
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--border);
+  background: var(--bg);
+  text-align: center;
+}
+
+.historial-grid-item.item-ok { border-left-color: #6db87a; }
+.historial-grid-item.item-mal { border-left-color: #d47a7a; }
+
+.historial-grid-item .historial-asig {
+  font-size: 0.78rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.historial-grid-item .historial-nota {
+  font-size: 1.1rem;
+}
+
+.historial-grid-item .historial-fecha,
+.historial-grid-item .historial-detalle {
+  font-size: 0.68rem;
+}
+
+/* FILTROS DE ACTIVIDAD Barra de filtros (tipo + fecha) sobre el
+   listado de Actividad reciente del panel de administración. */
+.actividad-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.actividad-filtros select,
+.actividad-filtros input[type="date"] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  background: #fff;
+  color: var(--text);
+}
+
+.actividad-tipo-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.15rem;
 }
 
 /* ACCIONES Botones del perfil */

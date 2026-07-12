@@ -82,7 +82,7 @@ export default function Colaborador() {
     }
   }
 
-  // EFECTO INICIAL - Carga asignaturas al montar el componente
+  // EFECTO INICIAL, Carga asignaturas al montar el componente
   useEffect(() => {
     cargarAsignaturas();
   }, []);
@@ -176,7 +176,7 @@ export default function Colaborador() {
       
       await crearPregunta(preguntaData);
       
-      setMsgManual('✅ Pregunta guardada exitosamente');
+      setMsgManual('Pregunta guardada exitosamente');
       
       // Resetear formulario
       setFormP({ 
@@ -235,7 +235,7 @@ export default function Colaborador() {
       <Navbar />
       <main className="page">
         <div className="colab-header">
-          <h1>📝 Panel del Colaborador</h1>
+          <h1>Panel del Colaborador</h1>
           <p>Ingresa preguntas de estudio para las asignaturas</p>
         </div>
 
@@ -245,17 +245,17 @@ export default function Colaborador() {
         <ImportarTrivia usuario={usuario} asignaturas={asignaturas} onImportado={cargarAsignaturas} />
 
         <div className="admin-form card">
-            <h3>✏️ Ingresar pregunta manualmente</h3>
+            <h3>Ingresar pregunta manualmente</h3>
             
             {msgManual && (
-              <div className={`admin-flash ${msgManual.includes('✅') ? 'success' : 'error'}`}>
+              <div className={`admin-flash ${msgManual.includes('✓') ? 'success' : 'error'}`}>
                 {msgManual}
               </div>
             )}
             
             <div className="form-row">
               <div className="form-group" style={{ flex: 2 }}>
-                <label className="input-label" htmlFor="colab-asignaturaId">📚 Asignatura</label>
+                <label className="input-label" htmlFor="colab-asignaturaId">Asignatura</label>
                 <select 
                   id="colab-asignaturaId"
                   name="asignaturaId"
@@ -278,7 +278,7 @@ export default function Colaborador() {
               </div>
               
               <div className="form-group" style={{ flex: 1 }}>
-                <label className="input-label" htmlFor="colab-dificultad">📊 Dificultad</label>
+                <label className="input-label" htmlFor="colab-dificultad">Dificultad</label>
                 <select 
                   id="colab-dificultad"
                   name="dificultad"
@@ -286,14 +286,14 @@ export default function Colaborador() {
                   value={formP.dificultad} 
                   onChange={e => setFormP(f => ({ ...f, dificultad: e.target.value }))}
                 >
-                  <option value="easy">🟢 Fácil</option>
-                  <option value="medium">🟡 Media</option>
-                  <option value="hard">🔴 Difícil</option>
+                  <option value="easy">Fácil</option>
+                  <option value="medium">Media</option>
+                  <option value="hard">Difícil</option>
                 </select>
               </div>
               
               <div className="form-group" style={{ flex: 1 }}>
-                <label className="input-label" htmlFor="colab-unidad">📂 Unidad</label>
+                <label className="input-label" htmlFor="colab-unidad"> Unidad</label>
                 <input 
                   id="colab-unidad"
                   name="unidad"
@@ -307,7 +307,7 @@ export default function Colaborador() {
             </div>
             
             <div className="form-group">
-              <label className="input-label" htmlFor="colab-caso">📝 Caso (opcional)</label>
+              <label className="input-label" htmlFor="colab-caso">Caso (opcional)</label>
               <textarea
                 id="colab-caso"
                 name="caso"
@@ -323,7 +323,7 @@ export default function Colaborador() {
             </div>
 
             <div className="form-group">
-              <label className="input-label" htmlFor="colab-pregunta">❓ Pregunta *</label>
+              <label className="input-label" htmlFor="colab-pregunta">Pregunta *</label>
               <textarea 
                 id="colab-pregunta"
                 name="pregunta"
@@ -341,7 +341,7 @@ export default function Colaborador() {
             <div className="form-group">
               <label className="input-label" id="colab-opciones-label">Opciones de respuesta * ({formP.opciones.length})</label>
               <p style={{ fontSize: '0.875rem', color: '#6b7280', marginBottom: '0.5rem' }}>
-                👆 Selecciona el radio button de la opción correcta
+                Selecciona el radio button de la opción correcta
               </p>
               {formP.opciones.map((op, i) => (
                 <div key={i} style={{ marginBottom: '0.5rem' }}>
@@ -389,7 +389,7 @@ export default function Colaborador() {
             </div>
 
             <div className="form-group">
-              <label className="input-label" htmlFor="colab-explicacion">💡 Explicación</label>
+              <label className="input-label" htmlFor="colab-explicacion">Explicación</label>
               <textarea 
                 id="colab-explicacion"
                 name="explicacion"
@@ -406,7 +406,7 @@ export default function Colaborador() {
 
             {/* Contenido extra: tabla o consola simulada (opcional) */}
             <div className="form-group">
-              <label htmlFor="extra" className="input-label">🖥️ Contenido extra (tabla o consola, opcional)</label>
+              <label htmlFor="extra" className="input-label">Contenido extra (tabla o consola, opcional)</label>
               <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.4rem' }}>
                 <button
                   type="button"
@@ -460,7 +460,7 @@ export default function Colaborador() {
             </div>
             
             <button className="btn btn-primary" onClick={guardarPreguntaManual}>
-              💾 Guardar pregunta
+              Guardar pregunta
             </button>
           </div>
       </main>

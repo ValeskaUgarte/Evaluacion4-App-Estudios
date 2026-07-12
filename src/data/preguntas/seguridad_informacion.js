@@ -515,7 +515,7 @@ const preguntas_seguridad_informacion = [
       "exp": "El principio de mínimo privilegio establece que cada usuario o proceso debe tener acceso solo a los recursos estrictamente necesarios para su función. Reduce superficie de ataque: si una cuenta es comprometida, el daño es limitado."
     },
 
-    // ── PREGUNTAS ADICIONALES (profe:false) ────────────────
+    // PREGUNTAS ADICIONALES (profe:false)
 
     // 01. Autenticación y acceso
     {

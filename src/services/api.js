@@ -173,8 +173,7 @@ function normalizar(p) {
     respuestaCorrecta: p.ans ?? p.respuestaCorrecta,
     explicacion: p.exp ?? p.explicacion,
     dificultad: p.diff ?? p.dificultad ?? 'medium',
-    unidad: p.unit ?? false,
-    temario: p.temario ?? false,
+    unidad: p.unit ?? p.unidad ?? '',
     profe: p.profe ?? false,
     case: p.case ?? '',
     extra: p.extra ?? '',
@@ -421,7 +420,6 @@ export function getPreguntasPorAsignatura(key) {
       explicacion: p.explicacion ?? '',
       dificultad: p.dificultad ?? 'medium',
       unidad: p.unidad ?? '',
-      temario: p.temario ?? false,     // ← agregado, faltaba
       profe: p.esDelProfesor === true,
       case: p.caso ?? '',
       extra: p.extra ?? '',
@@ -431,6 +429,7 @@ export function getPreguntasPorAsignatura(key) {
     }));
   return Promise.resolve([...delArchivo, ...delAdmin]);
 }
+
 export const getPreguntasByKey = (key) => getPreguntasPorAsignatura(key);
 
 
@@ -562,9 +561,9 @@ export function eliminarReporte(id) {
 const LS_KEY_ACTIVIDAD = 'admin_actividad';
 const MAX_ACTIVIDAD = 50;
 
-export function registrarActividad(texto) {
+export function registrarActividad(texto, tipo = 'general') {
   const actual = getActividadLS();
-  const nueva = { texto, fecha: Date.now() };
+  const nueva = { texto, tipo, fecha: Date.now() };
   const actualizada = [nueva, ...actual].slice(0, MAX_ACTIVIDAD);
   localStorage.setItem(LS_KEY_ACTIVIDAD, JSON.stringify(actualizada));
 }

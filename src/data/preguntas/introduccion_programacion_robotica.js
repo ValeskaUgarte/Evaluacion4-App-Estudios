@@ -1326,7 +1326,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "La sentencia if evalúa una condición y, si es verdadera, ejecuta el bloque de código correspondiente; si es falsa, el programa continúa su flujo sin ejecutar ese bloque."
   },
-  
+
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1334,10 +1334,16 @@ const introduccion_programacion_robotica = [
     "temario": true,
     "case": "Un programa debe mostrar un mensaje si el número es par, y otro mensaje distinto si es impar; siempre debe mostrar uno de los dos.",
     "q": "¿Qué sentencia se utiliza para ejecutar un bloque de código cuando la condición del if es falsa?",
-    "opts": ["elif", "else", "break", "continue"],
+    "opts": [
+      "elif", 
+      "else", 
+      "break", 
+      "continue"
+    ],
     "ans": 1,
     "exp": "La sentencia else se utiliza al final de una serie de condicionales para capturar cualquier caso que no haya sido cubierto por las condiciones anteriores, es decir, cuando la condición es falsa."
   },
+  
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1345,10 +1351,16 @@ const introduccion_programacion_robotica = [
     "temario": true,
     "case": "Un programa debe calcular el área de un triángulo, cuadrado o rectángulo dependiendo de la figura elegida por el usuario entre tres opciones distintas.",
     "q": "¿Qué sentencia se utiliza en Python para evaluar condiciones adicionales cuando la condición del if inicial no se cumplió?",
-    "opts": ["else", "elif", "while", "for"],
+    "opts": [
+      "else",
+      "elif",
+      "while",
+      "for"
+    ],
     "ans": 1,
     "exp": "La sentencia elif (abreviatura de 'else if') se usa después de un if inicial para evaluar condiciones adicionales, permitiendo manejar más de dos alternativas."
   },
+
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1367,6 +1379,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "Siempre solo una alternativa será ejecutada. Tan pronto alguna de las condiciones sea verdadera, el resto de las condiciones no son evaluadas."
   },
+  
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1374,10 +1387,16 @@ const introduccion_programacion_robotica = [
     "temario": true,  
     "case": "Un programa debe repetir un bloque de código mientras el usuario no ingrese el número 0.",
     "q": "¿Qué sentencia de repetición ejecuta un bloque de código mientras una condición especificada sea verdadera?",
-    "opts": ["for", "while", "if", "elif"],
+    "opts": [
+      "for",
+      "while",
+      "if",
+      "elif"
+    ],
     "ans": 1,
     "exp": "El bucle while ejecuta un bloque de código mientras una condición sea verdadera, y es más adecuado cuando no se conoce de antemano el número de iteraciones."
   },
+
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1386,10 +1405,16 @@ const introduccion_programacion_robotica = [
     "case": "Un programa debe imprimir el cubo de los números del 0 al 10, un número conocido y fijo de iteraciones.",
     "extra": "<div style='background:#1a1a1a;color:#00ff00;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:#2d2d2d;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>cubos.py</div>for i in range(11):\n    cubo = i ** 3\n    print(f\"El cubo de {i} es {cubo}\")</div>",
     "q": "¿Qué bucle es más adecuado usar cuando se conoce de antemano el número exacto de iteraciones que se necesitan?",
-    "opts": ["while", "for", "if", "elif"],
+    "opts": [
+      "while", 
+      "for", 
+      "if", 
+      "elif"
+    ],
     "ans": 1,
     "exp": "El bucle for se utiliza para iterar sobre una secuencia de elementos y es útil cuando se conoce de antemano el número de iteraciones que se necesitan."
   },
+
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1406,6 +1431,7 @@ const introduccion_programacion_robotica = [
     "ans": 2,
     "exp": "range(11,4) no entrega ningún valor, ya que si se omite el incremento se asume que es +1, y con un valor inicial mayor que el final no se genera ninguna secuencia; para lograr el orden decreciente se debe usar range(11,4,-1)."
   },
+
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1414,10 +1440,16 @@ const introduccion_programacion_robotica = [
     "case": "Un programa busca el primer divisor de un número para determinar si es primo, y una vez encontrado ya no necesita seguir revisando los demás.",
     "extra": "<div style='background:#1a1a1a;color:#00ff00;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:#2d2d2d;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>primo.py</div>for d in range(2,n):\n    if n % d == 0:\n        es_primo = False\n        break</div>",
     "q": "¿Qué sentencia permite salir de un ciclo de forma anticipada, en medio de una iteración?",
-    "opts": ["continue", "break", "pass", "return"],
+    "opts": [
+      "continue", 
+      "break", 
+      "pass", 
+      "return"
+    ],
     "ans": 1,
     "exp": "La sentencia break se utiliza para salir de un ciclo en medio de una iteración; siempre aparece dentro de un if, ya que de otro modo el ciclo terminaría en la primera iteración."
   },
+
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1426,10 +1458,16 @@ const introduccion_programacion_robotica = [
     "case": "Un programa calcula el cuadrado y cubo de los números del 1 al 20, pero debe saltarse (sin calcular) los que son múltiplos de 4, sin terminar el ciclo completo.",
     "extra": "<div style='background:#1a1a1a;color:#00ff00;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:#2d2d2d;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>saltar.py</div>for num in range(1,21):\n    if num % 4 == 0:\n        continue\n    a2 = num ** 2</div>",
     "q": "¿Qué sentencia permite saltar a la siguiente iteración de un ciclo sin terminar de ejecutar la iteración actual?",
-    "opts": ["break", "continue", "elif", "pass"],
+    "opts": [
+      "break", 
+      "continue", 
+      "elif", 
+      "pass"
+    ],
     "ans": 1,
     "exp": "La sentencia continue se utiliza para saltar a la siguiente iteración sin que termine de ejecutarse la iteración en curso, a diferencia de break que termina el ciclo completo."
   },
+
   {
     "profe": true,
     "unit": "U2 - Sentencias condicionales (if, else, elif) e iterativas (while, for), Examen de la unidad, Examen Final",
@@ -1446,6 +1484,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "Las sentencias condicionales permiten tomar decisiones ejecutando código según se cumplan o no ciertas condiciones, mientras que las iterativas permiten repetir un bloque de código varias veces."
   },
+  
   {
     "profe": true,
     "unit": "U2 - Cadenas y listas, Examen de la unidad, Examen Final",
@@ -1453,10 +1492,16 @@ const introduccion_programacion_robotica = [
     "temario": true,
     "case": "Un programa necesita guardar el nombre de un usuario ingresado por teclado como una secuencia de caracteres.",
     "q": "¿Cómo se denomina en programación a una secuencia de caracteres utilizada para representar texto?",
-    "opts": ["Lista", "Cadena (string)", "Diccionario", "Booleano"],
+    "opts": [
+      "Lista", 
+      "Cadena (string)", 
+      "Diccionario", 
+      "Booleano"
+    ],
     "ans": 1,
     "exp": "Las cadenas (string) son secuencias de caracteres utilizadas para representar texto en los programas, y pueden manipularse con operaciones como concatenación."
   },
+
   {
     "profe": true,
     "unit": "U2 - Cadenas y listas, Examen de la unidad, Examen Final",
@@ -1464,10 +1509,16 @@ const introduccion_programacion_robotica = [
     "temario": true,
     "case": "Un programa necesita guardar varios nombres de estudiantes en una sola variable, permitiendo agregar o eliminar elementos más adelante.",
     "q": "¿Qué estructura de datos de Python es una colección ordenada y mutable de elementos, que permite agregar, eliminar y acceder a elementos por índice?",
-    "opts": ["Cadena (str)", "Lista", "Booleano", "Entero"],
+    "opts": [
+      "Cadena (str)", 
+      "Lista", 
+      "Booleano", 
+      "Entero"
+    ],
     "ans": 1,
     "exp": "Las listas son colecciones ordenadas y mutables de elementos en Python, que pueden contener datos de diferentes tipos y permiten operaciones como adición, eliminación y acceso por índice."
   },
+
   {
     "profe": true,
     "unit": "U2 - Cadenas y listas, Examen de la unidad, Examen Final",
@@ -1485,6 +1536,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "Los operadores de comparación en cadenas son sensibles a mayúsculas y minúsculas, por lo que 'Hola mundo' y 'Hola Mundo' se consideran cadenas distintas y la comparación da False."
   },
+
   {
     "profe": true,
     "unit": "U2 - Cadenas y listas, Examen de la unidad, Examen Final",
@@ -1523,6 +1575,7 @@ const introduccion_programacion_robotica = [
     "exp": "Estas medidas protegen tanto al robot como a los operadores humanos, asegurando que el sistema pueda manejar situaciones imprevistas de manera segura.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1542,6 +1595,7 @@ const introduccion_programacion_robotica = [
     "exp": "Una buena documentación facilita futuras modificaciones y el mantenimiento del sistema robótico, asegurando que cualquier desarrollador pueda entender y trabajar con el código.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1561,6 +1615,7 @@ const introduccion_programacion_robotica = [
     "exp": "Es crucial validar el robot tanto en simulaciones como en el entorno real de trabajo para ajustar y optimizar su operación.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1580,6 +1635,7 @@ const introduccion_programacion_robotica = [
     "exp": "Estas cinco categorías estructuran el desarrollo de sistemas robotizados de forma integral, desde la planificación hasta el mantenimiento a largo plazo.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1599,6 +1655,7 @@ const introduccion_programacion_robotica = [
     "exp": "Python se recomienda por permitir un desarrollo rápido, siendo una de las opciones adecuadas para programar sistemas robotizados.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1618,6 +1675,7 @@ const introduccion_programacion_robotica = [
     "exp": "PEP 8 es la convención de estilo mencionada para mantener un código Python consistente y legible.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1637,6 +1695,7 @@ const introduccion_programacion_robotica = [
     "exp": "Git es el sistema de control de versiones mencionado para gestionar cambios y colaboraciones en el código.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1656,6 +1715,7 @@ const introduccion_programacion_robotica = [
     "exp": "Las pruebas unitarias verifican cada módulo, las simulaciones prueban en entorno controlado y las pruebas reales validan el sistema en condiciones reales.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1675,6 +1735,7 @@ const introduccion_programacion_robotica = [
     "exp": "Realizar refactorizaciones periódicas permite mejorar la eficiencia y claridad del código a lo largo del tiempo.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1694,6 +1755,7 @@ const introduccion_programacion_robotica = [
     "exp": "La seguridad del software protege el código de vulnerabilidades, mientras que la seguridad operacional asegura que el robot opere de forma segura para humanos y entorno.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1713,6 +1775,7 @@ const introduccion_programacion_robotica = [
     "exp": "El primer paso crucial es definir claramente la tarea del robot, lo que asegura que la programación se adapte a las necesidades específicas del sector profesional.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1732,6 +1795,7 @@ const introduccion_programacion_robotica = [
     "exp": "Utilizar simuladores robóticos compatibles con Python para probar el comportamiento del robot en un entorno virtual antes de implementarlo físicamente es fundamental para reducir riesgos y costos.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1751,6 +1815,7 @@ const introduccion_programacion_robotica = [
     "exp": "Para proteger al robot y a los operadores humanos, se deben implementar bloques de manejo de excepciones y medidas de seguridad como paradas de emergencia.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1770,6 +1835,7 @@ const introduccion_programacion_robotica = [
     "exp": "El proceso comienza definiendo la tarea, luego se selecciona el entorno de desarrollo (IDE), se programan sensores y actuadores y finalmente se implementan los algoritmos de control y navegación.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1789,6 +1855,7 @@ const introduccion_programacion_robotica = [
     "exp": "Se debe elegir un entorno de desarrollo integrado (IDE) adecuado para facilitar la escritura y depuración del código.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1808,6 +1875,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los sensores se programan para que el robot pueda percibir su entorno y recoger datos esenciales para su operación.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1827,6 +1895,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los algoritmos de navegación autónoma permiten a los robots móviles moverse y operar en su entorno evitando obstáculos y completando las tareas asignadas.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1846,6 +1915,7 @@ const introduccion_programacion_robotica = [
     "exp": "Se debe mantener el software del robot actualizado con las últimas mejoras y parches de seguridad, fomentando la mejora continua.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1865,6 +1935,7 @@ const introduccion_programacion_robotica = [
     "exp": "La guía plantea ocho pasos secuenciales que abarcan desde la definición de la tarea hasta la actualización y mejora continua del sistema robótico.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1884,6 +1955,7 @@ const introduccion_programacion_robotica = [
     "exp": "El robot debe gestionar errores de manera robusta utilizando bloques de manejo de excepciones, complementados con medidas de seguridad como paradas de emergencia.",
     "topic": "Buenas prácticas en programación"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1903,6 +1975,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los sensores de proximidad permiten a los robots detectar objetos cercanos sin necesidad de contacto físico, esencial para evitar colisiones y mejorar la precisión.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1922,6 +1995,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los robots pueden realizar tareas arriesgadas en entornos peligrosos, reduciendo la exposición del personal a situaciones potencialmente dañinas.",
     "topic": "Ámbitos de aplicación de los robots"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1941,6 +2015,7 @@ const introduccion_programacion_robotica = [
     "exp": "La mejora de la precisión y velocidad de producción es un beneficio clave de los robots en la manufactura, ayudando a reducir errores y costos operativos.",
     "topic": "Ámbitos de aplicación de los robots"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1960,6 +2035,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los robots médicos asisten en cirugías, diagnósticos y cuidados, proporcionando precisión y mejorando los resultados de los tratamientos.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1979,6 +2055,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los robots autónomos, como los vehículos autónomos, están transformando el transporte y la logística al operar sin intervención humana.",
     "topic": "Ámbitos de aplicación de los robots"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -1998,6 +2075,7 @@ const introduccion_programacion_robotica = [
     "exp": "Un sistema robotizado está compuesto por actuadores, sensores, controladores, software y estructura mecánica, cada uno cumpliendo una función esencial.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2017,6 +2095,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los sensores de fuerza y torque miden la fuerza y el torque aplicados por el robot, siendo cruciales para tareas de ensamblaje y manipulación precisa.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2036,6 +2115,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los servomotores ofrecen control preciso de posición, velocidad y aceleración, siendo esenciales para tareas que requieren alta precisión.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2055,6 +2135,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los PLC (controladores lógicos programables) se utilizan en entornos industriales para controlar maquinaria y procesos.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2074,6 +2155,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los sistemas de energía solar son adecuados para robots que operan en exteriores y requieren autonomía prolongada.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2093,6 +2175,7 @@ const introduccion_programacion_robotica = [
     "exp": "Wi-Fi y Bluetooth se utilizan para comunicaciones inalámbricas en corto y mediano alcance entre robots y sistemas de control.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2112,6 +2195,7 @@ const introduccion_programacion_robotica = [
     "exp": "En logística, los robots mejoran la gestión de almacenes y la eficiencia de las entregas.",
     "topic": "Ámbitos de aplicación de los robots"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2131,6 +2215,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los cilindros hidráulicos son parte de los actuadores, no de la interfaz de usuario, que incluye pantallas táctiles, paneles de control y software.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2150,6 +2235,7 @@ const introduccion_programacion_robotica = [
     "exp": "La documentación detallada es una buena práctica esencial en la programación de robots, ya que facilita el mantenimiento y asegura un funcionamiento óptimo y seguro.",
     "topic": "Características y componentes de un robot"
   },
+  
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2169,6 +2255,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los robots son ampliamente utilizados en la manufactura para automatizar procesos y mejorar la precisión y la productividad.",
     "topic": "Ámbitos de aplicación de los robots"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2188,6 +2275,7 @@ const introduccion_programacion_robotica = [
     "exp": "Los sensores son cruciales para que un robot perciba su entorno y recoja datos esenciales para su funcionamiento.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2207,6 +2295,7 @@ const introduccion_programacion_robotica = [
     "exp": "Las tres ideas fuerza son: características y componentes de un robot, ámbitos de aplicación de los robots, y buenas prácticas en programación.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2226,6 +2315,7 @@ const introduccion_programacion_robotica = [
     "exp": "La robótica impacta principalmente en manufactura, servicios, medicina y agricultura, automatizando tareas y mejorando la eficiencia en cada sector.",
     "topic": "Ámbitos de aplicación de los robots"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2245,6 +2335,7 @@ const introduccion_programacion_robotica = [
     "exp": "Un robot está compuesto por sensores, actuadores y controladores, que le permiten interactuar con su entorno y ejecutar tareas específicas con precisión y eficiencia.",
     "topic": "Características y componentes de un robot"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2264,6 +2355,7 @@ const introduccion_programacion_robotica = [
     "exp": "El comando en pseudocódigo para mover al robot hacia adelante es \"INICIO MOVER_ADELANTE FIN\".",
     "topic": "Programación de un robot simple mediante software"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2283,6 +2375,7 @@ const introduccion_programacion_robotica = [
     "exp": "La estructura de control utilizada es \"INICIO SI (OBSTACULO_ADELANTE) ENTONCES DETENER GIRAR_DERECHA FIN_SI FIN\", una estructura condicional (IF).",
     "topic": "Programación de un robot simple mediante software"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2302,6 +2395,7 @@ const introduccion_programacion_robotica = [
     "exp": "El pseudocódigo correcto es \"INICIO MOVER_ADELANTE ESPERAR(5) DETENER FIN\".",
     "topic": "Programación de un robot simple mediante software"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2321,6 +2415,7 @@ const introduccion_programacion_robotica = [
     "exp": "Cuando se desea detener el movimiento de un robot se debe usar el comando DETENER dentro de la estructura INICIO...FIN.",
     "topic": "Programación de un robot simple mediante software"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2340,6 +2435,7 @@ const introduccion_programacion_robotica = [
     "exp": "El bucle MIENTRAS permite que, mientras el robot no encuentre un obstáculo adelante, continúe realizando la acción de moverse hacia adelante.",
     "topic": "Programación de un robot simple mediante software"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2359,6 +2455,7 @@ const introduccion_programacion_robotica = [
     "exp": "Cuando se detecta un obstáculo, el robot ejecuta: DETENER, GIRAR_DERECHA, MOVER_ADELANTE y ESPERAR(2), antes de continuar con el bucle hasta llegar a la meta.",
     "topic": "Programación de un robot simple mediante software"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2378,6 +2475,7 @@ const introduccion_programacion_robotica = [
     "exp": "Usar estructuras de control permite que el robot pueda tomar decisiones basado en lo que percibe del medio a través de los sensores.",
     "topic": "Programación de un robot simple mediante software"
   },
+
   {
     "profe": true,
     "unit": "U-3 - Fundamentos y aplicaciones de robótica, Examen de la unidad, Examen Final",
@@ -2400,12 +2498,8 @@ const introduccion_programacion_robotica = [
 
 
 
-
-
   //CONTENIDO MATERIAL DE ESTUDIO RECURSOS DIGITAL DEL AMBIENTE DE APRENDIZAJE
     //UNIDAD 1
-  
-  
   
 
   {
@@ -2423,6 +2517,7 @@ const introduccion_programacion_robotica = [
     "ans": 2,
     "exp": "El proceso comienza con 'Busca', que consiste en identificar la temática y elegir las fuentes, buscadores y sitios pertinentes, confiables y de calidad."
   },
+
   {
     "profe": true,
     "unit": "Curación de Contenidos",
@@ -2438,6 +2533,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "El criterio 'Creíble' evalúa si la información fue revisada desde un sitio o publicación confiable y de alta calidad informativa."
   },
+
   {
     "profe": true,
     "unit": "Curación de Contenidos",
@@ -2453,6 +2549,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "La actividad enfatiza que no es un ejercicio de 'copiar y pegar': se debe aportar contexto, valor y opinión propia, además de respetar siempre la propiedad intelectual y derecho de autor."
   },
+
   {
     "profe": true,
     "unit": "Curación de Contenidos",
@@ -2468,6 +2565,7 @@ const introduccion_programacion_robotica = [
     "ans": 2,
     "exp": "Está estrictamente prohibido subir videos al Ambiente de Aprendizaje AAI; solo se puede compartir el link del video junto con una imagen que identifique la temática."
   },
+
   {
     "profe": true,
     "unit": "Curación de Contenidos",
@@ -2483,6 +2581,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "Se recomienda que el relato o resumen de cada entrada del blog tenga aproximadamente entre 200 y 250 palabras."
   },
+
   {
     "profe": true,
     "unit": "Curación de Contenidos",
@@ -2498,6 +2597,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "Al finalizar cada unidad se comparte una Pauta de Autoevaluación para que el estudiante reconozca y valore su propio trabajo de curación de contenidos."
   },
+
   {
     "profe": true,
     "unit": "Curación de Contenidos",
@@ -2524,10 +2624,16 @@ const introduccion_programacion_robotica = [
     "diff": "easy",
     "case": "Estás diseñando el diagrama de flujo de un algoritmo antes de programarlo.",
     "q": "¿Qué símbolo (figura) se utiliza en un Diagrama de Flujo de Datos (DFD) para representar el Inicio y el Fin del algoritmo?",
-    "opts": ["Rombo", "Óvalo", "Rectángulo", "Flecha"],
+    "opts": [
+      "Rombo", 
+      "Óvalo", 
+      "Rectángulo", 
+      "Flecha"
+    ],
     "ans": 1,
     "exp": "Los óvalos se utilizan para indicar el inicio y el fin de un algoritmo en un DFD."
   },
+
   {
     "id": "u2-f1-02",
     "profe": true,
@@ -2536,10 +2642,16 @@ const introduccion_programacion_robotica = [
     "diff": "easy",
     "case": "El profesor pide identificar la simbología correcta de los DFD.",
     "q": "¿Qué símbolo se utiliza para representar procesos o acciones dentro de un DFD?",
-    "opts": ["Óvalo", "Rombo", "Rectángulo", "Círculo"],
+    "opts": [
+      "Óvalo", 
+      "Rombo", 
+      "Rectángulo", 
+      "Círculo"
+    ],
     "ans": 2,
     "exp": "Los rectángulos representan procesos o acciones dentro del diagrama de flujo."
   },
+
   {
     "id": "u2-f1-03",
     "profe": true,
@@ -2548,10 +2660,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Un DFD necesita evaluar si un valor cumple una condición para bifurcar el flujo.",
     "q": "¿Qué figura se utiliza en un DFD para representar una decisión o condición?",
-    "opts": ["Rectángulo", "Rombo", "Óvalo", "Paralelogramo"],
+    "opts": [
+      "Rectángulo", 
+      "Rombo", 
+      "Óvalo", 
+      "Paralelogramo"
+    ],
     "ans": 1,
     "exp": "Los rombos se usan para representar decisiones, ya que de ellos salen normalmente dos caminos (Sí/No)."
   },
+
   {
     "id": "u2-f1-04",
     "profe": true,
@@ -2560,10 +2678,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Antes de escribir código, necesitas abrir el entorno de trabajo de Python en Windows.",
     "q": "¿Cómo se llama la consola/terminal de Python que se abre al ejecutar el IDLE y que permite escribir código directamente?",
-    "opts": ["Terminal", "Shell", "Prompt", "Editor"],
+    "opts": [
+      "Terminal", 
+      "Shell", 
+      "Prompt", 
+      "Editor"
+    ],
     "ans": 1,
     "exp": "Al abrir el IDLE se despliega la 'Shell' de Python, una consola donde se puede escribir e interpretar código línea a línea."
   },
+
   {
     "id": "u2-f1-05",
     "profe": true,
@@ -2572,12 +2696,16 @@ const introduccion_programacion_robotica = [
     "diff": "easy",
     "case": "Vas a guardar tu primer programa en un archivo para poder ejecutarlo con F5.",
     "q": "¿Cuál es la extensión de archivo correcta para guardar un programa de Python?",
-    "opts": [".pt", ".py", ".pyt", ".pty"],
+    "opts": [
+      ".pt", 
+      ".py", 
+      ".pyt", 
+      ".pty"
+    ],
     "ans": 1,
     "exp": "Los archivos de Python se guardan con extensión .py."
   },
  
-
   {
     "id": "u2-f1-07",
     "profe": true,
@@ -2650,6 +2778,7 @@ const introduccion_programacion_robotica = [
     "ans": 1,
     "exp": "2.3e6 es notación científica y equivale a 2.3 x 10^6 = 2300000.0, que Python interpreta como un dato float."
   },
+
   {
     "id": "u2-f1-11",
     "profe": true,
@@ -2658,10 +2787,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Necesitas calcular cuántas veces cabe un número dentro de otro, descartando decimales.",
     "q": "¿Qué operador matemático de Python realiza la división descartando la parte decimal del resultado?",
-    "opts": ["/", "//", "%", "**"],
+    "opts": [
+      "/",
+      "//",
+      "%",
+      "**"
+    ],
     "ans": 1,
     "exp": "El operador de división entera (//) realiza la división y descarta la parte decimal del resultado."
   },
+  
   {
     "id": "u2-f1-12",
     "profe": true,
@@ -2670,10 +2805,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Necesitas saber si un número es par o impar usando el resto de una división.",
     "q": "¿Qué operador matemático en Python entrega el resto (residuo) de una división entera?",
-    "opts": ["//", "%", "/", "**"],
+    "opts": [
+      "//",
+      "%",
+      "/",
+      "**"
+    ],
     "ans": 1,
     "exp": "El operador módulo (%) es la operación complementaria a la división entera, y entrega el resto de dividir dos números."
   },
+
   {
     "id": "u2-f1-13",
     "profe": true,
@@ -2683,10 +2824,16 @@ const introduccion_programacion_robotica = [
     "case": "Se ejecuta el siguiente fragmento de código en Python.",
     "q": "¿Cuál es el resultado de ejecutar estas líneas?",
     "extra": "<div style='background:#1a1a1a;color:#00ff00;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:#2d2d2d;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Python</div>valor_1 = 12\nvalor_2 = 5\nprint(valor_1 // valor_2)\nprint(valor_1 % valor_2)</div>",
-    "opts": ["2 y 2", "2.4 y 2", "12 y 5", "2 y 0"],
+    "opts": [
+      "2 y 2", 
+      "2.4 y 2", 
+      "12 y 5", 
+      "2 y 0"
+    ],
     "ans": 0,
     "exp": "12 // 5 = 2 (división entera, descarta el decimal) y 12 % 5 = 2 (resto de la división). Ambos resultados son 2."
   },
+  
   {
     "id": "u2-f1-14",
     "profe": true,
@@ -2695,7 +2842,12 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Quieres comparar si dos valores son distintos entre sí en una condición.",
     "q": "¿Qué operador de comparación en Python representa 'desigualdad'?",
-    "opts": ["==", "!=", "<>", "~="],
+    "opts": [
+      "==",
+      "!=",
+      "<>",
+      "~="
+    ],
     "ans": 1,
     "exp": "El operador != se utiliza para comprobar desigualdad entre dos valores en Python."
   },
@@ -2708,10 +2860,16 @@ const introduccion_programacion_robotica = [
     "case": "Se ejecuta el siguiente código con operadores de cadena.",
     "q": "¿Qué imprimirá este código?",
     "extra": "<div style='background:#1a1a1a;color:#00ff00;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:#2d2d2d;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Python</div>saludo = \"Hola \" + \"mundo\"\nrisa = 3 * \"ja\"\nprint(saludo)\nprint(risa)</div>",
-    "opts": ["Hola mundo / jajaja", "Error, no se puede sumar texto", "HolamundoHolamundoHolamundo / ja", "Hola  mundo / ja3"],
+    "opts": [
+      "Hola mundo / jajaja",
+      "Error, no se puede sumar texto",
+      "HolamundoHolamundoHolamundo / ja",
+      "Hola  mundo / ja3"
+    ],
     "ans": 0,
     "exp": "El operador + concatena cadenas ('Hola mundo') y el operador * repite la cadena 'ja' tres veces ('jajaja')."
   },
+
   {
     "id": "u2-f1-16",
     "profe": true,
@@ -2720,10 +2878,16 @@ const introduccion_programacion_robotica = [
     "diff": "hard",
     "case": "Necesitas evaluar si un número x está dentro de un intervalo [a,b] usando operadores lógicos.",
     "q": "¿Qué operador lógico en Python devuelve True solamente si AMBAS expresiones evaluadas son verdaderas?",
-    "opts": ["or", "not", "and", "xor"],
+    "opts": [
+      "or", 
+      "not", 
+      "and", 
+      "xor"
+    ],
     "ans": 2,
     "exp": "El operador 'and' evalúa dos expresiones y devuelve True únicamente si ambas son verdaderas."
   },
+  
   {
     "id": "u2-f1-17",
     "profe": true,
@@ -2732,10 +2896,16 @@ const introduccion_programacion_robotica = [
     "diff": "hard",
     "case": "Se combinan varios operadores en una misma expresión y se debe determinar el orden de ejecución.",
     "q": "Según el orden de precedencia de operadores en Python visto en la unidad, ¿cuál de los siguientes se ejecuta PRIMERO en una expresión combinada?",
-    "opts": ["or", "and", "**  (exponente)", "== (igualdad)"],
+    "opts": [
+      "or", 
+      "and", 
+      "**  (exponente)", 
+      "== (igualdad)"
+    ],
     "ans": 2,
     "exp": "La precedencia de mayor a menor es: **, luego */ %, luego + -, luego comparaciones, luego not, and y finalmente or. El exponente (**) tiene la mayor precedencia."
   },
+  
   {
     "id": "u2-f1-18",
     "profe": true,
@@ -2744,10 +2914,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Quieres alterar el orden natural de precedencia en una expresión matemática.",
     "q": "¿Qué elemento se utiliza en Python para alterar el orden de precedencia de una expresión?",
-    "opts": ["Corchetes []", "Llaves {}", "Paréntesis ()", "Comillas \" \""],
+    "opts": [
+      "Corchetes []",
+      "Llaves {}",
+      "Paréntesis ()",
+      "Comillas \" \""
+    ],
     "ans": 2,
     "exp": "Los paréntesis permiten forzar que una operación se ejecute antes que otra, alterando el orden natural de precedencia."
   },
+  
   {
     "id": "u2-f1-19",
     "profe": true,
@@ -2756,10 +2932,16 @@ const introduccion_programacion_robotica = [
     "diff": "easy",
     "case": "Quieres ejecutar un bloque de código solo si se cumple una condición, y en caso contrario, seguir el flujo normal.",
     "q": "¿Qué sentencia se usa cuando solo se necesita ejecutar un bloque de código si la condición es verdadera (sin bloque alternativo)?",
-    "opts": ["if-elif-else", "while", "if", "for"],
+    "opts": [
+      "if-elif-else",
+      "while",
+      "if",
+      "for"
+    ],
     "ans": 2,
     "exp": "La sentencia if ejecuta un bloque de instrucciones solo si se cumple la condición; si es falsa, el programa simplemente continúa."
   },
+
   {
     "id": "u2-f1-20",
     "profe": true,
@@ -2768,10 +2950,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Un programa debe imprimir un mensaje distinto dependiendo de si un número es par o impar.",
     "q": "¿Qué estructura de control es la más adecuada para este caso, donde solo existen dos alternativas posibles?",
-    "opts": ["if simple", "if-else", "while", "for con rango"],
+    "opts": [
+      "if simple",
+      "if-else",
+      "while",
+      "for con rango"
+    ],
     "ans": 1,
     "exp": "La sentencia if-else decide qué bloque ejecutar dependiendo de si la condición es verdadera o falsa, ideal para dos alternativas excluyentes."
   },
+  
   {
     "id": "u2-f1-21",
     "profe": true,
@@ -2780,10 +2968,16 @@ const introduccion_programacion_robotica = [
     "diff": "hard",
     "case": "Un programa debe elegir entre tres o más alternativas posibles (por ejemplo triángulo, cuadrado o rectángulo).",
     "q": "¿Qué estructura permite evaluar varias condiciones en orden, ejecutando solo el primer bloque cuya condición sea verdadera?",
-    "opts": ["if-elif-else", "while anidado", "for-else", "break-continue"],
+    "opts": [
+      "if-elif-else",
+      "while anidado",
+      "for-else",
+      "break-continue"
+    ],
     "ans": 0,
     "exp": "La sentencia if-elif-else evalúa condiciones en orden; la primera verdadera ejecuta su bloque y las siguientes condiciones no se evalúan."
   },
+
   {
     "id": "u2-f1-22",
     "profe": true,
@@ -2792,10 +2986,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "No se conoce de antemano cuántas veces se repetirá un ciclo, ya que depende de una condición dinámica durante la ejecución.",
     "q": "¿Qué estructura de repetición es más adecuada en este caso?",
-    "opts": ["for con rango", "while", "if-elif-else", "break"],
+    "opts": [
+      "for con rango",
+      "while",
+      "if-elif-else",
+      "break"
+    ],
     "ans": 1,
     "exp": "El ciclo while es más adecuado cuando el número de iteraciones no se conoce de antemano y depende de una condición evaluada en cada iteración."
   },
+
   {
     "id": "u2-f1-23",
     "profe": true,
@@ -2805,10 +3005,16 @@ const introduccion_programacion_robotica = [
     "case": "Se ejecuta el siguiente ciclo for en Python.",
     "q": "¿Qué valores tomará la variable de control 'i' en este ciclo?",
     "extra": "<div style='background:#1a1a1a;color:#00ff00;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:#2d2d2d;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Python</div>for i in range(3, 13, 2):\n    print(i)</div>",
-    "opts": ["3,4,5,6,7,8,9,10,11,12", "3,5,7,9,11", "3,5,7,9,11,13", "3,6,9,12"],
+    "opts": [
+      "3,4,5,6,7,8,9,10,11,12", 
+      "3,5,7,9,11", 
+      "3,5,7,9,11,13", 
+      "3,6,9,12"
+    ],
     "ans": 1,
     "exp": "range(3,13,2) comienza en 3, aumenta de 2 en 2, y termina antes de llegar a 13 (valor final excluido): 3,5,7,9,11."
   },
+  
   {
     "id": "u2-f1-24",
     "profe": true,
@@ -2817,10 +3023,16 @@ const introduccion_programacion_robotica = [
     "diff": "hard",
     "case": "Se ejecuta range(11,4) en un ciclo for.",
     "q": "¿Cuántos valores generará este rango?",
-    "opts": ["Del 11 al 4 descendente", "Del 4 al 11", "Ningún valor", "Un error de ejecución"],
+    "opts": [
+      "Del 11 al 4 descendente",
+      "Del 4 al 11",
+      "Ningún valor",
+      "Un error de ejecución"
+    ],
     "ans": 2,
     "exp": "range(11,4) no genera ningún valor, ya que por defecto el incremento es +1 y el valor inicial (11) es mayor que el final (4); se necesitaría un incremento negativo como en range(11,4,-1)."
   },
+
   {
     "id": "u2-f1-25",
     "profe": true,
@@ -2829,10 +3041,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Estás buscando un divisor de un número dentro de un ciclo for y, apenas lo encuentras, ya no necesitas seguir revisando.",
     "q": "¿Qué sentencia permite terminar de forma anticipada un ciclo (while o for) apenas se cumple una condición?",
-    "opts": ["continue", "pass", "break", "return"],
+    "opts": [
+      "continue", 
+      "pass", 
+      "break", 
+      "return"
+    ],
     "ans": 2,
     "exp": "La sentencia break termina de forma prematura el ciclo, sin esperar a que la condición natural del ciclo finalice."
   },
+
   {
     "id": "u2-f1-26",
     "profe": true,
@@ -2841,10 +3059,16 @@ const introduccion_programacion_robotica = [
     "diff": "medium",
     "case": "Quieres omitir ciertos números (por ejemplo, los múltiplos de 4) sin terminar el ciclo completo.",
     "q": "¿Qué sentencia permite saltar directamente a la siguiente iteración de un ciclo, sin ejecutar el resto del bloque actual?",
-    "opts": ["break", "continue", "else", "exit"],
+    "opts": [
+      "break", 
+      "continue", 
+      "else", 
+      "exit"
+    ],
     "ans": 1,
     "exp": "La sentencia continue salta a la siguiente iteración sin terminar de ejecutar el bloque de código actual."
   },
+
   {
     "id": "u2-f1-27",
     "profe": true,
@@ -2853,796 +3077,16 @@ const introduccion_programacion_robotica = [
     "diff": "hard",
     "case": "El profesor pregunta por una buena práctica al usar la sentencia break.",
     "q": "¿Por qué la sentencia break siempre debe aparecer dentro de una sentencia if dentro de un ciclo?",
-    "opts": ["Porque Python lo exige por sintaxis obligatoria", "Porque de lo contrario el ciclo terminaría siempre en la primera iteración", "Porque así se optimiza la memoria", "No es necesario, es solo una convención estética"],
+    "opts": [
+      "Porque Python lo exige por sintaxis obligatoria",
+      "Porque de lo contrario el ciclo terminaría siempre en la primera iteración",
+      "Porque así se optimiza la memoria",
+      "No es necesario, es solo una convención estética"
+    ],
     "ans": 1,
     "exp": "Si break no estuviera condicionado por un if, el ciclo se rompería siempre en la primera vuelta, sin permitir ninguna repetición útil."
   },
 
-  //UNIDAD 3
-
-   {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre las medidas de seguridad en programación de robots.",
-    "q": "¿Cuál es una medida importante para la seguridad en la programación de sistemas robotizados?",
-    "extra": "",
-    "opts": [
-      "Ignorar la seguridad y centrarse solo en la funcionalidad",
-      "No gestionar errores ni utilizar manejo de excepciones",
-      "Implementar medidas de seguridad como paradas de emergencia",
-      "Evitar las pruebas del sistema"
-    ],
-    "ans": 2,
-    "exp": "Estas medidas protegen tanto al robot como a los operadores humanos, asegurando que el sistema pueda manejar situaciones imprevistas de manera segura."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre las buenas prácticas fundamentales.",
-    "q": "¿Cuál es una buena práctica fundamental en la programación de sistemas robotizados?",
-    "extra": "",
-    "opts": [
-      "Evitar el uso de control de versiones",
-      "Ignorar el manejo de excepciones y errores",
-      "Documentar detalladamente el código y los procesos de programación",
-      "Escribir el código sin comentarios para ahorrar tiempo"
-    ],
-    "ans": 2,
-    "exp": "Una buena documentación facilita futuras modificaciones y el mantenimiento del sistema robótico, asegurando que cualquier desarrollador pueda entender y trabajar con el código."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre el aseguramiento de la calidad del código.",
-    "q": "¿Qué práctica es esencial para asegurar la calidad del código en un sistema robotizado?",
-    "extra": "",
-    "opts": [
-      "Solo probar el código en simuladores sin hacerlo en el entorno real",
-      "Omitir la validación del robot después de la implementación",
-      "Realizar pruebas exhaustivas del código bajo todas las condiciones previstas",
-      "Publicar el código sin revisión"
-    ],
-    "ans": 2,
-    "exp": "Es crucial validar el robot tanto en simulaciones como en el entorno real de trabajo para ajustar y optimizar su operación."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre las cinco categorías de buenas prácticas.",
-    "q": "Según el recurso, ¿cuáles son los cinco conceptos clave a considerar en las buenas prácticas de programación de un sistema robotizado?",
-    "extra": "",
-    "opts": [
-      "Diseño gráfico, marketing, ventas, logística y finanzas",
-      "Especificaciones de software, escritura de código, pruebas y validación, mantenimiento y actualización, y seguridad",
-      "Hardware, electricidad, mecánica, química y física",
-      "Redes, bases de datos, servidores, nube y ciberseguridad"
-    ],
-    "ans": 1,
-    "exp": "Estas cinco categorías estructuran el desarrollo de sistemas robotizados de forma integral, desde la planificación hasta el mantenimiento a largo plazo."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre el lenguaje de programación recomendado.",
-    "q": "¿Qué lenguaje de programación se menciona como adecuado por su rapidez en el desarrollo de sistemas robotizados?",
-    "extra": "",
-    "opts": [
-      "Java",
-      "Python",
-      "C++",
-      "COBOL"
-    ],
-    "ans": 1,
-    "exp": "Python se recomienda por permitir un desarrollo rápido, siendo una de las opciones adecuadas para programar sistemas robotizados."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre las convenciones de estilo de codificación.",
-    "q": "¿Qué convención se menciona para adoptar un estilo consistente de codificación en Python?",
-    "extra": "<div style='background:`#1a1a1a`;color:`#00ff00`;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:`#2d2d2d`;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Estilo de codificación</div># PEP 8: convención de estilo\ndef mover_adelante():\n    # nombres en minúscula, guiones bajos\n    pass</div>",
-    "opts": [
-      "ISO 9001",
-      "PEP 8",
-      "RFC 2119",
-      "UML 2.0"
-    ],
-    "ans": 1,
-    "exp": "PEP 8 es la convención de estilo mencionada para mantener un código Python consistente y legible."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre el control de versiones.",
-    "q": "¿Qué herramienta se menciona para gestionar cambios y colaboraciones en el código durante el mantenimiento del sistema?",
-    "extra": "",
-    "opts": [
-      "Git",
-      "Excel",
-      "PowerPoint",
-      "AutoCAD"
-    ],
-    "ans": 0,
-    "exp": "Git es el sistema de control de versiones mencionado para gestionar cambios y colaboraciones en el código."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre las pruebas y validación.",
-    "q": "¿Cuáles son los tres tipos de pruebas mencionados en la etapa de pruebas y validación?",
-    "extra": "",
-    "opts": [
-      "Pruebas unitarias, simulaciones y pruebas reales",
-      "Pruebas de humo, de regresión y de carga",
-      "Pruebas alfa, beta y gamma",
-      "Pruebas de caja negra, blanca y gris"
-    ],
-    "ans": 0,
-    "exp": "Las pruebas unitarias verifican cada módulo, las simulaciones prueban en entorno controlado y las pruebas reales validan el sistema en condiciones reales."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre el mantenimiento del código.",
-    "q": "¿Qué práctica de mantenimiento busca mejorar la eficiencia y claridad del código mediante revisiones periódicas?",
-    "extra": "",
-    "opts": [
-      "La escalabilidad",
-      "La refactorización",
-      "La documentación inicial",
-      "La compilación"
-    ],
-    "ans": 1,
-    "exp": "Realizar refactorizaciones periódicas permite mejorar la eficiencia y claridad del código a lo largo del tiempo."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Buenas_prácticas_de_programación_de_un_sistema_robotizado.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre los dos tipos de seguridad mencionados.",
-    "q": "¿Qué dos tipos de seguridad se abordan en las buenas prácticas de programación de un sistema robotizado?",
-    "extra": "",
-    "opts": [
-      "Seguridad física y seguridad financiera",
-      "Seguridad del software y seguridad operacional",
-      "Seguridad laboral y seguridad ambiental",
-      "Seguridad de red y seguridad de datos"
-    ],
-    "ans": 1,
-    "exp": "La seguridad del software protege el código de vulnerabilidades, mientras que la seguridad operacional asegura que el robot opere de forma segura para humanos y entorno."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre el primer paso al programar un robot.",
-    "q": "¿Cuál es el primer paso crucial para programar un robot en Python?",
-    "extra": "",
-    "opts": [
-      "Programar los sensores y actuadores",
-      "Definir claramente la tarea del robot, especificando objetivos, requisitos técnicos y condiciones del entorno",
-      "Seleccionar el entorno de desarrollo",
-      "Realizar pruebas exhaustivas del código"
-    ],
-    "ans": 1,
-    "exp": "El primer paso crucial es definir claramente la tarea del robot, lo que asegura que la programación se adapte a las necesidades específicas del sector profesional."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre la reducción de riesgos y costos antes de la implementación física.",
-    "q": "¿Qué debe hacerse antes de implementar el robot físicamente para reducir riesgos y costos?",
-    "extra": "",
-    "opts": [
-      "Implementar algoritmos de control y navegación",
-      "Probar el comportamiento del robot en un entorno virtual utilizando simuladores robóticos compatibles con Python",
-      "Realizar pruebas exhaustivas del código únicamente",
-      "Actualizar el software del robot"
-    ],
-    "ans": 1,
-    "exp": "Utilizar simuladores robóticos compatibles con Python para probar el comportamiento del robot en un entorno virtual antes de implementarlo físicamente es fundamental para reducir riesgos y costos."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre las medidas de protección para robot y operadores.",
-    "q": "¿Qué medidas deben implementarse para proteger al robot y a los operadores humanos?",
-    "extra": "",
-    "opts": [
-      "Algoritmos de control eficientes",
-      "Bloques de manejo de excepciones y medidas de seguridad como paradas de emergencia",
-      "Actualización del software del robot",
-      "Documentación del código"
-    ],
-    "ans": 1,
-    "exp": "Para proteger al robot y a los operadores humanos, se deben implementar bloques de manejo de excepciones y medidas de seguridad como paradas de emergencia."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre los ocho pasos de la guía de recomendaciones.",
-    "q": "Según la guía, ¿cuál es el orden correcto de los primeros cuatro pasos para programar un robot?",
-    "extra": "",
-    "opts": [
-      "Selección del entorno, definición de la tarea, pruebas, documentación",
-      "Definición de la tarea, selección del entorno de desarrollo, programación de sensores y actuadores, implementación de algoritmos de control y navegación",
-      "Programación de sensores, definición de la tarea, seguridad, pruebas",
-      "Documentación, mantenimiento, actualización, mejora continua"
-    ],
-    "ans": 1,
-    "exp": "El proceso comienza definiendo la tarea, luego se selecciona el entorno de desarrollo (IDE), se programan sensores y actuadores y finalmente se implementan los algoritmos de control y navegación."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre la elección del entorno de desarrollo.",
-    "q": "¿Qué se debe elegir para facilitar la escritura y depuración del código al programar un robot?",
-    "extra": "",
-    "opts": [
-      "Un entorno de desarrollo integrado (IDE) adecuado",
-      "Un procesador más rápido",
-      "Una batería de mayor capacidad",
-      "Una pantalla táctil"
-    ],
-    "ans": 0,
-    "exp": "Se debe elegir un entorno de desarrollo integrado (IDE) adecuado para facilitar la escritura y depuración del código."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre la programación de sensores y actuadores.",
-    "q": "¿Qué función cumplen los sensores según la guía de recomendaciones para la programación de un robot?",
-    "extra": "",
-    "opts": [
-      "Convertir energía eléctrica en movimiento",
-      "Permitir que el robot perciba su entorno y recoja datos esenciales para su operación",
-      "Almacenar el código fuente del robot",
-      "Enviar comandos a otros robots"
-    ],
-    "ans": 1,
-    "exp": "Los sensores se programan para que el robot pueda percibir su entorno y recoger datos esenciales para su operación."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los algoritmos de navegación autónoma.",
-    "q": "¿Para qué se utilizan los algoritmos de navegación autónoma en robots móviles?",
-    "extra": "",
-    "opts": [
-      "Para reducir el consumo de batería únicamente",
-      "Para moverse y operar en su entorno, evitando obstáculos y completando las tareas asignadas",
-      "Para generar documentación automática",
-      "Para comunicarse por Bluetooth"
-    ],
-    "ans": 1,
-    "exp": "Los algoritmos de navegación autónoma permiten a los robots móviles moverse y operar en su entorno evitando obstáculos y completando las tareas asignadas."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre la actualización continua del sistema.",
-    "q": "¿Qué se debe mantener actualizado con las últimas mejoras y parches de seguridad, según el último paso de la guía?",
-    "extra": "",
-    "opts": [
-      "El manual impreso del robot",
-      "El software del robot",
-      "La estructura mecánica",
-      "El embalaje del robot"
-    ],
-    "ans": 1,
-    "exp": "Se debe mantener el software del robot actualizado con las últimas mejoras y parches de seguridad, fomentando la mejora continua."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre el ciclo completo de recomendaciones.",
-    "q": "¿Cuáles son los ocho pasos completos que propone la guía de recomendaciones para la programación de un robot?",
-    "extra": "",
-    "opts": [
-      "Definición de tarea, selección de entorno, programación de sensores y actuadores, algoritmos de control y navegación, manejo de excepciones y seguridad, pruebas y validación, documentación y mantenimiento, actualización y mejora continua",
-      "Compra, instalación, configuración, prueba, entrega, soporte, garantía, reciclaje",
-      "Diseño, marketing, producción, ventas, distribución, postventa, análisis, cierre",
-      "Sensores, actuadores, controladores, software, estructura, alimentación, interfaz, comunicación"
-    ],
-    "ans": 0,
-    "exp": "La guía plantea ocho pasos secuenciales que abarcan desde la definición de la tarea hasta la actualización y mejora continua del sistema robótico."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Guía_de_recomendaciones_para_la_programación_de_robots.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre el manejo de excepciones.",
-    "q": "¿Con qué mecanismo debe gestionar el robot los errores de manera robusta según la guía?",
-    "extra": "",
-    "opts": [
-      "Bloques de manejo de excepciones",
-      "Reinicio manual constante",
-      "Ignorando los errores menores",
-      "Apagado total del sistema"
-    ],
-    "ans": 0,
-    "exp": "El robot debe gestionar errores de manera robusta utilizando bloques de manejo de excepciones, complementados con medidas de seguridad como paradas de emergencia."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre los sensores de proximidad.",
-    "q": "¿Qué tipo de sensores permite a los robots detectar la presencia de objetos cercanos sin contacto físico?",
-    "extra": "",
-    "opts": [
-      "Sensores de temperatura",
-      "Sensores de proximidad",
-      "Sensores de visión",
-      "Sensores de fuerza y torque"
-    ],
-    "ans": 1,
-    "exp": "Los sensores de proximidad permiten a los robots detectar objetos cercanos sin necesidad de contacto físico, esencial para evitar colisiones y mejorar la precisión."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre la seguridad en entornos peligrosos.",
-    "q": "¿Cómo contribuyen los robots a la seguridad en entornos peligrosos?",
-    "extra": "",
-    "opts": [
-      "Incrementando los riesgos para el personal",
-      "Realizando tareas arriesgadas y reduciendo la exposición del personal",
-      "Aumentando la necesidad de supervisión humana",
-      "Eliminando la necesidad de sensores"
-    ],
-    "ans": 1,
-    "exp": "Los robots pueden realizar tareas arriesgadas en entornos peligrosos, reduciendo la exposición del personal a situaciones potencialmente dañinas."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre los beneficios en la manufactura.",
-    "q": "¿Cuál es uno de los principales beneficios de los robots en la manufactura?",
-    "extra": "",
-    "opts": [
-      "Aumento del trabajo manual",
-      "Mejora de la precisión y velocidad de producción",
-      "Reducción del uso de sensores",
-      "Eliminación total del personal humano"
-    ],
-    "ans": 1,
-    "exp": "La mejora de la precisión y velocidad de producción es un beneficio clave de los robots en la manufactura, ayudando a reducir errores y costos operativos."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los tipos de robots.",
-    "q": "¿Qué tipo de robot asiste en cirugías, diagnósticos y cuidados de pacientes?",
-    "extra": "",
-    "opts": [
-      "Robots industriales",
-      "Robots de servicio",
-      "Robots médicos",
-      "Robots autónomos"
-    ],
-    "ans": 2,
-    "exp": "Los robots médicos asisten en cirugías, diagnósticos y cuidados, proporcionando precisión y mejorando los resultados de los tratamientos."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los robots que operan sin intervención humana.",
-    "q": "¿Qué tipo de robot, como los vehículos autónomos, opera sin intervención humana transformando el transporte y la logística?",
-    "extra": "",
-    "opts": [
-      "Robots industriales",
-      "Robots de servicio",
-      "Robots médicos",
-      "Robots autónomos"
-    ],
-    "ans": 3,
-    "exp": "Los robots autónomos, como los vehículos autónomos, están transformando el transporte y la logística al operar sin intervención humana."
-  },
-  
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los sensores de fuerza y torque.",
-    "q": "¿Para qué tipo de tareas son cruciales los sensores de fuerza y torque?",
-    "extra": "",
-    "opts": [
-      "Para tareas de ensamblaje y manipulación precisa",
-      "Para medir la temperatura ambiental",
-      "Para detectar redes Wi-Fi",
-      "Para almacenar energía"
-    ],
-    "ans": 0,
-    "exp": "Los sensores de fuerza y torque miden la fuerza y el torque aplicados por el robot, siendo cruciales para tareas de ensamblaje y manipulación precisa."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre los actuadores de control preciso.",
-    "q": "¿Qué tipo de actuador ofrece control preciso de posición, velocidad y aceleración?",
-    "extra": "",
-    "opts": [
-      "Cilindros hidráulicos",
-      "Motores eléctricos genéricos",
-      "Servomotores",
-      "Sensores de visión"
-    ],
-    "ans": 2,
-    "exp": "Los servomotores ofrecen control preciso de posición, velocidad y aceleración, siendo esenciales para tareas que requieren alta precisión."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los controladores.",
-    "q": "¿Qué tipo de controlador se utiliza comúnmente en entornos industriales para controlar maquinaria y procesos?",
-    "extra": "",
-    "opts": [
-      "Microcontroladores",
-      "PLC (controladores lógicos programables)",
-      "Computadoras integradas",
-      "Pantallas táctiles"
-    ],
-    "ans": 1,
-    "exp": "Los PLC (controladores lógicos programables) se utilizan en entornos industriales para controlar maquinaria y procesos."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los sistemas de alimentación.",
-    "q": "¿Qué sistema de alimentación es más adecuado para robots que operan en exteriores y requieren autonomía prolongada?",
-    "extra": "",
-    "opts": [
-      "Conexión directa a la red eléctrica",
-      "Baterías de baja capacidad",
-      "Sistemas de energía solar",
-      "Cables de extensión"
-    ],
-    "ans": 2,
-    "exp": "Los sistemas de energía solar son adecuados para robots que operan en exteriores y requieren autonomía prolongada."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre la comunicación inalámbrica de corto alcance.",
-    "q": "¿Qué tecnologías se mencionan para comunicaciones inalámbricas de corto y mediano alcance entre robots?",
-    "extra": "",
-    "opts": [
-      "Ethernet industrial y Profinet",
-      "Wi-Fi y Bluetooth",
-      "Fibra óptica",
-      "Cable coaxial"
-    ],
-    "ans": 1,
-    "exp": "Wi-Fi y Bluetooth se utilizan para comunicaciones inalámbricas en corto y mediano alcance entre robots y sistemas de control."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los beneficios en logística.",
-    "q": "¿Qué beneficio aportan los robots en el ámbito de la logística?",
-    "extra": "",
-    "opts": [
-      "Optimización de la gestión de almacenes y entregas",
-      "Aumento de la precisión en procedimientos quirúrgicos",
-      "Mejora en el monitoreo de cultivos",
-      "Reducción de sensores de visión"
-    ],
-    "ans": 0,
-    "exp": "En logística, los robots mejoran la gestión de almacenes y la eficiencia de las entregas."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Robots_y_componentes_para_sistema_robotizado_en_contextos_profesionales.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre la interfaz de usuario de los robots.",
-    "q": "¿Cuál de las siguientes NO forma parte de la interfaz de usuario de un sistema robotizado?",
-    "extra": "",
-    "opts": [
-      "Pantallas táctiles",
-      "Paneles de control",
-      "Software de computadora",
-      "Cilindros hidráulicos"
-    ],
-    "ans": 3,
-    "exp": "Los cilindros hidráulicos son parte de los actuadores, no de la interfaz de usuario, que incluye pantallas táctiles, paneles de control y software."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Síntesis_de_la_unidad_3.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre la práctica esencial de programación.",
-    "q": "¿Qué práctica es crucial en la programación de robots para asegurar su funcionamiento óptimo y seguro?",
-    "extra": "",
-    "opts": [
-      "Documentación detallada",
-      "Interfaz gráfica de usuario",
-      "Diseño ergonómico",
-      "Uso de hardware avanzado"
-    ],
-    "ans": 0,
-    "exp": "La documentación detallada es una buena práctica esencial en la programación de robots, ya que facilita el mantenimiento y asegura un funcionamiento óptimo y seguro."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Síntesis_de_la_unidad_3.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre los ámbitos de aplicación de los robots.",
-    "q": "¿En qué ámbito se utilizan comúnmente los robots para mejorar la precisión y aumentar la productividad?",
-    "extra": "",
-    "opts": [
-      "Entretenimiento",
-      "Manufactura",
-      "Publicidad",
-      "Educación"
-    ],
-    "ans": 1,
-    "exp": "Los robots son ampliamente utilizados en la manufactura para automatizar procesos y mejorar la precisión y la productividad."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Síntesis_de_la_unidad_3.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre el componente que permite percibir el entorno.",
-    "q": "¿Cuál es el componente esencial de un robot que le permite percibir su entorno?",
-    "extra": "",
-    "opts": [
-      "Controladores",
-      "Sensores",
-      "Motores",
-      "Actuadores"
-    ],
-    "ans": 1,
-    "exp": "Los sensores son cruciales para que un robot perciba su entorno y recoja datos esenciales para su funcionamiento."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Síntesis_de_la_unidad_3.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre las tres ideas fuerza de la unidad.",
-    "q": "Según la síntesis de la unidad, ¿cuáles son las tres ideas fuerza principales de la asignatura?",
-    "extra": "",
-    "opts": [
-      "Hardware, software y redes",
-      "Características y componentes de un robot, ámbitos de aplicación de los robots, y buenas prácticas en programación",
-      "Historia, presente y futuro de la robótica",
-      "Costos, beneficios y riesgos"
-    ],
-    "ans": 1,
-    "exp": "Las tres ideas fuerza son: características y componentes de un robot, ámbitos de aplicación de los robots, y buenas prácticas en programación."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Síntesis_de_la_unidad_3.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta por los sectores donde la robótica genera impacto.",
-    "q": "Según la síntesis, ¿en qué cuatro sectores principales se destaca el impacto de la robótica?",
-    "extra": "",
-    "opts": [
-      "Manufactura, servicios, medicina y agricultura",
-      "Turismo, banca, moda y arte",
-      "Educación, deporte, música y cine",
-      "Minería, pesca, construcción y transporte"
-    ],
-    "ans": 0,
-    "exp": "La robótica impacta principalmente en manufactura, servicios, medicina y agricultura, automatizando tareas y mejorando la eficiencia en cada sector."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Síntesis_de_la_unidad_3.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre los tres componentes esenciales de un robot.",
-    "q": "Según la síntesis, ¿qué tres componentes esenciales le permiten a un robot interactuar con su entorno y ejecutar tareas?",
-    "extra": "",
-    "opts": [
-      "Pantalla, teclado y batería",
-      "Sensores, actuadores y controladores",
-      "Cámara, micrófono y altavoz",
-      "Chasis, ruedas y motor"
-    ],
-    "ans": 1,
-    "exp": "Un robot está compuesto por sensores, actuadores y controladores, que le permiten interactuar con su entorno y ejecutar tareas específicas con precisión y eficiencia."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre el comando de movimiento hacia adelante.",
-    "q": "¿Cuál es el comando en pseudocódigo para mover al robot hacia adelante?",
-    "extra": "<div style='background:`#1a1a1a`;color:`#00ff00`;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:`#2d2d2d`;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Pseudocódigo</div>INICIO\n MOVER_ADELANTE\nFIN</div>",
-    "opts": [
-      "INICIO MOVER_ADELANTE FIN",
-      "INICIO DETENER FIN",
-      "INICIO GIRAR_DERECHA FIN",
-      "INICIO ESPERAR(5) FIN"
-    ],
-    "ans": 0,
-    "exp": "El comando en pseudocódigo para mover al robot hacia adelante es \"INICIO MOVER_ADELANTE FIN\"."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre la estructura condicional ante un obstáculo.",
-    "q": "¿Cuál es la estructura de control que se utiliza para que el robot gire a la derecha si detecta un obstáculo?",
-    "extra": "<div style='background:`#1a1a1a`;color:`#00ff00`;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:`#2d2d2d`;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Pseudocódigo - Condicional</div>INICIO\n SI (OBSTACULO_ADELANTE) ENTONCES\n  DETENER\n  GIRAR_DERECHA\n FIN_SI\nFIN</div>",
-    "opts": [
-      "INICIO ESPERAR(5) FIN",
-      "INICIO MIENTRAS (NO OBSTACULO_ADELANTE) MOVER_ADELANTE FIN_MIENTRAS FIN",
-      "INICIO SI (OBSTACULO_ADELANTE) ENTONCES DETENER GIRAR_DERECHA FIN_SI FIN",
-      "INICIO GIRAR_DERECHA FIN"
-    ],
-    "ans": 2,
-    "exp": "La estructura de control utilizada es \"INICIO SI (OBSTACULO_ADELANTE) ENTONCES DETENER GIRAR_DERECHA FIN_SI FIN\", una estructura condicional (IF)."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre el pseudocódigo de una tarea sencilla.",
-    "q": "¿Cuál es el pseudocódigo correcto para hacer que el robot se mueva hacia adelante por 5 segundos y luego se detenga?",
-    "extra": "<div style='background:`#1a1a1a`;color:`#00ff00`;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:`#2d2d2d`;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Pseudocódigo</div>INICIO\n MOVER_ADELANTE\n ESPERAR(5)\n DETENER\nFIN</div>",
-    "opts": [
-      "INICIO MOVER_ADELANTE ESPERAR(5) DETENER FIN",
-      "INICIO SI (OBSTACULO_ADELANTE) ENTONCES DETENER FIN_SI FIN",
-      "INICIO MIENTRAS (NO OBSTACULO_ADELANTE) MOVER_ADELANTE FIN_MIENTRAS FIN",
-      "INICIO GIRAR_DERECHA ESPERAR(5) FIN"
-    ],
-    "ans": 0,
-    "exp": "El pseudocódigo correcto es \"INICIO MOVER_ADELANTE ESPERAR(5) DETENER FIN\"."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre el comando de detención.",
-    "q": "¿Qué instrucción en pseudocódigo se usa cuando se desea detener el movimiento de un robot?",
-    "extra": "<div style='background:`#1a1a1a`;color:`#00ff00`;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:`#2d2d2d`;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Pseudocódigo</div>INICIO\n DETENER\nFIN</div>",
-    "opts": [
-      "MOVER_ADELANTE",
-      "GIRAR_DERECHA",
-      "DETENER",
-      "ESPERAR"
-    ],
-    "ans": 2,
-    "exp": "Cuando se desea detener el movimiento de un robot se debe usar el comando DETENER dentro de la estructura INICIO...FIN."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre la estructura de bucle WHILE.",
-    "q": "¿Qué permite hacer la estructura de control MIENTRAS (bucle WHILE) en el ejemplo del robot que avanza hasta encontrar un obstáculo?",
-    "extra": "<div style='background:`#1a1a1a`;color:`#00ff00`;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:`#2d2d2d`;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Pseudocódigo - Bucle</div>INICIO\n MIENTRAS (NO OBSTACULO_ADELANTE)\n  MOVER_ADELANTE\n FIN_MIENTRAS\n DETENER\nFIN</div>",
-    "opts": [
-      "Detener el robot inmediatamente sin condiciones",
-      "Repetir la acción MOVER_ADELANTE mientras no se detecte un obstáculo adelante",
-      "Girar a la derecha de forma indefinida",
-      "Apagar los sensores del robot"
-    ],
-    "ans": 1,
-    "exp": "El bucle MIENTRAS permite que, mientras el robot no encuentre un obstáculo adelante, continúe realizando la acción de moverse hacia adelante."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "hard",
-    "case": "El profesor pregunta sobre el pseudocódigo de navegación con obstáculos.",
-    "q": "En el ejemplo de navegación compleja con obstáculos, ¿qué hace el robot cuando SI (OBSTACULO_ADELANTE) se cumple dentro del bucle MIENTRAS (NO LLEGAR_META)?",
-    "extra": "<div style='background:`#1a1a1a`;color:`#00ff00`;padding:10px 12px;border-radius:6px;font-family:monospace;white-space:pre-wrap;border:1px solid #333;text-align:left;font-size:13px;'><div style='background:`#2d2d2d`;color:#ccc;padding:3px 8px;margin:-10px -12px 8px -12px;border-radius:6px 6px 0 0;border-bottom:1px solid #444;font-family:sans-serif;font-size:11px;'>Pseudocódigo - Navegación compleja</div>INICIO\n MIENTRAS (NO LLEGAR_META)\n  SI (OBSTACULO_ADELANTE) ENTONCES\n   DETENER\n   GIRAR_DERECHA\n   MOVER_ADELANTE\n   ESPERAR(2)\n  FIN_SI\n  MOVER_ADELANTE\n FIN_MIENTRAS\n DETENER\nFIN</div>",
-    "opts": [
-      "Continúa avanzando sin detenerse",
-      "Se detiene, gira a la derecha, avanza y espera 2 segundos antes de continuar",
-      "Apaga todos los sensores",
-      "Termina el programa inmediatamente"
-    ],
-    "ans": 1,
-    "exp": "Cuando se detecta un obstáculo, el robot ejecuta: DETENER, GIRAR_DERECHA, MOVER_ADELANTE y ESPERAR(2), antes de continuar con el bucle hasta llegar a la meta."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "medium",
-    "case": "El profesor pregunta sobre el propósito de las estructuras de control condicionales.",
-    "q": "¿Para qué permiten usar estructuras de control como el condicional (IF) en la programación de tareas de un robot?",
-    "extra": "",
-    "opts": [
-      "Para que el robot pueda tomar decisiones basadas en lo que percibe del medio a través de los sensores",
-      "Para aumentar la velocidad de procesamiento del hardware",
-      "Para reducir el consumo eléctrico del robot",
-      "Para eliminar la necesidad de sensores"
-    ],
-    "ans": 0,
-    "exp": "Usar estructuras de control permite que el robot pueda tomar decisiones basado en lo que percibe del medio a través de los sensores."
-  },
-  {
-    "profe": true,
-    "unit": "Unidad 3 - Fundamentos y aplicaciones de robótica",
-    "file": "Tareas_simples_de_un_robot_en_el_ámbito_profesional.docx",
-    "diff": "easy",
-    "case": "El profesor pregunta sobre los beneficios de las tareas simples en el ámbito profesional.",
-    "q": "¿Qué beneficios aporta la implementación de robots en tareas simples dentro del ámbito profesional?",
-    "extra": "",
-    "opts": [
-      "Solo reduce costos, sin otros beneficios",
-      "Optimiza los procesos operativos y aporta beneficios en seguridad, eficiencia y calidad",
-      "Elimina la necesidad de programación",
-      "Aumenta exclusivamente la carga de trabajo humano"
-    ],
-    "ans": 1,
-    "exp": "La implementación de robots en tareas simples optimiza los procesos operativos y aporta beneficios significativos en términos de seguridad, eficiencia y calidad."
-  }
 ]
 
 export default introduccion_programacion_robotica;

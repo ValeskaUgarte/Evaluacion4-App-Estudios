@@ -289,8 +289,8 @@ export default function Cuestionario() {
                     <div className={`subject-card${desactivadas.includes('introduccion_programacion_robotica') ? ' subject-disabled' : ''}`} key="static-introduccion_programacion_robotica" id="card-introduccion_programacion_robotica" onClick={() => irAlQuiz('introduccion_programacion_robotica')}>
                       <img src="img/inRobotica01.jpg" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
                       <div className="subject-name">Introducción a la Programación y Robótica Aplicada</div>
-                      <div className="subject-meta">Material de la asignatura</div>
-                      <div><span className="coming-badge">Material - Elaborando cuestionario</span></div>
+                      <div className="subject-meta">Material de la asignatura, Temario para el examen</div>
+                      <div><span className="coming-badge">Material - 171 preguntas</span></div>
                       {/* Solo aparece si hay sesión iniciada */}
                       {usuario && (
                         <button
@@ -687,7 +687,7 @@ export default function Cuestionario() {
             <div className="config-row">
               <span className="config-label">Orden:</span>
               <span style={{ fontSize: '0.85rem', color: 'var(--text-soft)' }}>
-                Preguntas del profe primero · 🔀 Aleatorio · 🔤 Opciones mezcladas
+                Preguntas del profe primero · Aleatorio · Opciones mezcladas
               </span>
             </div>
           </div>
