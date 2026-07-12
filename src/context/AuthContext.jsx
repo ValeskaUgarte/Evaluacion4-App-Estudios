@@ -6,7 +6,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 // Crea el contexto para compartir datos de autenticación en toda la app
 const AuthContext = createContext(null);
 
-// AUTH PROVIDER - Componente que envuelve la app y provee los datos
+// AUTH PROVIDER Componente que envuelve la app y provee los datos
 export function AuthProvider({ children }) {
   const [usuario, setUsuario] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
     setLoading(false); 
   }, []);
 
-   // LOGIN - Inicia sesión (admin fijo o usuario registrado)
+   // LOGIN Inicia sesión (admin fijo o usuario registrado)
   function login(email, password) {
   const emailLimpio = (email || '').trim().toLowerCase();
   // Admin fijo — no está en localStorage
@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
   return { ok: true };
 }
 
-  // REGISTRO - Crea un nuevo usuario y lo loguea automáticamente
+  // REGISTRO Crea un nuevo usuario y lo loguea automáticamente
   function registro(nombre, email, password, rol = 'estudiante') {
     // VALIDACIÓN DE SEGURIDAD (defensa en profundidad, además de la del formulario)
     const nombreLimpio = (nombre || '').trim();
@@ -132,13 +132,13 @@ export function AuthProvider({ children }) {
     actualizarUsuario({ historial: [...historial, resultado] });
   }
 
-  // ══════════════════════════════════════════════════════════
-  // MODERADORES - El administrador puede nombrar a un usuario
+ 
+  // MODERADORES El administrador puede nombrar a un usuario
   // registrado (estudiante o colaborador) como "moderador", para que
   // lo ayude a aprobar/rechazar preguntas y asignaturas pendientes.
   // Un moderador NO tiene los permisos completos de admin (no puede
   // nombrar a otros moderadores, ni activar/desactivar cuestionarios).
-  // ══════════════════════════════════════════════════════════
+
 
   // Devuelve la lista de usuarios registrados (sin la contraseña, para
   // no exponerla en el panel de Admin) — no incluye al admin fijo,
@@ -169,7 +169,7 @@ export function AuthProvider({ children }) {
   // Quita el rol de moderador y deja al usuario como 'estudiante'
   function revocarModerador(id) { cambiarRolUsuario(id, 'estudiante'); }
 
-  // PROVIDER - Expone todos los datos y funciones a los hijos
+  // PROVIDER Expone todos los datos y funciones a los hijos
   return (
     <AuthContext.Provider value={{ 
       usuario, 

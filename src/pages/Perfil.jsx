@@ -129,16 +129,15 @@ export default function Perfil() {
         </div>
       )}
 
-        {/*HISTORIAL Lista de resultados de quizzes. Para el admin se
-            muestra en grid compacto para no ocupar tanto espacio y no
-            interrumpir visualmente la sección de Actividad reciente
-            de más abajo.*/}
+        {/*HISTORIAL Lista de resultados de quizzes, en grid compacto
+            con scroll interno para todos los roles por igual (antes
+            el admin tenía un diseño distinto al resto, se unificó).*/}
 
         <div className="perfil-section">
           <h3>Historial de quizzes</h3>
           {historial.length === 0 ? (
             <p className="perfil-empty">Aún no has realizado ningún quiz.</p>
-          ) : usuario.rol === 'admin' ? (
+          ) : (
             <div className="historial-grid">
               {[...historial].reverse().map((h, i) => (
                 <div key={i} className={`historial-grid-item ${h.nota >= 4.0 ? 'item-ok' : 'item-mal'}`}>
@@ -146,21 +145,6 @@ export default function Perfil() {
                   <span className="historial-nota">{(h.nota ?? 0).toFixed(1)}</span>
                   <p className="historial-detalle">{h.correctas}/{h.total}</p>
                   <p className="historial-fecha">{new Date(h.fecha).toLocaleDateString('es-CL')}</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="historial-lista">
-              {[...historial].reverse().map((h, i) => (
-                <div key={i} className={`historial-item ${h.nota >= 4.0 ? 'item-ok' : 'item-mal'}`}>
-                  <div className="historial-info">
-                    <p className="historial-asig">{h.asignatura?.nombre ?? h.asignatura}</p>
-                    <p className="historial-fecha">{new Date(h.fecha).toLocaleDateString('es-CL')}</p>
-                  </div>
-                  <div className="historial-resultado">
-                    <span className="historial-nota">{(h.nota ?? 0).toFixed(1)}</span>
-                    <span className="historial-detalle">{h.correctas}/{h.total}</span>
-                  </div>
                 </div>
               ))}
             </div>

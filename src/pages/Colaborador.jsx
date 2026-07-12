@@ -235,7 +235,7 @@ export default function Colaborador() {
       <Navbar />
       <main className="page">
         <div className="colab-header">
-          <h1>Panel del Colaborador</h1>
+          <h2>Panel del Colaborador</h2>
           <p>Ingresa preguntas de estudio para las asignaturas</p>
         </div>
 
