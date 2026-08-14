@@ -426,8 +426,8 @@ export default function Cuestionario() {
                     <div className={`subject-card${desactivadas.includes('ingles_basico') ? ' subject-disabled' : ''}`} key="static-ingles_basico" id="card-ingles_basico" onClick={() => irAlQuiz('ingles_basico')}>
                       <img src="img/Ingles Imicial01.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
                       <div className="subject-name">Inglés Inicial</div>
-                      <div className="subject-meta">Pendiente: agregar preguntas</div>
-                      <div><span className="coming-badge">Material - Aun sin preguntas</span></div>
+                      <div className="subject-meta">En desarrollo segun material de estudio otorgado por la asignatura</div>
+                      <div><span className="coming-badge">Material - 386 preguntas</span></div>
                       {/* Solo aparece si hay sesión iniciada */}
                       {usuario && (
                         <button

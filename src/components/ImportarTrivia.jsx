@@ -24,28 +24,27 @@ import './ImportarTrivia.css';
 const DIFICULTAD_LABEL = { easy: 'Fácil', medium: 'Media', hard: 'Difícil' };
 
 export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
-  // ── Categorías de la API (se cargan una vez, al montar) ──
+  //Categorías de la API (se cargan una vez, al montar)
   const [categorias, setCategorias] = useState([]);
-  const [estadoCategorias, setEstadoCategorias] = useState('cargando'); // cargando | exito | error
+  const [estadoCategorias, setEstadoCategorias] = useState('cargando'); // cargando, exito, error
 
-  // ── Filtros de búsqueda ──
+  //Filtros de búsqueda
   const [asignaturaId, setAsignaturaId] = useState('');
   const [categoria, setCategoria] = useState('');
   const [dificultad, setDificultad] = useState('');
   const [cantidad, setCantidad] = useState(10);
 
-  // ── Resultado de la búsqueda ──
-  // estado: idle | cargando | exito | error | vacio
+  //Resultado de la búsqueda, estado: idle, cargando, exito, error, vacio
   const [estado, setEstado] = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [descartadas, setDescartadas] = useState(0);
   const [resultados, setResultados] = useState([]); // [{ ...pregunta, seleccionada, _localId }]
 
-  // ── Importación hacia el banco propio ──
+  //Importación hacia el banco propio
   const [importando, setImportando] = useState(false);
-  const [msgImport, setMsgImport] = useState(null); // { texto, tipo: 'success' | 'error' }
+  const [msgImport, setMsgImport] = useState(null); // { texto, tipo: 'success', 'error' }
 
-  // EFECTO INICIAL - Carga categorías de la API externa al montar el componente
+  // EFECTO INICIAL, Carga categorías de la API externa al montar el componente
   useEffect(() => {
     let activo = true;
     setEstadoCategorias('cargando');
@@ -86,7 +85,7 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
   function actualizar() {
     buscar();
   }
-
+ 
   function toggleSeleccion(localId) {
     setResultados(rs => rs.map(r => r._localId === localId ? { ...r, seleccionada: !r.seleccionada } : r));
   }
@@ -110,7 +109,7 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
     setImportando(true);
     setMsgImport(null);
     const estadoNuevo = estadoSegunRol(usuario?.rol);
-
+ 
     try {
       // Se crean en paralelo; si alguna falla, no detiene a las demás.
       const resultadosImport = await Promise.allSettled(
@@ -251,14 +250,14 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
           )}
         </div>
       </div>
-
+ 
       {/*ESTADO: CARGANDO */}
       {estado === 'cargando' && (
         <div className="loading importar-loading">
           <span className="importar-spinner" aria-hidden="true" /> Consultando Open Trivia DB y traduciendo al español…
         </div>
       )}
-
+ 
       {/* ESTADO: ERROR */}
       {estado === 'error' && (
         <div className="admin-flash-inline error">
@@ -272,7 +271,7 @@ export default function ImportarTrivia({ usuario, asignaturas, onImportado }) {
           No se encontraron preguntas para esos filtros. Prueba cambiando la categoría, dificultad o cantidad.
         </div>
       )}
-
+  
       {/* ESTADO: ÉXITO, listado de preguntas obtenidas */}
       {estado === 'exito' && resultados.length > 0 && (
         <div className="card">

@@ -25,3 +25,4 @@ export default function RutaProtegida({ children, roles }) {
   // Si todo está bien, muestra la página solicitada
   return children;
 }
+

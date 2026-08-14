@@ -2868,7 +2868,2063 @@ const preguntas_ingles_basico = [
         ],
         "ans": 0,
         "exp": "'See you!' (¡Hasta luego!). Pronunciación: /siː juː/. Frase: A: See you later! B: See you!"
-    }
+    },
+
+    //WIDE ANGLE LEVE 1A
+
+    {
+    "unit": "Unit 1 - Self",
+    "section": "1.1 Spotlight on International Students",
+    "topic": "Reading: Student profiles",
+    "diff": "medium",
+    "q": "What does 'the land of silver' refer to?",
+    "opts": ["Mexico", "Argentina", "Peru", "Chile"],
+    "ans": 1,
+    "exp": "En el perfil de Mariana Bianchi: 'The name of our country means \"the land of silver\" in Spanish.' Se refiere a Argentina."
+},
+//UNIT 1 - SELF
+//1.1 Spotlight on International Students (página 6-7)
+
+
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "easy",
+        "q": "Where is Mariana Bianchi from?",
+        "opts": ["Germany", "Japan", "Argentina", "Egypt"],
+        "ans": 2,
+        "exp": "Mariana Bianchi dice: 'I'm a student and musician from Buenos Aires, Argentina.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "easy",
+        "q": "What is Kaito Fuchida's mother's nationality?",
+        "opts": ["Japanese", "Korean", "Chinese", "German"],
+        "ans": 1,
+        "exp": "Kaito dice: 'My father is Japanese, but my mother is Korean.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "easy",
+        "q": "What is Karim Abadi's job?",
+        "opts": ["Musician", "Scientist", "French teacher", "Businessman"],
+        "ans": 2,
+        "exp": "Karim dice: 'I'm a French teacher here.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "easy",
+        "q": "Where are Hanna and Emilia Fischer from?",
+        "opts": ["France", "Germany", "Spain", "Italy"],
+        "ans": 1,
+        "exp": "Hanna y Emilia dicen: 'We're from Germany.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "medium",
+        "q": "What is the capital of Argentina?",
+        "opts": ["Santiago", "Buenos Aires", "Lima", "Bogotá"],
+        "ans": 1,
+        "exp": "Mariana dice: 'It's the capital city of Argentina.' Se refiere a Buenos Aires."
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "medium",
+        "q": "What is the German currency?",
+        "opts": ["Peso", "Yen", "Euro", "Pound"],
+        "ans": 2,
+        "exp": "Hanna y Emilia dicen: '...our currency is the euro.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "hard",
+        "q": "What is Kaito's mother's job?",
+        "opts": ["Teacher", "Scientist", "Businesswoman", "Server"],
+        "ans": 1,
+        "exp": "Kaito dice: 'My father is Japanese, but my mother is Korean. They're both scientists.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "hard",
+        "q": "What is the Egyptian currency?",
+        "opts": ["Peso", "Euro", "Yen", "Egyptian pound"],
+        "ans": 3,
+        "exp": "Karim dice: 'Our currency is the Egyptian pound.'"
+    },
+
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "easy",
+        "q": "Complete: 'The name of our country means \"the land of ___\" in Spanish.'",
+        "opts": ["gold", "silver", "copper", "bronze"],
+        "ans": 1,
+        "exp": "Mariana Bianchi dice: 'The name of our country means \"the land of silver\" in Spanish.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "easy",
+        "q": "Complete: 'Our language is German, and our currency is the ___ .'",
+        "opts": ["peso", "yen", "euro", "pound"],
+        "ans": 2,
+        "exp": "Hanna y Emilia dicen: 'Our language is German, and our currency is the euro.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "medium",
+        "q": "Complete: 'I'm from Tokyo, the capital city of ___.'",
+        "opts": ["China", "Korea", "Japan", "Vietnam"],
+        "ans": 2,
+        "exp": "Kaito Fuchida dice: 'I'm from Tokyo, the capital city of Japan.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.1 Spotlight on International Students",
+        "topic": "Reading: Student profiles",
+        "diff": "medium",
+        "q": "Complete: 'Alexandria ___ the capital city. It's Cairo.'",
+        "opts": ["is", "isn't", "are", "aren't"],
+        "ans": 1,
+        "exp": "Karim Abadi dice: 'Alexandria isn't the capital city. It's Cairo.'"
+    },
+
+
+    //1.2 I'm a Rising Star! (página 8-10)
+
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "easy",
+        "q": "What is David's last name?",
+        "opts": ["David", "Rodrigues", "Smith", "Rising"],
+        "ans": 1,
+        "exp": "David dice: 'My first name is David, and my last name is Rodrigues.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "easy",
+        "q": "What career does David want to train for?",
+        "opts": ["Musician", "Teacher", "TV chef", "Actor"],
+        "ans": 2,
+        "exp": "David dice: 'I want to be a famous chef on TV.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "easy",
+        "q": "How old is David?",
+        "opts": ["17", "18", "19", "20"],
+        "ans": 1,
+        "exp": "David dice: 'I'm 18.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "medium",
+        "q": "Where is David from?",
+        "opts": ["New York", "Asheville", "Boston", "Chicago"],
+        "ans": 1,
+        "exp": "David dice: 'Asheville, North Carolina.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Grammar: Questions with be",
+        "diff": "medium",
+        "q": "What is the correct question: '___ your phone number?'",
+        "opts": ["What", "Where", "How", "When"],
+        "ans": 0,
+        "exp": "Amanda pregunta: 'What's your phone number?' (¿Cuál es tu número de teléfono?)"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Grammar: Questions with be",
+        "diff": "hard",
+        "q": "What is the correct question: '___ old are you?'",
+        "opts": ["What", "Where", "How", "When"],
+        "ans": 2,
+        "exp": "Amanda pregunta: 'How old are you now?' (¿Cuántos años tienes ahora?)"
+    },
+
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "easy",
+        "q": "Complete the conversation: '___ you a student here?' 'No, I'm not.'",
+        "opts": ["Are", "Is", "Am", "Do"],
+        "ans": 0,
+        "exp": "Amanda pregunta: 'Are you a student here?'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "easy",
+        "q": "Complete: 'What's ___ email address?'",
+        "opts": ["my", "your", "his", "her"],
+        "ans": 1,
+        "exp": "Amanda pregunta: 'Your email address?'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "medium",
+        "q": "Complete: 'What ___ your career choice?'",
+        "opts": ["is", "are", "am", "be"],
+        "ans": 0,
+        "exp": "Amanda pregunta: 'And what's your career choice?'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.2 I'm a Rising Star!",
+        "topic": "Conversation: David and Amanda",
+        "diff": "medium",
+        "q": "Complete: 'You ___ be, David! You're a rising star!'",
+        "opts": ["can", "will", "are", "do"],
+        "ans": 1,
+        "exp": "Amanda dice: 'You will be, David! You're a rising star!'"
+    },
+
+    //1.3 Who's Who? (página 11)
+
+
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.3 Who's Who?",
+        "topic": "Jobs vocabulary",
+        "diff": "easy",
+        "q": "Which job earns up to $20 million a year according to the article?",
+        "opts": ["Doctor", "Teacher", "Soccer player", "Scientist"],
+        "ans": 2,
+        "exp": "En el artículo '10 Best Jobs of This Year', el trabajo #2 tiene un rango de $1,000,000–$20,000,000 (soccer player/race car driver)."
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.3 Who's Who?",
+        "topic": "Listening: Content words",
+        "diff": "medium",
+        "q": "In the listening skill, what are 'content words'?",
+        "opts": ["Words that are said more clearly and stressed", "Words that are not important", "All words in a sentence", "Only nouns"],
+        "ans": 0,
+        "exp": "La habilidad de escucha dice: 'Content words are words that have important meaning in a sentence. Content words are said more clearly and have more stress on them than other words.'"
+    },
+
+// 1.4 Nice to Meet You! (página 12-13)
+
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.4 Nice to Meet You!",
+        "topic": "English For Real: Greetings",
+        "diff": "easy",
+        "q": "What is an informal way to greet a friend?",
+        "opts": ["Good morning", "Hello", "Hey, what's up?", "How are you?"],
+        "ans": 2,
+        "exp": "El texto dice: 'When we talk to friends, family, or classmates, we feel relaxed. We might say Hi or Hey!, What's up?, How's it going?, or How are you doing?'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.4 Nice to Meet You!",
+        "topic": "English For Real: Greetings",
+        "diff": "easy",
+        "q": "What is a formal way to greet someone you don't know well?",
+        "opts": ["Hey!", "What's up?", "Hello", "How's it going?"],
+        "ans": 2,
+        "exp": "El texto dice: 'If we talk to an older person, someone we don't know well, or our boss or teacher, we are less relaxed. We say Hello or Good morning / afternoon.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.4 Nice to Meet You!",
+        "topic": "English For Real: Introductions",
+        "diff": "medium",
+        "q": "What expression do you use when you meet someone for the first time?",
+        "opts": ["Hey!", "Nice to meet you.", "How are you doing?", "Goodbye"],
+        "ans": 1,
+        "exp": "El texto dice: 'When we meet people for the first time, we use introductions: I'm..., My name is..., and Nice to meet you.'"
+    },
+
+    //1.5 All About Me (página 14-15)
+
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.5 All About Me",
+        "topic": "Pronunciation: Sounds of the alphabet",
+        "diff": "easy",
+        "q": "Why do we practice the sounds of the alphabet?",
+        "opts": ["To sing better", "To spell words and understand spelling", "To learn grammar", "To read faster"],
+        "ans": 1,
+        "exp": "El texto dice: 'Practice reading the letters of the alphabet. These will help you spell words and understand when people spell words for you.'"
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.5 All About Me",
+        "topic": "Speaking: Giving personal information",
+        "diff": "medium",
+        "q": "What should you do when you give information about yourself?",
+        "opts": ["Speak fast", "Speak slowly and clearly", "Whisper", "Don't repeat anything"],
+        "ans": 1,
+        "exp": "El texto dice: 'When you give information about yourself, speak slowly and clearly. Be ready to answer questions and repeat information.'"
+    },
+    
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.5 All About Me",
+        "topic": "Listening: Conversation",
+        "diff": "easy",
+        "q": "Complete: 'The man's name is ___ .'",
+        "opts": ["Greg", "Craig", "David", "Max"],
+        "ans": 0,
+        "exp": "El ejercicio dice: 'The man's name is Greg/Craig.' La respuesta correcta es Greg."
+    },
+    {
+        "unit": "Unit 1 - Self",
+        "section": "1.5 All About Me",
+        "topic": "Listening: Conversation",
+        "diff": "medium",
+        "q": "Complete: 'His address is 16 ___ Street.'",
+        "opts": ["Portnoy", "Portland", "Pleasant", "Main"],
+        "ans": 0,
+        "exp": "El ejercicio dice: 'His address is 16 Portnoy Street/16 Portland Street.'"
+    },
+
+//UNIT 2 - THINGS
+//2.1 Great Gifts! (página 18-19)
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "easy",
+        "q": "What is the price range for a hot air balloon ride?",
+        "opts": ["$5–$25", "$200–$300", "$15–$100", "$10–$30"],
+        "ans": 1,
+        "exp": "El artículo dice: 'a hot air balloon ride $200–$300'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "easy",
+        "q": "What gift is good for people ages 4 to 34?",
+        "opts": ["A picture frame", "Concert tickets", "Colored pencils and a coloring book", "A Peruvian bag"],
+        "ans": 2,
+        "exp": "El artículo dice: 'colored pencils and a coloring book $10–$30. This gift is good for a four-year-old…or a 34-year-old!'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "medium",
+        "q": "How much is the big Peruvian bag?",
+        "opts": ["$12", "$45", "$25", "$60"],
+        "ans": 1,
+        "exp": "El artículo dice: 'a Peruvian bag $12 small/$45 big'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "medium",
+        "q": "What is the price range for concert tickets?",
+        "opts": ["$5–$25", "$200–$300", "$15–$100", "$10–$30"],
+        "ans": 2,
+        "exp": "El artículo dice: 'concert tickets $15–$100'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Grammar: Singular and plural nouns",
+        "diff": "easy",
+        "q": "What is the plural of 'gift'?",
+        "opts": ["gift", "gifts", "giftes", "gifting"],
+        "ans": 1,
+        "exp": "El libro dice: 'To form most plural nouns, add -s. gift → gifts'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Grammar: Singular and plural nouns",
+        "diff": "hard",
+        "q": "What is the plural of 'child'?",
+        "opts": ["childs", "children", "childes", "child"],
+        "ans": 1,
+        "exp": "El libro dice: 'Some plural nouns are irregular. child → children'"
+    },
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "easy",
+        "q": "Complete: 'A picture of friends or family in a ___ is a very special gift.'",
+        "opts": ["box", "frame", "bag", "book"],
+        "ans": 1,
+        "exp": "El artículo dice: 'A picture of friends or family in a frame is a very special gift.'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "easy",
+        "q": "Complete: 'These bags are cool and ___!'",
+        "opts": ["expensive", "ugly", "colorful", "old"],
+        "ans": 2,
+        "exp": "El artículo dice: 'These bags are cool and colorful!'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "medium",
+        "q": "Complete: 'The big bags are great for ___, but everyone can use a Peruvian bag.'",
+        "opts": ["teachers", "students", "parents", "children"],
+        "ans": 1,
+        "exp": "El artículo dice: 'The big bags are great for students, but everyone can use a Peruvian bag.'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.1 Great Gifts!",
+        "topic": "Reading: Gift Ideas for All Ages",
+        "diff": "medium",
+        "q": "Complete: 'Music concerts are for everyone, from age one to ___!'",
+        "opts": ["100", "101", "99", "102"],
+        "ans": 1,
+        "exp": "El artículo dice: 'Music concerts are for everyone, from age one to 101!'"
+    },
+
+
+//2.2 You Need This! (página 20-21)
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.2 You Need This!",
+        "topic": "Reading: Alexander Graham Bell ad",
+        "diff": "easy",
+        "q": "What company is advertising the T-Phone?",
+        "opts": ["Apple", "Bell Telephone Company", "Samsung", "Google"],
+        "ans": 1,
+        "exp": "El anuncio dice: 'Alexander Graham Bell and Bell Telephone Company present... THE EXCITING NEW T-PHONE-1878'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.2 You Need This!",
+        "topic": "Reading: Alexander Graham Bell ad",
+        "diff": "medium",
+        "q": "What does the small text at the bottom of the ad say?",
+        "opts": ["Free shipping", "If you're a rich person or a big company", "Limited time only", "One per customer"],
+        "ans": 1,
+        "exp": "El anuncio tiene una nota: '*if you're a rich person or a big company'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.2 You Need This!",
+        "topic": "Grammar: Demonstrative adjectives",
+        "diff": "easy",
+        "q": "Complete: '___ phone is great!' (near)",
+        "opts": ["This", "That", "These", "Those"],
+        "ans": 0,
+        "exp": "El libro dice: 'This phone is great!' Usamos 'this' con singular y cerca."
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.2 You Need This!",
+        "topic": "Grammar: Demonstrative adjectives",
+        "diff": "easy",
+        "q": "Complete: '___ phones aren't expensive.' (near)",
+        "opts": ["This", "That", "These", "Those"],
+        "ans": 2,
+        "exp": "El libro dice: 'These phones aren't expensive.' Usamos 'these' con plural y cerca."
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.2 You Need This!",
+        "topic": "Vocabulary: Adjectives",
+        "diff": "easy",
+        "q": "What is the opposite of 'new'?",
+        "opts": ["Big", "Old", "Small", "Beautiful"],
+        "ans": 1,
+        "exp": "El vocabulario incluye 'new' y 'old' como adjetivos opuestos."
+    },
+    
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.2 You Need This!",
+        "topic": "Vocabulary: Adjectives",
+        "diff": "easy",
+        "q": "Complete: 'This car is ___ .' (opposite of new)",
+        "opts": ["big", "old", "beautiful", "black"],
+        "ans": 1,
+        "exp": "El opuesto de 'new' es 'old'."
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.2 You Need This!",
+        "topic": "Reading: Alexander Bell ad",
+        "diff": "medium",
+        "q": "Complete: 'These phones are great! You can talk to your family and ___!'",
+        "opts": ["friends", "teachers", "bosses", "strangers"],
+        "ans": 0,
+        "exp": "El anuncio dice: 'These phones are great! You can talk to your family and friends!'"
+    },
+
+    //2.3 What's in Your Bag? (página 22-23)
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.3 What's in Your Bag?",
+        "topic": "Vocabulary: Personal items",
+        "diff": "easy",
+        "q": "Which item is NOT listed in the picture?",
+        "opts": ["Cell phone", "Wallet", "Computer", "Television"],
+        "ans": 3,
+        "exp": "La lista incluye: a cell phone, a wallet, a picture of someone, glasses, money, a car key, house keys, a computer. No incluye 'television'."
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.3 What's in Your Bag?",
+        "topic": "Grammar: Possessive 's",
+        "diff": "easy",
+        "q": "Complete: 'This is ___ bag.' (de Rachel)",
+        "opts": ["Rachel", "Rachel's", "Rachels", "Racheles"],
+        "ans": 1,
+        "exp": "El libro dice: 'Rachel's wallet is big.' Usamos 's para indicar posesión."
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.3 What's in Your Bag?",
+        "topic": "Grammar: Possessive adjectives",
+        "diff": "easy",
+        "q": "Complete: 'I have a phone. It's in ___ bag.'",
+        "opts": ["my", "your", "his", "her"],
+        "ans": 0,
+        "exp": "El libro dice: 'I have a phone. It's in my bag.' Usamos 'my' como adjetivo posesivo."
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.3 What's in Your Bag?",
+        "topic": "Grammar: Possessive 's",
+        "diff": "medium",
+        "q": "Complete: 'This is my ___ house.' (de mis padres)",
+        "opts": ["parents", "parent's", "parents'", "parents's"],
+        "ans": 2,
+        "exp": "El libro dice: 'We add ' (not 's) to a plural noun that ends with s.' → parents' house."
+    },
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.3 What's in Your Bag?",
+        "topic": "Grammar: Possessive 's",
+        "diff": "easy",
+        "q": "Complete: 'Rachel's ___ is big.'",
+        "opts": ["bag", "wallet", "phone", "keys"],
+        "ans": 1,
+        "exp": "El libro dice: 'Rachel's wallet is big.'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.3 What's in Your Bag?",
+        "topic": "Grammar: Possessive adjectives",
+        "diff": "easy",
+        "q": "Complete: 'I have a phone. It's in ___ bag.'",
+        "opts": ["my", "your", "his", "her"],
+        "ans": 0,
+        "exp": "El libro dice: 'I have a phone. It's in my bag.'"
+    },
+
+    //2.4 Excuse Me... (página 24-25)
+
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.4 Excuse Me...",
+        "topic": "English For Real: Being polite to strangers",
+        "diff": "easy",
+        "q": "What is the polite way to get someone's attention?",
+        "opts": ["Hey!", "Excuse me", "Hello", "What?"],
+        "ans": 1,
+        "exp": "El libro dice: 'excuse me (to get someone's attention)'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.4 Excuse Me...",
+        "topic": "English For Real: Being polite to strangers",
+        "diff": "easy",
+        "q": "What do you say after someone says 'thank you'?",
+        "opts": ["Please", "Sorry", "You're welcome", "Excuse me"],
+        "ans": 2,
+        "exp": "El libro dice: 'you're welcome (after someone says \"thank you\" to you)'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.4 Excuse Me...",
+        "topic": "English For Real: Being polite to strangers",
+        "diff": "medium",
+        "q": "What is more polite: 'I want a coffee' or 'I'd like a coffee'?",
+        "opts": ["I want a coffee", "I'd like a coffee", "Both are polite", "Neither is polite"],
+        "ans": 1,
+        "exp": "El libro compara 'I want a coffee' (menos educado) con 'I'd like a coffee' (más educado)."
+    },
+
+    //2.5 Is It for Me? (página 26)
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.5 Is It for Me?",
+        "topic": "Speaking: Asking and answering questions",
+        "diff": "easy",
+        "q": "What kind of answer do wh- questions need?",
+        "opts": ["Yes or no", "More information", "Just 'ok'", "A number"],
+        "ans": 1,
+        "exp": "El libro dice: 'We use wh- questions when we want more information... Question words need more information than yes/no questions.'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.5 Is It for Me?",
+        "topic": "Speaking: Asking and answering questions",
+        "diff": "easy",
+        "q": "What kind of answer do questions with 'be' give?",
+        "opts": ["Yes/no answer", "More information", "A number", "A time"],
+        "ans": 0,
+        "exp": "El libro dice: 'We use questions with be when we want a yes/no answer.'"
+    },
+
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.5 Is It for Me?",
+        "topic": "Speaking: Questions",
+        "diff": "easy",
+        "q": "Complete the question: '___ color is it?'",
+        "opts": ["What", "Where", "How", "When"],
+        "ans": 0,
+        "exp": "El libro dice: 'What color is it?'"
+    },
+    {
+        "unit": "Unit 2 - Things",
+        "section": "2.5 Is It for Me?",
+        "topic": "Speaking: Questions",
+        "diff": "easy",
+        "q": "Complete the question: 'How ___ is it?' (price)",
+        "opts": ["expensive", "big", "new", "small"],
+        "ans": 0,
+        "exp": "El libro dice: 'How expensive is it?'"
+    },
+
+    //UNIT 3 - PLACES
+//3.1 Welcome to Headquarters! (página 30-31)
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Reading: British Airways Headquarters",
+        "diff": "easy",
+        "q": "What is the name of British Airways' headquarters?",
+        "opts": ["Heathrow", "Waterside", "London", "Airport"],
+        "ans": 1,
+        "exp": "El texto dice: 'The British Airways headquarters is near Heathrow Airport in London. The headquarters is called Waterside.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Reading: British Airways Headquarters",
+        "diff": "easy",
+        "q": "How many people work at British Airways headquarters?",
+        "opts": ["400", "4,000", "40,000", "4"],
+        "ans": 1,
+        "exp": "El texto dice: 'About 4,000 people work here.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Reading: British Airways Headquarters",
+        "diff": "medium",
+        "q": "What facilities are inside the British Airways headquarters?",
+        "opts": ["A cinema", "A supermarket and a hairdresser's", "A gym", "A library"],
+        "ans": 1,
+        "exp": "El texto dice: 'On the street, there is a supermarket and a small shop. There is also a hairdresser's.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Reading: British Airways Headquarters",
+        "diff": "hard",
+        "q": "How big is the British Airways headquarters building?",
+        "opts": ["900 square meters", "9,000 square meters", "90,000 square meters", "900,000 square meters"],
+        "ans": 1,
+        "exp": "El texto dice: 'It's a very large building—about 9,000 square meters.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Grammar: There is / There are",
+        "diff": "easy",
+        "q": "Complete: '___ an airport in my city.'",
+        "opts": ["There is", "There are", "Is there", "Are there"],
+        "ans": 0,
+        "exp": "El libro dice: 'There is an airport in my city.' Usamos 'there is' con singular."
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Grammar: There is / There are",
+        "diff": "medium",
+        "q": "Complete: '___ many tall buildings in the city.'",
+        "opts": ["There is", "There are", "Is there", "Are there"],
+        "ans": 1,
+        "exp": "El libro dice: 'There are many tall buildings in the city.' Usamos 'there are' con plural."
+    },
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Reading: British Airways",
+        "diff": "easy",
+        "q": "Complete: 'The airline has about ___ planes.'",
+        "opts": ["100", "200", "300", "400"],
+        "ans": 2,
+        "exp": "El texto dice: 'The airline has about 300 planes.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Reading: British Airways",
+        "diff": "medium",
+        "q": "Complete: 'It cost ___ million pounds.'",
+        "opts": ["100", "150", "200", "250"],
+        "ans": 2,
+        "exp": "El texto dice: 'It cost 200 million pounds.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.1 Welcome to Headquarters!",
+        "topic": "Reading: British Airways",
+        "diff": "medium",
+        "q": "Complete: 'There is a restaurant by a ___ .'",
+        "opts": ["river", "lake", "park", "building"],
+        "ans": 1,
+        "exp": "El texto dice: 'The restaurant is by a lake.'"
+    },
+
+
+//3.2 Tips For Travelers (página 32-33)
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Reading: Online reviews",
+        "diff": "easy",
+        "q": "Which city's review has 362 reviews?",
+        "opts": ["San Juan", "Springfield", "Strasbourg", "Bondi"],
+        "ans": 2,
+        "exp": "La reseña dice: 'Visit Strasbourg this summer! 😍😍😍 362 reviews'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Reading: Online reviews",
+        "diff": "easy",
+        "q": "What does the reviewer say NOT to do in Strasbourg?",
+        "opts": ["Visit in summer", "Visit in winter", "Go shopping", "Sit at a café"],
+        "ans": 1,
+        "exp": "La reseña dice: 'Come in the summer or fall, but don't visit in winter. It's cold!'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Reading: Online reviews",
+        "diff": "medium",
+        "q": "How many stars does the Springfield review have?",
+        "opts": ["5 stars", "4 stars", "3 stars", "1 star"],
+        "ans": 2,
+        "exp": "La reseña de Springfield tiene los emojis '😤😤😤' que representan 3 estrellas."
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Vocabulary: Prepositions of place",
+        "diff": "easy",
+        "q": "Complete: 'Bondi Beach is ___ Australia.'",
+        "opts": ["in", "on", "at", "between"],
+        "ans": 0,
+        "exp": "El libro dice: 'Bondi Beach is in Australia.' Usamos 'in' para países."
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Grammar: Imperatives",
+        "diff": "easy",
+        "q": "Complete the command: '___ Bondi Beach. It's a fun place.'",
+        "opts": ["Don't visit", "Visit", "Going", "Visited"],
+        "ans": 1,
+        "exp": "El libro dice: 'Visit Bondi Beach. It's a fun place.'"
+    },
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Vocabulary: Prepositions",
+        "diff": "easy",
+        "q": "Complete: 'Bondi Beach Public School is ___ Campbell Parade and Gould Street.'",
+        "opts": ["next to", "between", "on", "in"],
+        "ans": 1,
+        "exp": "El texto dice: 'Bondi Beach Public School is between Campbell Parade and Gould Street.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Vocabulary: Prepositions",
+        "diff": "easy",
+        "q": "Complete: 'The Bondi Market is ___ to the school.'",
+        "opts": ["between", "next", "in", "on"],
+        "ans": 1,
+        "exp": "El texto dice: 'The Bondi Market is next to the school.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.2 Tips For Travelers",
+        "topic": "Reading: Online reviews",
+        "diff": "medium",
+        "q": "Complete: 'There are some restaurants and museums, but the city ___ beautiful.'",
+        "opts": ["is", "isn't", "are", "aren't"],
+        "ans": 1,
+        "exp": "La reseña de Springfield dice: 'but the city isn't beautiful.'"
+    },
+
+    //3.3 A Place to Stay (página 35-36)
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.3 A Place to Stay",
+        "topic": "Reading: RentAway listing",
+        "diff": "easy",
+        "q": "What is the cost per night for Keisha's place?",
+        "opts": ["$50", "$75", "$100", "$150"],
+        "ans": 1,
+        "exp": "El anuncio dice: 'Cost: $75/night'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.3 A Place to Stay",
+        "topic": "Listening: Specific information",
+        "diff": "medium",
+        "q": "What does Keisha have a lot of pictures of?",
+        "opts": ["City", "Cats", "Family", "Food"],
+        "ans": 1,
+        "exp": "La pregunta del ejercicio 3 dice: 'Keisha has a lot of pictures of the city/cats.' La respuesta correcta es 'cats'."
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.3 A Place to Stay",
+        "topic": "Grammar: There is/There are negative",
+        "diff": "medium",
+        "q": "Complete: 'There ___ a bathroom in the train station.'",
+        "opts": ["is", "isn't", "are", "aren't"],
+        "ans": 1,
+        "exp": "El libro dice: 'There isn't a bathroom in the train station.'"
+    },
+
+    //3.4 Take a Right! (página 37-38)
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.4 Take a Right!",
+        "topic": "English For Real: Giving directions",
+        "diff": "easy",
+        "q": "What is NOT rude when giving directions?",
+        "opts": ["Go away", "Be quiet", "Walk down this street", "Don't sit there"],
+        "ans": 2,
+        "exp": "El libro dice: 'It's not rude to use imperatives when we explain how to do something or give directions or advice. Walk down this street to get to the beach.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.4 Take a Right!",
+        "topic": "English For Real: Giving directions",
+        "diff": "easy",
+        "q": "How do we often show directions while speaking?",
+        "opts": ["With our hands", "With a map", "With a phone", "With a pen"],
+        "ans": 0,
+        "exp": "El libro dice: 'We also use our hands to show the directions while we speak.'"
+    },
+
+    //3.5 What a Great Place! (página 39)
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.5 What a Great Place!",
+        "topic": "Reading: Helsingor",
+        "diff": "easy",
+        "q": "Helsingor is in which country?",
+        "opts": ["Denmark", "Sweden", "England", "Norway"],
+        "ans": 0,
+        "exp": "El ejercicio dice: 'Helsingor is in Denmark/England.' La respuesta correcta es Denmark."
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.5 What a Great Place!",
+        "topic": "Reading: Helsingor",
+        "diff": "medium",
+        "q": "The castle in Helsingor is from which Shakespeare play?",
+        "opts": ["Macbeth", "Hamlet", "Romeo and Juliet", "King Lear"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'The castle in Helsingor is the same castle from Shakespeare's Hamlet/Disney's Cinderella.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.5 What a Great Place!",
+        "topic": "Pronunciation: Weak sound of are",
+        "diff": "medium",
+        "q": "What happens to the /r/ sound in 'there are'?",
+        "opts": ["It disappears", "It blends together", "It is said loudly", "It changes to /l/"],
+        "ans": 1,
+        "exp": "El libro dice: 'Listen to the phrase there are. Notice how the /r/ sounds blend together.'"
+    },
+
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.5 What a Great Place!",
+        "topic": "Reading: Helsingor",
+        "diff": "easy",
+        "q": "Complete: 'The castle in Helsingor is from Shakespeare's ___ .'",
+        "opts": ["Macbeth", "Hamlet", "Romeo and Juliet", "King Lear"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'The castle in Helsingor is the same castle from Shakespeare's Hamlet.'"
+    },
+    {
+        "unit": "Unit 3 - Places",
+        "section": "3.5 What a Great Place!",
+        "topic": "Reading: Helsingor",
+        "diff": "medium",
+        "q": "Complete: 'There ___ a bathroom at the tourist office.'",
+        "opts": ["is", "isn't", "are", "aren't"],
+        "ans": 0,
+        "exp": "El ejercicio dice: 'There is/are a bathroom at the tourist office.'"
+    },
+
+    //UNIT 4 - LIFE
+    //4.1 My Famous Family (página 42-43)
+
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "easy",
+        "q": "Who wrote 'Little Women'?",
+        "opts": ["Jane Austen", "Louisa May Alcott", "Charles Dickens", "Mark Twain"],
+        "ans": 1,
+        "exp": "El texto dice: 'Little Women (1868) by Louisa May Alcott tells the story of the March family.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "easy",
+        "q": "How many daughters do Mr. and Mrs. March have?",
+        "opts": ["Three", "Four", "Five", "Six"],
+        "ans": 1,
+        "exp": "El texto dice: 'They have four daughters: Jo, Meg, Beth, and Amy.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "medium",
+        "q": "What does Jo want to be?",
+        "opts": ["A musician", "A teacher", "An author", "A doctor"],
+        "ans": 2,
+        "exp": "El texto dice: 'She writes a lot of stories. She wants to be an author.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "hard",
+        "q": "What is true about Beth?",
+        "opts": ["She is strong", "She loves music", "She wants a rich husband", "She has blonde hair"],
+        "ans": 1,
+        "exp": "El texto dice: 'Beth is 13. She loves music and wants to be a musician, but she is not strong.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Grammar: Simple present",
+        "diff": "easy",
+        "q": "Complete: 'Mr. March ___ for the army.'",
+        "opts": ["work", "works", "working", "worked"],
+        "ans": 1,
+        "exp": "El texto dice: 'Mr. March works for the army.' Con 'he' añadimos '-s'."
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Grammar: Simple present",
+        "diff": "medium",
+        "q": "Complete: 'She ___ blonde hair.'",
+        "opts": ["have", "has", "having", "haves"],
+        "ans": 1,
+        "exp": "El texto dice: 'Amy... has blonde hair.' El verbo 'have' es irregular con 'she'."
+    },
+
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "easy",
+        "q": "Complete: 'The family in the book is similar to the author's ___ .'",
+        "opts": ["family", "house", "city", "job"],
+        "ans": 0,
+        "exp": "El texto dice: 'The family in the book is similar to the author's life and family.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "easy",
+        "q": "Complete: 'Mr. March works for the army and is away in the ___ .'",
+        "opts": ["World War", "Civil War", "Revolution", "War"],
+        "ans": 1,
+        "exp": "El texto dice: 'Her husband, Mr. March, works for the army and is away in the Civil War.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "medium",
+        "q": "Complete: 'Jo is 15 years old and ___.'",
+        "opts": ["pretty", "intelligent", "beautiful", "strong"],
+        "ans": 1,
+        "exp": "El texto dice: 'Jo is 15 years old and intelligent.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.1 My Famous Family",
+        "topic": "Reading: The Marches",
+        "diff": "medium",
+        "q": "Complete: 'Meg is 18 and ___.'",
+        "opts": ["intelligent", "strong", "pretty", "beautiful"],
+        "ans": 2,
+        "exp": "El texto dice: 'Her sister Meg is 18 and pretty.'"
+    },
+
+    //4.2 How Happy Are You? (página 44-46)
+
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.2 How Happy Are You?",
+        "topic": "Reading: Happiness survey",
+        "diff": "easy",
+        "q": "How many hours should you sleep every night according to the survey?",
+        "opts": ["5-6 hours", "7-9 hours", "10-12 hours", "3-4 hours"],
+        "ans": 1,
+        "exp": "La encuesta pregunta: 'Do you sleep 7–9 hours every night?'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.2 How Happy Are You?",
+        "topic": "Reading: Happiness survey",
+        "diff": "easy",
+        "q": "What does the survey say about getting up early?",
+        "opts": ["It's bad for health", "It makes you happy and healthy", "It makes you tired", "It's not important"],
+        "ans": 1,
+        "exp": "La encuesta dice: 'Studies show that people who get up early in the morning are happy and healthy.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.2 How Happy Are You?",
+        "topic": "Reading: Happiness survey",
+        "diff": "medium",
+        "q": "How many 'yes' answers do you need for 'Great! You're a very happy person!'?",
+        "opts": ["0-2", "3-5", "6", "All"],
+        "ans": 2,
+        "exp": "La encuesta dice: 'Now count your 'Yes' answers. 6 → Great! You're a very happy person!'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.2 How Happy Are You?",
+        "topic": "Grammar: Yes/no questions",
+        "diff": "easy",
+        "q": "Choose the correct question: '___ you exercise every day?'",
+        "opts": ["Do", "Does", "Are", "Is"],
+        "ans": 0,
+        "exp": "La encuesta pregunta: 'Do you exercise every day?'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.2 How Happy Are You?",
+        "topic": "Grammar: Yes/no questions",
+        "diff": "easy",
+        "q": "Choose the correct question: '___ the article give good advice?'",
+        "opts": ["Do", "Does", "Are", "Is"],
+        "ans": 1,
+        "exp": "El libro pregunta: 'Does the article give good advice?' Con 'he/she/it' usamos 'Does'."
+    },
+
+    //4.3 Be Successful! (página 47-48)
+
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Listening: Ray Rich's talk",
+        "diff": "easy",
+        "q": "What is Ray Rich's talk about?",
+        "opts": ["How to make money", "Do's and Don'ts for Successful People", "How to be happy", "How to get a job"],
+        "ans": 1,
+        "exp": "El cartel dice: 'Ray Rich: Do's and Don'ts for Successful People'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Listening: Ray Rich's talk",
+        "diff": "medium",
+        "q": "According to Ray Rich, a successful person...",
+        "opts": ["Has a lot of money", "Has a big house", "Has a lot of good friends", "Has an interesting job"],
+        "ans": 2,
+        "exp": "El ejercicio 5 dice: 'In Ray Rich's opinion, a successful person... c. has a lot of good friends.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Listening: Contractions",
+        "diff": "hard",
+        "q": "What can be hard to hear when people speak quickly?",
+        "opts": ["Only nouns", "Negative short forms", "Questions", "Adjectives"],
+        "ans": 1,
+        "exp": "El libro dice: 'Negative short forms can be hard to hear when people speak quickly.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Vocabulary: Prepositions of time",
+        "diff": "easy",
+        "q": "Complete: 'He sleeps late ___ weekend.'",
+        "opts": ["in", "on", "at", "for"],
+        "ans": 1,
+        "exp": "El libro dice: 'Use on for days. on weekends'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Vocabulary: Prepositions of time",
+        "diff": "easy",
+        "q": "Complete: 'She goes to work ___ 10:00 ___ the morning.'",
+        "opts": ["in / at", "at / in", "on / at", "at / on"],
+        "ans": 1,
+        "exp": "El libro dice: 'Use at for specific times... Use in with times of the day.'"
+    },
+    
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Listening: Ray Rich",
+        "diff": "easy",
+        "q": "Complete: 'A successful person doesn't go to work ___ .'",
+        "opts": ["early", "late", "fast", "slow"],
+        "ans": 1,
+        "exp": "El libro dice: 'A successful person doesn't go to work late.'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Vocabulary: Prepositions of time",
+        "diff": "easy",
+        "q": "Complete: 'He sleeps late ___ weekend.'",
+        "opts": ["in", "on", "at", "for"],
+        "ans": 1,
+        "exp": "El libro dice: 'Use on for days. on weekends'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.3 Be Successful!",
+        "topic": "Vocabulary: Prepositions of time",
+        "diff": "medium",
+        "q": "Complete: 'I do housework ___ 2:00 ___ the afternoon.'",
+        "opts": ["at / in", "in / at", "on / at", "at / on"],
+        "ans": 0,
+        "exp": "El libro dice: 'Use at for specific times. Use in with times of the day.'"
+    },
+
+    //4.4 Time to Go! (página 49-50)
+
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.4 Time to Go!",
+        "topic": "English For Real: Asking for the time",
+        "diff": "easy",
+        "q": "What is the polite way to ask a stranger for the time?",
+        "opts": ["Hey, what time is it?", "What's the time?", "Excuse me, do you have the time?", "Give me the time"],
+        "ans": 2,
+        "exp": "El libro dice: 'When you ask a stranger for the time, you need to get the person's attention first. Then use a polite question. Excuse me, do you have the time?'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.4 Time to Go!",
+        "topic": "English For Real: Asking for the time",
+        "diff": "easy",
+        "q": "What is a direct way to ask a friend for the time?",
+        "opts": ["Excuse me, do you have the time?", "Hey, what time is it?", "Could you tell me the time?", "I'm sorry, what time is it?"],
+        "ans": 1,
+        "exp": "El libro dice: 'When asking a friend, you can be more direct. Hey, what time is it? What's the time?'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.4 Time to Go!",
+        "topic": "Video: Max and Andy",
+        "diff": "medium",
+        "q": "Why don't Max and Andy know what time it is?",
+        "opts": ["They don't have a clock", "The power is out", "They are asleep", "They don't care"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'Max and Andy don't know what time it is because b. the power is out.'"
+    },
+
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.4 Time to Go!",
+        "topic": "Telling time",
+        "diff": "easy",
+        "q": "Complete: 'It's ___ past three.' (3:30)",
+        "opts": ["quarter", "half", "ten", "five"],
+        "ans": 1,
+        "exp": "3:30 se dice 'half past three'."
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.4 Time to Go!",
+        "topic": "Telling time",
+        "diff": "medium",
+        "q": "Complete: 'It's quarter ___ eleven.' (10:45)",
+        "opts": ["to", "past", "after", "of"],
+        "ans": 0,
+        "exp": "10:45 se dice 'quarter to eleven'."
+    },
+
+    //4.5 A Day in the Life (página 51)
+
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.5 A Day in the Life",
+        "topic": "Reading: Meera's jobs",
+        "diff": "easy",
+        "q": "What are Meera's two jobs?",
+        "opts": ["Teacher and writer", "Actor and tutor", "Scientist and artist", "Doctor and nurse"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'Sometimes Meera works in a theater... For tutoring...'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.5 A Day in the Life",
+        "topic": "Reading: Meera's jobs",
+        "diff": "medium",
+        "q": "What time does Meera start work at the theater?",
+        "opts": ["6 a.m.", "6 p.m.", "9 a.m.", "9 p.m."],
+        "ans": 0,
+        "exp": "El ejercicio dice: 'At the theater, she starts work at [6 a.m.](6 p.m.).'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.5 A Day in the Life",
+        "topic": "Reading: Meera's jobs",
+        "diff": "medium",
+        "q": "What is Meera's favorite thing about being an actor?",
+        "opts": ["She gets paid well", "Every day is different", "She meets famous people", "She works in a theater"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'Her favorite thing about being an actor is that every day is [different](fun).'"
+    },
+    {
+        "unit": "Unit 4 - Life",
+        "section": "4.5 A Day in the Life",
+        "topic": "Speaking: Describing habits",
+        "diff": "easy",
+        "q": "What tense do you use to talk about things you do every day?",
+        "opts": ["Present continuous", "Simple present", "Simple past", "Future"],
+        "ans": 1,
+        "exp": "El libro dice: 'Use the simple present tense to talk about things you do (or don't do) every day or every week.'"
+    },
+
+    //UNIT 5 - TRAVEL
+    //5.1 By Train or by Plane (página 54-55)
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.1 By Train or by Plane",
+        "topic": "Listening: Haley and Emma",
+        "diff": "easy",
+        "q": "What is Haley and Emma's main reason for traveling?",
+        "opts": ["A beach vacation", "A friend's wedding", "A business trip", "A family reunion"],
+        "ans": 1,
+        "exp": "El ejercicio 4 dice: 'Listen to the conversation between two friends, Haley and Emma. What is their main reason for traveling? b. a friend's wedding'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.1 By Train or by Plane",
+        "topic": "Listening: Haley and Emma",
+        "diff": "medium",
+        "q": "How do Haley and Emma finally agree to travel?",
+        "opts": ["By plane", "By train", "By car", "By bus"],
+        "ans": 2,
+        "exp": "El ejercicio 5 dice: 'They agree to travel by [car] because it's only a [three] hour trip.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.1 By Train or by Plane",
+        "topic": "Grammar: Adverbs of frequency",
+        "diff": "easy",
+        "q": "What does 'always' mean in terms of frequency?",
+        "opts": ["50%", "0%", "100%", "75%"],
+        "ans": 2,
+        "exp": "El libro muestra: '100% always → 0% never'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.1 By Train or by Plane",
+        "topic": "Grammar: Adverbs of frequency",
+        "diff": "medium",
+        "q": "Where does the adverb of frequency usually go in a sentence?",
+        "opts": ["At the end", "Between the subject and the verb", "At the beginning", "After the verb"],
+        "ans": 1,
+        "exp": "El libro dice: 'Notice the word order. I always find good deals.'"
+    },
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.1 By Train or by Plane",
+        "topic": "Listening: Haley and Emma",
+        "diff": "easy",
+        "q": "Complete: 'Haley wants to travel by ___ .'",
+        "opts": ["car", "plane", "train", "bus"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'Haley wants to travel by plane.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.1 By Train or by Plane",
+        "topic": "Listening: Haley and Emma",
+        "diff": "medium",
+        "q": "Complete: 'Haley also doesn't like traveling by train because it's slow and ___ .'",
+        "opts": ["cheap", "expensive", "fast", "comfortable"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'Haley also doesn't like traveling by train because it's slow and expensive.'"
+    },
+
+    //5.2 I Hate Driving Here! (página 56-58)
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Reading: San Pedro Sun",
+        "diff": "easy",
+        "q": "What problem does Dana Smith have?",
+        "opts": ["The subway is dirty", "Drivers don't watch for people on bikes", "The trains are slow", "The buses are expensive"],
+        "ans": 1,
+        "exp": "Dana dice: 'Also, the drivers don't watch for people on bikes. It's dangerous! We need a bike path.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Reading: San Pedro Sun",
+        "diff": "easy",
+        "q": "What does Marlon Jimenez like about the subway?",
+        "opts": ["It's cheap", "It's clean and fast", "It's always on time", "It has good music"],
+        "ans": 1,
+        "exp": "Marlon dice: 'I love taking the subway for many reasons. For example, the station is clean, and the trains are clean, too. They're also fast, and the drivers are always nice.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Reading: San Pedro Sun",
+        "diff": "medium",
+        "q": "What does Heidi Fleischer suggest as a solution to traffic?",
+        "opts": ["More buses", "Hot air balloon taxis", "More bike paths", "Subway expansion"],
+        "ans": 1,
+        "exp": "Heidi dice: 'We need to try something different—maybe hot air balloon taxis that fly over the cars!'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Grammar: like/love/hate + -ing",
+        "diff": "easy",
+        "q": "Complete: 'I love ___ my bike.'",
+        "opts": ["ride", "riding", "rides", "to ride"],
+        "ans": 1,
+        "exp": "El libro dice: 'I love my bike. I usually love riding my bike.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Grammar: like/love/hate + -ing",
+        "diff": "medium",
+        "q": "What is the -ing form of 'take'?",
+        "opts": ["takeing", "taking", "taked", "take"],
+        "ans": 1,
+        "exp": "El libro dice: 'If a verb ends in -e, drop the -e before adding -ing. take → taking'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Writing: Using 'for example'",
+        "diff": "easy",
+        "q": "Why do we use 'for example' in writing?",
+        "opts": ["To give opinions", "To give examples to support ideas", "To introduce a story", "To ask a question"],
+        "ans": 1,
+        "exp": "El libro dice: 'We often give examples to support our ideas. Before an example or a list of examples, we can use the phrase for example.'"
+    },
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Reading: San Pedro Sun",
+        "diff": "easy",
+        "q": "Complete: 'There are always a lot of cars on the main streets, and there is no place for ___ to ride.'",
+        "opts": ["drivers", "bikers", "walkers", "runners"],
+        "ans": 1,
+        "exp": "Dana Smith dice: 'there is no place for bikers to ride.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.2 I Hate Driving Here!",
+        "topic": "Reading: San Pedro Sun",
+        "diff": "medium",
+        "q": "Complete: 'I love our town. We have great ___ .'",
+        "opts": ["restaurants", "transportation", "schools", "parks"],
+        "ans": 1,
+        "exp": "Heidi Fleischer dice: 'I love our town. We have great transportation.'"
+    },
+
+    //5.3 Do You Share? (página 59-61)
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Reading: The Sharing Economy",
+        "diff": "easy",
+        "q": "What is the 'sharing economy'?",
+        "opts": ["Selling things online", "Sharing bikes, cars, and rooms using the Internet", "Renting hotels", "Buying new things"],
+        "ans": 1,
+        "exp": "El texto dice: 'Services like Citi Bike, Zipcar, and Airbnb are very popular now. People and companies use the Internet to share bikes, cars, and rooms.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Reading: The Sharing Economy",
+        "diff": "easy",
+        "q": "What is CouchSurfing.com?",
+        "opts": ["A bike-sharing service", "A site where travelers stay with locals for free", "A meal-sharing app", "A car rental service"],
+        "ans": 1,
+        "exp": "El texto dice: 'They stay with local people for free through sites like CouchSurfing.com.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Reading: The Sharing Economy",
+        "diff": "medium",
+        "q": "What is an example of a free ride-sharing service mentioned?",
+        "opts": ["Lyft", "Uber", "Hitch-a-Ride", "Zipcar"],
+        "ans": 2,
+        "exp": "El texto dice: 'Ride-sharing apps help drivers and riders connect. Some are free, like Hitch-a-Ride.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Reading: The Sharing Economy",
+        "diff": "medium",
+        "q": "What app helps travelers eat with local cooks?",
+        "opts": ["Citi Bike", "EatWith", "HomeAway", "CouchSurfing"],
+        "ans": 1,
+        "exp": "El texto dice: 'There are even meal-sharing apps now! Sites like EatWith help local cooks share food with tourists in their homes.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Vocabulary: Agent nouns",
+        "diff": "easy",
+        "q": "What does '-er' mean when added to a verb?",
+        "opts": ["The action itself", "A person who does the action", "The place of the action", "The time of the action"],
+        "ans": 1,
+        "exp": "El libro dice: 'When you add the ending -er to a verb, the word becomes a noun. It means \"a person who does ______.\"'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Vocabulary: Agent nouns",
+        "diff": "medium",
+        "q": "What is a 'scientist'?",
+        "opts": ["Someone who teaches", "Someone who studies or works in science", "Someone who draws", "Someone who drives"],
+        "ans": 1,
+        "exp": "El libro dice: 'science → scientist (a person who studies or works in science)'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Pronunciation: Falling intonation",
+        "diff": "hard",
+        "q": "What happens to the pitch in a wh- question?",
+        "opts": ["It rises at the end", "It falls on the most important word and then falls", "It stays flat", "It rises and then rises again"],
+        "ans": 1,
+        "exp": "El libro dice: 'In a wh- question, the pitch usually rises on the most important word and then falls.'"
+    },
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Reading: Sharing Economy",
+        "diff": "easy",
+        "q": "Complete: 'People and companies use the ___ to share bikes, cars, and rooms.'",
+        "opts": ["Internet", "phone", "newspaper", "TV"],
+        "ans": 0,
+        "exp": "El texto dice: 'People and companies use the Internet to share bikes, cars, and rooms.'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.3 Do You Share?",
+        "topic": "Reading: Sharing Economy",
+        "diff": "medium",
+        "q": "Complete: 'Many cities, such as Shanghai, Mexico City, and ___, also offer bike-sharing programs.'",
+        "opts": ["London", "Paris", "Tokyo", "Berlin"],
+        "ans": 1,
+        "exp": "El texto dice: 'Many cities, such as Shanghai, Mexico City, and Paris, also offer bike-sharing programs.'"
+    },
+
+    //5.4 Huh? What? (página 62-63)
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.4 Huh? What?",
+        "topic": "English For Real: Asking to repeat",
+        "diff": "easy",
+        "q": "What is a direct way to ask a friend to repeat something?",
+        "opts": ["Could you say that again, please?", "Huh? What?", "I'm sorry, could you repeat that?", "Sorry, could you repeat that?"],
+        "ans": 1,
+        "exp": "El libro dice: 'With friends, you can be direct when you want them to repeat something. Huh? What? Say that again? I'm sorry, what?'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.4 Huh? What?",
+        "topic": "English For Real: Asking to repeat",
+        "diff": "easy",
+        "q": "What is the polite way to ask a teacher to repeat something?",
+        "opts": ["Huh?", "What?", "Could you say that again, please?", "Say that again!"],
+        "ans": 2,
+        "exp": "El libro dice: 'With teachers, bosses, and people you don't know well, you need to use longer, less direct questions. Sorry, could you repeat that? Could you say that again, please?'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.4 Huh? What?",
+        "topic": "Video: Max and Andy",
+        "diff": "medium",
+        "q": "Where are Max and Andy at the beginning of the video?",
+        "opts": ["At the bus station", "At the train station", "At the airport", "At a coffee shop"],
+        "ans": 1,
+        "exp": "El ejercicio dice: 'Max and Andy are at [the train station].'"
+    },
+
+    //5.5 A Ticket to Somewhere (página 64)
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.5 A Ticket to Somewhere",
+        "topic": "Speaking: Buying tickets",
+        "diff": "easy",
+        "q": "What phrase can you use to buy a ticket?",
+        "opts": ["I'd like a bus ticket", "Give me a ticket", "I want a ticket", "Ticket please"],
+        "ans": 0,
+        "exp": "El libro dice: 'Some helpful phrases to use when buying a ticket are: I'd like... a bus ticket'"
+    },
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.5 A Ticket to Somewhere",
+        "topic": "Speaking: Buying tickets",
+        "diff": "easy",
+        "q": "What is the difference between a one-way ticket and a round-trip ticket?",
+        "opts": ["One-way is cheaper", "Round-trip returns to where you started", "One-way is faster", "There is no difference"],
+        "ans": 1,
+        "exp": "El libro pregunta: 'Which ticket is one way? Which is round trip? What's the difference?' Un round-trip va de ida y vuelta."
+    },
+
+    {
+        "unit": "Unit 5 - Travel",
+        "section": "5.5 A Ticket to Somewhere",
+        "topic": "Speaking: Buying tickets",
+        "diff": "easy",
+        "q": "Complete: 'I'd like a ___ ticket to [place] at [time].'",
+        "opts": ["one-way", "round-trip", "bus", "train"],
+        "ans": 1,
+        "exp": "El libro dice: 'I need... a round-trip train ticket to [place] at [time]'"
+    },
+
+    //UNIT 6 - SKILLS
+    //6.1 What's Your Superpower? (página 66-68)
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Reading: Three Real People with Superpowers",
+        "diff": "easy",
+        "q": "What special ability does Daniel Kish have?",
+        "opts": ["He can see from far away", "He uses echolocation to 'see'", "He can remember all details", "He can climb mountains"],
+        "ans": 1,
+        "exp": "El texto dice: 'Daniel Kish can't see, but he can ride a bike! He uses echolocation. This means that he makes sounds and listens for the echo to \"see\" what's around him.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Reading: Three Real People with Superpowers",
+        "diff": "easy",
+        "q": "What is Stephen Wiltshire's special ability?",
+        "opts": ["He can jump high", "He can draw perfect pictures of cities from memory", "He can climb mountains", "He can speak many languages"],
+        "ans": 1,
+        "exp": "El texto dice: 'Stephen Wiltshire can see something once and remember all the details. He can draw a perfect picture of a city.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Reading: Three Real People with Superpowers",
+        "diff": "easy",
+        "q": "What is Beth Rodden's special skill?",
+        "opts": ["She can draw perfectly", "She can climb mountains easily", "She uses echolocation", "She can fly"],
+        "ans": 1,
+        "exp": "El texto dice: 'Most people can't climb like Beth Rodden! She is a champion rock climber. She can climb a mountain as easily as you or I climb the stairs.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Reading: Three Real People with Superpowers",
+        "diff": "medium",
+        "q": "How long did Stephen Wiltshire spend in a helicopter to draw Tokyo?",
+        "opts": ["15 minutes", "30 minutes", "45 minutes", "1 hour"],
+        "ans": 1,
+        "exp": "El texto dice: 'He created a picture of Tokyo that was 30 feet (10 meters) long after a 30-minute helicopter ride.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Grammar: Can / Can't",
+        "diff": "easy",
+        "q": "Complete: 'Cats ___ fly.'",
+        "opts": ["can", "can't", "could", "cannot"],
+        "ans": 1,
+        "exp": "El libro dice: 'Cats can't fly.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Grammar: Can / Can't",
+        "diff": "easy",
+        "q": "Complete: 'Spider-Man ___ jump high and climb buildings.'",
+        "opts": ["can", "can't", "could", "cannot"],
+        "ans": 0,
+        "exp": "El libro dice: 'Spider-Man can jump high and climb buildings.'"
+    },
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Reading: Superpowers",
+        "diff": "easy",
+        "q": "Complete: 'Daniel Kish can't ___, but he can ride a bike!'",
+        "opts": ["walk", "see", "hear", "speak"],
+        "ans": 1,
+        "exp": "El texto dice: 'Daniel Kish can't see, but he can ride a bike!'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Reading: Superpowers",
+        "diff": "easy",
+        "q": "Complete: 'Stephen Wiltshire can see something once and ___ all the details.'",
+        "opts": ["forget", "remember", "draw", "paint"],
+        "ans": 1,
+        "exp": "El texto dice: 'Stephen Wiltshire can see something once and remember all the details.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.1 What's Your Superpower?",
+        "topic": "Reading: Superpowers",
+        "diff": "medium",
+        "q": "Complete: 'Beth Rodden is a champion ___ .'",
+        "opts": ["swimmer", "runner", "rock climber", "biker"],
+        "ans": 2,
+        "exp": "El texto dice: 'She is a champion rock climber.'"
+    },
+
+    //6.2 Amira Online (página 69-71)
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Reading: Amira's social media post",
+        "diff": "easy",
+        "q": "What does Amira love doing on Saturday afternoons?",
+        "opts": ["Cooking and cleaning", "Playing computer games and reading science fiction", "Playing tennis", "Singing karaoke"],
+        "ans": 1,
+        "exp": "Amira dice: 'My favorite thing to do on a Saturday afternoon: play computer games, read science fiction'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Reading: Amira's social media post",
+        "diff": "easy",
+        "q": "What two things does Amira hate doing?",
+        "opts": ["Reading and writing", "Cleaning the house and cooking", "Playing games and singing", "Drawing and painting"],
+        "ans": 1,
+        "exp": "Amira dice: 'Two things I hate doing: cleaning the house and cooking'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Reading: Amira's social media post",
+        "diff": "medium",
+        "q": "What can Amira do quickly?",
+        "opts": ["Run", "Fix computers", "Speak Turkish", "Make tea"],
+        "ans": 1,
+        "exp": "Amira dice: 'I can fix computers quickly.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Grammar: Adverbs of manner",
+        "diff": "easy",
+        "q": "Complete: 'She sings ___ .' (bad)",
+        "opts": ["bad", "badly", "baddly", "badly"],
+        "ans": 1,
+        "exp": "El libro dice: 'She sings badly.' Se añade '-ly' a 'bad'."
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Grammar: Adverbs of manner",
+        "diff": "easy",
+        "q": "Complete: 'You walk very ___ .' (fast)",
+        "opts": ["fastly", "fast", "faster", "fastest"],
+        "ans": 1,
+        "exp": "El libro dice: 'fast → You walk very fast!' Es un adverbio irregular."
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Grammar: Adverbs of manner",
+        "diff": "medium",
+        "q": "Complete: 'He fixes things ___ .' (quick)",
+        "opts": ["quick", "quickly", "quickier", "quickest"],
+        "ans": 1,
+        "exp": "El libro dice: 'quick → Amira fixes computers quickly'"
+    },
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Reading: Amira's post",
+        "diff": "easy",
+        "q": "Complete: 'My favorite movie: ___ .'",
+        "opts": ["Life Is Beautiful", "The Matrix", "Titanic", "Avatar"],
+        "ans": 0,
+        "exp": "Amira dice: 'My favorite movie: Life Is Beautiful'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Reading: Amira's post",
+        "diff": "easy",
+        "q": "Complete: 'I can't draw or paint ___.'",
+        "opts": ["good", "well", "bad", "badly"],
+        "ans": 1,
+        "exp": "Amira dice: 'I can't draw or paint well.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.2 Amira Online",
+        "topic": "Grammar: Adverbs of manner",
+        "diff": "easy",
+        "q": "Complete: 'Amira fixes computers ___ .'",
+        "opts": ["quick", "quickly", "quicker", "quickest"],
+        "ans": 1,
+        "exp": "Amira dice: 'I can fix computers quickly.'"
+    },
+
+    //6.3 Are You a Polymath? (página 72-73)
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.3 Are You a Polymath?",
+        "topic": "Listening: Polymath interview",
+        "diff": "easy",
+        "q": "What is a 'polymath'?",
+        "opts": ["Someone who is good at sports", "Someone who is good at many things", "Someone who can't learn", "Someone who is a teacher"],
+        "ans": 1,
+        "exp": "El libro pregunta: 'What is a polymath?' Un políglota/erudito es alguien bueno en muchas cosas."
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.3 Are You a Polymath?",
+        "topic": "Listening: Polymath interview",
+        "diff": "medium",
+        "q": "What languages can Mira speak?",
+        "opts": ["Russian and Spanish", "Spanish and Chinese", "Chinese and German", "All of the above"],
+        "ans": 3,
+        "exp": "El ejercicio 7 dice: 'Mira can speak: Spanish, Chinese, German' - todas las opciones están en la lista."
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.3 Are You a Polymath?",
+        "topic": "Vocabulary: Adjective + at + noun",
+        "diff": "easy",
+        "q": "Complete: 'She's great ___ math.'",
+        "opts": ["in", "on", "at", "for"],
+        "ans": 2,
+        "exp": "El libro dice: 'She's great at math.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.3 Are You a Polymath?",
+        "topic": "Vocabulary: Adjective + at + noun",
+        "diff": "easy",
+        "q": "Complete: 'I'm terrible ___ sports.'",
+        "opts": ["in", "on", "at", "for"],
+        "ans": 2,
+        "exp": "El libro dice: 'I'm terrible at sports.'"
+    },
+
+    //6.4 How about You? (página 74-75)
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.4 How about You?",
+        "topic": "English For Real: Keeping conversation going",
+        "diff": "easy",
+        "q": "What is a good way to ask about the other person after giving information?",
+        "opts": ["How about you?", "Tell me about yourself", "What do you do?", "Where are you from?"],
+        "ans": 0,
+        "exp": "El libro dice: 'I'm from Madrid. How about you? / What about you? / And you?'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.4 How about You?",
+        "topic": "English For Real: Keeping conversation going",
+        "diff": "easy",
+        "q": "What is a good response when someone says 'I love Russian literature'?",
+        "opts": ["OK", "Really? Who's your favorite author?", "I don't like reading", "Let's change the subject"],
+        "ans": 1,
+        "exp": "El libro dice: 'Really? / Interesting. / What do you like about it? / Who's your favorite author?'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.4 How about You?",
+        "topic": "English For Real: Keeping conversation going",
+        "diff": "medium",
+        "q": "What is a NOT appropriate question to ask someone you don't know well?",
+        "opts": ["What do you study?", "Do you like sports?", "How much money do you make?", "What do you do for work?"],
+        "ans": 2,
+        "exp": "El libro clasifica 'How much money do you make?' como 'Bad conversation starter'."
+    },
+
+    //6.5 I Can Do That! (página 76)
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.5 I Can Do That!",
+        "topic": "Job ads",
+        "diff": "easy",
+        "q": "What job is advertised at Billie's Bike Tours?",
+        "opts": ["Tour guide", "Coach", "Game designer", "Tutor"],
+        "ans": 0,
+        "exp": "El anuncio dice: 'Billie's Bike Tours. Become a tour guide.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.5 I Can Do That!",
+        "topic": "Job ads",
+        "diff": "easy",
+        "q": "What skills does the 'Games Games Games!' job require?",
+        "opts": ["Computer skills", "Teaching skills", "Driving skills", "Cooking skills"],
+        "ans": 0,
+        "exp": "El anuncio dice: 'Are you good with computers? Do you like games? We make and sell games of all kinds.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.5 I Can Do That!",
+        "topic": "Video: Emiliano",
+        "diff": "medium",
+        "q": "What instrument can Emiliano play?",
+        "opts": ["Piano", "Guitar", "Different kinds of music", "Drums"],
+        "ans": 2,
+        "exp": "El ejercicio dice: 'He [can] play different kinds of music.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.5 I Can Do That!",
+        "topic": "Speaking: Talking about abilities",
+        "diff": "easy",
+        "q": "Which phrase is NOT correct for talking about abilities?",
+        "opts": ["I'm good at math", "I can cook well", "I have computer skills", "I am can dance"],
+        "ans": 3,
+        "exp": "El libro dice que puedes usar 'be + good/bad at', 'can + verb', o 'have'. 'I am can dance' es incorrecto (dos verbos auxiliares)."
+    },
+
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.5 I Can Do That!",
+        "topic": "Job ads",
+        "diff": "easy",
+        "q": "Complete: 'Lakeside School needs new coaches for volleyball, tennis, and ___ .'",
+        "opts": ["basketball", "softball", "soccer", "baseball"],
+        "ans": 1,
+        "exp": "El anuncio dice: 'Lakeside School needs new coaches for volleyball, tennis, and softball.'"
+    },
+    {
+        "unit": "Unit 6 - Skills",
+        "section": "6.5 I Can Do That!",
+        "topic": "Job ads",
+        "diff": "easy",
+        "q": "Complete: 'Billie's Bike Tours: Show tourists the city by ___!'",
+        "opts": ["car", "bus", "bike", "train"],
+        "ans": 2,
+        "exp": "El anuncio dice: 'Become a tour guide. Show tourists the city by bike!'"
+    },
+
+    //UNIT REVIEWS
+
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 1 Review",
+        "topic": "Vocabulary: Jobs",
+        "diff": "easy",
+        "q": "Unscramble the letters: 'crateh' is what job?",
+        "opts": ["Teacher", "Driver", "Musician", "Artist"],
+        "ans": 0,
+        "exp": "La palabra 'crateh' es 'teacher' (profesor/a)."
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 1 Review",
+        "topic": "Vocabulary: Nationalities",
+        "diff": "easy",
+        "q": "A Peruvian person is from ___.",
+        "opts": ["Argentina", "Peru", "Mexico", "Chile"],
+        "ans": 1,
+        "exp": "Un Peruano es de Perú (Peru)."
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 2 Review",
+        "topic": "Vocabulary: Numbers",
+        "diff": "easy",
+        "q": "How do you write '101' in words?",
+        "opts": ["One hundred and one", "One hundred ten", "Hundred and one", "One hundred one"],
+        "ans": 0,
+        "exp": "101 se escribe 'one hundred and one'."
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 3 Review",
+        "topic": "Vocabulary: Places",
+        "diff": "easy",
+        "q": "Where can you find 'Piggly Wiggly'?",
+        "opts": ["A museum", "A supermarket", "A bank", "An airport"],
+        "ans": 1,
+        "exp": "El libro menciona: 'There is a supermarket in the United States called Piggly Wiggly.'"
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 4 Review",
+        "topic": "Vocabulary: Days of the week",
+        "diff": "easy",
+        "q": "What is the fourth day of the week?",
+        "opts": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+        "ans": 2,
+        "exp": "Los días de la semana son: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. El cuarto es Thursday."
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 5 Review",
+        "topic": "Vocabulary: Travel verbs",
+        "diff": "easy",
+        "q": "What does a 'driver' do?",
+        "opts": ["Flies a plane", "Drives a car", "Sails a boat", "Rides a bike"],
+        "ans": 1,
+        "exp": "Un 'driver' conduce (drives)."
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 6 Review",
+        "topic": "Grammar: Adverbs",
+        "diff": "easy",
+        "q": "Complete: 'This song is ___ .'",
+        "opts": ["terrible", "terribly", "terriblly", "terriblely"],
+        "ans": 0,
+        "exp": "Se usa 'terrible' porque describe el sustantivo (song)."
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 6 Review",
+        "topic": "Vocabulary: Abilities",
+        "diff": "easy",
+        "q": "What is the correct word: '___ a photo of me with my family.'",
+        "opts": ["Draw", "Take", "Paint", "Sing"],
+        "ans": 1,
+        "exp": "'Take a photo' (tomar una foto) es la expresión correcta."
+    },
+
+
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 4 Review",
+        "topic": "Reading: Maggie's routine",
+        "diff": "easy",
+        "q": "Complete: 'Maggie is a nurse. She ___ at a hospital in the city.'",
+        "opts": ["work", "works", "working", "worked"],
+        "ans": 1,
+        "exp": "El texto dice: 'Maggie is a nurse. She works at a hospital in the city.'"
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 4 Review",
+        "topic": "Reading: Maggie's routine",
+        "diff": "medium",
+        "q": "Complete: 'She has ___ days off.'",
+        "opts": ["two", "three", "four", "five"],
+        "ans": 2,
+        "exp": "El texto dice: 'She has four days off.'"
+    },
+    {
+        "unit": "Unit Reviews",
+        "section": "Unit 4 Review",
+        "topic": "Reading: Maggie's routine",
+        "diff": "hard",
+        "q": "Complete: 'She sleeps on Thursdays and does fun things on ___ , Saturdays, and Sundays.'",
+        "opts": ["Mondays", "Tuesdays", "Wednesdays", "Fridays"],
+        "ans": 3,
+        "exp": "El texto dice: 'She sleeps on Thursdays and does fun things on Fridays, Saturdays, and Sundays.'"
+    },
+
+
+
+
+
+
+
 ];
 
 export default preguntas_ingles_basico;

@@ -57,7 +57,7 @@ async function fetchConTimeout(url) {
     httpError.status = response.status;
     throw httpError;
   }
-
+ 
   try {
     return await response.json();
   } catch {
@@ -181,9 +181,8 @@ export async function fetchCategoriasTrivia() {
     return { ok: false, error: traducirError(error) };
   }
 }
-
-// Descarga preguntas de trivia y las normaliza al formato interno de
-// la app: { pregunta, opciones, respuestaCorrecta, dificultad, ... }
+  
+// Descarga preguntas de trivia y las normaliza al formato interno de la app: { pregunta, opciones, respuestaCorrecta, dificultad, ... }
 export async function fetchPreguntasTrivia({ categoria = '', dificultad = '', cantidad = 10 } = {}) {
   try {
     const params = new URLSearchParams({ amount: String(cantidad), type: 'multiple' });
@@ -191,7 +190,7 @@ export async function fetchPreguntasTrivia({ categoria = '', dificultad = '', ca
     if (dificultad) params.set('difficulty', dificultad);
 
     const data = await fetchConTimeout(`${BASE_URL}/api.php?${params.toString()}`);
-
+ 
     // VALIDACIÓN DE DATOS RECIBIDOS (existencia y tipo) 
     if (!data || typeof data.response_code !== 'number') {
       return { ok: false, error: 'La API devolvió una respuesta con formato inesperado.' };
@@ -206,8 +205,7 @@ export async function fetchPreguntasTrivia({ categoria = '', dificultad = '', ca
       return { ok: true, preguntas: [], descartadas: 0 }; // "sin resultados" no es un error
     }
 
-    // Valida cada pregunta (existencia, tipo, valores nulos,
-    // objetos incompletos) y descarta silenciosamente las inválidas,
+    // Valida cada pregunta (existencia, tipo, valores nulos, objetos incompletos) y descarta silenciosamente las inválidas,
     // informando cuántas se descartaron.
     let descartadas = 0;
     const preguntas = data.results
@@ -235,10 +233,8 @@ export async function fetchPreguntasTrivia({ categoria = '', dificultad = '', ca
         };
       });
 
-    // Traducción EN, ES de cada pregunta (en paralelo)
-    // Si por algún motivo la API de traducción no responde, cada
-    // pregunta individual conserva su texto en inglés en vez de que
-    // fallen todas, es más importante no perder la pregunta que
+    // Traducción EN, ES de cada pregunta (en paralelo), si por algún motivo la API de traducción no responde, cada
+    // pregunta individual conserva su texto en inglés en vez de que fallen todas, es más importante no perder la pregunta que
     // bloquear la importación completa por un servicio externo caído.
     const preguntasTraducidas = await Promise.all(preguntas.map(traducirPregunta));
 

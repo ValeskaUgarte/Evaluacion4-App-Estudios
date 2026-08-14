@@ -7,7 +7,7 @@
 // desplegaste server.cjs (ej: https://aa-cuestionarios-api.onrender.com)
 
 export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-
+ 
 import preguntas_seguridad_examen from '../data/preguntas/seguridad_examen.js';
 import preguntas_seguridad_informacion from '../data/preguntas/seguridad_informacion.js';
 import preguntas_sistemas_operativos from '../data/preguntas/sistemas_operativos.js';
@@ -125,7 +125,7 @@ const ASIGNATURAS = [
     key: 'ingles_basico',
     nombre: 'Ingles Básico',
     meta: 'Estudio de Ingles',
-    badge: 'Material aun en desarrollo',
+    badge: 'Material aun en desarrollo - 386 preguntas',
     preguntas: preguntas_ingles_basico,
   },
   {
