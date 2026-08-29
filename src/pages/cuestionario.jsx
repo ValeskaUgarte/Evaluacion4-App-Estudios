@@ -358,8 +358,8 @@ export default function Cuestionario() {
                     <div className={`subject-card${desactivadas.includes('ingenieria_software') ? ' subject-disabled' : ''}`} key="static-ingenieria_software" id="card-ingenieria_software" onClick={() => irAlQuiz('ingenieria_software')}>
                       <img src="img/Inhgenieriasoftware01.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
                       <div className="subject-name">Ingeniería de Software</div>
-                      <div className="subject-meta">Pendiente: agregar preguntas</div>
-                      <div><span className="coming-badge">Material - Aun sin preguntas</span></div>
+                      <div className="subject-meta">En desarrollo, según material subido por la profesoras</div>
+                      <div><span className="coming-badge">Subiendo</span></div>
                       {/* Solo aparece si hay sesión iniciada */}
                       {usuario && (
                         <button

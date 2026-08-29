@@ -9,6 +9,7 @@
 export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
  
 import preguntas_seguridad_examen from '../data/preguntas/seguridad_examen.js';
+import preguntas_ingenieria_software from '../data/preguntas/ingenieria_software.js';
 import preguntas_seguridad_informacion from '../data/preguntas/seguridad_informacion.js';
 import preguntas_sistemas_operativos from '../data/preguntas/sistemas_operativos.js';
 import preguntas_frontend from '../data/preguntas/frontend.js'
@@ -56,6 +57,15 @@ const ASIGNATURAS = [
     badge: 'Cuestionario Examen - 55 Preguntas',
     preguntas: preguntas_seguridad_examen,
   },
+
+   { 
+    key: 'ingenieria_software', 
+    nombre: 'Ingeniería de Software', 
+    meta: 'Pendiente: en desarrollo', 
+    badge: 'Material subido por profesora - en desarrollo', 
+    preguntas: preguntas_ingenieria_software,
+  },
+
 
    {
     key: 'linux',
