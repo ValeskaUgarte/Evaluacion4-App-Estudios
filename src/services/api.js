@@ -26,6 +26,11 @@ import preguntas_chino from '../data/preguntas/chino.js';
 import preguntas_coreano from '../data/preguntas/coreano.js';
 import preguntas_metodologia_agil from '../data/preguntas/metodologia.agil.js';
 import preguntas_algebra from '../data/preguntas/algebra.js';
+import preguntas_backend from '../data/preguntas/backend.js';
+import preguntas_poo from '../data/preguntas/poo.js';
+import preguntas_django_bd from '../data/preguntas/django_bd.js';
+import preguntas_bd_no_estructurados from '../data/preguntas/bd_no_estructurados.js';
+import preguntas_frontend_ampliacion from '../data/preguntas/frontend_ampliacion.js';
 
 
 // Agrega aquí los demás imports según los archivos que tengas en /data/preguntas/
@@ -56,6 +61,21 @@ const ASIGNATURAS = [
     meta: 'Cuestionario Examen Final otorgado por el profesor',
     badge: 'Cuestionario Examen - 55 Preguntas',
     preguntas: preguntas_seguridad_examen,
+  },
+  {
+    key: 'programacion_orientada_a_objetos',
+    nombre: 'Programación Orientada a Objetos',
+    meta: 'Cuestionario de estudios',
+    badge: '50 Preguntas',
+    preguntas: preguntas_poo,
+  },
+
+  {
+    key: 'db_django',
+    nombre: 'Base de Datos con Django',
+    meta: 'Cuestionario de Estudios',
+    badge: '50 Preguntas',
+    preguntas: preguntas_django_bd,
   },
 
    { 
@@ -91,23 +111,24 @@ const ASIGNATURAS = [
     preguntas: preguntas_metodologia_agil, 
   },
   { 
-    key: 'frontend', 
-    nombre: 'Programación Front End', 
-    meta: 'Pendiente: agregar preguntas', 
-    badge: 'Material - Aun sin preguntas', 
-    preguntas: preguntas_frontend
+    key: 'frontend',
+    nombre: 'Programación Front End',
+    meta: 'HTTP, CSS, JavaScript, React, Vue, Angular, TypeScript',
+    badge: 'Cuestionario - 146 preguntas', 
+    preguntas: [...preguntas_frontend, ...preguntas_frontend_ampliacion]
   },
 
-  { key: 'backend', nombre: 'Programación Back End', icon: '⚙️', meta: 'Pendiente: agregar preguntas', badge: 'Material - Aun sin preguntas', preguntas: [] },
+  { key: 'backend', nombre: 'Programación Back End', icon: '⚙️', meta: 'Java, Python, Node.js, PHP, SQL, APIs y arquitectura', badge: 'Cuestionario - 97 preguntas', preguntas: [...preguntas_backend] },
+
   
   { key: 'bd_estructurados', 
     nombre: 'Base de Datos Estructuradas', 
-    meta: 'Pendiente: agregar preguntas', 
-    badge: 'Material - En desarrollo', 
-    preguntas: preguntas_bd_estructurados, 
+    meta: 'SQL: consultas, JOIN, normalización, transacciones e índices', 
+    badge: 'Cuestionario - 53 preguntas', 
+    preguntas: [...preguntas_bd_estructurados], 
   },
 
-  { key: 'bd_no_estructurados', nombre: 'Base de Datos No Estructurados', icon: '🍃', meta: 'Pendiente: agregar preguntas', badge: 'Material - Aun sin preguntas', preguntas: [] },
+  { key: 'bd_no_estructurados', nombre: 'Base de Datos No Estructurados', icon: '🍃', meta: 'MongoDB, Redis, Cassandra, Neo4j, CAP y BASE', badge: 'Cuestionario - 43 preguntas', preguntas: [...preguntas_bd_no_estructurados] },
    
   { 
     key: 'introduccion_programacion_robotica', 
@@ -483,6 +504,8 @@ export const LISTA_ASIGNATURAS_ADMIN = [
   { key: 'japones', nombre: 'Japonés' },
   { key: 'chino', nombre: 'Chino' },
   { key: 'coreano', nombre: 'Coreano' },
+  { key: 'programacion_orientada_a_objetos', nombre: 'Programación Orientada a Objetos' },
+  { key: 'db_django', nombre: 'Base de Datos con Django' },
 ];
 
 function getAsignaturasDesactivadasLS() {

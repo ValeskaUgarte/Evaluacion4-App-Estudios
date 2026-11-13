@@ -148,6 +148,44 @@ export default function Cuestionario() {
                       )}
                       </div>
                     ) },
+
+                     { key: 'Programación Orientada a Objetos', nombre: 'Programación Orientada a Objetos', el: (
+                    <div className={`subject-card${desactivadas.includes('programacion_orientada_a_objetos') ? ' subject-disabled' : ''}`} key="static-programacion_orientada_a_objetos" id="card-programacion_orientada_a_objetos" onClick={() => irAlQuiz('programacion_orientada_a_objetos')}>
+                      <img src="img/examen01.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
+                      <div className="subject-name">Programación Orientada a Objetos</div>
+                      <div className="subject-meta">Preparación para prueba</div>
+                      <div><span className="coming-badge">Material - 50 Preguntas</span></div>
+                      {/* Solo aparece si hay sesión iniciada */}
+                      {usuario && (
+                        <button
+                          className={`fav-btn ${usuario.favoritas?.includes('programacion_orientada_a_objetos') ? 'fav-activa' : ''}`}
+                          onClick={(e) => { e.stopPropagation(); toggleFavorita('programacion_orientada_a_objetos'); }}
+                        >
+                          {usuario.favoritas?.includes('programacion_orientada_a_objetos') ? 'Guardada' : 'Guardar'}
+                        </button>
+                      )}
+                      </div>
+                    ) },
+
+                    { key: 'DB Django', nombre: 'DB Django', el: (
+                    <div className={`subject-card${desactivadas.includes('db_django') ? ' subject-disabled' : ''}`} key="static-db_django" id="card-db_django" onClick={() => irAlQuiz('db_django')}>
+                      <img src="img/Base de datos03.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
+                      <div className="subject-name">DB Django</div>
+                      <div className="subject-meta">Preparación para prueba</div>
+                      <div><span className="coming-badge">Material - 50 Preguntas</span></div>
+                      {/* Solo aparece si hay sesión iniciada */}
+                      {usuario && (
+                        <button
+                          className={`fav-btn ${usuario.favoritas?.includes('db_django') ? 'fav-activa' : ''}`}
+                          onClick={(e) => { e.stopPropagation(); toggleFavorita('db_django'); }}
+                        >
+                          {usuario.favoritas?.includes('db_django') ? 'Guardada' : 'Guardar'}
+                        </button>
+                      )}
+                      </div>
+                    ) },
+
+
                     { key: 'sistemas_operativos', nombre: 'Sistemas Operativos', el: (
                     <div className={`subject-card${desactivadas.includes('sistemas_operativos') ? ' subject-disabled' : ''}`} key="static-sistemas_operativos" id="card-sistemas_operativos" onClick={() => irAlQuiz('sistemas_operativos')}>
                       <img src="img/Sistemas Operativos02.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
@@ -186,8 +224,8 @@ export default function Cuestionario() {
                     <div className={`subject-card${desactivadas.includes('algebra') ? ' subject-disabled' : ''}`} key="static-algebra" id="card-algebra" onClick={() => irAlQuiz('algebra')}>
                       <img src="img/Algebra01.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
                       <div className="subject-name">Resolución de Problemas de Álgebra</div>
-                      <div className="subject-meta">Pendiente: agregar preguntas</div>
-                      <div><span className="coming-badge">Material - Aun sin preguntas</span></div>
+                      <div className="subject-meta">Java, Python, Node.js, PHP, SQL, APIs y arquitectura</div>
+                      <div><span className="coming-badge">Cuestionario - 97 preguntas</span></div>
                       {/* Solo aparece si hay sesión iniciada */}
                       {usuario && (
                         <button
@@ -235,10 +273,10 @@ export default function Cuestionario() {
                     ) },
                     { key: 'frontend', nombre: 'Programación Front End', el: (
                     <div className={`subject-card${desactivadas.includes('frontend') ? ' subject-disabled' : ''}`} key="static-frontend" id="card-frontend" onClick={() => irAlQuiz('frontend')}>
-                      <img src="img/Programación FrontEnd01.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
+                      <img src="img/logos/frontend.png" width="96" height="96" alt="Logo Front End" style={{ display: 'block', margin: '0 auto', objectFit: 'contain' }} />
                       <div className="subject-name">Programación Front End</div>
-                      <div className="subject-meta">Pendiente: FrontEnd HTML, CSS, JavaScript, React, Vue, TypeScript, Angular, etc. </div>
-                      <div><span className="coming-badge">Material - 121 preguntas</span></div>
+                      <div className="subject-meta">HTML, CSS, JavaScript, React, Vue, TypeScript, Angular y más</div>
+                      <div><span className="coming-badge">Cuestionario - 146 preguntas</span></div>
                       {/* Solo aparece si hay sesión iniciada */}
                       {usuario && (
                         <button
@@ -252,7 +290,7 @@ export default function Cuestionario() {
                     ) },
                     { key: 'backend', nombre: 'Programación Back End', el: (
                     <div className={`subject-card${desactivadas.includes('backend') ? ' subject-disabled' : ''}`} key="static-backend" id="card-backend" onClick={() => irAlQuiz('backend')}>
-                      <img src="img/Programación BackEnd01.JPG" width="20%" height="20%" style={{ display: 'block', margin: '0 auto' }} />
+                      <img src="img/logos/backend.png" width="96" height="96" alt="Logo Back End" style={{ display: 'block', margin: '0 auto', objectFit: 'contain' }} />
                       <div className="subject-name">Programación Back End</div>
                       <div className="subject-meta">Pendiente: agregar preguntas</div>
                       <div><span className="coming-badge">Material - Aun sin preguntas</span></div>
