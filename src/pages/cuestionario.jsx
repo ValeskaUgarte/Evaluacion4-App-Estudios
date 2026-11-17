@@ -19,7 +19,7 @@ const KEYS_ESTATICAS = [
   'ingles_intermedio', 'japones', 'lenguaje_css', 'lenguaje_javascript',
   'lenguaje_python', 'linux', 'metodologia_agil', 'mobile_iot',
   'modelamiento_informaticas', 'prog_html', 'seguridad-examen',
-  'seguridad_informacion', 'sistemas_operativos',
+  'seguridad_informacion', 'sistemas_operativos', 'programacion_orientada_a_objetos', 'db_django',
 ];
 
 // ESTADOS

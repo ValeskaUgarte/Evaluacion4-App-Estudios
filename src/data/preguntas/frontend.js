@@ -1,4 +1,1777 @@
 const preguntas_frontend = [
+    // ==================== AGREGADAS DESDE DOCUMENTO DE ESTUDIO (112 preguntas) ====================
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué diferencia existe entre ID y CLASS en HTML?",
+        "opts": [
+            "id solo puede usarse en elementos de bloque, y class solo en elementos en línea.",
+            "class identifica un elemento de manera única; id permite agrupar varios elementos con los mismos estilos.",
+            "id identifica un elemento de manera única dentro de una página. class permite agrupar varios elementos para aplicarles los mismos estilos o comportamientos.",
+            "Son lo mismo: ambos atributos sirven para asignar un nombre al elemento en CSS y en JavaScript."
+        ],
+        "ans": 2,
+        "exp": "id identifica un elemento de manera única dentro de una página. class permite agrupar varios elementos para aplicarles los mismos estilos o comportamientos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué hace la etiqueta FORM?",
+        "opts": [
+            "La etiqueta form ejecuta automáticamente la base de datos del servidor al cargar la página.",
+            "La etiqueta form se utiliza únicamente para cambiar el color de los botones.",
+            "La etiqueta form dibuja un recuadro visual alrededor del texto de la página.",
+            "La etiqueta form permite agrupar controles para recopilar y enviar datos del usuario al servidor mediante métodos como GET o POST."
+        ],
+        "ans": 3,
+        "exp": "La etiqueta form permite agrupar controles para recopilar y enviar datos del usuario al servidor mediante métodos como GET o POST.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es HTML?",
+        "opts": [
+            "Es un protocolo de comunicación que cifra las páginas antes de mostrarlas.",
+            "Es un lenguaje de programación que permite conectarse directamente a bases de datos.",
+            "Es un lenguaje de marcado que define la estructura y el contenido de una página web.",
+            "Es un formato de imagen utilizado para publicar gráficos en la web."
+        ],
+        "ans": 2,
+        "exp": "Es un lenguaje de marcado que define la estructura y el contenido de una página web.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es CSS?",
+        "opts": [
+            "Es un lenguaje que define únicamente la apariencia de un sitio web sin ninguna estructura.",
+            "Es un lenguaje de programación utilizado para administrar bases de datos.",
+            "Es un servidor que almacena las hojas de estilo de las páginas web.",
+            "Es un lenguaje de estilos que permite definir la apariencia visual de una página web."
+        ],
+        "ans": 3,
+        "exp": "Es un lenguaje de estilos que permite definir la apariencia visual de una página web.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es JavaScript?",
+        "opts": [
+            "Es un sistema que almacena los datos de los usuarios en el servidor.",
+            "Es un formato de texto que guarda la configuración de un servidor.",
+            "Es un lenguaje de programación que permite agregar interactividad y comportamientos dinámicos a una página web.",
+            "Es un lenguaje de estilos que define únicamente la apariencia visual de una página."
+        ],
+        "ans": 2,
+        "exp": "Es un lenguaje de programación que permite agregar interactividad y comportamientos dinámicos a una página web.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es Frontend?",
+        "opts": [
+            "Es el conjunto de servidores que ejecutan las aplicaciones en la nube.",
+            "Es el código que se ejecuta en el servidor cuando el usuario envía un formulario.",
+            "Es la parte del sistema que procesa la lógica y se comunica con la base de datos.",
+            "Es la parte de una aplicación con la que interactúa directamente el usuario, como botones, formularios, menús y contenidos."
+        ],
+        "ans": 3,
+        "exp": "Es la parte de una aplicación con la que interactúa directamente el usuario, como botones, formularios, menús y contenidos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una etiqueta HTML?",
+        "opts": [
+            "Es un elemento utilizado para definir la estructura o el contenido de una página web.",
+            "Es el archivo que contiene las imágenes y los videos de un sitio web.",
+            "Es un componente que se encarga solamente de guardar los datos en el servidor.",
+            "Es un atributo que asigna un nombre único a cada elemento de la página."
+        ],
+        "ans": 0,
+        "exp": "Es un elemento utilizado para definir la estructura o el contenido de una página web.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un atributo HTML?",
+        "opts": [
+            "Es un bloque de código que define el comportamiento de un botón al hacer clic.",
+            "Es un elemento que define la estructura de una página, como un párrafo o una tabla.",
+            "Es una propiedad que proporciona información adicional o configuración a un elemento HTML.",
+            "Es un archivo independiente que se conecta a la página para definir su apariencia."
+        ],
+        "ans": 2,
+        "exp": "Es una propiedad que proporciona información adicional o configuración a un elemento HTML.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un selector CSS?",
+        "opts": [
+            "Es una etiqueta que contiene el contenido visible de la página web.",
+            "Es un atributo que asigna un identificador único a un elemento HTML.",
+            "Es una expresión que permite seleccionar elementos HTML para aplicarles estilos.",
+            "Es una expresión que define el color o el tamaño de un texto en la página."
+        ],
+        "ans": 2,
+        "exp": "Es una expresión que permite seleccionar elementos HTML para aplicarles estilos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una propiedad CSS?",
+        "opts": [
+            "Es un bloque de código que se ejecuta al cargar la página en el navegador.",
+            "Es un selector que aplica estilos a todos los elementos de la página.",
+            "Es una característica del texto que solo puede modificarse con JavaScript.",
+            "Es una característica visual que se desea modificar, como el color, tamaño o margen."
+        ],
+        "ans": 3,
+        "exp": "Es una característica visual que se desea modificar, como el color, tamaño o margen.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una clase en CSS?",
+        "opts": [
+            "Es una etiqueta que agrupa los elementos de una página en una sola sección.",
+            "Es un atributo que asigna un nombre único a un elemento para poder seleccionarlo en JavaScript.",
+            "Es un identificador que permite aplicar un conjunto de estilos a uno o varios elementos HTML.",
+            "Es una propiedad de JavaScript que cambia el aspecto visual de los botones."
+        ],
+        "ans": 2,
+        "exp": "Es un identificador que permite aplicar un conjunto de estilos a uno o varios elementos HTML.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es el DOM?",
+        "opts": [
+            "Significa Document Object Model. Es una representación estructurada del documento HTML que JavaScript puede consultar y modificar.",
+            "Es una base de datos que guarda el contenido de la página en memoria.",
+            "Es un lenguaje de estilos que define la estructura de un documento HTML.",
+            "Es una función de JavaScript que crea nuevos elementos en el servidor."
+        ],
+        "ans": 0,
+        "exp": "Significa Document Object Model. Es una representación estructurada del documento HTML que JavaScript puede consultar y modificar.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un evento en JavaScript?",
+        "opts": [
+            "Es un archivo que guarda los eventos ocurridos durante la navegación del usuario.",
+            "Es una acción o suceso que ocurre en la página, como hacer clic, escribir o enviar un formulario.",
+            "Es un mecanismo que bloquea la modificación de los elementos de la página.",
+            "Es un método que elimina los elementos de la página al cargarla."
+        ],
+        "ans": 1,
+        "exp": "Es una acción o suceso que ocurre en la página, como hacer clic, escribir o enviar un formulario.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una función en JavaScript?",
+        "opts": [
+            "Es una acción del usuario que solo puede ocurrir al cargar la página por primera vez.",
+            "Es un archivo que guarda las respuestas del servidor durante la sesión.",
+            "Es un bloque de código que realiza una tarea y puede ejecutarse cuando se necesita.",
+            "Es un bloque de estilos que se aplica automáticamente a todos los formularios."
+        ],
+        "ans": 2,
+        "exp": "Es un bloque de código que realiza una tarea y puede ejecutarse cuando se necesita.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una variable en JavaScript?",
+        "opts": [
+            "Es un bloque de código que solo puede ejecutarse una vez al cargar la página.",
+            "Es una etiqueta que define una sección de estilos dentro del documento.",
+            "Es un valor fijo que no puede cambiar durante la ejecución del programa.",
+            "Es un espacio identificado por un nombre que permite almacenar un valor."
+        ],
+        "ans": 3,
+        "exp": "Es un espacio identificado por un nombre que permite almacenar un valor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una API en el desarrollo frontend?",
+        "opts": [
+            "Es una interfaz que permite que el frontend se comunique con otros sistemas, por ejemplo, un servidor backend.",
+            "Es un espacio en la memoria del servidor que guarda los datos del usuario.",
+            "Es una palabra reservada que define el color de un elemento en la página.",
+            "Es un atributo que asigna el valor predeterminado a un campo de formulario."
+        ],
+        "ans": 0,
+        "exp": "Es una interfaz que permite que el frontend se comunique con otros sistemas, por ejemplo, un servidor backend.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es JSON?",
+        "opts": [
+            "Es un lenguaje de programación que se ejecuta únicamente en el servidor.",
+            "Es una conexión directa entre el navegador y la base de datos del sistema.",
+            "Es un formato de texto utilizado para representar e intercambiar información estructurada entre aplicaciones.",
+            "Es un sistema de archivos que el navegador utiliza para guardar las imágenes de la página."
+        ],
+        "ans": 2,
+        "exp": "Es un formato de texto utilizado para representar e intercambiar información estructurada entre aplicaciones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una solicitud HTTP?",
+        "opts": [
+            "Es un protocolo de seguridad que cifra los datos enviados desde el formulario.",
+            "Es un formato de imagen utilizado para guardar fotografías en la web.",
+            "Es un lenguaje de marcado que reemplaza a HTML en las aplicaciones modernas.",
+            "Es una petición que un cliente, como un navegador, envía a un servidor para solicitar o enviar información."
+        ],
+        "ans": 3,
+        "exp": "Es una petición que un cliente, como un navegador, envía a un servidor para solicitar o enviar información.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es el diseño responsive?",
+        "opts": [
+            "Es una técnica que solo se aplica a las imágenes de la página para cargarlas más rápido.",
+            "Es una técnica de diseño que permite adaptar una página web a distintos tamaños de pantalla, como computadores, tablets y celulares.",
+            "Es un sistema que oculta el contenido de la página a los usuarios de celulares.",
+            "Es un método que limita el tamaño de la página a una única pantalla de computador."
+        ],
+        "ans": 1,
+        "exp": "Es una técnica de diseño que permite adaptar una página web a distintos tamaños de pantalla, como computadores, tablets y celulares.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una hoja de estilos externa?",
+        "opts": [
+            "Es una hoja de estilo que solo se usa en sitios con una sola página.",
+            "Es un archivo que guarda los estilos del navegador del usuario en el servidor.",
+            "Es un archivo CSS independiente que se conecta a un documento HTML para definir su apariencia.",
+            "Es un archivo independiente que contiene todo el código del sitio web en un solo lugar."
+        ],
+        "ans": 2,
+        "exp": "Es un archivo CSS independiente que se conecta a un documento HTML para definir su apariencia.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un formulario web?",
+        "opts": [
+            "Es un conjunto de controles que permite al usuario ingresar y enviar información.",
+            "Es un conjunto de controles que sirve para diseñar la estructura de una página web.",
+            "Es un componente que guarda los datos del usuario sin enviarlos al servidor.",
+            "Es un archivo CSS que define los colores de todos los campos de texto."
+        ],
+        "ans": 0,
+        "exp": "Es un conjunto de controles que permite al usuario ingresar y enviar información.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un framework frontend?",
+        "opts": [
+            "Es una estructura de desarrollo que proporciona herramientas y componentes para construir interfaces web.",
+            "Es un conjunto de reglas que el navegador impone para ejecutar aplicaciones web.",
+            "Es un programa que compila el código JavaScript antes de publicarlo.",
+            "Es un servidor que guarda las plantillas de diseño de la aplicación."
+        ],
+        "ans": 0,
+        "exp": "Es una estructura de desarrollo que proporciona herramientas y componentes para construir interfaces web.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una biblioteca de JavaScript?",
+        "opts": [
+            "Es un programa que traduce el código HTML a un lenguaje de programación.",
+            "Es un archivo de configuración que define la ruta de los scripts del sitio.",
+            "Es un conjunto de funciones que siempre debe ejecutarse por completo en cada página.",
+            "Es un conjunto de funciones y herramientas reutilizables que facilitan determinadas tareas de programación."
+        ],
+        "ans": 3,
+        "exp": "Es un conjunto de funciones y herramientas reutilizables que facilitan determinadas tareas de programación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es la validación de formularios?",
+        "opts": [
+            "Es la revisión que realiza el navegador para detectar errores en los estilos.",
+            "Es una comprobación que el servidor realiza para validar la base de datos del sistema.",
+            "Es el proceso de comprobar que los datos ingresados por el usuario cumplan determinadas condiciones.",
+            "Es un proceso que cifra los datos del formulario antes de enviarlos."
+        ],
+        "ans": 2,
+        "exp": "Es el proceso de comprobar que los datos ingresados por el usuario cumplan determinadas condiciones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es la accesibilidad web?",
+        "opts": [
+            "Es la capacidad de una página para adaptarse solamente a computadores de escritorio.",
+            "Es la capacidad de una página para ser utilizada por personas con distintas capacidades y necesidades, incluyendo aquellas que utilizan tecnologías de asistencia.",
+            "Es la capacidad de una página para mostrar anuncios personalizados al usuario.",
+            "Es la capacidad de una página para cargar más rápido en conexiones lentas."
+        ],
+        "ans": 1,
+        "exp": "Es la capacidad de una página para ser utilizada por personas con distintas capacidades y necesidades, incluyendo aquellas que utilizan tecnologías de asistencia.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre HTML y CSS?",
+        "opts": [
+            "HTML define la estructura y el contenido de una página; CSS define su apariencia visual.",
+            "CSS define la estructura y el contenido de la página, y HTML define su apariencia visual.",
+            "Son lo mismo: ambos lenguajes definen la estructura y los estilos de la página.",
+            "HTML controla la lógica del sitio, y CSS guarda los datos del usuario."
+        ],
+        "ans": 0,
+        "exp": "HTML define la estructura y el contenido de una página; CSS define su apariencia visual.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre CSS y JavaScript?",
+        "opts": [
+            "Son lo mismo; ambos lenguajes se usan para cambiar el aspecto de la página.",
+            "CSS controla la presentación visual; JavaScript permite programar comportamientos e interacciones.",
+            "CSS se ejecuta en el servidor, y JavaScript solo en el diseño de la página.",
+            "JavaScript controla la presentación visual, y CSS permite programar interacciones."
+        ],
+        "ans": 1,
+        "exp": "CSS controla la presentación visual; JavaScript permite programar comportamientos e interacciones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre id y class?",
+        "opts": [
+            "id solo puede usarse en CSS, y class solo en JavaScript.",
+            "class identifica un elemento de forma única, y id permite identificar un grupo de elementos.",
+            "Son lo mismo; ambos atributos pueden repetirse en la misma página.",
+            "id identifica un elemento de manera única; class permite identificar un grupo de elementos."
+        ],
+        "ans": 3,
+        "exp": "id identifica un elemento de manera única; class permite identificar un grupo de elementos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una etiqueta y un atributo HTML?",
+        "opts": [
+            "La etiqueta define el elemento; el atributo proporciona información o configuración adicional sobre ese elemento.",
+            "Son lo mismo; ambos términos describen el mismo componente de HTML.",
+            "La etiqueta contiene información adicional, y el atributo define el elemento en la página.",
+            "El atributo siempre aparece antes que la etiqueta en el documento."
+        ],
+        "ans": 0,
+        "exp": "La etiqueta define el elemento; el atributo proporciona información o configuración adicional sobre ese elemento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre div y span?",
+        "opts": [
+            "div solo puede usarse dentro de un párrafo, y span solo en la cabecera.",
+            "div es un contenedor de bloque; span es un contenedor en línea que permite agrupar contenido dentro de un texto u otro elemento.",
+            "Son lo mismo; ambos se usan para agrupar contenido sin ningún efecto visual.",
+            "span es un contenedor de bloque que ocupa todo el ancho, y div es un contenedor en línea."
+        ],
+        "ans": 1,
+        "exp": "div es un contenedor de bloque; span es un contenedor en línea que permite agrupar contenido dentro de un texto u otro elemento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre elementos de bloque y elementos en línea?",
+        "opts": [
+            "Los elementos en línea ocupan todo el ancho disponible, y los de bloque solo el espacio necesario.",
+            "Los elementos de bloque no pueden contener texto ni otras etiquetas.",
+            "Los elementos de bloque normalmente ocupan todo el ancho disponible y comienzan en una nueva línea; los elementos en línea ocupan solamente el espacio necesario para su contenido.",
+            "Son lo mismo; cambia únicamente la forma en que se escribe la etiqueta."
+        ],
+        "ans": 2,
+        "exp": "Los elementos de bloque normalmente ocupan todo el ancho disponible y comienzan en una nueva línea; los elementos en línea ocupan solamente el espacio necesario para su contenido.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre margin y padding?",
+        "opts": [
+            "margin establece el espacio exterior de un elemento; padding establece el espacio interior entre el contenido y el borde.",
+            "margin establece el espacio interior entre el contenido y el borde, y padding el espacio exterior.",
+            "padding solo funciona en elementos en línea, y margin solo en bloques.",
+            "Son lo mismo; ambas propiedades cambian el espacio alrededor del elemento."
+        ],
+        "ans": 0,
+        "exp": "margin establece el espacio exterior de un elemento; padding establece el espacio interior entre el contenido y el borde.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre display: none y visibility: hidden?",
+        "opts": [
+            "display: none conserva el espacio del elemento, y visibility: hidden lo elimina del diseño.",
+            "Son lo mismo; ambas propiedades ocultan el elemento y liberan su espacio.",
+            "visibility: hidden elimina el elemento del código HTML de la página.",
+            "display: none oculta el elemento y elimina su espacio del diseño; visibility: hidden lo oculta, pero conserva el espacio que ocupa."
+        ],
+        "ans": 3,
+        "exp": "display: none oculta el elemento y elimina su espacio del diseño; visibility: hidden lo oculta, pero conserva el espacio que ocupa.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre let, const y var en JavaScript?",
+        "opts": [
+            "let tiene alcance de función y no permite reasignación; var tiene alcance de bloque y sí permite reasignación.",
+            "var tiene alcance de función y permite redeclaración; let tiene alcance de bloque y permite reasignación; const tiene alcance de bloque y no permite reasignar la variable.",
+            "Son lo mismo; las tres palabras declaran variables con el mismo comportamiento.",
+            "const permite cambiar el valor, y let no permite ninguna reasignación."
+        ],
+        "ans": 1,
+        "exp": "var tiene alcance de función y permite redeclaración; let tiene alcance de bloque y permite reasignación; const tiene alcance de bloque y no permite reasignar la variable.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre == y === en JavaScript?",
+        "opts": [
+            "=== solo funciona con números, y == solo con cadenas de texto.",
+            "== compara valores realizando conversión de tipos cuando corresponde; === compara valor y tipo sin realizar esa conversión.",
+            "== compara valor y tipo sin conversión, y === compara valores realizando conversión de tipos.",
+            "Son lo mismo; ambos operadores comparan únicamente el valor de las variables."
+        ],
+        "ans": 1,
+        "exp": "== compara valores realizando conversión de tipos cuando corresponde; === compara valor y tipo sin realizar esa conversión.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre GET y POST?",
+        "opts": [
+            "GET se utiliza para enviar información al servidor, y POST se utiliza para solicitar información.",
+            "GET se utiliza principalmente para solicitar información; POST se utiliza para enviar información al servidor.",
+            "GET solo funciona en formularios con JavaScript, y POST solo sin JavaScript.",
+            "Ambos métodos envían los datos de la misma forma y con la misma finalidad."
+        ],
+        "ans": 1,
+        "exp": "GET se utiliza principalmente para solicitar información; POST se utiliza para enviar información al servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre HTML semántico y HTML no semántico?",
+        "opts": [
+            "Son lo mismo; ambos tipos de HTML describen el contenido de la misma forma.",
+            "El HTML semántico usa contenedores genéricos como div, y el no semántico usa etiquetas como nav y footer.",
+            "El HTML semántico utiliza etiquetas que describen el significado del contenido, como header, nav y footer. El no semántico utiliza contenedores genéricos como div y span.",
+            "El HTML semántico solo puede usarse en navegadores antiguos."
+        ],
+        "ans": 2,
+        "exp": "El HTML semántico utiliza etiquetas que describen el significado del contenido, como header, nav y footer. El no semántico utiliza contenedores genéricos como div y span.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una ruta relativa y una ruta absoluta?",
+        "opts": [
+            "Una ruta relativa depende de la ubicación del archivo actual; una ruta absoluta indica una dirección completa o una ruta desde la raíz definida.",
+            "Las rutas relativas solo funcionan en servidores de producción.",
+            "Una ruta absoluta depende de la ubicación del archivo actual, y una ruta relativa siempre es completa.",
+            "Son lo mismo; ambas rutas apuntan al mismo archivo en cualquier computador."
+        ],
+        "ans": 0,
+        "exp": "Una ruta relativa depende de la ubicación del archivo actual; una ruta absoluta indica una dirección completa o una ruta desde la raíz definida.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una página estática y una página dinámica?",
+        "opts": [
+            "Una página estática cambia su contenido según las acciones del usuario, y una dinámica no cambia nunca.",
+            "Una página estática presenta contenido que no cambia automáticamente según la interacción o los datos; una página dinámica puede modificar su contenido según las acciones del usuario o la información recibida.",
+            "Son lo mismo; ambas páginas presentan siempre el mismo contenido al usuario.",
+            "Las páginas estáticas necesitan siempre una base de datos para mostrarse."
+        ],
+        "ans": 1,
+        "exp": "Una página estática presenta contenido que no cambia automáticamente según la interacción o los datos; una página dinámica puede modificar su contenido según las acciones del usuario o la información recibida.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre frontend y backend?",
+        "opts": [
+            "El frontend siempre se comunica directamente con la base de datos.",
+            "Backend es la parte que utiliza el usuario final, y frontend procesa la lógica del sistema.",
+            "Son lo mismo; ambos términos describen la parte de la aplicación que se ejecuta en el servidor.",
+            "Frontend es la parte que utiliza el usuario; backend es la parte del sistema que procesa la información, aplica la lógica y se comunica con la base de datos."
+        ],
+        "ans": 3,
+        "exp": "Frontend es la parte que utiliza el usuario; backend es la parte del sistema que procesa la información, aplica la lógica y se comunica con la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre innerHTML y textContent?",
+        "opts": [
+            "Son lo mismo; ambas propiedades modifican el contenido del elemento de la misma forma.",
+            "textContent solo puede usarse en elementos de bloque, e innerHTML en elementos en línea.",
+            "innerHTML trabaja solo con texto sin formato, y textContent interpreta las etiquetas HTML.",
+            "innerHTML permite obtener o modificar contenido interpretado como HTML; textContent trabaja con texto sin interpretar etiquetas HTML."
+        ],
+        "ans": 3,
+        "exp": "innerHTML permite obtener o modificar contenido interpretado como HTML; textContent trabaja con texto sin interpretar etiquetas HTML.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se incorpora CSS externo en un documento HTML?",
+        "opts": [
+            "<link rel=\"script\" href=\"estilos.css\">",
+            "<style href=\"script.js\"></style>",
+            "Mediante la etiqueta link dentro de head.",
+            "<script src=\"estilos.css\"></script>"
+        ],
+        "ans": 2,
+        "exp": "Mediante la etiqueta link dentro de head.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;link rel=\"stylesheet\" href=\"estilos.css\"&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se incorpora JavaScript externo en HTML?",
+        "opts": [
+            "<link rel=\"javascript\" src=\"script.js\">",
+            "Mediante la etiqueta script.",
+            "<script href=\"script.js\"></script>",
+            "<js href=\"script.js\"></js>"
+        ],
+        "ans": 1,
+        "exp": "Mediante la etiqueta script.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;script src=\"script.js\"&gt;&lt;/script&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se crea un enlace en HTML?",
+        "opts": [
+            "<a src=\"https://www.google.com\">Ingresar</a>",
+            "<link href=\"https://www.google.com\">Ingresar</link>",
+            "<href url=\"https://www.google.com\">Ingresar</href>",
+            "Utilizando la etiqueta a y el atributo href."
+        ],
+        "ans": 3,
+        "exp": "Utilizando la etiqueta a y el atributo href.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;a href=\"https://www.google.com\"&gt;Ingresar&lt;/a&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se inserta una imagen en HTML?",
+        "opts": [
+            "<picture src=\"imagen.jpg\" alt=\"Descripción\">",
+            "Utilizando la etiqueta img.",
+            "<image link=\"imagen.jpg\">Descripción</image>",
+            "<img href=\"imagen.jpg\" alt=\"Descripción\">"
+        ],
+        "ans": 1,
+        "exp": "Utilizando la etiqueta img.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;img src=\"imagen.jpg\" alt=\"Descripción\"&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se crea una lista ordenada?",
+        "opts": [
+            "<ol>\n    <li>Primero</li>\n    <li>Segundo</li>\n</ol>",
+            "Utilizando ol y li.",
+            "<list>\n    <item>Primero</item>\n    <item>Segundo</item>\n</list>",
+            "<ul>\n    <li>Primero</li>\n    <li>Segundo</li>\n</ul>"
+        ],
+        "ans": 1,
+        "exp": "Utilizando ol y li.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;ol&gt;\n    &lt;li&gt;Primero&lt;/li&gt;\n    &lt;li&gt;Segundo&lt;/li&gt;\n&lt;/ol&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se crea una lista desordenada?",
+        "opts": [
+            "Utilizando ul y li.",
+            "<li>Manzana</li>\n<li>Pera</li>",
+            "<ol>\n    <li>Manzana</li>\n    <li>Pera</li>\n</ol>",
+            "<list type=\"unordered\">Manzana, Pera</list>"
+        ],
+        "ans": 0,
+        "exp": "Utilizando ul y li.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;ul&gt;\n    &lt;li&gt;Manzana&lt;/li&gt;\n    &lt;li&gt;Pera&lt;/li&gt;\n&lt;/ul&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se crea una tabla en HTML?",
+        "opts": [
+            "Utilizando las etiquetas list, item y cell para organizar los datos en columnas.",
+            "Utilizando las etiquetas grid, row y column dentro de la etiqueta body.",
+            "Utilizando únicamente la etiqueta table, sin filas ni celdas.",
+            "Utilizando las etiquetas table, tr, th y td."
+        ],
+        "ans": 3,
+        "exp": "Utilizando las etiquetas table, tr, th y td.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se crea un campo de texto en HTML?",
+        "opts": [
+            "<field value=\"nombre\">",
+            "Utilizando un input de tipo text.",
+            "<text type=\"text\" name=\"nombre\">",
+            "<input type=\"textbox\" name=\"nombre\">"
+        ],
+        "ans": 1,
+        "exp": "Utilizando un input de tipo text.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;input type=\"text\" name=\"nombre\"&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se crea un botón en HTML?",
+        "opts": [
+            "<link type=\"button\">Aceptar</link>",
+            "<button type=\"click\">Aceptar</button>",
+            "<input type=\"submit\" value=\"Aceptar\" click=\"true\">",
+            "Utilizando un elemento button."
+        ],
+        "ans": 3,
+        "exp": "Utilizando un elemento button.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;button type=\"button\"&gt;Aceptar&lt;/button&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se aplica un color de fondo mediante CSS?",
+        "opts": [
+            "body {\n    bgcolor: lightblue;\n}",
+            "body {\n    color: lightblue;\n}",
+            "Utilizando la propiedad background-color.",
+            "body {\n    background: lightblue-color;\n}"
+        ],
+        "ans": 2,
+        "exp": "Utilizando la propiedad background-color.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">body {\n    background-color: lightblue;\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se cambia el tamaño de un texto mediante CSS?",
+        "opts": [
+            "h1 {\n    font: 30px-size;\n}",
+            "h1 {\n    text-size: 30px;\n}",
+            "h1 {\n    size: 30px;\n}",
+            "Utilizando la propiedad font-size."
+        ],
+        "ans": 3,
+        "exp": "Utilizando la propiedad font-size.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">h1 {\n    font-size: 30px;\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se selecciona un elemento mediante su ID en CSS?",
+        "opts": [
+            "titulo {\n    color: blue;\n}",
+            "#titulo {\n    color: blue;\n}",
+            "Utilizando #.",
+            ".titulo {\n    color: blue;\n}"
+        ],
+        "ans": 2,
+        "exp": "Utilizando #.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">#titulo {\n    color: blue;\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se selecciona una clase mediante CSS?",
+        "opts": [
+            "#destacado {\n    color: red;\n}",
+            ".destacado {\n    color: red;\n}",
+            "destacado {\n    color: red;\n}",
+            "Utilizando un punto."
+        ],
+        "ans": 3,
+        "exp": "Utilizando un punto.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">.destacado {\n    color: red;\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se agrega un evento de clic a un botón mediante JavaScript?",
+        "opts": [
+            "document.getElementById(\"boton\").addEvent(\"click\", \"Hola\");",
+            "document.getElementById(\"boton\").onclick(alert(\"Hola\"));",
+            "Utilizando addEventListener().",
+            "document.addEventListener(\"boton\", \"click\");"
+        ],
+        "ans": 2,
+        "exp": "Utilizando addEventListener().",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">document.getElementById(\"boton\")\n    .addEventListener(\"click\", function() {\n        alert(\"Hola\");\n    });</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se obtiene el contenido de un elemento HTML mediante JavaScript?",
+        "opts": [
+            "let texto = document.getElementById(\"titulo\").innerHTML();",
+            "let texto = document.getElementById(\"titulo\").value;",
+            "let texto = document.getText(\"titulo\");",
+            "Utilizando textContent."
+        ],
+        "ans": 3,
+        "exp": "Utilizando textContent.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">let texto = document.getElementById(\"titulo\").textContent;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se modifica el contenido de un elemento HTML?",
+        "opts": [
+            "document.getElementById(\"titulo\").setContent(\"Nuevo título\");",
+            "Asignando un nuevo valor a textContent.",
+            "document.getElementById(\"titulo\").text = \"Nuevo título\" + 1;",
+            "document.getElementById(\"titulo\").textContent();"
+        ],
+        "ans": 1,
+        "exp": "Asignando un nuevo valor a textContent.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">document.getElementById(\"titulo\").textContent = \"Nuevo título\";</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se declara una variable en JavaScript?",
+        "opts": [
+            "var 1nombre = \"Ana\";",
+            "declare nombre = \"Ana\";",
+            "let nombre = Ana;",
+            "Utilizando let, const o var."
+        ],
+        "ans": 3,
+        "exp": "Utilizando let, const o var.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">let nombre = \"Ana\";</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se declara una función en JavaScript?",
+        "opts": [
+            "def saludar() {\n    alert(\"Hola\");\n}",
+            "saludar() = function {\n    alert(\"Hola\");\n}",
+            "Utilizando la palabra reservada function.",
+            "function saludar {\n    alert(\"Hola\");\n}"
+        ],
+        "ans": 2,
+        "exp": "Utilizando la palabra reservada function.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">function saludar() {\n    alert(\"Hola\");\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se obtiene el valor ingresado en un campo de formulario?",
+        "opts": [
+            "let nombre = document.getElementById(\"nombre\").text;",
+            "let nombre = document.getElementById(\"nombre\").name();",
+            "let nombre = document.getElementById(\"nombre\").content;",
+            "Utilizando la propiedad value."
+        ],
+        "ans": 3,
+        "exp": "Utilizando la propiedad value.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">let nombre = document.getElementById(\"nombre\").value;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se comprueba si un campo está vacío?",
+        "opts": [
+            "if (nombre == null) {\n    alert(\"El campo está vacío\");\n}",
+            "if (nombre.length > 0) {\n    alert(\"El campo está vacío\");\n}",
+            "Comparando su valor con una cadena vacía.",
+            "if (nombre = \"\") {\n    alert(\"El campo está vacío\");\n}"
+        ],
+        "ans": 2,
+        "exp": "Comparando su valor con una cadena vacía.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">if (nombre === \"\") {\n    alert(\"El campo está vacío\");\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se adapta una página a diferentes tamaños de pantalla?",
+        "opts": [
+            "Utilizando un archivo HTML separado para cada tamaño de pantalla de los usuarios.",
+            "Utilizando la etiqueta script para modificar el tamaño de las imágenes del sitio.",
+            "Utilizando CSS responsive y reglas @media para modificar los estilos según el tamaño de pantalla.",
+            "Utilizando únicamente atributos HTML fijos en cada elemento, sin estilos adicionales."
+        ],
+        "ans": 2,
+        "exp": "Utilizando CSS responsive y reglas @media para modificar los estilos según el tamaño de pantalla.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "¿Cómo se realiza una solicitud a un servidor utilizando JavaScript?",
+        "opts": [
+            "fetch(\"/api/productos\").then(datos => console.log(datos));",
+            "get(\"/api/productos\").then(response => response.json());",
+            "Se puede utilizar fetch().",
+            "fetch(\"/api/productos\").json();"
+        ],
+        "ans": 2,
+        "exp": "Se puede utilizar fetch().",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">fetch(\"/api/productos\")\n    .then(response =&gt; response.json())\n    .then(datos =&gt; console.log(datos));</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es el modelo de caja o Box Model de CSS?",
+        "opts": [
+            "Es el modelo que organiza las filas y columnas de una tabla en el servidor.",
+            "Es el modelo que describe cómo se compone el espacio de un elemento: contenido, padding, borde y margin.",
+            "Es el modelo que define los eventos del navegador asociados a un formulario.",
+            "Es el modelo que define las animaciones que se aplican a un elemento al cargarse."
+        ],
+        "ans": 1,
+        "exp": "Es el modelo que describe cómo se compone el espacio de un elemento: contenido, padding, borde y margin.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es Flexbox?",
+        "opts": [
+            "Es un sistema que solo puede usarse para textos y no para imágenes.",
+            "Es un sistema que organiza las páginas del sitio en el servidor.",
+            "Es un sistema que organiza los elementos en filas y columnas de forma fija, sin posibilidad de cambio.",
+            "Es un sistema de CSS que permite organizar y distribuir elementos dentro de un contenedor, principalmente en una dirección horizontal o vertical."
+        ],
+        "ans": 3,
+        "exp": "Es un sistema de CSS que permite organizar y distribuir elementos dentro de un contenedor, principalmente en una dirección horizontal o vertical.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es CSS Grid?",
+        "opts": [
+            "Es un sistema que organiza los elementos en una sola dirección, horizontal o vertical, dentro de filas fijas.",
+            "Es un sistema que organiza el contenido del servidor en memoria caché.",
+            "Es un sistema que genera automáticamente las páginas del sitio.",
+            "Es un sistema de diseño CSS que permite organizar elementos mediante filas y columnas."
+        ],
+        "ans": 3,
+        "exp": "Es un sistema de diseño CSS que permite organizar elementos mediante filas y columnas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué diferencia existe entre Flexbox y Grid?",
+        "opts": [
+            "Grid organiza solo texto, y Flexbox solo imágenes.",
+            "Son lo mismo; ambos organizan los elementos de la misma forma y en dos dimensiones.",
+            "Flexbox está pensado principalmente para organizar elementos en una dimensión; Grid permite organizar elementos en dos dimensiones, filas y columnas.",
+            "Flexbox solo puede usarse en JavaScript, y Grid solo en CSS."
+        ],
+        "ans": 2,
+        "exp": "Flexbox está pensado principalmente para organizar elementos en una dimensión; Grid permite organizar elementos en dos dimensiones, filas y columnas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una media query?",
+        "opts": [
+            "Es una función de JavaScript que consulta el tamaño de la pantalla al cargar la página.",
+            "Es una regla HTML que permite cambiar el idioma de la página según el usuario.",
+            "Es un atributo que oculta una imagen en pantallas pequeñas.",
+            "Es una regla CSS que permite aplicar estilos dependiendo de características del dispositivo, como el ancho de la pantalla."
+        ],
+        "ans": 3,
+        "exp": "Es una regla CSS que permite aplicar estilos dependiendo de características del dispositivo, como el ancho de la pantalla.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la especificidad en CSS?",
+        "opts": [
+            "Es el orden en que se cargan las imágenes de una página para mejorar el rendimiento.",
+            "Es el mecanismo que determina qué regla CSS tiene prioridad cuando varias reglas intentan aplicar estilos al mismo elemento.",
+            "Es el número de hojas de estilo que puede tener un sitio web.",
+            "Es la cantidad de estilos que puede tener un mismo elemento en la página."
+        ],
+        "ans": 1,
+        "exp": "Es el mecanismo que determina qué regla CSS tiene prioridad cuando varias reglas intentan aplicar estilos al mismo elemento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la cascada en CSS?",
+        "opts": [
+            "Es el proceso que elimina los estilos no utilizados de la página.",
+            "Es el mecanismo mediante el cual el navegador determina qué estilos aplicar cuando existen varias reglas que afectan a un mismo elemento.",
+            "Es el orden en que el navegador carga las hojas de estilo externas.",
+            "Es el mecanismo que determina el tamaño final de los elementos en la pantalla del usuario."
+        ],
+        "ans": 1,
+        "exp": "Es el mecanismo mediante el cual el navegador determina qué estilos aplicar cuando existen varias reglas que afectan a un mismo elemento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una pseudoclase en CSS?",
+        "opts": [
+            "Es una palabra clave que aplica estilos a todos los elementos de la página al mismo tiempo.",
+            "Es una palabra clave que permite aplicar estilos según el estado de un elemento, como :hover cuando el usuario pasa el cursor sobre él.",
+            "Es un selector que aplica estilos a la primera línea de un párrafo.",
+            "Es una propiedad que cambia el tamaño de la fuente según el dispositivo."
+        ],
+        "ans": 1,
+        "exp": "Es una palabra clave que permite aplicar estilos según el estado de un elemento, como :hover cuando el usuario pasa el cursor sobre él.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es un pseudoelemento en CSS?",
+        "opts": [
+            "Es una regla que cambia el orden de las etiquetas dentro del documento.",
+            "Es un selector que permite aplicar estilos a una parte específica de un elemento, como ::before o ::after.",
+            "Es una palabra clave que aplica estilos solamente al pasar el cursor por encima.",
+            "Es un selector que aplica estilos a todos los elementos hijos de un contenedor."
+        ],
+        "ans": 1,
+        "exp": "Es un selector que permite aplicar estilos a una parte específica de un elemento, como ::before o ::after.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es el diseño mobile first?",
+        "opts": [
+            "Es una estrategia de diseño que comienza desarrollando la interfaz para pantallas pequeñas y después adapta el diseño a pantallas más grandes.",
+            "Es un método que oculta las secciones de la página en pantallas grandes.",
+            "Es una técnica que solo se aplica a sitios con imágenes muy grandes.",
+            "Es una estrategia que comienza desarrollando la página para computadores y luego adapta a celulares."
+        ],
+        "ans": 0,
+        "exp": "Es una estrategia de diseño que comienza desarrollando la interfaz para pantallas pequeñas y después adapta el diseño a pantallas más grandes.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una etiqueta semántica?",
+        "opts": [
+            "Es una etiqueta que se usa solamente para dar formato a los títulos de la página.",
+            "Es una etiqueta que define el estilo visual de un bloque de texto.",
+            "Es una etiqueta HTML que comunica el significado de su contenido, como header, main, article y footer.",
+            "Es una etiqueta que contiene los scripts del sitio web."
+        ],
+        "ans": 2,
+        "exp": "Es una etiqueta HTML que comunica el significado de su contenido, como header, main, article y footer.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué función cumple la etiqueta head?",
+        "opts": [
+            "Contiene el contenido visible de la página, como textos, imágenes y botones.",
+            "Contiene los estilos generales que se aplican a todos los elementos de la página.",
+            "Contiene la configuración de los servidores que aloja el sitio web.",
+            "Contiene información y configuraciones del documento HTML, como el título, los metadatos y los enlaces a hojas de estilos."
+        ],
+        "ans": 3,
+        "exp": "Contiene información y configuraciones del documento HTML, como el título, los metadatos y los enlaces a hojas de estilos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué función cumple la etiqueta body?",
+        "opts": [
+            "Contiene la configuración de la base de datos que utiliza el sitio.",
+            "Contiene las imágenes y los videos que se muestran en la página principal.",
+            "Contiene el contenido visible de la página web, como textos, imágenes, formularios y botones.",
+            "Contiene únicamente el título de la página que se muestra en la pestaña."
+        ],
+        "ans": 2,
+        "exp": "Contiene el contenido visible de la página web, como textos, imágenes, formularios y botones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué función cumple la etiqueta meta?",
+        "opts": [
+            "Proporciona el título de la página que se muestra en la pestaña del navegador.",
+            "Proporciona metadatos sobre el documento HTML, como la codificación de caracteres y la configuración de visualización en dispositivos móviles.",
+            "Contiene el código de los scripts que se ejecutan al cargar la página.",
+            "Define el color de fondo y la fuente de todo el documento."
+        ],
+        "ans": 1,
+        "exp": "Proporciona metadatos sobre el documento HTML, como la codificación de caracteres y la configuración de visualización en dispositivos móviles.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué función cumple <!DOCTYPE html>?",
+        "opts": [
+            "Indica al navegador que el documento está escrito en HTML4 con una estructura antigua.",
+            "Indica al navegador que el documento utiliza HTML5.",
+            "Indica al navegador que la página está protegida con un certificado de seguridad.",
+            "Indica al navegador el idioma principal de todo el contenido de la página."
+        ],
+        "ans": 1,
+        "exp": "Indica al navegador que el documento utiliza HTML5.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es el almacenamiento local o Local Storage?",
+        "opts": [
+            "Es una función de JavaScript que elimina los datos del navegador al cerrarlo.",
+            "Es un mecanismo del servidor que guarda la información del usuario en una base de datos.",
+            "Es un mecanismo del navegador que permite guardar información como pares clave-valor y conservarla incluso después de cerrar el navegador.",
+            "Es un archivo de texto que el navegador envía al servidor en cada solicitud."
+        ],
+        "ans": 2,
+        "exp": "Es un mecanismo del navegador que permite guardar información como pares clave-valor y conservarla incluso después de cerrar el navegador.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué diferencia existe entre Local Storage y Session Storage?",
+        "opts": [
+            "Local Storage elimina los datos al cerrar la pestaña, y Session Storage los conserva siempre.",
+            "Son lo mismo; ambos guardan los datos en el servidor de forma permanente.",
+            "Local Storage conserva los datos después de cerrar el navegador; Session Storage mantiene los datos durante la sesión de esa pestaña y se eliminan al finalizarla.",
+            "Session Storage guarda los datos en el servidor, y Local Storage en la memoria RAM."
+        ],
+        "ans": 2,
+        "exp": "Local Storage conserva los datos después de cerrar el navegador; Session Storage mantiene los datos durante la sesión de esa pestaña y se eliminan al finalizarla.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es el evento submit?",
+        "opts": [
+            "Es un evento que ocurre cuando el navegador termina de cargar todas las imágenes.",
+            "Es un evento que se ejecuta cada vez que el usuario hace clic sobre un botón.",
+            "Es un evento que ocurre cuando se intenta enviar un formulario.",
+            "Es un evento que ocurre cuando el usuario cierra la página o cambia de pestaña."
+        ],
+        "ans": 2,
+        "exp": "Es un evento que ocurre cuando se intenta enviar un formulario.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es preventDefault()?",
+        "opts": [
+            "Es un método que reinicia el formulario y borra todos los datos ingresados.",
+            "Es un método de JavaScript que impide que se ejecute el comportamiento predeterminado de un evento.",
+            "Es un método que reinicia el navegador antes de ejecutar un evento.",
+            "Es un método que elimina el contenido de un elemento para dejarlo vacío."
+        ],
+        "ans": 1,
+        "exp": "Es un método de JavaScript que impide que se ejecute el comportamiento predeterminado de un evento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una promesa en JavaScript?",
+        "opts": [
+            "Es un objeto que representa el resultado futuro de una operación asíncrona, que puede resolverse o rechazarse.",
+            "Es una función que se ejecuta de forma inmediata y bloquea la página hasta terminar.",
+            "Es una variable que guarda el resultado de una función al cargar la página.",
+            "Es una palabra reservada que detiene la ejecución del navegador por unos segundos."
+        ],
+        "ans": 0,
+        "exp": "Es un objeto que representa el resultado futuro de una operación asíncrona, que puede resolverse o rechazarse.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es programación asíncrona?",
+        "opts": [
+            "Es un método para copiar archivos del servidor al navegador del usuario.",
+            "Es una forma de ejecutar el código en el orden exacto en que aparece, sin esperar a ninguna tarea.",
+            "Es una forma de ejecutar operaciones sin bloquear el resto del programa mientras se espera que una tarea termine.",
+            "Es un sistema que bloquea el navegador hasta que el servidor responda."
+        ],
+        "ans": 2,
+        "exp": "Es una forma de ejecutar operaciones sin bloquear el resto del programa mientras se espera que una tarea termine.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es async y await?",
+        "opts": [
+            "Son palabras reservadas de JavaScript que permiten trabajar con operaciones asíncronas de una manera más sencilla de leer.",
+            "Son palabras reservadas que bloquean el navegador hasta que termine una operación.",
+            "Son etiquetas HTML que definen el inicio y el fin de un bloque de código.",
+            "Son funciones que eliminan las promesas pendientes de la página."
+        ],
+        "ans": 0,
+        "exp": "Son palabras reservadas de JavaScript que permiten trabajar con operaciones asíncronas de una manera más sencilla de leer.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es fetch()?",
+        "opts": [
+            "Es una función de JavaScript que permite realizar solicitudes HTTP para comunicarse con servidores o API.",
+            "Es un método que valida los campos de un formulario antes de enviarlo.",
+            "Es una función que guarda los datos del formulario en el almacenamiento local.",
+            "Es una función que permite cargar los estilos de la página de forma asíncrona."
+        ],
+        "ans": 0,
+        "exp": "Es una función de JavaScript que permite realizar solicitudes HTTP para comunicarse con servidores o API.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una API REST?",
+        "opts": [
+            "Es un protocolo que cifra los datos de la página antes de enviarlos.",
+            "Es una interfaz que permite intercambiar información entre sistemas mediante solicitudes HTTP y recursos identificados por direcciones URL.",
+            "Es una interfaz que permite ejecutar código JavaScript directamente en el servidor.",
+            "Es un formato de imagen utilizado para publicar gráficos en el navegador."
+        ],
+        "ans": 1,
+        "exp": "Es una interfaz que permite intercambiar información entre sistemas mediante solicitudes HTTP y recursos identificados por direcciones URL.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es el DOMContentLoaded?",
+        "opts": [
+            "Es una base de datos que se consulta desde el navegador mediante JavaScript.",
+            "Es un evento que ocurre cuando el documento HTML ha sido completamente analizado y su estructura DOM está disponible.",
+            "Es un lenguaje de estilos que reemplaza a CSS en los navegadores modernos.",
+            "Es una interfaz que muestra el contenido de la página en tiempo real sin usar servidores."
+        ],
+        "ans": 1,
+        "exp": "Es un evento que ocurre cuando el documento HTML ha sido completamente analizado y su estructura DOM está disponible.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la compatibilidad entre navegadores?",
+        "opts": [
+            "Es la velocidad con la que el navegador carga los estilos de una página.",
+            "Es la capacidad de un navegador para descargar archivos sin usar conexión a internet.",
+            "Es la capacidad de una página para mostrar anuncios personalizados según la ubicación del usuario.",
+            "Es la capacidad de una página web de funcionar correctamente en distintos navegadores, como Chrome, Firefox y Edge."
+        ],
+        "ans": 3,
+        "exp": "Es la capacidad de una página web de funcionar correctamente en distintos navegadores, como Chrome, Firefox y Edge.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la carga diferida o Lazy Loading?",
+        "opts": [
+            "Es un sistema que bloquea la carga de scripts externos por seguridad.",
+            "Es una técnica que carga todos los recursos de la página al mismo tiempo para ahorrar conexiones.",
+            "Es una técnica que elimina las imágenes de la página para mejorar la velocidad.",
+            "Es una técnica que retrasa la carga de ciertos recursos, como imágenes, hasta que son necesarios, para mejorar el rendimiento."
+        ],
+        "ans": 3,
+        "exp": "Es una técnica que retrasa la carga de ciertos recursos, como imágenes, hasta que son necesarios, para mejorar el rendimiento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿HTML es un lenguaje de programación?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Es un lenguaje de marcado que define la estructura de una página web.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿CSS permite almacenar información en una base de datos?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. CSS se utiliza para definir estilos y presentación visual.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿JavaScript solamente funciona en el navegador?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. También puede ejecutarse fuera del navegador mediante entornos como Node.js.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Un elemento puede tener varias clases CSS?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 0,
+        "exp": "Sí. Un elemento HTML puede tener varias clases separadas por espacios.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Dos elementos pueden tener el mismo ID en una página?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No deberían. El ID debe identificar de forma única un elemento dentro del documento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Un formulario siempre necesita JavaScript para funcionar?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. HTML permite enviar formularios directamente al servidor sin necesidad de JavaScript.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El atributo placeholder reemplaza al atributo label?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. placeholder muestra una indicación dentro del campo; label identifica el campo y permite asociarlo con su descripción.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El frontend puede comunicarse directamente con una base de datos?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "Normalmente no. Se comunica con un backend o API, que administra las operaciones con la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Ocultar un botón mediante CSS impide que un usuario realice una operación?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Ocultar un botón solamente modifica su presentación. Los permisos y restricciones deben comprobarse también en el backend.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El código JavaScript del frontend es completamente privado?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. El código que se entrega al navegador puede ser inspeccionado por los usuarios.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Es una lista desordenada con un único elemento llamado Hola mundo.",
+            "Es un párrafo de texto que muestra la palabra Hola mundo en negrita.",
+            "Es un título de nivel 6 que se muestra con un tamaño muy pequeño.",
+            "Es un encabezado HTML de nivel 1."
+        ],
+        "ans": 3,
+        "exp": "Es un encabezado HTML de nivel 1.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;h1&gt;Hola mundo&lt;/h1&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Es una lista ordenada con un elemento que contiene el texto del párrafo.",
+            "Define un párrafo de texto.",
+            "Es un enlace que lleva a una página que contiene un párrafo.",
+            "Es un encabezado de nivel 2 que muestra el texto Este es un párrafo."
+        ],
+        "ans": 1,
+        "exp": "Define un párrafo de texto.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;p&gt;Este es un párrafo&lt;/p&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Crea un campo de texto que oculta los caracteres mediante puntos en la pantalla.",
+            "Crea un campo para ingresar una contraseña, ocultando visualmente los caracteres introducidos.",
+            "Crea un botón que muestra una contraseña al pasar el cursor por encima.",
+            "Crea un campo de texto que solo acepta números y nunca muestra caracteres."
+        ],
+        "ans": 1,
+        "exp": "Crea un campo para ingresar una contraseña, ocultando visualmente los caracteres introducidos.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;input type=\"password\"&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Selecciona los elementos de tipo caja y les asigna un borde de 200 píxeles.",
+            "Selecciona el elemento con el ID caja y establece su color de fondo en gris.",
+            "Crea una nueva clase llamada caja con altura y ancho fijos para la página.",
+            "Selecciona los elementos de la clase caja y establece su ancho y alto."
+        ],
+        "ans": 3,
+        "exp": "Selecciona los elementos de la clase caja y establece su ancho y alto.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">.caja {\n    width: 200px;\n    height: 100px;\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Aplica un tamaño de fuente de 14 píxeles cuando el ancho de pantalla es de 600 píxeles o menos.",
+            "Cambia el tamaño de la fuente a 14 píxeles en todas las pantallas sin condiciones.",
+            "Aplica un color de fondo a la página cuando el usuario usa un celular.",
+            "Oculta el elemento body cuando el ancho de pantalla es de 600 píxeles o menos."
+        ],
+        "ans": 0,
+        "exp": "Aplica un tamaño de fuente de 14 píxeles cuando el ancho de pantalla es de 600 píxeles o menos.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">@media (max-width: 600px) {\n    body {\n        font-size: 14px;\n    }\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Declara una función que devuelve true si la edad es mayor a 18 años.",
+            "Declara una variable que puede cambiar su valor y muestra la edad del usuario en pantalla.",
+            "Declara una constante y comprueba si la edad es igual o superior a 18.",
+            "Declara una constante que guarda el texto Mayor de edad en la consola."
+        ],
+        "ans": 2,
+        "exp": "Declara una constante y comprueba si la edad es igual o superior a 18.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">const edad = 25;\n\nif (edad &gt;= 18) {\n    console.log(\"Mayor de edad\");\n}</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Elimina el elemento que tiene el ID titulo del documento.",
+            "Cambia el nombre del elemento titulo a un identificador de clase.",
+            "Busca y obtiene del DOM el elemento que tiene el ID titulo.",
+            "Crea una nueva etiqueta llamada titulo dentro del documento HTML."
+        ],
+        "ans": 2,
+        "exp": "Busca y obtiene del DOM el elemento que tiene el ID titulo.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">document.getElementById(\"titulo\");</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Asigna el valor click al atributo saludar del elemento seleccionado.",
+            "Elimina el evento click del elemento y ejecuta la función saludar de inmediato.",
+            "Crea una función llamada saludar que se ejecuta cada vez que se carga la página.",
+            "Asocia la función saludar al evento de clic del elemento."
+        ],
+        "ans": 3,
+        "exp": "Asocia la función saludar al evento de clic del elemento.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">elemento.addEventListener(\"click\", saludar);</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Crea un nuevo elemento con la clase menu al final del documento.",
+            "Busca el primer elemento que coincide con el selector CSS .menu.",
+            "Busca el primer elemento que tiene el atributo name igual a menu.",
+            "Busca y devuelve todos los elementos que tienen la clase menu en la página."
+        ],
+        "ans": 1,
+        "exp": "Busca el primer elemento que coincide con el selector CSS .menu.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">document.querySelector(\".menu\");</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Evita que el navegador ejecute el comportamiento predeterminado asociado al evento.",
+            "Ejecuta el evento de forma inmediata sin permitir ninguna acción del navegador.",
+            "Detiene la carga de la página hasta que el usuario acepte los términos.",
+            "Cancela todos los eventos de la página y reinicia el navegador."
+        ],
+        "ans": 0,
+        "exp": "Evita que el navegador ejecute el comportamiento predeterminado asociado al evento.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">event.preventDefault();</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Crea un botón que guarda el campo nombre en la base de datos sin formulario.",
+            "Crea un formulario que no envía datos al servidor y solo muestra un mensaje.",
+            "Crea un formulario que envía el campo nombre mediante POST a la dirección /guardar.",
+            "Crea un formulario que envía el campo nombre mediante GET a la dirección /guardar."
+        ],
+        "ans": 2,
+        "exp": "Crea un formulario que envía el campo nombre mediante POST a la dirección /guardar.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;form action=\"/guardar\" method=\"POST\"&gt;\n    &lt;input type=\"text\" name=\"nombre\"&gt;\n    &lt;button type=\"submit\"&gt;Enviar&lt;/button&gt;\n&lt;/form&gt;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Frontend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué representa este código?",
+        "opts": [
+            "Configura el idioma de la página para que los navegadores lo traduzcan automáticamente.",
+            "Configura la página para que se muestre siempre con el mismo tamaño en cualquier dispositivo.",
+            "Configura la codificación de caracteres que el navegador usa para mostrar el texto.",
+            "Configura la visualización de la página para adaptarse al ancho del dispositivo, algo importante para el diseño responsive."
+        ],
+        "ans": 3,
+        "exp": "Configura la visualización de la página para adaptarse al ancho del dispositivo, algo importante para el diseño responsive.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">&lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;</div></div>"
+    },
+
 
     //  HTML - ESTRUCTURA BÁSICA 
     {

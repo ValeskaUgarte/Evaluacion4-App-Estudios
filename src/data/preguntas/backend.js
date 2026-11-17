@@ -1,5 +1,1760 @@
 import { P, TABLA } from '../preguntas_helpers.js';
 const preguntas_backend = [
+    // ==================== AGREGADAS DESDE DOCUMENTO DE ESTUDIO (112 preguntas) ====================
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué diferencia existe entre hacer una migración y ejecutar migrate?",
+        "opts": [
+            "migrate elimina las migraciones anteriores y crea una base de datos vacía.",
+            "makemigrations aplica los cambios a la base de datos, y migrate genera los archivos de migración.",
+            "makemigrations genera los archivos que registran los cambios realizados en los modelos de Django. migrate aplica esos cambios a la estructura de la base de datos. Si agregamos un campo nuevo a un modelo, primero generamos la migración y después la aplicamos.",
+            "Ambos comandos hacen lo mismo; solo cambia la versión de Django utilizada."
+        ],
+        "ans": 2,
+        "exp": "makemigrations genera los archivos que registran los cambios realizados en los modelos de Django. migrate aplica esos cambios a la estructura de la base de datos. Si agregamos un campo nuevo a un modelo, primero generamos la migración y después la aplicamos.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">python manage.py makemigrations\npython manage.py migrate</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es Backend?",
+        "opts": [
+            "Es un lenguaje de estilos que define la apariencia de las páginas web.",
+            "Es una base de datos que se instala directamente en el computador del usuario.",
+            "Es el programa que muestra la interfaz visual al usuario en el navegador.",
+            "Es la parte de una aplicación que trabaja detrás de la interfaz de usuario. Se encarga de procesar solicitudes, ejecutar la lógica del sistema, comunicarse con la base de datos y devolver respuestas."
+        ],
+        "ans": 3,
+        "exp": "Es la parte de una aplicación que trabaja detrás de la interfaz de usuario. Se encarga de procesar solicitudes, ejecutar la lógica del sistema, comunicarse con la base de datos y devolver respuestas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un servidor?",
+        "opts": [
+            "Es un tipo de cable de red utilizado para conectar equipos en una oficina.",
+            "Es un programa que descarga archivos de internet al computador del usuario.",
+            "Es un sistema que recibe solicitudes de clientes, las procesa y devuelve respuestas mediante una red.",
+            "Es una aplicación instalada en el celular que muestra la interfaz al usuario."
+        ],
+        "ans": 2,
+        "exp": "Es un sistema que recibe solicitudes de clientes, las procesa y devuelve respuestas mediante una red.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un cliente?",
+        "opts": [
+            "Es un sistema que siempre se encuentra en el computador del usuario final.",
+            "Es un programa que ejecuta consultas SQL sin recibir ninguna solicitud.",
+            "Es un componente que solo muestra la interfaz visual de una aplicación.",
+            "Es una aplicación o dispositivo que realiza solicitudes a un servidor para obtener información o utilizar sus servicios."
+        ],
+        "ans": 3,
+        "exp": "Es una aplicación o dispositivo que realiza solicitudes a un servidor para obtener información o utilizar sus servicios.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una solicitud HTTP?",
+        "opts": [
+            "Es una instrucción que el servidor ejecuta sin devolver ningún resultado.",
+            "Es un archivo que guarda la configuración del navegador del usuario.",
+            "Es un mensaje que un cliente envía a un servidor para solicitar información o realizar una operación.",
+            "Es un mensaje que el servidor envía al cliente para iniciar la conexión de red."
+        ],
+        "ans": 2,
+        "exp": "Es un mensaje que un cliente envía a un servidor para solicitar información o realizar una operación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una respuesta HTTP?",
+        "opts": [
+            "Es un programa que cifra los datos antes de enviarlos por la red.",
+            "Es una base de datos que almacena las respuestas del servidor.",
+            "Es una aplicación que muestra información al usuario sin conectarse a ningún servidor.",
+            "Es el mensaje que devuelve el servidor al cliente después de procesar una solicitud. Puede contener información, resultados o errores."
+        ],
+        "ans": 3,
+        "exp": "Es el mensaje que devuelve el servidor al cliente después de procesar una solicitud. Puede contener información, resultados o errores.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una API?",
+        "opts": [
+            "Es una interfaz que permite que diferentes aplicaciones o componentes de software se comuniquen e intercambien información mediante reglas definidas.",
+            "Es un formato de archivo utilizado para almacenar imágenes en el servidor.",
+            "Es una aplicación que trabaja únicamente en el navegador y no se comunica con otros sistemas.",
+            "Es un tipo de base de datos que guarda los datos en formato de texto plano."
+        ],
+        "ans": 0,
+        "exp": "Es una interfaz que permite que diferentes aplicaciones o componentes de software se comuniquen e intercambien información mediante reglas definidas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una API REST?",
+        "opts": [
+            "Es una solicitud que el servidor envía al cliente para pedirle información adicional.",
+            "Es un mensaje de error que aparece cuando la base de datos está apagada.",
+            "Es una API que utiliza los principios de REST para permitir la comunicación entre sistemas, generalmente mediante solicitudes HTTP y recursos identificados por URL.",
+            "Es un código de estado que indica que la conexión fue cerrada por el usuario."
+        ],
+        "ans": 2,
+        "exp": "Es una API que utiliza los principios de REST para permitir la comunicación entre sistemas, generalmente mediante solicitudes HTTP y recursos identificados por URL.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un endpoint?",
+        "opts": [
+            "Es un servidor que almacena temporalmente las páginas web visitadas por el usuario.",
+            "Es un lenguaje de programación utilizado para escribir los estilos de la página.",
+            "Es una dirección específica de una API a través de la cual se puede acceder a un recurso o ejecutar una operación.",
+            "Es una dirección específica que solo sirve para cargar archivos estáticos como imágenes."
+        ],
+        "ans": 2,
+        "exp": "Es una dirección específica de una API a través de la cual se puede acceder a un recurso o ejecutar una operación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una ruta o URL?",
+        "opts": [
+            "Es un código de estado que indica que el recurso fue movido permanentemente.",
+            "Es un tipo de servidor que guarda los datos del usuario en su computador.",
+            "Es una dirección que solo se usa para enviar correos electrónicos desde la aplicación.",
+            "Es una dirección que identifica un recurso o punto de acceso dentro de una aplicación o servidor."
+        ],
+        "ans": 3,
+        "exp": "Es una dirección que identifica un recurso o punto de acceso dentro de una aplicación o servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una petición GET?",
+        "opts": [
+            "Es una solicitud HTTP utilizada para reemplazar todo el contenido de una página.",
+            "Es una solicitud HTTP utilizada para eliminar registros de la base de datos.",
+            "Es una solicitud HTTP utilizada principalmente para obtener información de un servidor.",
+            "Es una operación que modifica solamente el encabezado de una respuesta HTTP."
+        ],
+        "ans": 2,
+        "exp": "Es una solicitud HTTP utilizada principalmente para obtener información de un servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una petición POST?",
+        "opts": [
+            "Es una solicitud HTTP utilizada habitualmente para enviar información al servidor, por ejemplo, para crear un registro.",
+            "Es una solicitud HTTP utilizada para obtener información sin modificar el servidor.",
+            "Es una solicitud HTTP utilizada para eliminar un recurso del servidor.",
+            "Es una solicitud HTTP utilizada para cifrar la conexión entre cliente y servidor."
+        ],
+        "ans": 0,
+        "exp": "Es una solicitud HTTP utilizada habitualmente para enviar información al servidor, por ejemplo, para crear un registro.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una petición PUT?",
+        "opts": [
+            "Es una solicitud HTTP utilizada para crear un nuevo recurso en el servidor.",
+            "Es una solicitud HTTP utilizada para reemplazar completamente la representación de un recurso existente.",
+            "Es una solicitud HTTP utilizada para modificar solamente una parte del recurso.",
+            "Es una solicitud HTTP utilizada para cerrar la conexión con el servidor."
+        ],
+        "ans": 1,
+        "exp": "Es una solicitud HTTP utilizada para reemplazar completamente la representación de un recurso existente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una petición PATCH?",
+        "opts": [
+            "Es una solicitud HTTP utilizada para reemplazar completamente la representación de un recurso.",
+            "Es una solicitud HTTP utilizada para cifrar la conexión entre cliente y servidor.",
+            "Es una solicitud HTTP utilizada para modificar parcialmente un recurso.",
+            "Es una solicitud HTTP utilizada para obtener la lista completa de recursos."
+        ],
+        "ans": 2,
+        "exp": "Es una solicitud HTTP utilizada para modificar parcialmente un recurso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una petición DELETE?",
+        "opts": [
+            "Es una solicitud HTTP utilizada para obtener información sin modificar el servidor.",
+            "Es una solicitud HTTP utilizada para crear un recurso nuevo con datos del formulario.",
+            "Es una solicitud HTTP utilizada para actualizar parcialmente un recurso.",
+            "Es una solicitud HTTP utilizada para eliminar un recurso."
+        ],
+        "ans": 3,
+        "exp": "Es una solicitud HTTP utilizada para eliminar un recurso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es JSON?",
+        "opts": [
+            "Es un formato de intercambio de datos que permite representar información mediante estructuras de pares clave-valor y listas.",
+            "Es un formato de imagen que se utiliza para publicar fotografías en la web.",
+            "Es un lenguaje de programación utilizado para diseñar bases de datos relacionales.",
+            "Es un protocolo de comunicación que cifra los mensajes entre dos computadores."
+        ],
+        "ans": 0,
+        "exp": "Es un formato de intercambio de datos que permite representar información mediante estructuras de pares clave-valor y listas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es la lógica de negocio?",
+        "opts": [
+            "Es un software que administra la conexión física entre el servidor y la red.",
+            "Es el diseño visual de las pantallas que utiliza la empresa para sus clientes.",
+            "Es el conjunto de reglas y procesos que determinan cómo debe funcionar una aplicación según sus objetivos.",
+            "Es el conjunto de reglas de negocio aplicadas solamente por el usuario final en la interfaz."
+        ],
+        "ans": 2,
+        "exp": "Es el conjunto de reglas y procesos que determinan cómo debe funcionar una aplicación según sus objetivos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un ORM?",
+        "opts": [
+            "Es un servidor web que sirve archivos estáticos como imágenes y hojas de estilo.",
+            "Es una herramienta que escribe automáticamente la interfaz gráfica de la aplicación.",
+            "Es un lenguaje de consulta que reemplaza a SQL en todas las bases de datos.",
+            "Es una herramienta que permite trabajar con bases de datos relacionales utilizando objetos y clases del lenguaje de programación, sin tener que escribir manualmente todas las consultas SQL."
+        ],
+        "ans": 3,
+        "exp": "Es una herramienta que permite trabajar con bases de datos relacionales utilizando objetos y clases del lenguaje de programación, sin tener que escribir manualmente todas las consultas SQL.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un modelo en el Backend?",
+        "opts": [
+            "Es una representación visual de la pantalla que el usuario utiliza en la aplicación.",
+            "Es una representación de los datos que maneja una aplicación y que normalmente define cómo se almacenan en la base de datos.",
+            "Es un conjunto de pruebas automáticas que verifican el diseño de la interfaz.",
+            "Es un archivo de configuración que define el idioma y la zona horaria del sistema."
+        ],
+        "ans": 1,
+        "exp": "Es una representación de los datos que maneja una aplicación y que normalmente define cómo se almacenan en la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un controlador?",
+        "opts": [
+            "Es una tabla de la base de datos que almacena las respuestas enviadas al servidor.",
+            "Es un archivo que contiene solamente los estilos visuales de la aplicación.",
+            "Es un componente que recibe o coordina las solicitudes, ejecuta las operaciones correspondientes y determina la respuesta que debe entregarse. Su responsabilidad concreta depende de la arquitectura utilizada.",
+            "Es un componente que muestra los datos al usuario en la página web."
+        ],
+        "ans": 2,
+        "exp": "Es un componente que recibe o coordina las solicitudes, ejecuta las operaciones correspondientes y determina la respuesta que debe entregarse. Su responsabilidad concreta depende de la arquitectura utilizada.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una vista en el contexto de Backend?",
+        "opts": [
+            "Es el componente que procesa una solicitud y devuelve una respuesta. En Django, una vista recibe un objeto request y retorna un objeto response.",
+            "Es una cadena de texto que el navegador muestra en la barra de direcciones.",
+            "Es un componente que solo se encarga de presentar la plantilla HTML al usuario.",
+            "Es una función que valida los formularios antes de enviarlos desde el navegador."
+        ],
+        "ans": 0,
+        "exp": "Es el componente que procesa una solicitud y devuelve una respuesta. En Django, una vista recibe un objeto request y retorna un objeto response.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una sesión?",
+        "opts": [
+            "Es un mecanismo que permite mantener información asociada a un usuario entre diferentes solicitudes HTTP.",
+            "Es el espacio de almacenamiento del navegador donde se guardan las imágenes de la página.",
+            "Es un archivo que contiene el código fuente del frontend de la aplicación.",
+            "Es un sistema que bloquea el acceso a la aplicación desde direcciones IP desconocidas."
+        ],
+        "ans": 0,
+        "exp": "Es un mecanismo que permite mantener información asociada a un usuario entre diferentes solicitudes HTTP.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un token?",
+        "opts": [
+            "Es el proceso de asignar permisos de lectura a los archivos del servidor.",
+            "Es el proceso de cifrar todos los datos del usuario antes de guardarlos en la base.",
+            "Es el proceso de comprobar que el servidor esté disponible antes de enviar una solicitud.",
+            "Es una cadena de datos utilizada para representar información o acreditar determinados permisos, según el sistema de autenticación utilizado."
+        ],
+        "ans": 3,
+        "exp": "Es una cadena de datos utilizada para representar información o acreditar determinados permisos, según el sistema de autenticación utilizado.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es autenticación?",
+        "opts": [
+            "Es el proceso de cerrar la sesión del usuario después de un tiempo de inactividad.",
+            "Es el proceso de determinar qué acciones puede realizar un usuario sin verificar su identidad.",
+            "Es el proceso mediante el cual un sistema verifica la identidad de un usuario.",
+            "Es el proceso de guardar la contraseña del usuario en texto plano en la base de datos."
+        ],
+        "ans": 2,
+        "exp": "Es el proceso mediante el cual un sistema verifica la identidad de un usuario.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es autorización?",
+        "opts": [
+            "Es un componente que se ejecuta solamente en el navegador del usuario y no interviene en el servidor.",
+            "Es el proceso que determina qué acciones o recursos tiene permitido utilizar un usuario.",
+            "Es un archivo que almacena las respuestas HTTP guardadas en caché del navegador.",
+            "Es una función que copia automáticamente los datos de la base en la memoria RAM."
+        ],
+        "ans": 1,
+        "exp": "Es el proceso que determina qué acciones o recursos tiene permitido utilizar un usuario.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un middleware?",
+        "opts": [
+            "Es un componente que interviene en el procesamiento de las solicitudes y respuestas, permitiendo ejecutar operaciones antes o después de llegar a la vista.",
+            "Es una condición de error que nunca interrumpe la ejecución del programa.",
+            "Es una instrucción que reinicia el servidor cada vez que se produce un error.",
+            "Es una función que guarda el código fuente en un archivo separado."
+        ],
+        "ans": 0,
+        "exp": "Es un componente que interviene en el procesamiento de las solicitudes y respuestas, permitiendo ejecutar operaciones antes o después de llegar a la vista.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una excepción?",
+        "opts": [
+            "Es una herramienta que elimina el código con errores antes de compilar el programa.",
+            "Es un evento que interrumpe el flujo normal de ejecución de un programa debido a un error o situación excepcional.",
+            "Es el proceso de registrar los datos del usuario en una base de datos externa.",
+            "Es el proceso de ocultar los errores para que el usuario nunca los vea en pantalla."
+        ],
+        "ans": 1,
+        "exp": "Es un evento que interrumpe el flujo normal de ejecución de un programa debido a un error o situación excepcional.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es el manejo de errores?",
+        "opts": [
+            "Es una copia completa del sistema operativo guardada en un servidor remoto.",
+            "Es una carpeta del sistema operativo donde se guardan las variables de entorno del usuario.",
+            "Es un programa que ejecuta todas las aplicaciones del computador en paralelo.",
+            "Es el proceso de detectar, controlar y responder a los errores que pueden ocurrir durante la ejecución de una aplicación."
+        ],
+        "ans": 3,
+        "exp": "Es el proceso de detectar, controlar y responder a los errores que pueden ocurrir durante la ejecución de una aplicación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un entorno virtual en Python?",
+        "opts": [
+            "Es un entorno aislado que permite instalar y administrar dependencias de un proyecto sin afectar los demás proyectos del sistema.",
+            "Es una variable global que almacena el estado de la aplicación en el navegador.",
+            "Es un archivo que se descarga desde internet y se ejecuta automáticamente en el servidor.",
+            "Es un programa que comprime los archivos del proyecto antes de subirlos al servidor."
+        ],
+        "ans": 0,
+        "exp": "Es un entorno aislado que permite instalar y administrar dependencias de un proyecto sin afectar los demás proyectos del sistema.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una dependencia?",
+        "opts": [
+            "Backend es la parte visual de la aplicación, y Frontend guarda los datos en el servidor.",
+            "Es una biblioteca, paquete o componente externo que necesita una aplicación para funcionar.",
+            "Son lo mismo; solo cambia el nombre que se usa en cada empresa.",
+            "Frontend es el componente que procesa la lógica y se comunica con la base de datos, y Backend es la interfaz."
+        ],
+        "ans": 1,
+        "exp": "Es una biblioteca, paquete o componente externo que necesita una aplicación para funcionar.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre Backend y Frontend?",
+        "opts": [
+            "El cliente procesa la lógica y devuelve respuestas, y el servidor solo realiza solicitudes.",
+            "El servidor siempre es un computador personal, y el cliente siempre es un servidor de base de datos.",
+            "Frontend es la parte de una aplicación con la que interactúa directamente el usuario. Backend es la parte encargada de procesar la información, ejecutar la lógica y comunicarse con la base de datos.",
+            "Son lo mismo; ambos pueden recibir y realizar solicitudes indistintamente."
+        ],
+        "ans": 2,
+        "exp": "Frontend es la parte de una aplicación con la que interactúa directamente el usuario. Backend es la parte encargada de procesar la información, ejecutar la lógica y comunicarse con la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre cliente y servidor?",
+        "opts": [
+            "El cliente realiza solicitudes para obtener información o servicios. El servidor recibe esas solicitudes, las procesa y devuelve respuestas.",
+            "POST se utiliza principalmente para consultar información, y GET para crear recursos.",
+            "GET solo puede enviarse desde formularios, y POST solo desde la barra de direcciones.",
+            "Ambos métodos modifican los datos del servidor sin ninguna diferencia."
+        ],
+        "ans": 0,
+        "exp": "El cliente realiza solicitudes para obtener información o servicios. El servidor recibe esas solicitudes, las procesa y devuelve respuestas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre GET y POST?",
+        "opts": [
+            "PATCH reemplaza completamente un recurso, y PUT modifica solamente una parte.",
+            "Son lo mismo; ambos reemplazan el recurso completo por el nuevo contenido.",
+            "PUT solo se utiliza para eliminar recursos, y PATCH para consultar.",
+            "GET se utiliza principalmente para consultar información. POST se utiliza habitualmente para enviar información y crear recursos."
+        ],
+        "ans": 3,
+        "exp": "GET se utiliza principalmente para consultar información. POST se utiliza habitualmente para enviar información y crear recursos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre PUT y PATCH?",
+        "opts": [
+            "Una API REST es una interfaz que no utiliza HTTP, y una API es siempre REST.",
+            "PUT reemplaza completamente un recurso. PATCH modifica solamente una parte de ese recurso.",
+            "Son lo mismo: ambos términos describen la misma interfaz de comunicación.",
+            "Una API solo existe en aplicaciones móviles, mientras que REST existe en la web."
+        ],
+        "ans": 1,
+        "exp": "PUT reemplaza completamente un recurso. PATCH modifica solamente una parte de ese recurso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una API y una API REST?",
+        "opts": [
+            "La autorización se realiza antes de la autenticación y solo en sistemas sin contraseñas.",
+            "Una API es una interfaz de comunicación entre componentes o aplicaciones. Una API REST es un tipo de API que sigue los principios arquitectónicos REST.",
+            "La autenticación define qué puede hacer el usuario, y la autorización verifica su identidad.",
+            "Son sinónimos que siempre se realizan con el mismo mecanismo."
+        ],
+        "ans": 1,
+        "exp": "Una API es una interfaz de comunicación entre componentes o aplicaciones. Una API REST es un tipo de API que sigue los principios arquitectónicos REST.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre autenticación y autorización?",
+        "opts": [
+            "Una sesión se guarda en el navegador del usuario, y un token siempre se almacena en el servidor.",
+            "Autenticación verifica quién es el usuario. Autorización determina qué puede hacer ese usuario dentro del sistema.",
+            "El token no puede contener información del usuario, mientras que la sesión sí.",
+            "Son lo mismo; ambos mantienen información del usuario de la misma forma."
+        ],
+        "ans": 1,
+        "exp": "Autenticación verifica quién es el usuario. Autorización determina qué puede hacer ese usuario dentro del sistema.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre sesión y token?",
+        "opts": [
+            "Son lo mismo; ambos definen la forma en que se presentan los datos.",
+            "El modelo procesa las solicitudes y decide la respuesta, y la vista define los datos de la aplicación.",
+            "Una sesión normalmente mantiene información del usuario en el servidor y se identifica mediante una cookie u otro mecanismo. Un token contiene información o credenciales que el cliente presenta para acreditar su acceso, según el esquema utilizado.",
+            "La vista administra la base de datos, y el modelo genera el HTML que ve el usuario."
+        ],
+        "ans": 2,
+        "exp": "Una sesión normalmente mantiene información del usuario en el servidor y se identifica mediante una cookie u otro mecanismo. Un token contiene información o credenciales que el cliente presenta para acreditar su acceso, según el esquema utilizado.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre un modelo y una vista en Django?",
+        "opts": [
+            "El modelo define y representa los datos de la aplicación. La vista procesa las solicitudes y determina qué respuesta entregar.",
+            "La ruta solo se usa en aplicaciones móviles, y el endpoint solo en la web.",
+            "La ruta es una operación HTTP, y el endpoint es el patrón de URL que utiliza la aplicación.",
+            "Son sinónimos que se refieren exactamente al mismo elemento."
+        ],
+        "ans": 0,
+        "exp": "El modelo define y representa los datos de la aplicación. La vista procesa las solicitudes y determina qué respuesta entregar.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una ruta y un endpoint?",
+        "opts": [
+            "HTTPS es un protocolo que no utiliza cifrado y HTTP sí lo utiliza.",
+            "La ruta es el patrón de URL que utiliza la aplicación para dirigir una solicitud. El endpoint es el punto de acceso concreto de una API, asociado a una operación o recurso.",
+            "Son lo mismo; HTTPS es solo un nombre comercial de HTTP.",
+            "HTTP solo puede utilizarse en servidores locales, y HTTPS en internet."
+        ],
+        "ans": 1,
+        "exp": "La ruta es el patrón de URL que utiliza la aplicación para dirigir una solicitud. El endpoint es el punto de acceso concreto de una API, asociado a una operación o recurso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre HTTP y HTTPS?",
+        "opts": [
+            "El servidor de aplicaciones no puede recibir solicitudes HTTP en ningún caso.",
+            "Un servidor web siempre ejecuta la lógica de negocio, y un servidor de aplicaciones solo sirve archivos.",
+            "Ambos cumplen exactamente la misma función y no tienen diferencias.",
+            "HTTP es un protocolo de comunicación web. HTTPS utiliza HTTP protegido mediante TLS, proporcionando cifrado y autenticación del servidor."
+        ],
+        "ans": 3,
+        "exp": "HTTP es un protocolo de comunicación web. HTTPS utiliza HTTP protegido mediante TLS, proporcionando cifrado y autenticación del servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre un servidor web y un servidor de aplicaciones?",
+        "opts": [
+            "Son lo mismo; ambos códigos indican que la solicitud no pudo procesarse.",
+            "El error 400 aparece solo en bases de datos, y el 500 solo en el navegador.",
+            "Los errores 400 indican fallas en el servidor, y los errores 500 indican problemas del cliente.",
+            "Un servidor web recibe y gestiona solicitudes HTTP y puede servir archivos estáticos. Un servidor de aplicaciones ejecuta la lógica de la aplicación y procesa las solicitudes dinámicas. En algunos entornos, un mismo software puede cumplir ambas funciones."
+        ],
+        "ans": 3,
+        "exp": "Un servidor web recibe y gestiona solicitudes HTTP y puede servir archivos estáticos. Un servidor de aplicaciones ejecuta la lógica de la aplicación y procesa las solicitudes dinámicas. En algunos entornos, un mismo software puede cumplir ambas funciones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre un error 400 y un error 500?",
+        "opts": [
+            "Los microservicios no pueden comunicarse entre sí y deben usar una base de datos única.",
+            "Son lo mismo; solo cambia el lenguaje de programación utilizado.",
+            "Los errores 400 indican problemas en la solicitud del cliente. Los errores 500 indican problemas durante el procesamiento en el servidor.",
+            "Una aplicación monolítica divide el sistema en servicios independientes, y los microservicios concentran todo."
+        ],
+        "ans": 2,
+        "exp": "Los errores 400 indican problemas en la solicitud del cliente. Los errores 500 indican problemas durante el procesamiento en el servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una aplicación monolítica y una arquitectura de microservicios?",
+        "opts": [
+            "El código asíncrono espera a que termine cada operación, y el síncrono nunca espera.",
+            "Una aplicación monolítica concentra sus componentes principales en una misma aplicación. Los microservicios dividen el sistema en servicios independientes que se comunican entre sí.",
+            "El código síncrono solo funciona en el navegador, y el asíncrono solo en el servidor.",
+            "Son lo mismo; ambos bloquean siempre el flujo del programa."
+        ],
+        "ans": 1,
+        "exp": "Una aplicación monolítica concentra sus componentes principales en una misma aplicación. Los microservicios dividen el sistema en servicios independientes que se comunican entre sí.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre código síncrono y asíncrono?",
+        "opts": [
+            "Son sinónimos: ambos son lenguajes de programación para bases de datos.",
+            "El ORM solo funciona con bases de datos no relacionales y SQL con las relacionales.",
+            "SQL es un ORM que traduce objetos a consultas, y el ORM es un lenguaje de consulta.",
+            "El código síncrono ejecuta operaciones siguiendo una secuencia y espera a que termine cada operación. El asíncrono permite gestionar operaciones pendientes sin bloquear necesariamente el flujo de ejecución."
+        ],
+        "ans": 3,
+        "exp": "El código síncrono ejecuta operaciones siguiendo una secuencia y espera a que termine cada operación. El asíncrono permite gestionar operaciones pendientes sin bloquear necesariamente el flujo de ejecución.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre un ORM y SQL?",
+        "opts": [
+            "El Backend cifra la contraseña en el navegador antes de enviarla al servidor.",
+            "SQL es un lenguaje para consultar y administrar bases de datos relacionales. Un ORM permite interactuar con la base de datos utilizando objetos y métodos del lenguaje de programación.",
+            "El Backend crea automáticamente una cuenta nueva sin consultar la base de datos.",
+            "El Backend solo muestra un formulario al usuario y no verifica los datos enviados."
+        ],
+        "ans": 1,
+        "exp": "SQL es un lenguaje para consultar y administrar bases de datos relacionales. Un ORM permite interactuar con la base de datos utilizando objetos y métodos del lenguaje de programación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si un usuario ingresa a una página y solicita iniciar sesión, ¿qué sucede en el Backend?",
+        "opts": [
+            "Utilizaría DELETE, porque el usuario se registra eliminando datos previos.",
+            "El Backend recibe los datos enviados por el usuario, verifica sus credenciales, consulta la base de datos y determina si puede iniciar sesión. Si son correctas, establece el mecanismo de autenticación correspondiente y devuelve una respuesta.",
+            "Utilizaría PUT, porque permite obtener información sin modificar el recurso.",
+            "Utilizaría GET, porque permite crear un nuevo usuario en el servidor."
+        ],
+        "ans": 1,
+        "exp": "El Backend recibe los datos enviados por el usuario, verifica sus credenciales, consulta la base de datos y determina si puede iniciar sesión. Si son correctas, establece el mecanismo de autenticación correspondiente y devuelve una respuesta.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas registrar un usuario nuevo, ¿qué método HTTP utilizarías?",
+        "opts": [
+            "Utilizaría POST, porque permite enviar información al servidor para crear un nuevo recurso.",
+            "Utilizaría DELETE, porque elimina la información del usuario para consultarla.",
+            "Utilizaría POST, porque solo permite consultar datos sin modificar el recurso.",
+            "Utilizaría PUT, porque reemplaza el recurso completo sin consultar nada."
+        ],
+        "ans": 0,
+        "exp": "Utilizaría POST, porque permite enviar información al servidor para crear un nuevo recurso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas consultar los datos de un usuario, ¿qué método utilizarías?",
+        "opts": [
+            "Utilizaría PUT, porque reemplaza el usuario completo con el nuevo correo.",
+            "Utilizaría DELETE, porque elimina el usuario antes de modificar el correo.",
+            "Utilizaría GET, porque obtiene el correo sin modificar el recurso.",
+            "Utilizaría GET, porque permite obtener información sin modificar el recurso."
+        ],
+        "ans": 3,
+        "exp": "Utilizaría GET, porque permite obtener información sin modificar el recurso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas modificar solamente el correo electrónico de un usuario, ¿qué método utilizarías?",
+        "opts": [
+            "Utilizaría PATCH, porque modifica parcialmente el producto antes de eliminarlo.",
+            "Utilizaría PATCH, porque permite modificar parcialmente un recurso.",
+            "Utilizaría GET, porque envía una solicitud para obtener el producto a eliminar.",
+            "Utilizaría POST, porque crea un registro que reemplaza al producto."
+        ],
+        "ans": 1,
+        "exp": "Utilizaría PATCH, porque permite modificar parcialmente un recurso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas eliminar un producto, ¿qué método HTTP utilizarías?",
+        "opts": [
+            "El Frontend esperaría a que el usuario reinicie la aplicación para mostrar los productos.",
+            "El Frontend consultaría directamente el archivo de la base de datos en el servidor.",
+            "El Frontend ejecutaría consultas SQL en su propio navegador sin intervención del servidor.",
+            "Utilizaría DELETE para solicitar la eliminación del recurso correspondiente."
+        ],
+        "ans": 3,
+        "exp": "Utilizaría DELETE para solicitar la eliminación del recurso correspondiente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si el Frontend necesita consultar los productos almacenados en la base de datos, ¿cómo se comunicaría con el Backend?",
+        "opts": [
+            "El Backend cambiaría el rol del usuario para darle acceso a la sección.",
+            "El Backend mostraría la sección administrativa sin verificar los permisos del usuario.",
+            "El Frontend enviaría una solicitud HTTP a un endpoint de la API. El Backend procesaría la solicitud, consultaría la base de datos y devolvería los resultados, por ejemplo, en formato JSON.",
+            "El Backend redirigiría al usuario a la página de inicio sin mostrar ningún mensaje."
+        ],
+        "ans": 2,
+        "exp": "El Frontend enviaría una solicitud HTTP a un endpoint de la API. El Backend procesaría la solicitud, consultaría la base de datos y devolvería los resultados, por ejemplo, en formato JSON.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si un usuario intenta acceder a una sección administrativa sin permisos, ¿qué debería hacer el Backend?",
+        "opts": [
+            "El Backend devolvería siempre un error 500 sin indicar qué información falló.",
+            "El Backend guardaría los datos incorrectos en la base sin validarlos.",
+            "El Backend eliminaría el formulario y pediría al usuario que lo complete de nuevo.",
+            "Debería comprobar sus permisos y rechazar el acceso si no está autorizado, devolviendo una respuesta adecuada, como HTTP 403."
+        ],
+        "ans": 3,
+        "exp": "Debería comprobar sus permisos y rechazar el acceso si no está autorizado, devolviendo una respuesta adecuada, como HTTP 403.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si el servidor recibe información incorrecta desde un formulario, ¿qué debería hacer?",
+        "opts": [
+            "Puede utilizar solamente el Frontend, que se conecta directamente al disco duro.",
+            "Puede utilizar un navegador web, porque la base de datos se consulta desde la interfaz.",
+            "Debería validar los datos, detectar los errores y devolver una respuesta indicando qué información no cumple las condiciones requeridas.",
+            "Puede utilizar solamente archivos de texto, sin ningún tipo de consulta."
+        ],
+        "ans": 2,
+        "exp": "Debería validar los datos, detectar los errores y devolver una respuesta indicando qué información no cumple las condiciones requeridas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si una aplicación necesita comunicarse con una base de datos, ¿qué componente puede utilizar?",
+        "opts": [
+            "Eliminaría la tabla y la crearía de nuevo con la nueva columna incluida.",
+            "Modificaría la base de datos directamente y luego actualizaría el modelo manualmente.",
+            "Ejecutaría migrate sin modificar el modelo, porque Django detecta la columna.",
+            "Puede utilizar un ORM o consultas SQL para comunicarse con la base de datos y ejecutar las operaciones necesarias."
+        ],
+        "ans": 3,
+        "exp": "Puede utilizar un ORM o consultas SQL para comunicarse con la base de datos y ejecutar las operaciones necesarias.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas agregar una nueva columna a una tabla utilizando Django, ¿qué pasos seguirías?",
+        "opts": [
+            "Implementaría solamente autorización, sin verificar la identidad de los usuarios.",
+            "Implementaría solamente autenticación, sin asignar roles ni permisos a los usuarios.",
+            "Modificaría el modelo correspondiente, ejecutaría makemigrations para generar el archivo de migración y después migrate para aplicar el cambio en la base de datos.",
+            "Eliminaría los usuarios que no tienen permisos para liberar espacio en la base."
+        ],
+        "ans": 2,
+        "exp": "Modificaría el modelo correspondiente, ejecutaría makemigrations para generar el archivo de migración y después migrate para aplicar el cambio en la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si una aplicación debe permitir que diferentes usuarios accedan a diferentes funcionalidades, ¿qué implementarías?",
+        "opts": [
+            "HTTP 200, que indica que el servidor se encuentra apagado.",
+            "HTTP 404, que indica que el recurso fue creado correctamente.",
+            "HTTP 400, que indica que el usuario no tiene conexión a internet.",
+            "Implementaría autenticación para identificar a los usuarios y autorización para controlar sus permisos según sus roles."
+        ],
+        "ans": 3,
+        "exp": "Implementaría autenticación para identificar a los usuarios y autorización para controlar sus permisos según sus roles.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si el servidor deja de responder debido a un error interno, ¿qué código HTTP podría devolver?",
+        "opts": [
+            "Eliminaría el usuario después de iniciar sesión para evitar accesos indebidos.",
+            "HTTP 500, que indica un error interno del servidor.",
+            "Utilizaría únicamente el nombre del usuario en cada solicitud, sin ningún otro dato.",
+            "Utilizaría una sesión de navegador sin conexión, guardada solo en el celular."
+        ],
+        "ans": 1,
+        "exp": "HTTP 500, que indica un error interno del servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas que una aplicación mantenga la sesión de un usuario después de iniciar sesión, ¿qué utilizarías?",
+        "opts": [
+            "Una aplicación web que no puede conectarse a internet ni enviar datos al servidor.",
+            "Una base de datos local que solo puede consultarse desde el mismo computador.",
+            "Un archivo de texto que se envía por correo electrónico a cada usuario.",
+            "Utilizaría un mecanismo de sesiones o autenticación mediante tokens, según la arquitectura de la aplicación."
+        ],
+        "ans": 3,
+        "exp": "Utilizaría un mecanismo de sesiones o autenticación mediante tokens, según la arquitectura de la aplicación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas que una aplicación intercambie información entre Android y una página web, ¿qué podrías implementar?",
+        "opts": [
+            "En el Frontend, porque el navegador impide que el usuario envíe datos incompletos.",
+            "En la base de datos, usando un trigger que elimina los registros incompletos.",
+            "Una API REST que permita a ambas aplicaciones enviar y recibir información mediante solicitudes HTTP, utilizando normalmente JSON.",
+            "La validación en el Frontend es suficiente, porque los datos viajan cifrados por la red."
+        ],
+        "ans": 2,
+        "exp": "Una API REST que permita a ambas aplicaciones enviar y recibir información mediante solicitudes HTTP, utilizando normalmente JSON.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas evitar que un usuario envíe datos incompletos, ¿dónde realizarías las validaciones?",
+        "opts": [
+            "Significa que el servidor conserva automáticamente la información de cada solicitud para el usuario.",
+            "Significa que el protocolo no puede transmitir datos sin una base de datos.",
+            "Significa que el protocolo solo permite una solicitud por cada usuario conectado.",
+            "En el Backend, porque el servidor debe validar los datos independientemente de las comprobaciones que realice el Frontend."
+        ],
+        "ans": 3,
+        "exp": "En el Backend, porque el servidor debe validar los datos independientemente de las comprobaciones que realice el Frontend.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa que HTTP sea un protocolo sin estado?",
+        "opts": [
+            "Es un protocolo de seguridad que cifra las solicitudes entre el navegador y el servidor.",
+            "Es un formato de base de datos que guarda los datos en archivos binarios.",
+            "Significa que cada solicitud es independiente y el protocolo no conserva automáticamente la información de las solicitudes anteriores. Para mantener el estado del usuario se utilizan mecanismos como sesiones o tokens.",
+            "Es un lenguaje de programación para diseñar aplicaciones móviles nativas."
+        ],
+        "ans": 2,
+        "exp": "Significa que cada solicitud es independiente y el protocolo no conserva automáticamente la información de las solicitudes anteriores. Para mantener el estado del usuario se utilizan mecanismos como sesiones o tokens.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es REST?",
+        "opts": [
+            "Dependencia del navegador, uso de cookies obligatorias y comunicación en tiempo real.",
+            "Uso exclusivo de POST, cifrado obligatorio y servidores únicos por aplicación.",
+            "Es un estilo arquitectónico para diseñar sistemas distribuidos que exponen recursos mediante interfaces uniformes y utilizan operaciones HTTP.",
+            "Separación de funciones, interfaz pública, comunicación con estado y uso de bases relacionales."
+        ],
+        "ans": 2,
+        "exp": "Es un estilo arquitectónico para diseñar sistemas distribuidos que exponen recursos mediante interfaces uniformes y utilizan operaciones HTTP.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Cuáles son los principios más conocidos de REST?",
+        "opts": [
+            "Es un formato de imagen utilizado para representar gráficos vectoriales en la web.",
+            "Es un protocolo que cifra la conexión entre el cliente y el servidor.",
+            "Separación entre cliente y servidor; comunicación sin estado (stateless); interfaz uniforme; recursos identificados mediante URL; uso de representaciones de recursos; sistema por capas; caché cuando corresponde.",
+            "Es un lenguaje de consulta que reemplaza a SQL en las bases de datos relacionales."
+        ],
+        "ans": 2,
+        "exp": "Separación entre cliente y servidor; comunicación sin estado (stateless); interfaz uniforme; recursos identificados mediante URL; uso de representaciones de recursos; sistema por capas; caché cuando corresponde.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa que una API devuelva información en formato JSON?",
+        "opts": [
+            "Es un texto que describe el error ocurrido en la base de datos.",
+            "Significa que los datos se entregan en una estructura organizada de texto que puede ser interpretada por diferentes lenguajes y aplicaciones.",
+            "Es un código que identifica el navegador utilizado por el usuario.",
+            "Es un número que indica el tamaño del archivo que se envía por la red."
+        ],
+        "ans": 1,
+        "exp": "Significa que los datos se entregan en una estructura organizada de texto que puede ser interpretada por diferentes lenguajes y aplicaciones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es un código de estado HTTP?",
+        "opts": [
+            "1xx: éxito. 2xx: información. 3xx: errores del cliente. 4xx: redirecciones. 5xx: errores del servidor.",
+            "1xx: redirecciones. 2xx: errores. 3xx: éxito. 4xx: información. 5xx: errores del cliente.",
+            "1xx: errores del servidor. 2xx: redirecciones. 3xx: éxito. 4xx: información. 5xx: errores del cliente.",
+            "Es un número que indica el resultado de una solicitud realizada al servidor."
+        ],
+        "ans": 3,
+        "exp": "Es un número que indica el resultado de una solicitud realizada al servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Cuáles son las principales categorías de códigos HTTP?",
+        "opts": [
+            "Que el recurso fue eliminado correctamente del servidor.",
+            "Que el servidor no puede procesar la solicitud por falta de memoria.",
+            "Que la solicitud fue redirigida a otra dirección.",
+            "1xx: información. 2xx: solicitudes exitosas. 3xx: redirecciones. 4xx: errores del cliente. 5xx: errores del servidor."
+        ],
+        "ans": 3,
+        "exp": "1xx: información. 2xx: solicitudes exitosas. 3xx: redirecciones. 4xx: errores del cliente. 5xx: errores del servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa HTTP 200?",
+        "opts": [
+            "Que la solicitud fue redirigida a una página de error.",
+            "Que se eliminó un recurso correctamente.",
+            "Que la solicitud fue procesada correctamente.",
+            "Que el servidor está en mantenimiento y no responde."
+        ],
+        "ans": 2,
+        "exp": "Que la solicitud fue procesada correctamente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa HTTP 201?",
+        "opts": [
+            "Que el servidor está procesando la solicitud y responderá más tarde.",
+            "Que el usuario no tiene permisos para acceder al recurso solicitado.",
+            "Que la solicitud se envió correctamente, pero no hay datos disponibles.",
+            "Que se creó un recurso correctamente."
+        ],
+        "ans": 3,
+        "exp": "Que se creó un recurso correctamente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa HTTP 400?",
+        "opts": [
+            "Que el servidor encontró un error interno al procesar la solicitud.",
+            "Que el servidor no puede procesar la solicitud debido a un problema en los datos o en su estructura.",
+            "Que la solicitud requiere autenticación para ser procesada.",
+            "Que el recurso solicitado fue creado correctamente."
+        ],
+        "ans": 1,
+        "exp": "Que el servidor no puede procesar la solicitud debido a un problema en los datos o en su estructura.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa HTTP 401?",
+        "opts": [
+            "Que el recurso fue movido a una nueva dirección.",
+            "Que la solicitud requiere autenticación o que las credenciales presentadas no son válidas.",
+            "Que el servidor no puede procesar la solicitud por un error interno.",
+            "Que el servidor entiende la solicitud, pero el usuario no tiene permisos suficientes."
+        ],
+        "ans": 1,
+        "exp": "Que la solicitud requiere autenticación o que las credenciales presentadas no son válidas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa HTTP 403?",
+        "opts": [
+            "Que el servidor entiende la solicitud, pero el recurso fue eliminado.",
+            "Que el servidor entiende la solicitud, pero rechaza el acceso por falta de permisos.",
+            "Que la solicitud fue procesada correctamente con redirección.",
+            "Que el usuario debe iniciar sesión para acceder al recurso."
+        ],
+        "ans": 1,
+        "exp": "Que el servidor entiende la solicitud, pero rechaza el acceso por falta de permisos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa HTTP 404?",
+        "opts": [
+            "Que el servidor entiende la solicitud, pero no tiene permisos.",
+            "Que el recurso solicitado no fue encontrado.",
+            "Que la solicitud fue procesada, aunque el recurso está vacío.",
+            "Que el recurso solicitado existe, pero el servidor no lo puede procesar."
+        ],
+        "ans": 1,
+        "exp": "Que el recurso solicitado no fue encontrado.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué significa HTTP 500?",
+        "opts": [
+            "Que ocurrió un error interno en el servidor.",
+            "Que el usuario envió datos en un formato que el navegador no reconoce.",
+            "Que la solicitud fue procesada correctamente con un nuevo recurso.",
+            "Que el servidor fue apagado por el administrador durante la solicitud."
+        ],
+        "ans": 0,
+        "exp": "Que ocurrió un error interno en el servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la validación de datos en Backend?",
+        "opts": [
+            "Es la comprobación de que el navegador tenga activada la función de JavaScript.",
+            "Es el cifrado de los datos antes de guardarlos en el servidor.",
+            "Es el proceso de comprobar que la información recibida cumpla con los formatos, tipos, condiciones y reglas del sistema antes de procesarla o almacenarla.",
+            "Es la asignación automática de permisos a los usuarios nuevos."
+        ],
+        "ans": 2,
+        "exp": "Es el proceso de comprobar que la información recibida cumpla con los formatos, tipos, condiciones y reglas del sistema antes de procesarla o almacenarla.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Por qué no basta con validar los datos solamente en el Frontend?",
+        "opts": [
+            "Porque el navegador no puede enviar datos al servidor si el Frontend no valida los campos.",
+            "Porque el Frontend siempre cifra los datos de forma incorrecta.",
+            "Porque el Backend no puede recibir datos que no vengan de un formulario HTML.",
+            "Porque las validaciones del Frontend pueden ser modificadas o evitadas. El Backend debe realizar sus propias comprobaciones para proteger la integridad de la información."
+        ],
+        "ans": 3,
+        "exp": "Porque las validaciones del Frontend pueden ser modificadas o evitadas. El Backend debe realizar sus propias comprobaciones para proteger la integridad de la información.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una inyección SQL?",
+        "opts": [
+            "Es un ataque en el que se modifican los estilos CSS de la página.",
+            "Es un error de diseño de la interfaz que impide mostrar correctamente los formularios.",
+            "Es un tipo de ataque en el que un usuario introduce instrucciones SQL maliciosas en entradas que la aplicación incorpora incorrectamente a una consulta, pudiendo manipular las operaciones de la base de datos.",
+            "Es un método para copiar la base de datos completa a un servidor externo."
+        ],
+        "ans": 2,
+        "exp": "Es un tipo de ataque en el que un usuario introduce instrucciones SQL maliciosas en entradas que la aplicación incorpora incorrectamente a una consulta, pudiendo manipular las operaciones de la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Cómo se puede prevenir una inyección SQL?",
+        "opts": [
+            "Utilizando contraseñas largas, porque así la base de datos no puede ser consultada.",
+            "Utilizando consultas parametrizadas u ORM, validando entradas y evitando construir consultas mediante concatenación directa de datos proporcionados por el usuario.",
+            "Evitando guardar datos en la base, porque así no hay nada que consultar.",
+            "Cambiando el nombre de las tablas cada cierto tiempo para despistar al atacante."
+        ],
+        "ans": 1,
+        "exp": "Utilizando consultas parametrizadas u ORM, validando entradas y evitando construir consultas mediante concatenación directa de datos proporcionados por el usuario.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es el hashing de contraseñas?",
+        "opts": [
+            "Es el proceso de guardar la contraseña dentro de un archivo de configuración sin cifrar.",
+            "Es un proceso que transforma una contraseña en un valor hash mediante un algoritmo diseñado para almacenar credenciales de forma segura. Se deben utilizar algoritmos específicos para contraseñas, como Argon2 o bcrypt, con sus mecanismos de sal.",
+            "Es la transformación de la contraseña en texto cifrado que se puede revertir fácilmente.",
+            "Es el envío de la contraseña al navegador para que la muestre al usuario."
+        ],
+        "ans": 1,
+        "exp": "Es un proceso que transforma una contraseña en un valor hash mediante un algoritmo diseñado para almacenar credenciales de forma segura. Se deben utilizar algoritmos específicos para contraseñas, como Argon2 o bcrypt, con sus mecanismos de sal.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué diferencia existe entre cifrado y hashing?",
+        "opts": [
+            "El cifrado es un proceso que no se puede revertir, mientras que el hashing sí.",
+            "Es un método para convertir un texto en un formato más corto que se puede descifrar.",
+            "El cifrado permite recuperar la información original mediante una clave de descifrado. El hashing es un proceso unidireccional que no está diseñado para recuperar el valor original.",
+            "Son lo mismo: ambos transforman los datos con una clave que el servidor guarda."
+        ],
+        "ans": 2,
+        "exp": "El cifrado permite recuperar la información original mediante una clave de descifrado. El hashing es un proceso unidireccional que no está diseñado para recuperar el valor original.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es CORS?",
+        "opts": [
+            "Es un mecanismo que permite a cualquier sitio web acceder a los datos del usuario sin restricción.",
+            "Es una cookie que guarda las preferencias del usuario en el servidor.",
+            "Es un mecanismo de seguridad de los navegadores que controla cuándo una página web puede realizar solicitudes a recursos ubicados en otro origen.",
+            "Es un protocolo de cifrado utilizado solamente en aplicaciones móviles."
+        ],
+        "ans": 2,
+        "exp": "Es un mecanismo de seguridad de los navegadores que controla cuándo una página web puede realizar solicitudes a recursos ubicados en otro origen.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es un log?",
+        "opts": [
+            "Es una variable que se utiliza para contar los usuarios conectados.",
+            "Es un programa que cifra las solicitudes que llegan desde el navegador.",
+            "Es un registro de eventos que permite conocer qué ocurrió durante la ejecución de una aplicación, facilitando la detección y análisis de errores.",
+            "Es un archivo que guarda la configuración de la base de datos en el servidor."
+        ],
+        "ans": 2,
+        "exp": "Es un registro de eventos que permite conocer qué ocurrió durante la ejecución de una aplicación, facilitando la detección y análisis de errores.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una variable de entorno?",
+        "opts": [
+            "Es una variable que se escribe directamente en el código fuente de la aplicación.",
+            "Es una variable externa al código que permite configurar una aplicación, por ejemplo, almacenar la configuración de conexión a una base de datos.",
+            "Es una función que cifra la base de datos antes de cada consulta.",
+            "Es una cookie que el servidor guarda en el navegador del usuario."
+        ],
+        "ans": 1,
+        "exp": "Es una variable externa al código que permite configurar una aplicación, por ejemplo, almacenar la configuración de conexión a una base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Por qué no se deben guardar contraseñas directamente en el código?",
+        "opts": [
+            "Porque pueden quedar expuestas al compartir el código, subirlo a repositorios o permitir accesos no autorizados. Se deben utilizar mecanismos seguros de configuración y gestión de secretos.",
+            "Porque el código fuente siempre se cifra automáticamente al subirlo a un repositorio.",
+            "Porque el servidor no puede leer contraseñas almacenadas en el código.",
+            "Porque las contraseñas en el código solo se pueden usar en el navegador."
+        ],
+        "ans": 0,
+        "exp": "Porque pueden quedar expuestas al compartir el código, subirlo a repositorios o permitir accesos no autorizados. Se deben utilizar mecanismos seguros de configuración y gestión de secretos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la escalabilidad de una aplicación?",
+        "opts": [
+            "Es la velocidad con la que el navegador carga las imágenes de la página.",
+            "Es la capacidad de una aplicación para cambiar de lenguaje de programación sin reescribir el código.",
+            "Es la capacidad de una aplicación para soportar un aumento de usuarios, solicitudes o carga de trabajo sin perder su funcionamiento adecuado.",
+            "Es el número de pantallas que puede mostrar una aplicación al mismo tiempo."
+        ],
+        "ans": 2,
+        "exp": "Es la capacidad de una aplicación para soportar un aumento de usuarios, solicitudes o carga de trabajo sin perder su funcionamiento adecuado.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la paginación en una API?",
+        "opts": [
+            "Es un mecanismo que divide grandes conjuntos de resultados en páginas más pequeñas para evitar entregar demasiados registros en una sola respuesta.",
+            "Es un mecanismo que bloquea el acceso a la API después de cierto número de solicitudes.",
+            "Es una técnica que ordena los registros alfabéticamente antes de mostrarlos.",
+            "Es una forma de cifrar los resultados para que no puedan ser leídos por otros usuarios."
+        ],
+        "ans": 0,
+        "exp": "Es un mecanismo que divide grandes conjuntos de resultados en páginas más pequeñas para evitar entregar demasiados registros en una sola respuesta.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la caché?",
+        "opts": [
+            "Es un mecanismo que almacena temporalmente información para acelerar futuras consultas y reducir el trabajo del servidor o de la base de datos.",
+            "Es un registro de cada solicitud realizada por el usuario durante la sesión.",
+            "Es un archivo de texto que se envía por correo electrónico al administrador.",
+            "Es un método que impide que el navegador guarde información de la página visitada."
+        ],
+        "ans": 0,
+        "exp": "Es un mecanismo que almacena temporalmente información para acelerar futuras consultas y reducir el trabajo del servidor o de la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El Backend es lo mismo que la base de datos?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. El Backend contiene la lógica del servidor y puede comunicarse con una o varias bases de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El Frontend puede comunicarse directamente con el Backend?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 0,
+        "exp": "Sí. Normalmente lo hace mediante solicitudes HTTP a una API o rutas del servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Una API es necesariamente REST?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. REST es un estilo arquitectónico, pero existen otros tipos de API.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿GET debería modificar los datos del servidor?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No debería utilizarse para modificar recursos; su finalidad es consultar información.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿POST solamente sirve para iniciar sesión?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Puede utilizarse para crear recursos y realizar diferentes operaciones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿PUT y PATCH son iguales?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. PUT reemplaza un recurso y PATCH modifica parcialmente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El Backend confía en las validaciones del Frontend?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Debe validar nuevamente los datos recibidos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Autenticación y autorización son lo mismo?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Una verifica identidad y la otra permisos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿HTTP y HTTPS son iguales?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. HTTPS agrega protección mediante TLS.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Una sesión es lo mismo que una cookie?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Una sesión almacena información asociada al usuario; una cookie es un mecanismo del navegador que puede guardar el identificador de esa sesión.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿JSON es un lenguaje de programación?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Es un formato de intercambio de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El ORM elimina completamente la necesidad de SQL?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Facilita el acceso a los datos, pero las consultas SQL siguen existiendo y pueden ser necesarias.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Un error 404 significa que el servidor está apagado?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Significa que el recurso solicitado no fue encontrado.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Un error 500 es responsabilidad necesariamente del usuario?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Indica un problema interno del servidor.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿El hashing permite recuperar la contraseña original?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. No está diseñado para revertir el proceso.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Una API puede ser utilizada por una aplicación móvil?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 0,
+        "exp": "Sí. Puede permitir la comunicación entre aplicaciones móviles y servidores.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Un servidor debe tener siempre una base de datos?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Puede procesar solicitudes sin utilizar una base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Todos los endpoints utilizan POST?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Pueden utilizar diferentes métodos HTTP según la operación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Preguntas capciosas",
+        "diff": "medium",
+        "q": "¿Un token garantiza automáticamente que el usuario tenga permisos?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Se debe verificar su validez y comprobar los permisos correspondientes.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué hace este código?",
+        "opts": [
+            "Crea un nuevo usuario en la base de datos con los datos enviados por el cliente.",
+            "Obtiene todos los usuarios mediante el ORM de Django y devuelve sus datos en formato JSON.",
+            "Obtiene los usuarios en formato HTML y los muestra directamente en la página.",
+            "Elimina todos los usuarios de la base de datos y devuelve una lista vacía."
+        ],
+        "ans": 1,
+        "exp": "Obtiene todos los usuarios mediante el ORM de Django y devuelve sus datos en formato JSON.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">def obtener_usuarios(request):\n    usuarios = Usuario.objects.all()\n    return JsonResponse({\"usuarios\": list(usuarios.values())})</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué hace este código?",
+        "opts": [
+            "Busca un usuario existente y actualiza su nombre sin crear registros.",
+            "Comprueba si la solicitud es POST, obtiene el nombre enviado y crea un registro en la base de datos.",
+            "Elimina el usuario cuyo nombre fue enviado en la solicitud POST.",
+            "Muestra un formulario vacío para que el usuario ingrese un nuevo nombre."
+        ],
+        "ans": 1,
+        "exp": "Comprueba si la solicitud es POST, obtiene el nombre enviado y crea un registro en la base de datos.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">def crear_usuario(request):\n    if request.method == \"POST\":\n        nombre = request.POST.get(\"nombre\")\n        Usuario.objects.create(nombre=nombre)</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué hace esta instrucción?",
+        "opts": [
+            "Crea un nuevo usuario con el campo activo en True.",
+            "Elimina los usuarios que tienen el campo activo en True.",
+            "Consulta los usuarios cuyo campo activo tiene el valor False.",
+            "Consulta los usuarios cuyo campo activo tiene el valor True."
+        ],
+        "ans": 3,
+        "exp": "Consulta los usuarios cuyo campo activo tiene el valor True.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">usuarios = Usuario.objects.filter(activo=True)</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué hace esta instrucción?",
+        "opts": [
+            "Obtiene todos los usuarios y los filtra según el campo id.",
+            "Crea un usuario nuevo con id 1 y lo guarda en la base de datos.",
+            "Elimina el usuario con id 1 del sistema sin devolver ningún resultado.",
+            "Busca un usuario cuyo identificador sea 1. Si no existe o hay más de una coincidencia, puede generar una excepción."
+        ],
+        "ans": 3,
+        "exp": "Busca un usuario cuyo identificador sea 1. Si no existe o hay más de una coincidencia, puede generar una excepción.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">usuario = Usuario.objects.get(id=1)</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué hace este código?",
+        "opts": [
+            "Detiene el programa de forma permanente cuando intenta dividir por cero.",
+            "Ejecuta la división y muestra el resultado de 10 entre 0 en pantalla.",
+            "Evita la división por cero cambiando el divisor por el valor 1.",
+            "Utiliza manejo de excepciones para controlar el error que se produce al intentar dividir por cero."
+        ],
+        "ans": 3,
+        "exp": "Utiliza manejo de excepciones para controlar el error que se produce al intentar dividir por cero.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">try:\n    resultado = 10 / 0\nexcept ZeroDivisionError:\n    print(\"No se puede dividir por cero\")</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué hace este código?",
+        "opts": [
+            "Define una clase que hereda de JsonResponse y muestra el mensaje en la consola.",
+            "Define una vista que devuelve una respuesta HTTP con información en formato JSON.",
+            "Crea una URL que redirige automáticamente a otra página del sitio.",
+            "Define una función que solicita datos al usuario mediante un formulario HTML."
+        ],
+        "ans": 1,
+        "exp": "Define una vista que devuelve una respuesta HTTP con información en formato JSON.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">from django.http import JsonResponse\n\ndef respuesta(request):\n    return JsonResponse({\"mensaje\": \"Correcto\"})</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "Backend - Identificación de código",
+        "diff": "medium",
+        "q": "¿Qué hace esta ruta?",
+        "opts": [
+            "Asocia la vista lista_usuarios con la dirección usuarios/ dentro de una lista de rutas.",
+            "Asocia la dirección usuarios/ con la vista lista_usuarios, para que Django sepa qué función ejecutar cuando recibe una solicitud que coincide con esa ruta.",
+            "Crea una nueva vista llamada usuarios que devuelve la lista de rutas del sistema.",
+            "Elimina la dirección usuarios/ del servidor para proteger la vista lista_usuarios."
+        ],
+        "ans": 1,
+        "exp": "Asocia la dirección usuarios/ con la vista lista_usuarios, para que Django sepa qué función ejecutar cuando recibe una solicitud que coincide con esa ruta.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">path(\"usuarios/\", views.lista_usuarios)</div></div>"
+    },
+
 
 
 // ============================================================

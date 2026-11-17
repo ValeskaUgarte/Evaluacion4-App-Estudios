@@ -1,6 +1,1792 @@
 import { P, TABLA } from '../preguntas_helpers.js';
 const preguntas_bd_estructurados = [
 
+    // ==================== SQL - PREGUNTAS CAPCIOSAS Y CÓDIGO (87-115) ====================
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿NULL es igual a cero?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. NULL representa ausencia de valor y cero es un valor numérico."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿NULL es igual a una cadena vacía?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Una cadena vacía es un texto sin caracteres y NULL representa ausencia de valor."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Una clave primaria puede repetirse?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Sus valores deben ser únicos."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Una tabla puede tener varias claves foráneas?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 0,
+        "exp": "Sí. Puede relacionarse con diferentes tablas."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Una tabla puede tener más de una clave primaria?",
+        "opts": [
+            "Sí, puede tener varias claves primarias",
+            "No. Tiene una sola restricción PRIMARY KEY, aunque puede estar formada por varias columnas"
+        ],
+        "ans": 1,
+        "exp": "Tiene una sola restricción PRIMARY KEY, aunque puede estar formada por varias columnas."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿DELETE elimina la estructura de una tabla?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Elimina registros, no la estructura."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿TRUNCATE elimina la tabla?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Elimina sus registros, pero conserva su estructura."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿DROP elimina solamente los registros?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Elimina el objeto completo."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿INNER JOIN conserva los registros sin coincidencia?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Solamente devuelve las coincidencias."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿LEFT JOIN devuelve todos los registros de ambas tablas?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Conserva todos los registros de la tabla izquierda y las coincidencias de la derecha."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Una clave foránea siempre debe ser única?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Puede repetirse para representar relaciones uno a muchos."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Un índice siempre mejora el rendimiento?",
+        "opts": [
+            "Sí, siempre mejora el rendimiento",
+            "No. Puede mejorar las consultas, pero agrega costos de almacenamiento y mantenimiento"
+        ],
+        "ans": 1,
+        "exp": "No. Puede mejorar las consultas, pero agrega costos de almacenamiento y mantenimiento."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Normalizar significa crear la mayor cantidad posible de tablas?",
+        "opts": [
+            "Sí, significa crear la mayor cantidad posible de tablas",
+            "No. Significa organizar correctamente los datos según las reglas de normalización"
+        ],
+        "ans": 1,
+        "exp": "No. Significa organizar correctamente los datos según las reglas de normalización."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿GROUP BY ordena los resultados?",
+        "opts": [
+            "Sí, GROUP BY ordena los resultados",
+            "No necesariamente. Agrupa registros; para ordenar se utiliza ORDER BY"
+        ],
+        "ans": 1,
+        "exp": "No necesariamente. Agrupa registros; para ordenar se utiliza ORDER BY."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿WHERE puede utilizarse para filtrar directamente resultados de COUNT(*)?",
+        "opts": [
+            "Sí, WHERE puede filtrar directamente el resultado de COUNT(*)",
+            "No directamente sobre el resultado agregado; para filtrar grupos se utiliza HAVING"
+        ],
+        "ans": 1,
+        "exp": "No directamente sobre el resultado agregado; para filtrar grupos se utiliza HAVING."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Una clave primaria puede contener NULL?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿UNIQUE y PRIMARY KEY son lo mismo?",
+        "opts": [
+            "Sí, son exactamente lo mismo",
+            "No. Ambas garantizan unicidad, pero PRIMARY KEY identifica los registros y no admite NULL"
+        ],
+        "ans": 1,
+        "exp": "No. Ambas permiten garantizar unicidad, pero PRIMARY KEY identifica los registros y no admite NULL."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Una vista siempre almacena físicamente los datos?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 1,
+        "exp": "No. Una vista normal almacena la definición de la consulta, no una copia independiente de los resultados."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas Capciosas",
+        "diff": "medium",
+        "q": "¿Una transacción puede contener varias instrucciones SQL?",
+        "opts": [
+            "Sí",
+            "No"
+        ],
+        "ans": 0,
+        "exp": "Sí."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "easy",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT nombre, edad\nFROM estudiantes;</div></div>",
+        "opts": [
+            "Inserta un nuevo estudiante con los campos nombre y edad.",
+            "Elimina las columnas nombre y edad de la tabla estudiantes.",
+            "Selecciona las columnas nombre y edad de la tabla estudiantes.",
+            "Cuenta los estudiantes agrupados por edad."
+        ],
+        "ans": 2,
+        "exp": "Selecciona las columnas nombre y edad de la tabla estudiantes."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "easy",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT *\nFROM estudiantes\nWHERE edad &gt;= 18;</div></div>",
+        "opts": [
+            "Muestra solo los estudiantes menores de 18 años.",
+            "Elimina los estudiantes cuya edad sea menor a 18.",
+            "Muestra únicamente los estudiantes cuya edad sea exactamente 18.",
+            "Muestra todos los estudiantes cuya edad sea igual o superior a 18 años."
+        ],
+        "ans": 3,
+        "exp": "Muestra todos los estudiantes cuya edad sea igual o superior a 18 años."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "easy",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT COUNT(*)\nFROM estudiantes;</div></div>",
+        "opts": [
+            "Suma los valores de todas las columnas de estudiantes.",
+            "Cuenta la cantidad de registros de la tabla estudiantes.",
+            "Muestra únicamente la primera fila de la tabla estudiantes.",
+            "Elimina todos los registros de la tabla estudiantes."
+        ],
+        "ans": 1,
+        "exp": "Cuenta la cantidad de registros de la tabla estudiantes."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "medium",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT curso_id, COUNT(*)\nFROM estudiantes\nGROUP BY curso_id;</div></div>",
+        "opts": [
+            "Agrupa los estudiantes por curso y cuenta cuántos hay en cada grupo.",
+            "Ordena los estudiantes alfabéticamente según curso_id.",
+            "Elimina los estudiantes repetidos en cada curso.",
+            "Muestra solo los estudiantes que no tienen curso asignado."
+        ],
+        "ans": 0,
+        "exp": "Agrupa los estudiantes por curso y cuenta cuántos estudiantes hay en cada grupo."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "medium",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT *\nFROM productos\nWHERE precio BETWEEN 1000 AND 5000;</div></div>",
+        "opts": [
+            "Muestra los productos cuyo precio es menor a 1000 o mayor a 5000.",
+            "Muestra solo los productos cuyo precio es exactamente 1000 o 5000.",
+            "Muestra los productos cuyo precio se encuentra entre 1000 y 5000, incluyendo los extremos.",
+            "Actualiza el precio de los productos entre 1000 y 5000."
+        ],
+        "ans": 2,
+        "exp": "Muestra los productos cuyo precio se encuentra entre 1000 y 5000, incluyendo los extremos."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "medium",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT *\nFROM usuarios\nWHERE correo IS NULL;</div></div>",
+        "opts": [
+            "Busca los usuarios cuyo correo es una cadena vacía.",
+            "Busca los usuarios cuyo correo es igual a cero.",
+            "Elimina los usuarios que no tienen correo.",
+            "Busca los usuarios cuyo correo tiene un valor NULL."
+        ],
+        "ans": 3,
+        "exp": "Busca los usuarios cuyo correo tiene un valor NULL."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "medium",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT *\nFROM clientes\nLEFT JOIN pedidos\nON clientes.id = pedidos.cliente_id;</div></div>",
+        "opts": [
+            "Muestra todos los clientes y los pedidos coincidentes. Si un cliente no tiene pedidos, las columnas de pedidos aparecen con NULL.",
+            "Muestra solo los clientes que tienen pedidos.",
+            "Muestra solo los pedidos que no tienen un cliente asociado.",
+            "Elimina de la consulta los clientes que no tienen pedidos."
+        ],
+        "ans": 0,
+        "exp": "Muestra todos los clientes y los pedidos coincidentes. Si un cliente no tiene pedidos, las columnas correspondientes a pedidos aparecen con NULL."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "easy",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">UPDATE productos\nSET precio = 15000\nWHERE id = 3;</div></div>",
+        "opts": [
+            "Inserta un nuevo producto con id 3 y precio 15000.",
+            "Modifica el precio del producto cuyo identificador es 3.",
+            "Elimina el producto cuyo identificador es 3.",
+            "Modifica el precio de todos los productos a 15000."
+        ],
+        "ans": 1,
+        "exp": "Modifica el precio del producto cuyo identificador es 3."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "medium",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">DELETE FROM estudiantes;</div></div>",
+        "opts": [
+            "Elimina la tabla estudiantes completa, incluyendo su estructura.",
+            "Elimina solamente el primer estudiante registrado.",
+            "Elimina todos los registros de estudiantes, pero conserva la estructura de la tabla.",
+            "Muestra todos los estudiantes sin modificar la tabla."
+        ],
+        "ans": 2,
+        "exp": "Elimina todos los registros de estudiantes, pero conserva la estructura de la tabla."
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Identificación de Código",
+        "diff": "easy",
+        "q": "¿Qué hace esta consulta?",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT nombre\nFROM estudiantes\nORDER BY nombre ASC;</div></div>",
+        "opts": [
+            "Muestra los nombres de los estudiantes en orden descendente.",
+            "Muestra los nombres de los estudiantes ordenados alfabéticamente de forma ascendente.",
+            "Agrupa los nombres repetidos en un solo registro.",
+            "Filtra los estudiantes cuyo nombre sea ASC."
+        ],
+        "ans": 1,
+        "exp": "Muestra los nombres de los estudiantes ordenados alfabéticamente de forma ascendente."
+    },
+
+    // ==================== AGREGADAS DESDE DOCUMENTO DE ESTUDIO (86 preguntas) ====================
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Cuál es la diferencia entre NULL, cero y un String vacío?",
+        "opts": [
+            "NULL representa la ausencia de un valor o un dato desconocido. 0 es un valor numérico que representa cero. '' es una cadena de texto que no contiene caracteres. Importante: no conviene afirmar que NULL no ocupa memoria; su almacenamiento depende del motor y del tipo de columna.",
+            "Son lo mismo: ambos representan una cadena de texto vacía y se almacenan igual.",
+            "Un valor de cero que se guarda en la columna cuando la información no existe.",
+            "NULL es un texto especial que el motor sustituye por cero al insertarlo."
+        ],
+        "ans": 0,
+        "exp": "NULL representa la ausencia de un valor o un dato desconocido. 0 es un valor numérico que representa cero. '' es una cadena de texto que no contiene caracteres. Importante: no conviene afirmar que NULL no ocupa memoria; su almacenamiento depende del motor y del tipo de columna.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">INSERT INTO personas (nombre, edad, telefono) VALUES ('Ana', 0, NULL);\nINSERT INTO personas (nombre, edad, telefono) VALUES ('Pedro', 25, '');</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué diferencia existe entre DELETE, TRUNCATE y DROP?",
+        "opts": [
+            "DROP solamente borra los registros; DELETE elimina la tabla completa.",
+            "DELETE elimina registros de una tabla y permite utilizar condiciones mediante WHERE. TRUNCATE elimina todos los registros de una tabla de forma masiva. DROP elimina la tabla completa, incluyendo su estructura y sus datos.",
+            "TRUNCATE elimina una fila específica; DELETE elimina todas las tablas.",
+            "DELETE elimina la estructura de la tabla; TRUNCATE borra solamente los registros con condición."
+        ],
+        "ans": 1,
+        "exp": "DELETE elimina registros de una tabla y permite utilizar condiciones mediante WHERE. TRUNCATE elimina todos los registros de una tabla de forma masiva. DROP elimina la tabla completa, incluyendo su estructura y sus datos.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">DELETE FROM usuarios WHERE id = 5;\nTRUNCATE TABLE usuarios;\nDROP TABLE usuarios;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué diferencia existe entre una tabla, un registro y un campo?",
+        "opts": [
+            "Una tabla organiza los datos de una entidad, un registro corresponde a una fila que representa un elemento y un campo corresponde a una columna que almacena una característica de ese elemento.",
+            "Son sinónimos: los tres términos se refieren al mismo elemento de la tabla.",
+            "Una tabla es una fila que representa un elemento; un registro es una columna con sus valores.",
+            "Un campo es una tabla completa; un registro es una base de datos."
+        ],
+        "ans": 0,
+        "exp": "Una tabla organiza los datos de una entidad, un registro corresponde a una fila que representa un elemento y un campo corresponde a una columna que almacena una característica de ese elemento.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué cardinalidades existen entre tablas?",
+        "opts": [
+            "Las relaciones son únicamente de tipo 1:1, porque cada tabla tiene una sola clave.",
+            "Las relaciones más comunes son uno a uno, uno a muchos y muchos a muchos. También existen relaciones opcionales como cero a uno o cero a muchos. Ejemplos: 1:1 persona y pasaporte; 1:N cliente y pedidos; N:M estudiantes y asignaturas.",
+            "No existen cardinalidades; las tablas se relacionan automáticamente por su nombre.",
+            "Solo existe una cardinalidad posible: uno a muchos, porque es la única forma de relacionar tablas."
+        ],
+        "ans": 1,
+        "exp": "Las relaciones más comunes son uno a uno, uno a muchos y muchos a muchos. También existen relaciones opcionales como cero a uno o cero a muchos. Ejemplos: 1:1 persona y pasaporte; 1:N cliente y pedidos; N:M estudiantes y asignaturas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué es la normalización?",
+        "opts": [
+            "Es un método para cifrar los datos antes de guardarlos en el servidor.",
+            "Es la acción de copiar la misma información en varias tablas para acelerar consultas.",
+            "Es un proceso que elimina todas las tablas de la base para empezar de cero.",
+            "Es un proceso de organización de las tablas de una base de datos que busca reducir la redundancia, evitar inconsistencias y mejorar la integridad de los datos. Ejemplo: en vez de repetir los datos de un cliente en cada pedido, se crea una tabla Clientes y otra Pedidos, relacionadas mediante una clave."
+        ],
+        "ans": 3,
+        "exp": "Es un proceso de organización de las tablas de una base de datos que busca reducir la redundancia, evitar inconsistencias y mejorar la integridad de los datos. Ejemplo: en vez de repetir los datos de un cliente en cada pedido, se crea una tabla Clientes y otra Pedidos, relacionadas mediante una clave.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Preguntas confirmadas",
+        "diff": "easy",
+        "q": "¿Qué diferencia existe entre INNER JOIN y LEFT JOIN?",
+        "opts": [
+            "LEFT JOIN devuelve solo los registros que no tienen coincidencia en la tabla derecha.",
+            "INNER JOIN devuelve solamente los registros que tienen coincidencias entre ambas tablas. LEFT JOIN devuelve todos los registros de la tabla izquierda y los coincidentes de la derecha; cuando no existe coincidencia, devuelve NULL en las columnas de la derecha.",
+            "INNER JOIN devuelve todos los registros de ambas tablas, con o sin coincidencias.",
+            "Ambos devuelven exactamente los mismos registros, solo cambia el orden de las columnas."
+        ],
+        "ans": 1,
+        "exp": "INNER JOIN devuelve solamente los registros que tienen coincidencias entre ambas tablas. LEFT JOIN devuelve todos los registros de la tabla izquierda y los coincidentes de la derecha; cuando no existe coincidencia, devuelve NULL en las columnas de la derecha.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT * FROM clientes INNER JOIN pedidos ON clientes.id = pedidos.cliente_id;\nSELECT * FROM clientes LEFT JOIN pedidos ON clientes.id = pedidos.cliente_id;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una base de datos?",
+        "opts": [
+            "Es un conjunto organizado de información que permite almacenar, consultar, modificar y administrar datos de manera estructurada.",
+            "Un conjunto de servidores que ejecutan la lógica de un sitio web.",
+            "Un lenguaje para escribir consultas en tiempo real sobre la red.",
+            "Un programa que sirve únicamente para diseñar las pantallas e interfaces de usuario."
+        ],
+        "ans": 0,
+        "exp": "Es un conjunto organizado de información que permite almacenar, consultar, modificar y administrar datos de manera estructurada.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un sistema gestor de bases de datos (SGBD)?",
+        "opts": [
+            "Un conjunto de datos organizados que se guarda en un único archivo de texto.",
+            "Un servidor web que recibe solicitudes HTTP de los navegadores.",
+            "Es un software que permite crear, administrar, consultar y modificar bases de datos. Ejemplos: MySQL, PostgreSQL, SQLite y SQL Server.",
+            "Un lenguaje de programación utilizado para diseñar tablas y consultas."
+        ],
+        "ans": 2,
+        "exp": "Es un software que permite crear, administrar, consultar y modificar bases de datos. Ejemplos: MySQL, PostgreSQL, SQLite y SQL Server.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es SQL?",
+        "opts": [
+            "Un sistema gestor de bases de datos desarrollado por Oracle.",
+            "Un tipo de índice que acelera la búsqueda de textos largos.",
+            "Un formato de texto para intercambiar datos entre aplicaciones.",
+            "Es un lenguaje utilizado para administrar y consultar bases de datos relacionales. Permite crear estructuras, insertar, modificar, eliminar y consultar información."
+        ],
+        "ans": 3,
+        "exp": "Es un lenguaje utilizado para administrar y consultar bases de datos relacionales. Permite crear estructuras, insertar, modificar, eliminar y consultar información.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una base de datos relacional?",
+        "opts": [
+            "Una base de datos que almacena únicamente documentos en formato JSON.",
+            "Es una base de datos que organiza la información en tablas relacionadas entre sí mediante claves.",
+            "Una base de datos que solo puede consultarse desde un servidor remoto.",
+            "Una base de datos que guarda cada registro en un archivo independiente, sin relaciones."
+        ],
+        "ans": 1,
+        "exp": "Es una base de datos que organiza la información en tablas relacionadas entre sí mediante claves.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una clave primaria (PRIMARY KEY)?",
+        "opts": [
+            "Una restricción que solo permite valores nulos en la columna.",
+            "Es un campo o conjunto de campos que identifica de manera única cada registro de una tabla. No admite valores duplicados ni NULL.",
+            "Un campo que puede repetirse siempre que los demás valores de la fila sean distintos.",
+            "Un campo que relaciona la tabla con otra tabla mediante una referencia externa."
+        ],
+        "ans": 1,
+        "exp": "Es un campo o conjunto de campos que identifica de manera única cada registro de una tabla. No admite valores duplicados ni NULL.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una clave foránea (FOREIGN KEY)?",
+        "opts": [
+            "Una restricción que impide que la columna tenga valores repetidos.",
+            "Es un campo que establece una relación con la clave primaria o una clave candidata única de otra tabla, permitiendo mantener la integridad referencial.",
+            "Un campo que identifica de manera única cada registro de la tabla actual.",
+            "Un índice que acelera las búsquedas en la tabla de otra base de datos."
+        ],
+        "ans": 1,
+        "exp": "Es un campo que establece una relación con la clave primaria o una clave candidata única de otra tabla, permitiendo mantener la integridad referencial.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un índice?",
+        "opts": [
+            "Es una estructura que permite acelerar las búsquedas y consultas de información en una tabla.",
+            "Una copia completa de la tabla guardada en otra base de datos.",
+            "Una regla que obliga a que todas las columnas tengan un valor.",
+            "Una instrucción que elimina los registros duplicados de una tabla."
+        ],
+        "ans": 0,
+        "exp": "Es una estructura que permite acelerar las búsquedas y consultas de información en una tabla.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una restricción (CONSTRAINT)?",
+        "opts": [
+            "Un tipo de dato que solo guarda números enteros.",
+            "Es una regla que se aplica a una tabla o columna para controlar qué datos pueden almacenarse.",
+            "Una consulta almacenada que se presenta como una tabla virtual.",
+            "Un procedimiento que se ejecuta cada vez que se borra un registro."
+        ],
+        "ans": 1,
+        "exp": "Es una regla que se aplica a una tabla o columna para controlar qué datos pueden almacenarse.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es NOT NULL?",
+        "opts": [
+            "Una regla que valida que el dato cumpla una condición lógica.",
+            "Una restricción que asigna un valor predeterminado a la columna.",
+            "Una restricción que impide que los valores de la columna se repitan.",
+            "Es una restricción que impide almacenar valores NULL en una columna."
+        ],
+        "ans": 3,
+        "exp": "Es una restricción que impide almacenar valores NULL en una columna.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es UNIQUE?",
+        "opts": [
+            "Una restricción que impide que la columna tenga valores vacíos.",
+            "Una restricción que asigna automáticamente un valor cuando no se envía uno.",
+            "Es una restricción que impide que se repitan los valores de una columna o combinación de columnas, según la definición de la restricción.",
+            "Una regla que impide eliminar el registro si tiene relaciones."
+        ],
+        "ans": 2,
+        "exp": "Es una restricción que impide que se repitan los valores de una columna o combinación de columnas, según la definición de la restricción.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es DEFAULT?",
+        "opts": [
+            "Una restricción que impide almacenar valores NULL en la columna.",
+            "Una restricción que impide que los valores de la columna se repitan.",
+            "Una consulta que devuelve el valor más frecuente de una tabla.",
+            "Es una restricción que establece un valor predeterminado cuando no se proporciona uno al insertar un registro."
+        ],
+        "ans": 3,
+        "exp": "Es una restricción que establece un valor predeterminado cuando no se proporciona uno al insertar un registro.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una vista (VIEW)?",
+        "opts": [
+            "Una tabla física que guarda una copia independiente de los datos.",
+            "Un índice que acelera la búsqueda por texto dentro de una tabla.",
+            "Es una consulta almacenada que se presenta como una tabla virtual. Permite consultar información sin tener que escribir nuevamente la consulta completa.",
+            "Un procedimiento que se ejecuta automáticamente al insertar un registro."
+        ],
+        "ans": 2,
+        "exp": "Es una consulta almacenada que se presenta como una tabla virtual. Permite consultar información sin tener que escribir nuevamente la consulta completa.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una transacción?",
+        "opts": [
+            "Es un conjunto de operaciones que se ejecutan como una unidad lógica de trabajo, buscando mantener la integridad de la base de datos.",
+            "Un registro que se almacena en la tabla de auditoría de la base de datos.",
+            "Una sola consulta SELECT que devuelve varias tablas al mismo tiempo.",
+            "Una instrucción que crea una nueva tabla en la base de datos."
+        ],
+        "ans": 0,
+        "exp": "Es un conjunto de operaciones que se ejecutan como una unidad lógica de trabajo, buscando mantener la integridad de la base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un procedimiento almacenado?",
+        "opts": [
+            "Un índice que se guarda en un archivo separado del motor.",
+            "Una clave foránea que se define en una tabla de referencia.",
+            "Una vista que se actualiza cada vez que se consulta la tabla.",
+            "Es un conjunto de instrucciones SQL guardadas en la base de datos que pueden ejecutarse cuando se necesitan."
+        ],
+        "ans": 3,
+        "exp": "Es un conjunto de instrucciones SQL guardadas en la base de datos que pueden ejecutarse cuando se necesitan.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un trigger o disparador?",
+        "opts": [
+            "Una consulta que se ejecuta manualmente con el comando SELECT.",
+            "Una tabla temporal que se elimina al cerrar la conexión.",
+            "Es un mecanismo que ejecuta automáticamente instrucciones cuando ocurre un evento determinado en una tabla, como INSERT, UPDATE o DELETE.",
+            "Una restricción que valida el tipo de dato de una columna."
+        ],
+        "ans": 2,
+        "exp": "Es un mecanismo que ejecuta automáticamente instrucciones cuando ocurre un evento determinado en una tabla, como INSERT, UPDATE o DELETE.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es la integridad referencial?",
+        "opts": [
+            "Un método que copia la base de datos completa en otro servidor.",
+            "Una regla que impide que un usuario se conecte a la base de datos.",
+            "Es una regla que garantiza que las relaciones entre tablas sean válidas, evitando referencias a registros inexistentes.",
+            "Una técnica para cifrar las contraseñas almacenadas en las tablas."
+        ],
+        "ans": 2,
+        "exp": "Es una regla que garantiza que las relaciones entre tablas sean válidas, evitando referencias a registros inexistentes.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una consulta SQL?",
+        "opts": [
+            "Es una instrucción que permite solicitar, insertar, modificar o eliminar información de una base de datos, dependiendo del comando utilizado.",
+            "Un registro que guarda el historial de conexiones al servidor.",
+            "Un archivo que contiene el diseño de una tabla antes de crearla.",
+            "Una vista que se genera automáticamente con cada nueva tabla."
+        ],
+        "ans": 0,
+        "exp": "Es una instrucción que permite solicitar, insertar, modificar o eliminar información de una base de datos, dependiendo del comando utilizado.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un esquema de base de datos?",
+        "opts": [
+            "Un conjunto de registros guardados en una tabla específica.",
+            "Un programa que ejecuta consultas SQL de forma automática.",
+            "Es la definición de la estructura de una base de datos, incluyendo tablas, columnas, relaciones, restricciones y otros objetos.",
+            "Un índice que organiza las columnas por orden alfabético."
+        ],
+        "ans": 2,
+        "exp": "Es la definición de la estructura de una base de datos, incluyendo tablas, columnas, relaciones, restricciones y otros objetos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es la redundancia de datos?",
+        "opts": [
+            "La capacidad de consultar la misma tabla desde varios servidores.",
+            "La organización de los datos en tablas relacionadas para evitar duplicados.",
+            "Es la repetición innecesaria de información dentro de una base de datos.",
+            "La eliminación de todas las claves foráneas de la base de datos."
+        ],
+        "ans": 2,
+        "exp": "Es la repetición innecesaria de información dentro de una base de datos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es una entidad?",
+        "opts": [
+            "Una consulta que combina dos tablas mediante un JOIN.",
+            "Una restricción que impide la repetición de valores en una columna.",
+            "Es un elemento del mundo real que se desea representar y almacenar en una base de datos, como un estudiante, producto o cliente.",
+            "Una columna que almacena el identificador de otra tabla."
+        ],
+        "ans": 2,
+        "exp": "Es un elemento del mundo real que se desea representar y almacenar en una base de datos, como un estudiante, producto o cliente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Definiciones",
+        "diff": "easy",
+        "q": "¿Qué es un modelo entidad-relación?",
+        "opts": [
+            "Un lenguaje que describe las consultas que se ejecutan en el servidor.",
+            "Es una representación gráfica o conceptual de las entidades, sus atributos y las relaciones entre ellas.",
+            "Un tipo de índice que se usa solamente en bases no relacionales.",
+            "Un script que crea automáticamente las tablas de la base de datos."
+        ],
+        "ans": 1,
+        "exp": "Es una representación gráfica o conceptual de las entidades, sus atributos y las relaciones entre ellas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una clave primaria y una clave foránea?",
+        "opts": [
+            "La clave primaria identifica de manera única los registros de una tabla. La clave foránea permite relacionar una tabla con otra mediante una referencia.",
+            "Son lo mismo; solo cambia la forma en que se escribe en SQL.",
+            "La clave primaria solo puede existir en tablas que tienen una clave foránea.",
+            "La clave foránea identifica de manera única cada registro, y la clave primaria relaciona tablas."
+        ],
+        "ans": 0,
+        "exp": "La clave primaria identifica de manera única los registros de una tabla. La clave foránea permite relacionar una tabla con otra mediante una referencia.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre SQL y MySQL?",
+        "opts": [
+            "MySQL solo funciona con bases de datos no relacionales.",
+            "Son sinónimos que se refieren al mismo software de bases de datos.",
+            "SQL es un lenguaje para trabajar con bases de datos relacionales. MySQL es un sistema gestor de bases de datos que utiliza SQL.",
+            "MySQL es un lenguaje de consulta, y SQL es un sistema gestor de bases de datos."
+        ],
+        "ans": 2,
+        "exp": "SQL es un lenguaje para trabajar con bases de datos relacionales. MySQL es un sistema gestor de bases de datos que utiliza SQL.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre VARCHAR y CHAR?",
+        "opts": [
+            "CHAR utiliza una longitud fija para almacenar cadenas de texto. VARCHAR utiliza una longitud variable, según el contenido almacenado, dentro del límite definido.",
+            "CHAR utiliza una longitud variable, y VARCHAR utiliza una longitud fija.",
+            "Ambos ocupan siempre el mismo espacio, sin importar el contenido.",
+            "VARCHAR solo puede almacenar números, y CHAR solo texto."
+        ],
+        "ans": 0,
+        "exp": "CHAR utiliza una longitud fija para almacenar cadenas de texto. VARCHAR utiliza una longitud variable, según el contenido almacenado, dentro del límite definido.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre INT y DECIMAL?",
+        "opts": [
+            "INT permite definir precisión y escala, y DECIMAL no.",
+            "DECIMAL almacena solo números enteros, e INT almacena valores con decimales.",
+            "Ambos almacenan únicamente fechas con precisión de segundos.",
+            "INT almacena números enteros. DECIMAL almacena números con decimales y permite definir precisión y escala."
+        ],
+        "ans": 3,
+        "exp": "INT almacena números enteros. DECIMAL almacena números con decimales y permite definir precisión y escala.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre WHERE y HAVING?",
+        "opts": [
+            "Ambos filtran grupos después de aplicar GROUP BY.",
+            "HAVING filtra registros antes de agrupar, y WHERE filtra los grupos después.",
+            "WHERE solo puede usarse con funciones de agregación como SUM.",
+            "WHERE filtra registros antes de agrupar los resultados. HAVING filtra los grupos después de aplicar GROUP BY."
+        ],
+        "ans": 3,
+        "exp": "WHERE filtra registros antes de agrupar los resultados. HAVING filtra los grupos después de aplicar GROUP BY.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre ORDER BY y GROUP BY?",
+        "opts": [
+            "ORDER BY ordena los resultados de una consulta. GROUP BY agrupa registros que comparten determinados valores.",
+            "Ambas cláusulas hacen exactamente lo mismo con distinto nombre.",
+            "GROUP BY ordena los resultados, y ORDER BY agrupa registros similares.",
+            "ORDER BY solo puede usarse en consultas que tienen JOIN."
+        ],
+        "ans": 0,
+        "exp": "ORDER BY ordena los resultados de una consulta. GROUP BY agrupa registros que comparten determinados valores.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre INNER JOIN y RIGHT JOIN?",
+        "opts": [
+            "RIGHT JOIN devuelve solo las coincidencias, e INNER JOIN conserva la tabla derecha.",
+            "INNER JOIN conserva todos los registros de la tabla izquierda aunque no tengan coincidencia.",
+            "Ambos devuelven siempre todos los registros de las dos tablas.",
+            "INNER JOIN devuelve únicamente las coincidencias entre ambas tablas. RIGHT JOIN conserva todos los registros de la tabla derecha y agrega las coincidencias de la izquierda."
+        ],
+        "ans": 3,
+        "exp": "INNER JOIN devuelve únicamente las coincidencias entre ambas tablas. RIGHT JOIN conserva todos los registros de la tabla derecha y agrega las coincidencias de la izquierda.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre JOIN y UNION?",
+        "opts": [
+            "JOIN combina columnas de diferentes tablas mediante una relación. UNION combina los resultados de consultas compatibles, agregando filas.",
+            "Son lo mismo; ambos combinan columnas de diferentes tablas.",
+            "UNION une columnas de tablas relacionadas, y JOIN agrega filas de otra consulta.",
+            "JOIN solo funciona con tablas que tienen la misma cantidad de filas."
+        ],
+        "ans": 0,
+        "exp": "JOIN combina columnas de diferentes tablas mediante una relación. UNION combina los resultados de consultas compatibles, agregando filas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre COUNT, SUM y AVG?",
+        "opts": [
+            "COUNT cuenta registros o valores. SUM calcula la suma de valores numéricos. AVG calcula el promedio de valores numéricos.",
+            "Las tres funciones devuelven siempre el número total de filas de la tabla.",
+            "AVG cuenta registros, COUNT calcula la media y SUM devuelve el mínimo.",
+            "SUM cuenta registros, COUNT calcula la suma y AVG devuelve el valor máximo."
+        ],
+        "ans": 0,
+        "exp": "COUNT cuenta registros o valores. SUM calcula la suma de valores numéricos. AVG calcula el promedio de valores numéricos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre INSERT, UPDATE y DELETE?",
+        "opts": [
+            "UPDATE agrega registros, INSERT modifica y DELETE crea la tabla.",
+            "Los tres comandos sirven para consultar datos sin modificarlos.",
+            "DELETE agrega registros, UPDATE los elimina e INSERT modifica la estructura.",
+            "INSERT agrega registros. UPDATE modifica registros existentes. DELETE elimina registros."
+        ],
+        "ans": 3,
+        "exp": "INSERT agrega registros. UPDATE modifica registros existentes. DELETE elimina registros.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre DROP y ALTER?",
+        "opts": [
+            "ALTER elimina el objeto completo, y DROP modifica sus columnas.",
+            "DROP agrega columnas nuevas a una tabla existente sin eliminar datos.",
+            "DROP elimina un objeto de la base de datos. ALTER modifica la estructura de un objeto existente, como agregar o eliminar columnas.",
+            "Ambos modifican solamente los registros de la tabla sin tocar su estructura."
+        ],
+        "ans": 2,
+        "exp": "DROP elimina un objeto de la base de datos. ALTER modifica la estructura de un objeto existente, como agregar o eliminar columnas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una base de datos relacional y una no relacional?",
+        "opts": [
+            "Las no relacionales siempre usan tablas con claves foráneas obligatorias.",
+            "Las relacionales solo almacenan documentos, y las no relacionales usan SQL.",
+            "Son lo mismo; la diferencia está solo en el nombre del motor.",
+            "La relacional organiza la información en tablas con relaciones definidas. La no relacional puede utilizar estructuras como documentos, pares clave-valor, grafos o columnas."
+        ],
+        "ans": 3,
+        "exp": "La relacional organiza la información en tablas con relaciones definidas. La no relacional puede utilizar estructuras como documentos, pares clave-valor, grafos o columnas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una relación uno a muchos y muchos a muchos?",
+        "opts": [
+            "En uno a muchos, todos los registros de ambas tablas se relacionan entre sí.",
+            "En uno a muchos, un registro de una tabla puede relacionarse con varios registros de otra. En muchos a muchos, varios registros de ambas tablas pueden relacionarse entre sí.",
+            "Son lo mismo; solo cambia el número de columnas de cada tabla.",
+            "En muchos a muchos, un registro solo puede relacionarse con otro registro."
+        ],
+        "ans": 1,
+        "exp": "En uno a muchos, un registro de una tabla puede relacionarse con varios registros de otra. En muchos a muchos, varios registros de ambas tablas pueden relacionarse entre sí.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre DELETE y UPDATE?",
+        "opts": [
+            "UPDATE elimina registros, y DELETE modifica los valores existentes.",
+            "Ambos eliminan la tabla completa cuando se usan sin WHERE.",
+            "DELETE elimina registros de una tabla, mientras que UPDATE modifica los valores de registros existentes.",
+            "DELETE crea nuevos registros, y UPDATE los reemplaza."
+        ],
+        "ans": 2,
+        "exp": "DELETE elimina registros de una tabla, mientras que UPDATE modifica los valores de registros existentes.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre una tabla y una vista?",
+        "opts": [
+            "Son iguales porque ambas guardan una copia independiente de los registros.",
+            "Una vista almacena todos los datos, y la tabla solo guarda la consulta.",
+            "Una tabla almacena los datos. Una vista presenta información obtenida mediante una consulta, normalmente sin almacenar una copia independiente de los registros.",
+            "La vista solo puede existir si la tabla tiene una clave primaria."
+        ],
+        "ans": 2,
+        "exp": "Una tabla almacena los datos. Una vista presenta información obtenida mediante una consulta, normalmente sin almacenar una copia independiente de los registros.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Comparaciones",
+        "diff": "medium",
+        "q": "¿Qué diferencia existe entre un índice y una clave primaria?",
+        "opts": [
+            "La clave primaria identifica de forma única los registros y establece una regla de integridad. Un índice facilita las búsquedas y puede existir sin ser una clave primaria.",
+            "La clave primaria solo sirve para acelerar las búsquedas en la base.",
+            "Un índice siempre identifica de forma única los registros de la tabla.",
+            "Son lo mismo: ambos impiden que se repitan valores."
+        ],
+        "ans": 0,
+        "exp": "La clave primaria identifica de forma única los registros y establece una regla de integridad. Un índice facilita las búsquedas y puede existir sin ser una clave primaria.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas almacenar estudiantes, cursos y profesores, ¿cómo organizarías la base de datos?",
+        "opts": [
+            "Crearía una única tabla llamada Datos, sin claves ni relaciones.",
+            "Crearía tablas separadas para Estudiantes, Cursos y Profesores, y establecería relaciones entre ellas utilizando claves primarias y foráneas.",
+            "Crearía una tabla por cada estudiante registrado en el sistema.",
+            "Guardaría todos los datos en una sola tabla con columnas repetidas."
+        ],
+        "ans": 1,
+        "exp": "Crearía tablas separadas para Estudiantes, Cursos y Profesores, y establecería relaciones entre ellas utilizando claves primarias y foráneas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas identificar de manera única a cada estudiante, ¿qué utilizarías?",
+        "opts": [
+            "Usaría el campo nombre, porque cada estudiante tiene un nombre distinto.",
+            "Usaría la columna edad, porque es un valor numérico.",
+            "Usaría una restricción DEFAULT con el valor del curso.",
+            "Una clave primaria, por ejemplo, un campo id_estudiante con valores únicos."
+        ],
+        "ans": 3,
+        "exp": "Una clave primaria, por ejemplo, un campo id_estudiante con valores únicos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si un cliente puede realizar muchos pedidos, ¿qué cardinalidad utilizarías?",
+        "opts": [
+            "Una relación muchos a muchos, porque cada pedido puede tener varios clientes.",
+            "No necesita relación, porque los pedidos se guardan dentro del cliente.",
+            "Una relación uno a uno, porque cada cliente solo puede tener un pedido.",
+            "Una relación uno a muchos, porque un cliente puede tener varios pedidos, pero cada pedido pertenece a un cliente."
+        ],
+        "ans": 3,
+        "exp": "Una relación uno a muchos, porque un cliente puede tener varios pedidos, pero cada pedido pertenece a un cliente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si varios estudiantes pueden inscribirse en varios cursos, ¿cómo representarías esa relación?",
+        "opts": [
+            "Una relación uno a uno entre Estudiantes y Cursos.",
+            "Utilizaría una relación muchos a muchos mediante una tabla intermedia, por ejemplo, Inscripciones.",
+            "Una relación uno a muchos con una clave foránea en la tabla Cursos.",
+            "Una sola tabla que guarde cada curso dentro de cada estudiante."
+        ],
+        "ans": 1,
+        "exp": "Utilizaría una relación muchos a muchos mediante una tabla intermedia, por ejemplo, Inscripciones.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas consultar todos los clientes que tienen pedidos, ¿qué JOIN utilizarías?",
+        "opts": [
+            "UNION, porque combina las filas de ambas tablas.",
+            "RIGHT JOIN, porque necesito solamente los pedidos.",
+            "Utilizaría INNER JOIN, porque solamente necesito los clientes que tienen coincidencias con la tabla de pedidos.",
+            "LEFT JOIN, porque necesito todos los clientes aunque no tengan pedidos."
+        ],
+        "ans": 2,
+        "exp": "Utilizaría INNER JOIN, porque solamente necesito los clientes que tienen coincidencias con la tabla de pedidos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas mostrar todos los clientes, incluso los que no tienen pedidos, ¿qué JOIN utilizarías?",
+        "opts": [
+            "UNION, porque combina automáticamente las dos tablas.",
+            "Utilizaría LEFT JOIN, porque conserva todos los registros de la tabla clientes.",
+            "CROSS JOIN, porque necesito combinar todas las combinaciones posibles.",
+            "INNER JOIN, porque solo devuelve los clientes que tienen pedidos."
+        ],
+        "ans": 1,
+        "exp": "Utilizaría LEFT JOIN, porque conserva todos los registros de la tabla clientes.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas buscar un estudiante por su nombre, ¿qué comando utilizarías?",
+        "opts": [
+            "DELETE con la cláusula ORDER BY sobre la columna nombre.",
+            "SELECT con una condición HAVING sobre la columna nombre.",
+            "UPDATE con una condición WHERE sobre la columna nombre.",
+            "Utilizaría SELECT con una condición WHERE."
+        ],
+        "ans": 3,
+        "exp": "Utilizaría SELECT con una condición WHERE.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT * FROM estudiantes WHERE nombre = 'Ana';</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas modificar el correo de un usuario, ¿qué comando utilizarías?",
+        "opts": [
+            "DELETE seguido de SELECT para revisar el correo.",
+            "Utilizaría UPDATE con WHERE para identificar el registro que necesito modificar.",
+            "INSERT con el nuevo correo, porque agrega un registro.",
+            "SELECT con WHERE, porque modifica el valor del correo."
+        ],
+        "ans": 1,
+        "exp": "Utilizaría UPDATE con WHERE para identificar el registro que necesito modificar.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">UPDATE usuarios SET correo = 'ana@email.com' WHERE id = 1;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas eliminar un usuario específico, ¿qué comando utilizarías?",
+        "opts": [
+            "UPDATE usuarios SET activo = 0, porque lo elimina definitivamente.",
+            "TRUNCATE con WHERE id = 1, porque elimina solo ese registro.",
+            "DROP TABLE usuarios, porque elimina solo ese registro.",
+            "Utilizaría DELETE con WHERE para eliminar solamente el registro correspondiente."
+        ],
+        "ans": 3,
+        "exp": "Utilizaría DELETE con WHERE para eliminar solamente el registro correspondiente.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">DELETE FROM usuarios WHERE id = 1;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas contar cuántos estudiantes existen en una tabla, ¿qué utilizarías?",
+        "opts": [
+            "SUM(*), porque suma todos los registros de la tabla.",
+            "COUNT(nombre) FROM estudiantes, porque cuenta solo los nombres repetidos.",
+            "LENGTH(estudiantes), porque mide el tamaño de la tabla.",
+            "Utilizaría COUNT()."
+        ],
+        "ans": 3,
+        "exp": "Utilizaría COUNT().",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT COUNT(*) FROM estudiantes;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas obtener el promedio de las notas, ¿qué utilizarías?",
+        "opts": [
+            "COUNT(nota), porque calcula el promedio de las notas.",
+            "SUM(nota), porque devuelve el promedio de las notas.",
+            "MAX(nota), porque calcula el promedio de las notas.",
+            "Utilizaría AVG()."
+        ],
+        "ans": 3,
+        "exp": "Utilizaría AVG().",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT AVG(nota) FROM calificaciones;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas mostrar los productos desde el más caro al más barato, ¿qué utilizarías?",
+        "opts": [
+            "Utilizaría ORDER BY con DESC.",
+            "WHERE precio DESC, porque ordena los productos del más caro al más barato.",
+            "ORDER BY precio ASC, porque muestra del más caro al más barato.",
+            "GROUP BY precio, porque agrupa los productos por su precio."
+        ],
+        "ans": 0,
+        "exp": "Utilizaría ORDER BY con DESC.",
+        "extra": "<div class=\"extra-content\"><div style=\"background:#1e1e1e;color:#d4d4d4;font-family:monospace;padding:1rem;border-radius:8px;margin-bottom:1rem;white-space:pre-wrap;\">SELECT * FROM productos ORDER BY precio DESC;</div></div>"
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas evitar que dos usuarios tengan el mismo correo, ¿qué utilizarías?",
+        "opts": [
+            "Una restricción UNIQUE sobre la columna correo.",
+            "Una restricción NOT NULL sobre la columna correo.",
+            "Una vista que filtra los correos repetidos.",
+            "Una clave primaria sobre la columna correo."
+        ],
+        "ans": 0,
+        "exp": "Una restricción UNIQUE sobre la columna correo.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas evitar que un pedido tenga un cliente inexistente, ¿qué utilizarías?",
+        "opts": [
+            "Una restricción NOT NULL sobre la columna cliente_id.",
+            "Un índice que ordena los pedidos por cliente.",
+            "Una restricción UNIQUE sobre la columna cliente_id.",
+            "Una clave foránea que haga referencia a la clave primaria de la tabla clientes."
+        ],
+        "ans": 3,
+        "exp": "Una clave foránea que haga referencia a la clave primaria de la tabla clientes.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas que una columna siempre tenga un valor, ¿qué utilizarías?",
+        "opts": [
+            "La restricción NOT NULL.",
+            "La clave foránea.",
+            "La restricción UNIQUE.",
+            "La restricción DEFAULT."
+        ],
+        "ans": 0,
+        "exp": "La restricción NOT NULL.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas almacenar una fecha de nacimiento, ¿qué tipo de dato utilizarías?",
+        "opts": [
+            "VARCHAR, porque permite guardar cualquier texto de fecha.",
+            "TIMESTAMP con hora, porque siempre se necesita la hora de nacimiento.",
+            "DATE, porque permite almacenar fechas sin necesidad de guardar una hora.",
+            "INT, porque las fechas se guardan como números enteros."
+        ],
+        "ans": 2,
+        "exp": "DATE, porque permite almacenar fechas sin necesidad de guardar una hora.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas almacenar el precio de un producto, ¿qué tipo de dato utilizarías?",
+        "opts": [
+            "DECIMAL, porque permite almacenar valores numéricos con decimales y precisión definida.",
+            "CHAR, porque el precio se guarda como texto.",
+            "DATE, porque el precio cambia con el tiempo.",
+            "INT, porque el precio siempre es un número entero."
+        ],
+        "ans": 0,
+        "exp": "DECIMAL, porque permite almacenar valores numéricos con decimales y precisión definida.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Ejemplos y aplicaciones",
+        "diff": "medium",
+        "q": "Si necesitas evitar que se repitan los datos de los clientes en cada pedido, ¿qué aplicarías?",
+        "opts": [
+            "Normalización, separando la información de clientes y pedidos en tablas relacionadas.",
+            "Desnormalización, porque se repiten los datos para acelerar las consultas.",
+            "Índice, porque los datos repetidos se ordenan más rápido.",
+            "Restricción UNIQUE, porque evita que los pedidos repitan datos del cliente."
+        ],
+        "ans": 0,
+        "exp": "Normalización, separando la información de clientes y pedidos en tablas relacionadas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué son las formas normales?",
+        "opts": [
+            "Son reglas o criterios utilizados para organizar las tablas de una base de datos y reducir redundancias y anomalías.",
+            "Son formatos de archivo para exportar bases de datos completas.",
+            "Son tipos de datos que se utilizan para guardar fechas y horas.",
+            "Son comandos que eliminan las tablas duplicadas de una base de datos."
+        ],
+        "ans": 0,
+        "exp": "Son reglas o criterios utilizados para organizar las tablas de una base de datos y reducir redundancias y anomalías.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la primera forma normal (1FN)?",
+        "opts": [
+            "Exige que todas las columnas sean de tipo texto.",
+            "Establece que cada campo debe contener un valor atómico, es decir, no debe almacenar conjuntos de valores separados dentro de una misma celda.",
+            "Exige que cada tabla tenga una vista asociada.",
+            "Exige que cada tabla tenga al menos una clave foránea."
+        ],
+        "ans": 1,
+        "exp": "Establece que cada campo debe contener un valor atómico, es decir, no debe almacenar conjuntos de valores separados dentro de una misma celda.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la segunda forma normal (2FN)?",
+        "opts": [
+            "Exige que todas las tablas tengan la misma cantidad de columnas.",
+            "Una tabla debe cumplir la primera forma normal y cada atributo que no forme parte de una clave debe depender completamente de toda la clave candidata, no solamente de una parte de ella.",
+            "Exige que todas las columnas dependan de una vista de la base.",
+            "Exige que cada tabla tenga un único registro por cada columna."
+        ],
+        "ans": 1,
+        "exp": "Una tabla debe cumplir la primera forma normal y cada atributo que no forme parte de una clave debe depender completamente de toda la clave candidata, no solamente de una parte de ella.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la tercera forma normal (3FN)?",
+        "opts": [
+            "Una tabla debe cumplir la segunda forma normal y evitar dependencias transitivas de atributos no clave respecto de las claves candidatas.",
+            "Exige que cada columna contenga solamente valores numéricos.",
+            "Exige que todas las dependencias sean transitivas entre columnas.",
+            "Exige que las tablas no tengan claves primarias compuestas."
+        ],
+        "ans": 0,
+        "exp": "Una tabla debe cumplir la segunda forma normal y evitar dependencias transitivas de atributos no clave respecto de las claves candidatas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué problemas pueden aparecer si no normalizamos una base de datos?",
+        "opts": [
+            "Hacen que las consultas siempre sean más rápidas.",
+            "Impiden crear relaciones entre las tablas.",
+            "Pueden aparecer datos duplicados, inconsistencias y anomalías al insertar, actualizar o eliminar información.",
+            "Solo aumentan el tamaño de la base de datos, sin afectar la información."
+        ],
+        "ans": 2,
+        "exp": "Pueden aparecer datos duplicados, inconsistencias y anomalías al insertar, actualizar o eliminar información.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una anomalía de actualización?",
+        "opts": [
+            "Ocurre cuando se crea una vista sin consultas asociadas.",
+            "Es un problema que ocurre cuando un mismo dato está repetido en varios registros y es necesario modificarlo en todos para mantener la información consistente.",
+            "Ocurre cuando se elimina una tabla completa por error.",
+            "Ocurre cuando una columna no admite valores NULL."
+        ],
+        "ans": 1,
+        "exp": "Es un problema que ocurre cuando un mismo dato está repetido en varios registros y es necesario modificarlo en todos para mantener la información consistente.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una anomalía de inserción?",
+        "opts": [
+            "Ocurre cuando se modifica el valor de una clave primaria.",
+            "Es un problema que impide o dificulta insertar información sin tener que agregar otros datos que todavía no existen o que no corresponden.",
+            "Ocurre cuando una tabla no tiene índice asociado.",
+            "Ocurre cuando una consulta devuelve más registros de los esperados."
+        ],
+        "ans": 1,
+        "exp": "Es un problema que impide o dificulta insertar información sin tener que agregar otros datos que todavía no existen o que no corresponden.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una anomalía de eliminación?",
+        "opts": [
+            "Es cuando al eliminar un registro se pierde accidentalmente otra información que también estaba almacenada en él.",
+            "Ocurre cuando se borra una tabla que tiene índices asociados.",
+            "Ocurre cuando se eliminan las claves foráneas de una tabla.",
+            "Ocurre cuando se elimina un registro sin usar WHERE."
+        ],
+        "ans": 0,
+        "exp": "Es cuando al eliminar un registro se pierde accidentalmente otra información que también estaba almacenada en él.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué son las propiedades ACID?",
+        "opts": [
+            "Son cuatro comandos que se utilizan para crear tablas nuevas.",
+            "Son cuatro propiedades que buscan garantizar la confiabilidad de las transacciones: Atomicidad (todas las operaciones se realizan o ninguna); Consistencia (la transacción mantiene las reglas de integridad); Aislamiento (las transacciones concurrentes no deben interferir incorrectamente entre sí); Durabilidad (los cambios confirmados permanecen guardados incluso ante fallos).",
+            "Son cuatro reglas que permiten guardar las consultas en memoria caché.",
+            "Son cuatro tipos de índices que aceleran la búsqueda de datos."
+        ],
+        "ans": 1,
+        "exp": "Son cuatro propiedades que buscan garantizar la confiabilidad de las transacciones: Atomicidad (todas las operaciones se realizan o ninguna); Consistencia (la transacción mantiene las reglas de integridad); Aislamiento (las transacciones concurrentes no deben interferir incorrectamente entre sí); Durabilidad (los cambios confirmados permanecen guardados incluso ante fallos).",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es COMMIT?",
+        "opts": [
+            "Es una instrucción que elimina la tabla después de confirmar los cambios.",
+            "Es una instrucción que cancela todas las transacciones del servidor.",
+            "Es una instrucción que crea una copia de seguridad de la base.",
+            "Es una instrucción que confirma una transacción y guarda sus cambios."
+        ],
+        "ans": 3,
+        "exp": "Es una instrucción que confirma una transacción y guarda sus cambios.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es ROLLBACK?",
+        "opts": [
+            "Es una instrucción que confirma y guarda permanentemente los cambios.",
+            "Es una instrucción que elimina todas las vistas de la base.",
+            "Es una instrucción que crea un índice para acelerar la consulta.",
+            "Es una instrucción que revierte los cambios de una transacción que todavía no se han confirmado."
+        ],
+        "ans": 3,
+        "exp": "Es una instrucción que revierte los cambios de una transacción que todavía no se han confirmado.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué sucede si una transacción falla antes de realizar COMMIT?",
+        "opts": [
+            "No se puede recuperar nada, porque los cambios ya se escribieron en disco.",
+            "Se puede utilizar ROLLBACK para revertir las operaciones pendientes, según el motor y las características de la transacción.",
+            "Los cambios se guardan automáticamente aunque la transacción falle.",
+            "La tabla se elimina para proteger la integridad de los datos."
+        ],
+        "ans": 1,
+        "exp": "Se puede utilizar ROLLBACK para revertir las operaciones pendientes, según el motor y las características de la transacción.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Para qué sirve un índice en una base de datos?",
+        "opts": [
+            "Sirve para cifrar los datos almacenados en las tablas.",
+            "Sirve para acelerar las consultas y búsquedas, evitando que el motor tenga que revisar todos los registros en determinados casos.",
+            "Sirve para guardar copias de las tablas en otro servidor.",
+            "Sirve para eliminar registros duplicados de forma automática."
+        ],
+        "ans": 1,
+        "exp": "Sirve para acelerar las consultas y búsquedas, evitando que el motor tenga que revisar todos los registros en determinados casos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Los índices tienen alguna desventaja?",
+        "opts": [
+            "No, los índices siempre mejoran todas las operaciones sin costo adicional.",
+            "Sí, pero solo afectan a las consultas que usan SELECT *.",
+            "Sí. Ocupan espacio adicional y pueden hacer más lentas algunas operaciones de inserción, actualización y eliminación porque también deben mantenerse actualizados.",
+            "No, porque los índices no ocupan espacio en la base de datos."
+        ],
+        "ans": 2,
+        "exp": "Sí. Ocupan espacio adicional y pueden hacer más lentas algunas operaciones de inserción, actualización y eliminación porque también deben mantenerse actualizados.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la integridad de datos?",
+        "opts": [
+            "Es la garantía de que la información almacenada sea correcta, consistente y válida.",
+            "Es la cantidad de registros que una tabla puede almacenar.",
+            "Es la velocidad con la que se ejecutan las consultas SQL.",
+            "Es el número de usuarios que pueden conectarse simultáneamente."
+        ],
+        "ans": 0,
+        "exp": "Es la garantía de que la información almacenada sea correcta, consistente y válida.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la integridad de entidad?",
+        "opts": [
+            "Es la regla que impide eliminar tablas que tienen vistas asociadas.",
+            "Es el principio que garantiza que cada registro pueda identificarse de manera única, normalmente mediante una clave primaria.",
+            "Es la regla que permite que una clave primaria tenga valores nulos.",
+            "Es la regla que obliga a que las tablas tengan la misma cantidad de columnas."
+        ],
+        "ans": 1,
+        "exp": "Es el principio que garantiza que cada registro pueda identificarse de manera única, normalmente mediante una clave primaria.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la integridad referencial?",
+        "opts": [
+            "Garantiza que las referencias entre tablas correspondan a registros válidos.",
+            "Garantiza que los datos se respalden automáticamente en otra tabla.",
+            "Garantiza que cada registro tenga una clave primaria distinta de NULL.",
+            "Garantiza que las consultas se ejecuten en menos de un segundo."
+        ],
+        "ans": 0,
+        "exp": "Garantiza que las referencias entre tablas correspondan a registros válidos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué sucede si intentas insertar un registro con una clave foránea que no existe en la tabla relacionada?",
+        "opts": [
+            "La base de datos acepta el registro y lo guarda sin verificar la relación.",
+            "La base de datos rechazará la operación si la restricción de clave foránea está activa y no se cumplen las reglas correspondientes.",
+            "La base de datos crea automáticamente el registro faltante en la tabla relacionada.",
+            "La base de datos cambia la clave foránea por NULL sin mostrar ningún error."
+        ],
+        "ans": 1,
+        "exp": "La base de datos rechazará la operación si la restricción de clave foránea está activa y no se cumplen las reglas correspondientes.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una subconsulta?",
+        "opts": [
+            "Es una consulta SQL que se encuentra dentro de otra consulta y cuyo resultado se utiliza para resolver una operación.",
+            "Es una vista que se crea cada vez que se elimina un registro.",
+            "Es una tabla temporal que se guarda al finalizar una transacción.",
+            "Es un índice que se aplica solamente a las columnas de tipo texto."
+        ],
+        "ans": 0,
+        "exp": "Es una consulta SQL que se encuentra dentro de otra consulta y cuyo resultado se utiliza para resolver una operación.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una consulta correlacionada?",
+        "opts": [
+            "Es una subconsulta que depende de los valores de la consulta externa y puede ejecutarse para cada registro evaluado por ella.",
+            "Es una consulta que solo puede usarse con la cláusula GROUP BY.",
+            "Es una consulta que combina todas las tablas de una base de datos.",
+            "Es una consulta que se ejecuta una sola vez, sin depender de ninguna otra."
+        ],
+        "ans": 0,
+        "exp": "Es una subconsulta que depende de los valores de la consulta externa y puede ejecutarse para cada registro evaluado por ella.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una consulta agregada?",
+        "opts": [
+            "Es una consulta que devuelve únicamente la estructura de la tabla.",
+            "Es una consulta que copia todos los registros de una tabla a otra.",
+            "Es una consulta que elimina los registros duplicados de una tabla.",
+            "Es una consulta que utiliza funciones como COUNT, SUM, AVG, MIN o MAX para obtener resultados resumidos."
+        ],
+        "ans": 3,
+        "exp": "Es una consulta que utiliza funciones como COUNT, SUM, AVG, MIN o MAX para obtener resultados resumidos.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es una relación muchos a muchos y por qué necesita una tabla intermedia?",
+        "opts": [
+            "Es una relación donde varios registros de una tabla pueden relacionarse con varios de otra. La tabla intermedia permite representar esas asociaciones mediante claves foráneas.",
+            "Es una relación que se representa con una vista en lugar de una tabla.",
+            "Es una relación en la que un registro solo puede relacionarse con otro registro.",
+            "Es una relación que no necesita claves foráneas para mantener las referencias."
+        ],
+        "ans": 0,
+        "exp": "Es una relación donde varios registros de una tabla pueden relacionarse con varios de otra. La tabla intermedia permite representar esas asociaciones mediante claves foráneas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es un diagrama entidad-relación?",
+        "opts": [
+            "Es un script que ejecuta las consultas de la base de datos automáticamente.",
+            "Es un documento que describe los permisos de los usuarios del sistema.",
+            "Es un gráfico que muestra el rendimiento del servidor en tiempo real.",
+            "Es una representación visual de las entidades de una base de datos, sus atributos y las relaciones que existen entre ellas."
+        ],
+        "ans": 3,
+        "exp": "Es una representación visual de las entidades de una base de datos, sus atributos y las relaciones que existen entre ellas.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es la concurrencia en una base de datos?",
+        "opts": [
+            "Es la capacidad de cifrar los datos de varias tablas al mismo tiempo.",
+            "Es la capacidad de guardar copias de seguridad de la base en paralelo.",
+            "Es la capacidad de permitir que diferentes usuarios o procesos trabajen con la base de datos al mismo tiempo.",
+            "Es la cantidad de tablas que pueden ejecutarse en un mismo comando."
+        ],
+        "ans": 2,
+        "exp": "Es la capacidad de permitir que diferentes usuarios o procesos trabajen con la base de datos al mismo tiempo.",
+        "extra": ""
+    },
+
+    {
+        "profe": false,
+        "unit": "SQL - Profundización",
+        "diff": "hard",
+        "q": "¿Qué es un bloqueo (LOCK)?",
+        "opts": [
+            "Es un mecanismo que controla el acceso simultáneo a determinados datos para evitar conflictos durante las operaciones.",
+            "Es una instrucción que elimina permanentemente una tabla de la base.",
+            "Es una vista que muestra únicamente los registros bloqueados por el administrador.",
+            "Es una restricción que impide que una columna tenga valores repetidos."
+        ],
+        "ans": 0,
+        "exp": "Es un mecanismo que controla el acceso simultáneo a determinados datos para evitar conflictos durante las operaciones.",
+        "extra": ""
+    },
+
+
 
     // ==================== SQL - CONSULTAS BÁSICAS ====================
     {

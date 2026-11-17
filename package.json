@@ -11,6 +11,9 @@
     "start": "concurrently \"npm run api\" \"npm run dev\""
   },
   "dependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/cli": "^8.6.2",
+    "@capacitor/core": "^8.6.2",
     "axios": "^1.9.0",
     "json-server": "^0.17.4",
     "react": "^19.0.0",
